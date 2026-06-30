@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>{{TITLE}}</title>
+  <meta name="citation_title" content="{{TITLE}}" />
+  <meta name="citation_author" content="{{AUTHOR}}" />
+  <meta name="citation_publication_date" content="{{DATE}}" />
+  <meta name="citation_doi" content="{{DOI}}" />
+  <meta name="description" content="{{DESCRIPTION}}" />
+
+  <!-- QNFO Design System v2.0 — Silent Radix Light Theme -->
+  <link rel="stylesheet" href="https://qnfo.org/design-system/qnfo-light.css" />
+
+  <!-- MathJax — config MUST be before the script tag -->
+  <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      macros: {
+        "\\R": "\\mathbb{R}",
+        "\\Q": "\\mathbb{Q}",
+        "\\Z": "\\mathbb{Z}",
+        "\\N": "\\mathbb{N}",
+        "\\C": "\\mathbb{C}",
+        "\\F": "\\mathbb{F}",
+        "\\Qp": "\\mathbb{Q}_p",
+        "\\Zp": "\\mathbb{Z}_p",
+        "\\cA": "\\mathcal{A}",
+        "\\cC": "\\mathcal{C}",
+        "\\cB": "\\mathcal{B}",
+        "\\cU": "\\mathcal{U}",
+        "\\bT": "\\mathbb{T}",
+        "\\bP": "\\mathbb{P}",
+        "\\bK": "\\mathbb{K}",
+        "\\bB": "\\mathbb{B}",
+        "\\bM": "\\mathbb{M}",
+        "\\GL": "\\mathrm{GL}",
+        "\\Gal": "\\mathrm{Gal}",
+        "\\Aut": "\\mathrm{Aut}",
+        "\\End": "\\mathrm{End}",
+        "\\Hom": "\\mathrm{Hom}",
+        "\\Spec": "\\mathrm{Spec}",
+        "\\Proj": "\\mathrm{Proj}",
+        "\\id": "\\mathrm{id}",
+        "\\im": "\\mathrm{im}",
+        "\\ker": "\\ker",
+        "\\Tr": "\\mathrm{Tr}",
+        "\\vol": "\\mathrm{vol}"
+      }
+    },
+    options: {
+      ignoreHtmlClass: 'no-mathjax',
+      processHtmlClass: 'mathjax-process'
+    },
+    chtml: {
+      displayAlign: 'left'
+    }
+  };
+  </script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+</head>
+<body>
+
+<header>
+  <h1 class="title">{{TITLE}}</h1>
+  {{SUBTITLE}}
+  <div class="author-block">
+    <p><strong>Author:</strong> {{AUTHOR}}</p>
+    <p><strong>Date:</strong> {{DATE}}</p>
+    {{DOI_BLOCK}}
+    <p><strong>License:</strong> {{LICENSE}}</p>
+  </div>
+</header>
+
+{{CONTENT}}
+
+<footer>
+  <p>Published under the <a href="https://legal.qnfo.org/">QNFO Unified License Agreement</a>.</p>
+  <p><a href="https://qnfo.org/">QNFO Research Hub</a> &middot; <a href="https://papers.qnfo.org/">All Publications</a></p>
+</footer>
+
+</body>
+</html>
