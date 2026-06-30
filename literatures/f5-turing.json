@@ -1,0 +1,61 @@
+{
+  "papers": [
+    {
+      "title": "Turing patterns and apparent competition in predator-prey food webs on networks",
+      "authors": [
+        "Lucas D. Fernandes",
+        "Marcus A. M. Aguiar"
+      ],
+      "year": 2012,
+      "abstract": "Reaction-diffusion systems may lead to the formation of steady state heterogeneous spatial patterns, known as Turing patterns. Their mathematical formulation is important for the study of pattern formation in general and play central roles in many fields of biology, such as ecology and morphogenesis. In the present study we focus on the role of Turing patterns in describing the abundance distribution of predator and prey species distributed in patches in a scale free network structure. We extend the original model proposed by Nakao and Mikhailov by considering food chains with several interacting pairs of preys and predators. We identify patterns of species distribution displaying high degrees of apparent competition driven by Turing instabilities. Our results provide further indication that differences in abundance distribution among patches may be, at least in part, due to self organized Turing patterns, and not necessarily to intrinsic environmental heterogeneity.",
+      "arxiv_id": "1207.3424v1",
+      "doi": "https://doi.org/10.1103/PhysRevE.86.056203",
+      "url": "http://arxiv.org/abs/1207.3424v1",
+      "source": "arxiv",
+      "published": "2012-07-14T13:45:02Z",
+      "citation_count": 0,
+      "tier": "supporting"
+    },
+    {
+      "title": "Theory of mechano-chemical patterning in biphasic biological tissues",
+      "authors": [
+        "P. Recho",
+        "A. Hallou",
+        "E. Hannezo"
+      ],
+      "year": 2018,
+      "abstract": "The formation of self-organized patterns is key to the morphogenesis of multicellular organisms, although a comprehensive theory of biological pattern formation is still lacking. Here, we propose a minimal model combining tissue mechanics to morphogen turnover and transport in order to explore new routes to patterning. Our active description couples morphogen reaction-diffusion, which impact on cell differentiation and tissue mechanics, to a two-phase poroelastic rheology, where one tissue phase consists of a poroelastic cell network and the other of a permeating extracellular fluid, which provides a feedback by actively transporting morphogens. While this model encompasses previous theories approximating tissues to inert monophasic media, such as Turing's reaction-diffusion model, it overcomes some of their key limitations permitting pattern formation via any two-species biochemical kinetics thanks to mechanically induced cross-diffusion flows. Moreover, we describe a qualitatively different advection-driven Keller-Segel instability which allows for the formation of patterns with a single morphogen, and whose fundamental mode pattern robustly scales with tissue size. We discuss the potential relevance of these findings for tissue morphogenesis.",
+      "arxiv_id": "1811.12242v3",
+      "doi": "https://doi.org/10.1073/pnas.1813255116",
+      "url": "http://arxiv.org/abs/1811.12242v3",
+      "source": "arxiv",
+      "published": "2018-11-29T15:24:43Z",
+      "citation_count": 0,
+      "tier": "core"
+    },
+    {
+      "title": "Programmable reaction-diffusion fronts",
+      "authors": [
+        "Anton S. Zadorin",
+        "Yannick Rondelez",
+        "Jean-Christophe Galas",
+        "André Estevez-Torres"
+      ],
+      "year": 2014,
+      "abstract": "Morphogenesis is central to biology but remains largely unexplored in chemistry. Reaction-diffusion (RD) mechanisms are, however, essential to understand how shape emerges in the living world. While numerical methods confirm the incredible potential of RD mechanisms to generate patterns, their experimental implementation, despite great efforts, has yet to surpass the paradigm of stationary Turing patterns achieved 25 years ago. The principal reason for our difficulty to synthesize arbitrary concentration patterns from scratch is the lack of fully programmable reaction-diffusion systems. To solve this problem we introduce here a DNA-based system where kinetics and diffusion can be individually tuned. We demonstrate the capability to precisely control reaction-diffusion properties with an autocatalytic network that propagates in a one-dimensional reactor with uniform velocity, typically 100 μm min-1. The diffusion coefficient of the propagating species can be reduced up to a factor 2.7 using a species-specific strategy relying on self-assembled hydrodynamic drags. Our approach is modular as we illustrate by designing three alternative front generating systems, two of which can pass through each other with little interaction. Importantly, the strategies to control kinetics and diffusion are orthogonal to each other resulting in simple programming rules. Our results can be quantitatively predicted from first-principle RD equations and are in excellent agreement with a generalized Fisher- Kolmogorov-Petrovskii-Piscunov analytical model. Together, these advances open the way for the rational engineering of far-from-equilibrium arbitrary patterns and could lead to the synthesis of self-organizing materials.",
+      "arxiv_id": "1407.4152v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/1407.4152v1",
+      "source": "arxiv",
+      "published": "2014-07-15T21:37:58Z",
+      "citation_count": 0,
+      "tier": "supporting"
+    }
+  ],
+  "count": 3,
+  "query": "Turing pattern morphogenesis reaction diffusion biological self organization",
+  "tiers": {
+    "supporting": 2,
+    "core": 1
+  }
+}

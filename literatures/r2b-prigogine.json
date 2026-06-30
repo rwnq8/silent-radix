@@ -1,0 +1,136 @@
+{
+  "papers": [
+    {
+      "title": "The Underlying Dynamics of Life and Its Evolution: A Prigogine-Inspired Informational Dissipative System",
+      "authors": [
+        "Salvatore Chirumbolo",
+        "Antonio Vella"
+      ],
+      "year": 2024,
+      "abstract": "Life is fundamentally a scientific enigma. The interplay between chaos, entropy dynamics, and Prigogine's dissipative systems offers profound insights into the emergence, stabilization, and eventual collapse of far-from-equilibrium systems. This study proposes that, alongside thermodynamic dissipative systems as highlighted by Ilya Prigogine, informational dissipative systems actively contribute to granting inanimate matter properties characteristic of living systems, such as autopoiesis. By examining cyclic entropy flows between water topology (Shannon space) and molecular systems (Boltzmann space), the work emphasizes the pivotal role of disquisotropic entropy, an informational entropy reservoir arising from imperfections in molecular structures. The analysis demonstrates that chaos functions as a stabilizing force, enhancing resilience, adaptability, and longevity by delaying thermodynamic equilibrium. This research connects foundational thermodynamic principles with the emergent behavior of chaotic systems, paving the way for a deeper understanding of complexity in natural and technological contexts. By exploring the relationship between chaos, entropy, and dissipative dynamics, the study advances a paradigm where disorder becomes a mechanism to sustain order, a hallmark of life and complex systems.",
+      "arxiv_id": "2412.02459v2",
+      "doi": "",
+      "url": "http://arxiv.org/abs/2412.02459v2",
+      "source": "arxiv",
+      "published": "2024-12-03T14:00:41Z",
+      "citation_count": 0,
+      "tier": "core"
+    },
+    {
+      "title": "From the thermodynamics of irreversible processes to dissipative structures and active matter",
+      "authors": [
+        "Pierre Gaspard"
+      ],
+      "year": 2025,
+      "abstract": "A historical perspective is presented on thermodynamics from the pioneering contributions by Carnot and Clausius to recent advances on active matter. Non-equilibrium thermodynamics develops from the identification of the irreversible processes contributing to entropy production in various types of materials and systems. These processes include friction, viscosity, heat and electric conductions, diffusion, reactions, and more. In 1954, Glansdorff and Prigogine formulated a general evolution criterion, which led to the theory of dissipative structures like chemical clocks, reaction-diffusion patterns, and convection patterns. Non-equilibrium statistical mechanics provides the microscopic foundations for the thermodynamics of irreversible processes.",
+      "arxiv_id": "2512.16944v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/2512.16944v1",
+      "source": "arxiv",
+      "published": "2025-12-16T11:24:52Z",
+      "citation_count": 0,
+      "tier": "core"
+    },
+    {
+      "title": "BEDS : Bayesian Emergent Dissipative Structures : A Formal Framework for Continuous Inference Under Energy Constraints",
+      "authors": [
+        "Laurent Caraffa"
+      ],
+      "year": 2026,
+      "abstract": "We introduce BEDS (Bayesian Emergent Dissipative Structures), a formal framework for analyzing inference systems that must maintain beliefs continuously under energy constraints. Unlike classical computational models that assume perfect memory and focus on one-shot computation, BEDS explicitly incorporates dissipation (information loss over time) as a fundamental constraint.\n  We prove a central result linking energy, precision, and dissipation: maintaining a belief with precision $τ$ against dissipation rate $γ$ requires power $P \\geq γk_{\\rm B} T / 2$, with scaling $P \\propto γ\\cdot τ$. This establishes a fundamental thermodynamic cost for continuous inference.\n  We define three classes of problems -- BEDS-attainable, BEDS-maintainable, and BEDS-crystallizable -- and show these are distinct from classical decidability. We propose the Gödel-Landauer-Prigogine conjecture, suggesting that closure pathologies across formal systems, computation, and thermodynamics share a common structure.",
+      "arxiv_id": "2601.02329v2",
+      "doi": "",
+      "url": "http://arxiv.org/abs/2601.02329v2",
+      "source": "arxiv",
+      "published": "2026-01-05T18:21:02Z",
+      "citation_count": 0,
+      "tier": "core"
+    },
+    {
+      "title": "The dissipative effect of thermal radiation loss in high-temperature dense plasmas",
+      "authors": [
+        "L. H. Li",
+        "H. Q. Zhang"
+      ],
+      "year": 1997,
+      "abstract": "A dynamical model based on the two-fluid dynamical equations with energy generation and loss is obtained and used to investigate the self-generated magnetic fields in high-temperature dense plasmas such as the solar core. The self-generation of magnetic fields might be looked at as a self-organization-type behavior of stochastic thermal radiation fields, as expected for an open dissipative system according to Prigogine's theory of dissipative structures.",
+      "arxiv_id": "astro-ph/9711002v1",
+      "doi": "https://doi.org/10.1088/0022-3727/29/8/024",
+      "url": "http://arxiv.org/abs/astro-ph/9711002v1",
+      "source": "arxiv",
+      "published": "1997-11-01T11:26:43Z",
+      "citation_count": 0,
+      "tier": "background"
+    },
+    {
+      "title": "Self-Evidencing Through Hierarchical Gradient Decomposition: A Dissipative System That Maintains Non-Equilibrium Steady-State by Minimizing Variational Free Energy",
+      "authors": [
+        "Michael James McCulloch"
+      ],
+      "year": 2025,
+      "abstract": "The Free Energy Principle (FEP) states that self-organizing systems must minimize variational free energy to persist, but the path from principle to implementable algorithm has remained unclear. We present a constructive proof that the FEP can be realized through exact local credit assignment. The system decomposes gradient computation hierarchically: spatial credit via feedback alignment, temporal credit via eligibility traces, and structural credit via a Trophic Field Map (TFM) that estimates expected gradient magnitude for each connection block. We prove these mechanisms are exact at their respective levels and validate the central claim empirically: the TFM achieves 0.9693 Pearson correlation with oracle gradients. This exactness produces emergent capabilities including 98.6% retention after task interference, autonomous recovery from 75% structural damage, self-organized criticality (spectral radius p ~= 1.0$), and sample-efficient reinforcement learning on continuous control tasks without replay buffers. The architecture unifies Prigogine's dissipative structures, Friston's free energy minimization, and Hopfield's attractor dynamics, demonstrating that exact hierarchical inference over network topology can be implemented with local, biologically plausible rules.",
+      "arxiv_id": "2510.17916v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/2510.17916v1",
+      "source": "arxiv",
+      "published": "2025-10-20T00:19:32Z",
+      "citation_count": 0,
+      "tier": "core"
+    },
+    {
+      "title": "Self-Referential Noise as a Fundamental Aspect of Reality",
+      "authors": [
+        "Reginald T. Cahill",
+        "Christopher M. Klinger"
+      ],
+      "year": 1999,
+      "abstract": "Noise is often used in the study of open systems, such as in classical Brownian motion and in Quantum Dynamics, to model the influence of the environment. However generalising results from Gödel and Chaitin in mathematics suggests that systems that are sufficiently rich that self-referencing is possible contain intrinsic randomness. We argue that this is relevant to modelling the universe, even though it is by definition a closed system. We show how a three-dimensional process-space may arise, as a Prigogine dissipative structure, from a non-geometric order-disorder model driven by, what is termed, self-referential noise.",
+      "arxiv_id": "gr-qc/9905082v1",
+      "doi": "https://doi.org/10.1063/1.60018",
+      "url": "http://arxiv.org/abs/gr-qc/9905082v1",
+      "source": "arxiv",
+      "published": "1999-05-21T03:58:47Z",
+      "citation_count": 0,
+      "tier": "background"
+    },
+    {
+      "title": "Uncertainty Relations in Thermodynamics of Irreversible Processes on a Mesoscopic Scale",
+      "authors": [
+        "Giorgio Sonnino"
+      ],
+      "year": 2023,
+      "abstract": "Studies of mesoscopic structures have now become a leading and rapidly evolving research field ranging from physics, chemistry, and mineralogy to life sciences. The increasing miniaturization of devices with length scales of a few nanometers is leading to radical changes not only in the realization of new materials but also in shedding light on our understanding of the fundamental laws of nature that govern the dynamics of systems at the mesoscopic scale. On the basis of recent experimental results and previous theoretical research, we investigate thermodynamic processes in small systems in Onsager's region. We show that fundamental quantities such as the total entropy production, the thermodynamic variables conjugate to the thermodynamic forces, and the Glansdorff-Prigogine's dissipative variable may be discretized at the mesoscopic scale. We establish the canonical commutation rules (ccr) valid at the mesoscopic scale. The numerical value of the discretization constant is estimated experimentally. The ultraviolet divergence problem is solved by applying the correspondence principle with Einstein-Prigogine's fluctuations theory in the limit of macroscopic sy",
+      "arxiv_id": "2306.02863v4",
+      "doi": "",
+      "url": "http://arxiv.org/abs/2306.02863v4",
+      "source": "arxiv",
+      "published": "2023-06-05T13:33:53Z",
+      "citation_count": 0,
+      "tier": "core"
+    },
+    {
+      "title": "Statistical Thermodynamics of the Fröhlich-Bose-Einstein Condensation of Magnons out of Equilibrium",
+      "authors": [
+        "Fabio Stucchi Vannucchi",
+        "Áurea Rosas Vasconcellos",
+        "Roberto Luzzi"
+      ],
+      "year": 2018,
+      "abstract": "A non-equilibrium statistical-thermodynamic approach to the study of a Fröhlich-Bose-Einstein condensation of magnons under radio-frequency radiation pumping is presented. Such a system displays a complex behavior consisting in steady-state conditions to the emergence of a synergetic dissipative structure resembling the Bose-Einstein condensation of systems in equilibium. A kind of \"two fluid model\" arises: the \"normal\" non-equilibrium structure and Fröhlich condensate or \"non-equilibrium\" one, which is shown to be an attractor to the system. We analyze some aspects of the irreversible thermodynamics of this dissipative complex system, namely, its informational entropy, expressions for the fluctuations in non-equilibrium conditions, the associated Maxwell relations and the formulation of a generalized $\\mathscr{H}$-theorem. We also study the informational entropy production of the system, an order parameter is introduced and Glansdorff-Prigogine criteria for evolution and (in)stability are verified.",
+      "arxiv_id": "1809.03335v1",
+      "doi": "https://doi.org/10.1103/PhysRevE.100.032126",
+      "url": "http://arxiv.org/abs/1809.03335v1",
+      "source": "arxiv",
+      "published": "2018-09-06T19:49:44Z",
+      "citation_count": 0,
+      "tier": "supporting"
+    }
+  ],
+  "count": 8,
+  "query": "dissipative structures Prigogine",
+  "tiers": {
+    "core": 5,
+    "background": 2,
+    "supporting": 1
+  }
+}

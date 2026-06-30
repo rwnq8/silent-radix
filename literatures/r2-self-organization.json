@@ -1,0 +1,398 @@
+{
+  "papers": [
+    {
+      "title": "Synergetics and Its Application to Literature and Architecture",
+      "authors": [
+        "V. P. Maslov",
+        "T. V. Maslova"
+      ],
+      "year": 2008,
+      "abstract": "A series of phenomena pertaining to economics, quantum physics, language, literary criticism, and especially architecture is studied from the standpoint of synergetics (the study of self-organizing complex systems). It turns out that a whole series of concrete formulas describing these phenomena is identical in these different situations. This is the case of formulas relating to the Bose-Einstein distribution of particles and the distribution of words from a frequency dictionary. This also allows to apply a \"quantized\" from of the Zipf law to the problem of the authorship of 'Quiet Flows the Don' and to the\"blending in\" of new architectural structures in an existing environment.",
+      "arxiv_id": "0806.4164v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/0806.4164v1",
+      "source": "arxiv",
+      "published": "2008-06-25T18:08:31Z",
+      "citation_count": 0,
+      "tier": "background"
+    },
+    {
+      "title": "Synergetic Learning Systems: Concept, Architecture, and Algorithms",
+      "authors": [
+        "Ping Guo",
+        "Qian Yin"
+      ],
+      "year": 2020,
+      "abstract": "Drawing on the idea that brain development is a Darwinian process of ``evolution + selection'' and the idea that the current state is a local equilibrium state of many bodies with self-organization and evolution processes driven by the temperature and gravity in our universe, in this work, we describe an artificial intelligence system called the ``Synergetic Learning Systems''. The system is composed of two or more subsystems (models, agents or virtual bodies), and it is an open complex giant system. Inspired by natural intelligence, the system achieves intelligent information processing and decision-making in a given environment through cooperative/competitive synergetic learning. The intelligence evolved by the natural law of ``it is not the strongest of the species that survives, but the one most responsive to change,'' while an artificial intelligence system should adopt the law of ``human selection'' in the evolution process. Therefore, we expect that the proposed system architecture can also be adapted in human-machine synergy or multi-agent synergetic systems. It is also expected that under our design criteria, the proposed system will eventually achieve artificial general intelligence through long term coevolution.",
+      "arxiv_id": "2006.06367v2",
+      "doi": "",
+      "url": "http://arxiv.org/abs/2006.06367v2",
+      "source": "arxiv",
+      "published": "2020-05-31T06:23:03Z",
+      "citation_count": 0,
+      "tier": "supporting"
+    },
+    {
+      "title": "Synergetic Analysis of the Haeussler-von der Malsburg Equations for Manifolds of Arbitrary Geometry",
+      "authors": [
+        "Martin Guessmann",
+        "Axel Pelster",
+        "Guenter Wunner"
+      ],
+      "year": 2006,
+      "abstract": "We generalize a model of Haeussler and von der Malsburg which describes the self-organized generation of retinotopic projections between two one-dimensional discrete cell arrays on the basis of cooperative and competitive interactions of the individual synaptic contacts. Our generalized model is independent of the special geometry of the cell arrays and describes the temporal evolution of the connection weights between cells on different manifolds. By linearizing the equations of evolution around the stationary uniform state we determine the critical global growth rate for synapses onto the tectum where an instability arises. Within a nonlinear analysis we use then the methods of synergetics to adiabatically eliminate the stable modes near the instability. The resulting order parameter equations describe the emergence of retinotopic projections from initially undifferentiated mappings independent of dimension and geometry.",
+      "arxiv_id": "physics/0607253v2",
+      "doi": "https://doi.org/10.1002/andp.200610243",
+      "url": "http://arxiv.org/abs/physics/0607253v2",
+      "source": "arxiv",
+      "published": "2006-07-27T12:56:50Z",
+      "citation_count": 0,
+      "tier": "background"
+    },
+    {
+      "title": "Multistability and Self-Organization in Disordered SQUID Metamaterials",
+      "authors": [
+        "N. Lazarides",
+        "G. P. Tsironis"
+      ],
+      "year": 2013,
+      "abstract": "Planar arrays of magnetoinductively coupled rf SQUIDs belong to the emergent class of superconducting metamaterials that encompass the Josephson effect. SQUID metamaterials acquire their electromagnetic properties from the resonant characteristics of their constitutive elements, i.e., the individual rf SQUIDs, which consist of a superconducting ring interrupted by a Josephson junction. We investigate the response of a two-dimensional SQUID metamaterial to frequency variation of an applied alternating magnetic field in the presence of disorder, arising from critical current fluctuations of the Josephson elements; in effect, the resonance frequencies of individual SQUIDs are distributed randomly around a mean value. Bistability is observed in the total current-frequency curves both in ordered and disordered SQUID metamaterials; moreover, bistability is favoured by disorder through the improvement of synchronization between SQUID oscillators. Relatively weak disorder widens significantly the bistability region by helping the system to self-organize itself and leads to nearly homogeneous states that change smoothly with varying frequency. Moreover, the total current of the metamaterial is enhanced compared with that of uncoupled SQUIDs, through the synergetic action of coupling and synchronization. Multistability of nearly homogeneous states allows the metamaterial to exhibit different magnetic responses corresponding to different values of the magnetic permeability. At low power of the incident field, high-current states exhibit extreme diamagnetic properties corresponding to negative magnetic permeability in a narrow frequency region.",
+      "arxiv_id": "1304.1650v1",
+      "doi": "https://doi.org/10.1088/0953-2048/26/8/084006",
+      "url": "http://arxiv.org/abs/1304.1650v1",
+      "source": "arxiv",
+      "published": "2013-04-05T09:15:23Z",
+      "citation_count": 0,
+      "tier": "supporting"
+    },
+    {
+      "title": "Models and Metaphors. Part I: From the Boundaries of Formalization to the Visualization of the Non-Formalized",
+      "authors": [
+        "R. E. Zimmermann",
+        "S. Ley",
+        "V. G. Budanov",
+        "V. E. Voitsekhovitch"
+      ],
+      "year": 2002,
+      "abstract": "The explicit relationship among perception, communication, and design is being discussed in some detail, in order to relate it to characteristic details of the modeling of the world which defines the scientific and artistic activities of humans, in the first place, but also the philosophical grasping of the world and its foundations in order to position humankind within this worldly framework, at the same time. In particular, the structure and constitutional role of language are being analyzed with a view to the latter's universality. For the special case of synergetics (within the recent context of theories of self-organization and the formation of structure), this cognitive background is being inspected as to possible consequences for aspects of complexity and nonlinearity.",
+      "arxiv_id": "nlin/0207019v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/nlin/0207019v1",
+      "source": "arxiv",
+      "published": "2002-07-10T17:32:23Z",
+      "citation_count": 0,
+      "tier": "background"
+    },
+    {
+      "title": "Cycles in Nonlinear Macroeconomics",
+      "authors": [
+        "Anatoly V. Voronin",
+        "Sergey I. Chernyshov"
+      ],
+      "year": 2007,
+      "abstract": "The monograph is concerned with some key problems of the theory of nonlinear economic dynamics. The authors' concept consists in analyzing the problem of structural instability of economic systems within the framework of the synergetic paradigm. As examples, the classical models of macroeconomics are considered. The authors present the results of the study of the phenomenon of self-organization in open and nonequilibrium economic systems. The generation of limit cycles, as well as of more complex periodic structures, is discussed; the character of their stability is examined.",
+      "arxiv_id": "0706.1013v2",
+      "doi": "",
+      "url": "http://arxiv.org/abs/0706.1013v2",
+      "source": "arxiv",
+      "published": "2007-06-07T14:47:24Z",
+      "citation_count": 0,
+      "tier": "background"
+    },
+    {
+      "title": "Synergism in radiation effects in condensed matter. Fundamental and application aspects",
+      "authors": [
+        "Boris Oksengendler",
+        "Muhsin Ashurov",
+        "Sultan Suleymanov",
+        "Nigora Turayeva",
+        "Farida Iskandarova",
+        "Gulnoza Akhmatova",
+        "Rahmatillo Ibrohimov"
+      ],
+      "year": 2026,
+      "abstract": "The impressive success achieved by condensed matter radiation physics over its 170-year development period is related to the solution of problems in three areas, the emergence of new materials, the development of new sources of radiation, and the formulation of new concepts with a wide range of applications. In the borderlands of the 20th and 21st centuries, significant changes occurred in each of these aspects (not-so-catastrophic disasters, R. Tom). A major role was played by the emergence of a new ideology - Complexity, which led to the birth of four paradigms, self-organization, dynamic chaos, self-organized criticality and nonadditivity (the first three are related to the concept of synergetics, the fourth - synergism). This article is devoted to radiation synergism, with an emphasis on combinations of radiation and other effects. It presents methods of graphical techniques to identify the specific issue of synergism effects, which is the non-additivity of the overall radiation effect. A parameter expression is proposed to account for the non-additivity of the radiation effect in the experiment, which can be compared to the q parameter introduced by Tsallis in the general science of Complexity, opening up new possibilities in condensed matter radiation physics for both living and non-living objects.",
+      "arxiv_id": "2602.14085v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/2602.14085v1",
+      "source": "arxiv",
+      "published": "2026-02-15T10:26:50Z",
+      "citation_count": 0,
+      "tier": "core"
+    },
+    {
+      "title": "Glass clarified as the self-organizing system",
+      "authors": [
+        "Elena A. Chechetkina"
+      ],
+      "year": 2024,
+      "abstract": "The synergetic approach proposed here is based on characteristic instability of chemical bonding in the form of the bond wave considered as the spatiotemporal correlation between the elementary acts of bond exchange. In frames of the model, glass transition represents the dimensionality transition: from the 3D bond wave in glass-forming liquid to the 2D bond wave in glass. The model displays non-crystalline long-range order, semi-deterministic behavior of viscosity, and information field as a necessary condition for glass formation.",
+      "arxiv_id": "2405.00346v2",
+      "doi": "",
+      "url": "http://arxiv.org/abs/2405.00346v2",
+      "source": "arxiv",
+      "published": "2024-05-01T06:38:40Z",
+      "citation_count": 0,
+      "tier": "background"
+    },
+    {
+      "title": "Self-organization of adatom adsorption structure at interaction with tip of dynamic force microscope",
+      "authors": [
+        "Alexei V. Khomenko"
+      ],
+      "year": 2013,
+      "abstract": "The formation of an adatom adsorption structure in dynamic force microscopy experiment is shown as a result of the spontaneous appearance of shear strain caused by external supercritical heating. This transition is described by the Kelvin-Voigt equation for a viscoelastic medium, the relaxation Landau-Khalatnikov equation for shear stress, and the relaxation equation for temperature. It is shown that these equations formally coincide with the synergetic Lorenz system, where the shear strain acts as the order parameter, the conjugate field is reduced to the stress, and the temperature is the control parameter. Within the adiabatic approximation, the steady-state values of these quantities are found. Taking into account the sample shear modulus vs strain dependence, the formation of the adatom adsorption configuration is described as the first-order transition. The critical temperature of the tip linearly increases with the growth of the effective value of the sample shear modulus and decreases with the growth of its typical value.",
+      "arxiv_id": "1301.4379v2",
+      "doi": "https://doi.org/10.5488/CMP.17.33401",
+      "url": "http://arxiv.org/abs/1301.4379v2",
+      "source": "arxiv",
+      "published": "2013-01-18T13:38:47Z",
+      "citation_count": 0,
+      "tier": "supporting"
+    },
+    {
+      "title": "Axiomatic theory of nonequilibrium system",
+      "authors": [
+        "A. I. Olemskoi"
+      ],
+      "year": 2001,
+      "abstract": "Mutually conjugated synergetic schemes are assumed to address evolution of nonequilibrium self-organizing system. Within framework of the former, the system is parameterized by a conserving order parameter being a density, a conjugate field reducing to gradient of related flux, and control parameter, whose driven magnitude fixes stationary state. We show that so-introduced conjugate field and control parameter are relevant to entropy and internal energy, so that self-organization effect is appeared as a negative temperature. Along the line of the conjugated scheme, roles of order parameter, conjugate field and control parameter are played with a flux of conserving value, and gradients of both chemical potential and temperature. With growth of the latter, relevant value of the entropy shows to decrease in supercritical regime related to spontaneous flux-state. We proof that both approach stated on using density and conjugated flux as order parameters follow from unified field theory related to the simplest choice of both Lagrangian and dissipative function.",
+      "arxiv_id": "cond-mat/0106270v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/cond-mat/0106270v1",
+      "source": "arxiv",
+      "published": "2001-06-14T10:39:57Z",
+      "citation_count": 0,
+      "tier": "background"
+    },
+    {
+      "title": "Which factor dominates the industry evolution? A synergy analysis based on China's ICT industry",
+      "authors": [
+        "Yaya Li",
+        "Yongli Li",
+        "Yulin Zhao",
+        "Fang Wang"
+      ],
+      "year": 2014,
+      "abstract": "Industry evolution caused by various reasons, among which technology progress driving industry development has been approved, but with the new trend of industry convergence, inter-industry convergence also plays an increasing important role. This paper plans to probe the industry synergetic evolution mechanism based on industry convergence and technology progress. Firstly, we use self-organization method and Haken Model to establish synergetic evolution equations, select technology progress and industry convergence as the key variables of industry evolution system; then use patent licensing data of china's listed ICT companies to measure industry convergence rate and apply DEA Malmquist index method to calculate technology progress level; furthermore apply simultaneous equation estimation method to investigate the synergetic industry evolution process. From 2002 to 2012, China's ICT industry develops rapidly; it has the most obvious convergence and powerful technology progress compared with other industries. We choose china's listed ICT industry to make empirical analysis. Our main findings are: a) technology progress is the order parameter which dominates industry system evolution. Moreover, industry convergence is the control parameter which is influenced by technology progress; b) Development of technology progress is the core factor for causing evolution of industry system, and industry convergence is the outcome of technology progress; c) Especially, it is important that the dominated role of technology progress will be sustained, even though in the environment of convergence, companies also need focus on self-innovation, rather than only adapt to the new industry evolution trend.",
+      "arxiv_id": "1403.4305v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/1403.4305v1",
+      "source": "arxiv",
+      "published": "2014-03-17T23:34:18Z",
+      "citation_count": 0,
+      "tier": "supporting"
+    },
+    {
+      "title": "Unconventional Cognitive Intelligent Robotic Control: Quantum Soft Computing Approach in Human Being Emotion Estimation -- QCOptKB Toolkit Application",
+      "authors": [
+        "Sergey V. Ulyanov",
+        "Ichiro Kurawaki",
+        "Viktor S. Ulyanov",
+        "Takakhide Hagiwara"
+      ],
+      "year": 2023,
+      "abstract": "Strategy of intelligent cognitive control systems based on quantum and soft computing presented. Quantum self-organization knowledge base synergetic effect extracted from intelligent fuzzy controllers imperfect knowledge bases described. That technology improved of robustness of intelligent cognitive control systems in hazard control situations described with the cognitive neuro-interface and different types of robot cooperation. Examples demonstrated the introduction of quantum fuzzy inference gate design as prepared programmable algorithmic solution for board embedded control systems. The possibility of neuro-interface application based on cognitive helmet with quantum fuzzy controller for driving of the vehicle is shown.",
+      "arxiv_id": "2307.06858v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/2307.06858v1",
+      "source": "arxiv",
+      "published": "2023-06-14T21:22:20Z",
+      "citation_count": 0,
+      "tier": "supporting"
+    },
+    {
+      "title": "Bubbles, Jumps, and Scaling from Properly Anticipated Prices",
+      "authors": [
+        "Felix Patzelt",
+        "Klaus Pawelzik"
+      ],
+      "year": 2013,
+      "abstract": "Prices in financial markets exhibit extreme jumps far more often than can be accounted for by external news. Further, magnitudes of price changes are correlated over long times. These so called stylized facts are quantified by scaling laws similar to, for example, turbulent fluids. They are believed to reflect the complex interactions of heterogenous agents which give rise to irrational herding. Therefore, the stylized facts have been argued to provide evidence against the efficient market hypothesis which states that prices rapidly reflect available information and therefore are described by a martingale. Here we show, that in very simple bidding processes efficiency is not opposed to, but causative to scaling properties observed in real markets. Thereby, we link the stylized facts not only to price efficiency, but also to the economic theory of rational bubbles. We then demonstrate effects predicted from our normative model in the dynamics of groups of real human subjects playing a modified minority game. An extended version of the latter can be played online at seesaw.neuro.uni-bremen.de.",
+      "arxiv_id": "1303.2044v4",
+      "doi": "https://doi.org/10.1007/978-3-319-27635-9",
+      "url": "http://arxiv.org/abs/1303.2044v4",
+      "source": "arxiv",
+      "published": "2013-03-08T16:23:10Z",
+      "citation_count": 0,
+      "tier": "reject"
+    },
+    {
+      "title": "Optimization models of natural communication",
+      "authors": [
+        "Ramon Ferrer-i-Cancho"
+      ],
+      "year": 2014,
+      "abstract": "A family of information theoretic models of communication was introduced more than a decade ago to explain the origins of Zipf's law for word frequencies. The family is a based on a combination of two information theoretic principles: maximization of mutual information between forms and meanings and minimization of form entropy. The family also sheds light on the origins of three other patterns: the principle of contrast, a related vocabulary learning bias and the meaning-frequency law. Here two important components of the family, namely the information theoretic principles and the energy function that combines them linearly, are reviewed from the perspective of psycholinguistics, language learning, information theory and synergetic linguistics. The minimization of this linear function is linked to the problem of compression of standard information theory and might be tuned by self-organization.",
+      "arxiv_id": "1412.2486v2",
+      "doi": "https://doi.org/10.1080/09296174.2017.1366095",
+      "url": "http://arxiv.org/abs/1412.2486v2",
+      "source": "arxiv",
+      "published": "2014-12-08T09:05:40Z",
+      "citation_count": 0,
+      "tier": "supporting"
+    },
+    {
+      "title": "Trimer Formation and Metal-Insulator Transition in Orbital Degenerate Systems on a Triangular Lattice",
+      "authors": [
+        "Junki Yoshitake",
+        "Yukitoshi Motome"
+      ],
+      "year": 2011,
+      "abstract": "As a prototypical self-organization in the system with orbital degeneracy, we theoretically investigate trimer formation on a triangular lattice, as observed in LiVO2. From the analysis of an effective spin-orbital coupled model in the strong correlation limit, we show that the previously-proposed orbital-ordered trimer state is not the lowest-energy state for a finite Hund's-rule coupling. Instead, exploring the ground state in a wide range of parameters for a multiorbital Hubbard model, we find an instability toward a different orbital-ordered trimer state in the intermediately correlated regime in the presence of trigonal crystal field. The trimer phase appears in the competing region among a paramagnetic metal, band insulator, and Mott insulator. The underlying mechanism is nesting instability of the Fermi surface by a synergetic effect of Coulomb interactions and trigonal-field splitting. The results are compared with experiments in triangularlattice compounds, LiVX2 (X=O, S, Se) and NaVO2.",
+      "arxiv_id": "1105.5757v1",
+      "doi": "https://doi.org/10.1143/JPSJ.80.073711",
+      "url": "http://arxiv.org/abs/1105.5757v1",
+      "source": "arxiv",
+      "published": "2011-05-29T05:33:24Z",
+      "citation_count": 0,
+      "tier": "supporting"
+    },
+    {
+      "title": "Self-Organized Formation of Retinotopic Projections Between Manifolds of Different Geometries -- Part 3: Spherical Geometries",
+      "authors": [
+        "M. Guessmann",
+        "G. Wunner",
+        "A. Pelster"
+      ],
+      "year": 2006,
+      "abstract": "We follow our general model in Ref. [3] and analyze the formation of retinotopic projections for the biologically relevant situation of spherical geometries. To this end we elaborate both a linear and a nonlinear synergetic analysis which results in order parameter equations for the dynamics of connection weights between two spherical cell sheets. We show that these equations of evolution provide stable stationary solutions which correspond to retinotopic modes. A further analysis of higher modes furnishes proof that our model describes the emergence of a perfect one-to-one retinotopy between two spheres.",
+      "arxiv_id": "physics/0609109v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/physics/0609109v1",
+      "source": "arxiv",
+      "published": "2006-09-13T14:11:30Z",
+      "citation_count": 0,
+      "tier": "background"
+    },
+    {
+      "title": "Inverse design of soft materials via a deep-learning-based evolutionary strategy",
+      "authors": [
+        "Gabriele Maria Coli",
+        "Emanuele Boattini",
+        "Laura Filion",
+        "Marjolein Dijkstra"
+      ],
+      "year": 2021,
+      "abstract": "Colloidal self-assembly -- the spontaneous organization of colloids into ordered structures -- has been considered key to produce next-generation materials. However, the present-day staggering variety of colloidal building blocks and the limitless number of thermodynamic conditions make a systematic exploration intractable. The true challenge in this field is to turn this logic around, and to develop a robust, versatile algorithm to inverse design colloids that self-assemble into a target structure. Here, we introduce a generic inverse design method to efficiently reverse-engineer crystals, quasicrystals, and liquid crystals by targeting their diffraction patterns. Our algorithm relies on the synergetic use of an evolutionary strategy for parameter optimization, and a convolutional neural network as an order parameter, and provides a new way forward for the inverse design of experimentally feasible colloidal interactions, specifically optimized to stabilize the desired structure.",
+      "arxiv_id": "2106.14615v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/2106.14615v1",
+      "source": "arxiv",
+      "published": "2021-06-28T12:24:14Z",
+      "citation_count": 0,
+      "tier": "supporting"
+    },
+    {
+      "title": "Biological effects of pulsating magnetic fields: role of solitons",
+      "authors": [
+        "Larissa Brizhik"
+      ],
+      "year": 2014,
+      "abstract": "In this paper, we analyze biological effects produced by magnetic fields in order to elucidate the physical mechanisms, which can produce them. We show that there is a chierarchy of such mechanisms and that the mutual interplay between them can result in the synergetic outcome. In particular, we analyze the biological effects of magnetic fields on soliton mediated charge transport in the redox processes in living organisms. Such solitons are described by nonlinear systems of equations and represent electrons that are self-trapped in alpha-helical polypeptides due to the moderately strong electron-lattice interaction. They represent a particular type of disssipativeless large polarons in low-dimensional systems. We show that the effective mass of solitons in the is different from the mass of free electrons, and that there is a resonant effect of the magnetic fields on the dynamics of solitons, and, hence, on charge transport that accompanies photosynthesis and respiration. These effects can result in non-thermal resonant effects of magnetic fields on redox processes in particular, and on the metabolism of the organism in general. This can explain physical mechanisms of therapies based on applying magnetic fields.",
+      "arxiv_id": "1411.6576v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/1411.6576v1",
+      "source": "arxiv",
+      "published": "2014-11-12T17:14:41Z",
+      "citation_count": 0,
+      "tier": "background"
+    },
+    {
+      "title": "Achieving Synergy in Cognitive Behavior of Humanoids via Deep Learning of Dynamic Visuo-Motor-Attentional Coordination",
+      "authors": [
+        "Jungsik Hwang",
+        "Minju Jung",
+        "Naveen Madapana",
+        "Jinhyung Kim",
+        "Minkyu Choi",
+        "Jun Tani"
+      ],
+      "year": 2015,
+      "abstract": "The current study examines how adequate coordination among different cognitive processes including visual recognition, attention switching, action preparation and generation can be developed via learning of robots by introducing a novel model, the Visuo-Motor Deep Dynamic Neural Network (VMDNN). The proposed model is built on coupling of a dynamic vision network, a motor generation network, and a higher level network allocated on top of these two. The simulation experiments using the iCub simulator were conducted for cognitive tasks including visual object manipulation responding to human gestures. The results showed that synergetic coordination can be developed via iterative learning through the whole network when spatio-temporal hierarchy and temporal one can be self-organized in the visual pathway and in the motor pathway, respectively, such that the higher level can manipulate them with abstraction.",
+      "arxiv_id": "1507.02347v1",
+      "doi": "https://doi.org/10.1109/HUMANOIDS.2015.7363448",
+      "url": "http://arxiv.org/abs/1507.02347v1",
+      "source": "arxiv",
+      "published": "2015-07-09T02:10:03Z",
+      "citation_count": 0,
+      "tier": "background"
+    },
+    {
+      "title": "The 2019 Motile Active Matter Roadmap",
+      "authors": [
+        "Gerhard Gompper",
+        "Roland G. Winkler",
+        "Thomas Speck",
+        "Alexandre Solon",
+        "Cesare Nardini",
+        "Fernando Peruani",
+        "Hartmut Loewen",
+        "Ramin Golestanian",
+        "U. Benjamin Kaupp",
+        "Luis Alvarez",
+        "Thomas Kioerboe",
+        "Eric Lauga",
+        "Wilson Poon",
+        "Antonio De Simone",
+        "Frank Cichos",
+        "Alexander Fischer",
+        "Santiago Muinos Landin",
+        "Nicola Soeker",
+        "Raymond Kapral",
+        "Pierre Gaspard",
+        "Marisol Ripoll",
+        "Francesc Sagues",
+        "Julia Yeomans",
+        "Amin Doostmohammadi",
+        "Igor Aronson",
+        "Clemens Bechinger",
+        "Holger Stark",
+        "Charlotte Hemelrijk",
+        "Francois Nedelec",
+        "Trinish Sarkar",
+        "Thibault Aryaksama",
+        "Mathilde Lacroix",
+        "Guillaume Duclos",
+        "Victor Yashunsky",
+        "Pascal Silberzan",
+        "Marino Arroyo",
+        "Sohan Kale"
+      ],
+      "year": 2019,
+      "abstract": "Activity and autonomous motion are fundamental in living and engineering systems. This has stimulated the new field of active matter in recent years, which focuses on the physical aspects of propulsion mechanisms, and on motility-induced emergent collective behavior of a larger number of identical agents. The scale of agents ranges from nanomotors and microswimmers, to cells, fish, birds, and people. Inspired by biological microswimmers, various designs of autonomous synthetic nano- and micromachines have been proposed. Such machines provide the basis for multifunctional, highly responsive, intelligent (artificial) active materials, which exhibit emergent behavior and the ability to perform tasks in response to external stimuli. A major challenge for understanding and designing active matter is their inherent nonequilibrium nature due to persistent energy consumption, which invalidates equilibrium concepts such as free energy, detailed balance, and time-reversal symmetry. Unraveling, predicting, and controlling the behavior of active matter is a truly interdisciplinary endeavor at the interface of biology, chemistry, ecology, engineering, mathematics, and physics. The vast complexity of phenomena and mechanisms involved in the self-organization and dynamics of motile active matter comprises a major challenge. Hence, to advance, and eventually reach a comprehensive understanding, this important research area requires a concerted, synergetic approach of the various disciplines.",
+      "arxiv_id": "1912.06710v1",
+      "doi": "https://doi.org/10.1088/1361-648X/ab6348",
+      "url": "http://arxiv.org/abs/1912.06710v1",
+      "source": "arxiv",
+      "published": "2019-12-11T20:37:35Z",
+      "citation_count": 0,
+      "tier": "supporting"
+    },
+    {
+      "title": "Modeling synchronization in human musical rhythms using Impulse Pattern Formulation (IPF)",
+      "authors": [
+        "Simon Linke",
+        "Rolf Bader",
+        "Robert Mores"
+      ],
+      "year": 2021,
+      "abstract": "When musicians perform in an ensemble, synchronizing to a mutual pace is the foundation of their musical interaction. Clock generators, e.g., metronomes, or drum machines, might assist such synchronization, but these means, in general, will also distort this natural, self-organized, inter-human synchronization process. In this work, the synchronization of musicians to an external rhythm is modeled using the Impulse Pattern Formulation (IPF), an analytical modeling approach for synergetic systems motivated by research on musical instruments. Nonlinear coupling of system components is described as the interaction of individually propagating and exponentially damped impulse trains. The derived model is systematically examined by analyzing its behavior when coupled to numerical designed and carefully controlled rhythmical beat sequences. The results are evaluated by comparison in the light of other publications on tapping. Finally, the IPF model can be applied to analyze the personal rhythmical signature of specific musicians or to replace drum machines and click tracks with more musical and creative solutions.",
+      "arxiv_id": "2112.03218v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/2112.03218v1",
+      "source": "arxiv",
+      "published": "2021-12-06T18:20:08Z",
+      "citation_count": 0,
+      "tier": "background"
+    }
+  ],
+  "count": 21,
+  "query": "self-organization synergetics",
+  "tiers": {
+    "background": 10,
+    "supporting": 9,
+    "core": 1,
+    "reject": 1
+  }
+}

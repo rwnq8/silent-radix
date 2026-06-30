@@ -1,0 +1,173 @@
+{
+  "papers": [
+    {
+      "title": "Ultracold atoms and the Functional Renormalization Group",
+      "authors": [
+        "Igor Boettcher",
+        "Jan M. Pawlowski",
+        "Sebastian Diehl"
+      ],
+      "year": 2012,
+      "abstract": "We give a self-contained introduction to the physics of ultracold atoms using functional integral techniques. Based on a consideration of the relevant length scales, we derive the universal effective low energy Hamiltonian describing ultracold alkali atoms. We then introduce the concept of the effective action, which generalizes the classical action principle to full quantum status and provides an intuitive and versatile tool for practical calculations. This framework is applied to weakly interacting degenerate bosons and fermions in the spatial continuum. In particular, we discuss the related BEC and BCS quantum condensation mechanisms. We then turn to the BCS-BEC crossover, which interpolates between both phenomena, and which is realized experimentally in the vicinity of a Feshbach resonance. For its description, we introduce the Functional Renormalization Group approach. After a general discussion of the method in the cold atoms context, we present a detailed and pedagogical application to the crossover problem. This not only provides the physical mechanism underlying this phenomenon. More generally, it also reveals how the renormalization group can be used as a tool to capture physics at all scales, from few-body scattering on microscopic scales, through the finite temperature phase diagram governed by many-body length scales, up to critical phenomena dictating long distance physics at the phase transition. The presentation aims to equip students at the beginning PhD level with knowledge on key physical phenomena and flexible tools for their description, and should enable to embark upon practical calculations in this field.",
+      "arxiv_id": "1204.4394v1",
+      "doi": "https://doi.org/10.1016/j.nuclphysbps.2012.06.004",
+      "url": "http://arxiv.org/abs/1204.4394v1",
+      "source": "arxiv",
+      "published": "2012-04-19T16:04:38Z",
+      "citation_count": 0,
+      "tier": "supporting"
+    },
+    {
+      "title": "Crackling Noise and Avalanches: Scaling, Critical Phenomena, and the Renormalization Group",
+      "authors": [
+        "James P. Sethna"
+      ],
+      "year": 2006,
+      "abstract": "In the past two decades or so, we have learned how to understand crackling noise in a wide variety of systems. We review here the basic ideas and methods we use to understand crackling noise - critical phenomena, universality, the renormalization group, power laws, and universal scaling functions. These methods and tools were originally developed to understand continuous phase transitions in thermal and disordered systems, and we also introduce these more traditional applications as illustrations of the basic ideas and phenomena.",
+      "arxiv_id": "cond-mat/0612418v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/cond-mat/0612418v1",
+      "source": "arxiv",
+      "published": "2006-12-15T22:51:58Z",
+      "citation_count": 0,
+      "tier": "background"
+    },
+    {
+      "title": "Dynamic Renormalization Group Approach to Self-Organized Critical Phenomena",
+      "authors": [
+        "Albert Diaz-Guilera"
+      ],
+      "year": 1994,
+      "abstract": "Two different models exhibiting self-organized criticality are analyzed by means of the dynamic renormalization group. Although the two models differ by their behavior under a parity transformation of the order parameter, it is shown that they both belong to the same universality class, in agreement with computer simulations. The asymptotic values of the critical exponents are estimated up to one loop order from a systematic expansion of a nonlinear equation in the number of coupling constants.",
+      "arxiv_id": "cond-mat/9403036v1",
+      "doi": "https://doi.org/10.1209/0295-5075/26/3/004",
+      "url": "http://arxiv.org/abs/cond-mat/9403036v1",
+      "source": "arxiv",
+      "published": "1994-03-09T14:16:56Z",
+      "citation_count": 0,
+      "tier": "background"
+    },
+    {
+      "title": "The Theory of Boundary Critical Phenomena",
+      "authors": [
+        "H. W. Diehl"
+      ],
+      "year": 1996,
+      "abstract": "An introduction into the theory of boundary critical phenomena and the application of the field-theoretical renormalization group method to these is given. The emphasis is on a discussion of surface critical behavior at bulk critical points of magnets, binary alloys, and fluids. Yet a multitude of related phenomena are mentioned. The most important distinct surface universality classes that may occur for a given universality class of bulk critical behavior are described, and the respective boundary conditions of the associated field theories are discussed. The short-distance singularities of the order-parameter profile in the diverse asymptotic regimes are surveyed.",
+      "arxiv_id": "cond-mat/9610143v2",
+      "doi": "https://doi.org/10.1142/S0217979297001751",
+      "url": "http://arxiv.org/abs/cond-mat/9610143v2",
+      "source": "arxiv",
+      "published": "1996-10-18T09:19:09Z",
+      "citation_count": 0,
+      "tier": "background"
+    },
+    {
+      "title": "Novel critical phenomena in compressible polar active fluids: A functional renormalization group approach",
+      "authors": [
+        "Patrick Jentsch",
+        "Chiu Fan Lee"
+      ],
+      "year": 2022,
+      "abstract": "Active matter is not only relevant to living matter and diverse nonequilibrium systems, but also constitutes a fertile ground for novel physics. Indeed, dynamic renormalization group (DRG) analyses have uncovered many new universality classes (UCs) in polar active fluids - an archetype of active matter systems. However, due to the inherent technical difficulties in the DRG methodology, almost all previous studies have been restricted to polar active fluids in the incompressible or infinitely compressible (i.e., Malthusian) limits, and, when the $ε$-expansion was used in conjunction, to the one-loop level. Here, we use functional renormalization group methods to bypass some of these difficulties and unveil for the first time novel critical behavior in compressible polar active fluids, and calculate the corresponding critical exponents beyond the one-loop level. Specifically, focusing on a multicritical region of the system, we find three novel UCs and quantify their associate scaling behavior near the upper critical dimension $d_c = 6$.",
+      "arxiv_id": "2205.01610v2",
+      "doi": "",
+      "url": "http://arxiv.org/abs/2205.01610v2",
+      "source": "arxiv",
+      "published": "2022-05-03T16:42:16Z",
+      "citation_count": 0,
+      "tier": "core"
+    },
+    {
+      "title": "Novel critical phenomena in compressible polar active fluids: Dynamical and Functional Renormalization Group Studies",
+      "authors": [
+        "Patrick Jentsch",
+        "Chiu Fan Lee"
+      ],
+      "year": 2022,
+      "abstract": "Active matter is not only relevant to living matter and diverse nonequilibrium systems, but also constitutes a fertile ground for novel physics. Indeed, dynamic renormalization group (DRG) analyses have uncovered many new universality classes (UCs) in polar active fluids (PAFs) - an archetype of active matter systems. However, due to the inherent technical difficulties in the DRG methodology, almost all previous studies have been restricted to polar active fluids in the incompressible or infinitely compressible (i.e., Malthusian) limits, and, when the $ε$-expansion was used in conjunction, to the one-loop level. Here, we use functional renormalization group (FRG) methods to bypass some of these difficulties and unveil for the first time novel critical behavior in compressible polar active fluids, and calculate the corresponding critical exponents beyond the one-loop level. Specifically, we investigate the multicritical point of compressible PAFs, where the critical order-disorder transition coincides with critical phase separation. We first study the critical phenomenon using a DRG analysis and find that it is insufficient since two-loop effects are important to obtain a nontrivial correction to the scaling exponents. We then remedy this defect by using a FRG analysis. We find three novel universality classes and obtain their critical exponents, which we then use to show that at least two of these universality classes are out of equilibrium because they violate the fluctuation-dissipation relation.",
+      "arxiv_id": "2210.03830v2",
+      "doi": "https://doi.org/10.1103/PhysRevResearch.5.023061",
+      "url": "http://arxiv.org/abs/2210.03830v2",
+      "source": "arxiv",
+      "published": "2022-10-07T21:57:02Z",
+      "citation_count": 0,
+      "tier": "core"
+    },
+    {
+      "title": "Renormalization group and critical behaviour in gravitational collapse",
+      "authors": [
+        "Takashi Hara",
+        "Tatsuhiko Koike",
+        "Satoshi Adachi"
+      ],
+      "year": 1996,
+      "abstract": "We present a general framework for understanding and analyzing critical behaviour in gravitational collapse. We adopt the method of renormalization group, which has the following advantages. (1) It provides a natural explanation for various types of universality and scaling observed in numerical studies. In particular, universality in initial data space and universality for different models are understood in a unified way. (2) It enables us to perform a detailed analysis of time evolution beyond linear perturbation, by providing rigorous controls on nonlinear terms. Under physically reasonable assumptions we prove: (1) Uniqueness of the relevant mode around a fixed point implies universality in initial data space. (2) The critical exponent $β_{BH}$ and the unique positive eigenvalue $κ$ of the relevant mode is exactly related by $β_{BH} = β/κ$, where $β$ is a scaling exponent. (3) The above (1) and (2) hold also for discretely self-similar case (replacing ``fixed point'' with ``limit cycle''). (4) Universality for diffent models holds under a certain condition.\n  According to the framework, we carry out a rather complete (though not mathematically rigorous) analysis for perfect fluids with pressure proportional to density, in a wide range of the adiabatic index $γ$. The uniqueness of the relevant mode around a fixed point is established by Lyapunov analyses. This shows that the critical phenomena occurs not only for the radiation fluid but also for perfect fluids with $1 &lt; γ\\lesssim 1.88$. The accurate values of critical exponents are calculated for the models.",
+      "arxiv_id": "gr-qc/9607010v2",
+      "doi": "",
+      "url": "http://arxiv.org/abs/gr-qc/9607010v2",
+      "source": "arxiv",
+      "published": "1996-07-04T11:24:18Z",
+      "citation_count": 0,
+      "tier": "background"
+    },
+    {
+      "title": "Universal quantum correlation close to quantum critical phenomena",
+      "authors": [
+        "Meng Qin",
+        "Zhong-zhou Ren",
+        "Xin Zhang"
+      ],
+      "year": 2015,
+      "abstract": "We study the ground state quantum correlation of Ising model in a transverse field (ITF) by implementing the quantum renormalization group (QRG) theory. It is shown that various quantum correlation measures and the Clauser-Horne-Shimony-Holt inequality will highlight the critical point related with quantum phase transitions, and demonstrate nonanalytic phenomena and scaling behavior when the size of the systems becomes large. Our results also indicate a universal behavior of the critical exponent of ITF under QRG theory that the critical exponent of different measures is identical, even when the quantities vary from entanglement measures to quantum correlation measures. This means that the two kinds of quantum correlation criterion including the entanglement-separability paradigm and the information-theoretic paradigm have some connections between them. These remarkable behaviors may have important implications on condensed matter physics because the critical exponent directly associates with the correlation length exponent.",
+      "arxiv_id": "1509.04812v2",
+      "doi": "https://doi.org/10.1038/srep26042",
+      "url": "http://arxiv.org/abs/1509.04812v2",
+      "source": "arxiv",
+      "published": "2015-09-16T05:13:24Z",
+      "citation_count": 0,
+      "tier": "supporting"
+    },
+    {
+      "title": "Renormalization Group Approach to Einstein Equation in Cosmology",
+      "authors": [
+        "Osamu Iguchi",
+        "Akio Hosoya",
+        "Tatsuhiko Koike"
+      ],
+      "year": 1997,
+      "abstract": "The renormalization group method has been adapted to the analysis of the long-time behavior of non-linear partial differential equation and has demonstrated its power in the study of critical phenomena of gravitational collapse. In the present work we apply the renormalization group to the Einstein equation in cosmology and carry out detailed analysis of renormalization group flow in the vicinity of the scale invariant fixed point in the spherically symmetric and inhomogeneous dust filled universe model.",
+      "arxiv_id": "gr-qc/9709042v1",
+      "doi": "https://doi.org/10.1103/PhysRevD.57.3340",
+      "url": "http://arxiv.org/abs/gr-qc/9709042v1",
+      "source": "arxiv",
+      "published": "1997-09-16T11:06:48Z",
+      "citation_count": 0,
+      "tier": "background"
+    },
+    {
+      "title": "Theory of Critical Phenomena with Memory",
+      "authors": [
+        "Shaolong Zeng",
+        "Sue ping Szeto",
+        "Fan Zhong"
+      ],
+      "year": 2022,
+      "abstract": "Memory is a ubiquitous characteristic of complex systems and critical phenomena are one of the most intriguing phenomena in nature. Here, we propose an Ising model with memory and develop a corresponding theory of critical phenomena with memory for complex systems and discovered a series of surprising novel results. We show that a naive theory of a usual Hamiltonian with a direct inclusion of a power-law decaying long-range temporal interaction violates radically a hyperscaling law for all spatial dimensions even at and below the upper critical dimension. This entails both indispensable consideration of the Hamiltonian for dynamics, rather than the usual practice of just focusing on the corresponding dynamic Lagrangian alone, and transformations that result in a correct theory in which space and time are inextricably interwoven, leading to an effective spatial dimension that repairs the hyperscaling law. The theory gives rise to a set of novel mean-field critical exponents, which are different from the usual Landau ones, as well as new universality classes. These exponents are verified by numerical simulations of the Ising model with memory in two and three spatial dimensions.",
+      "arxiv_id": "2203.16243v2",
+      "doi": "https://doi.org/10.1088/0256-307X/39/12/120501",
+      "url": "http://arxiv.org/abs/2203.16243v2",
+      "source": "arxiv",
+      "published": "2022-03-30T12:17:30Z",
+      "citation_count": 0,
+      "tier": "core"
+    }
+  ],
+  "count": 10,
+  "query": "universality critical phenomena renormalization group",
+  "tiers": {
+    "supporting": 2,
+    "background": 5,
+    "core": 3
+  }
+}

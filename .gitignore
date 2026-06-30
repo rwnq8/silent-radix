@@ -1,0 +1,27 @@
+# Build tool caches
+.wrangler/
+node_modules/
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.toc
+*.bbl
+*.blg
+
+# Deployment temp directories
+_demo/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temp scripts from prior sessions
+_*.py

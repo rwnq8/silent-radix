@@ -1,0 +1,855 @@
+{
+  "papers": [
+    {
+      "title": "Memorisation and forgetting in a learning Hopfield neural network: bifurcation mechanisms, attractors and basins",
+      "authors": [
+        "Adam E. Essex",
+        "Natalia B. Janson",
+        "Rachel A. Norris",
+        "Alexander G. Balanov"
+      ],
+      "year": 2025,
+      "abstract": "Despite explosive expansion of artificial intelligence based on artificial neural networks (ANNs), these are employed as \"black boxes'', as it is unclear how, during learning, they form memories or develop unwanted features, including spurious memories and catastrophic forgetting. Much research is available on isolated aspects of learning ANNs, but due to their high dimensionality and non-linearity, their comprehensive analysis remains a challenge. In ANNs, knowledge is thought to reside in connection weights or in attractor basins, but these two paradigms are not linked explicitly. Here we comprehensively analyse mechanisms of memory formation in an 81-neuron Hopfield network undergoing Hebbian learning by revealing bifurcations leading to formation and destruction of attractors and their basin boundaries. We show that, by affecting evolution of connection weights, the applied stimuli induce a pitchfork and then a cascade of saddle-node bifurcations creating new attractors with their basins that can code true or spurious memories, and an abrupt disappearance of old memories (catastrophic forgetting). With successful learning, new categories are represented by the basins of newly born point attractors, and their boundaries by the stable manifolds of new saddles. With this, memorisation and forgetting represent two manifestations of the same mechanism. Our strategy to analyse high-dimensional learning ANNs is universal and applicable to recurrent ANNs of any form. The demonstrated mechanisms of memory formation and of catastrophic forgetting shed light on the operation of a wider class of recurrent ANNs and could aid the development of approaches to mitigate their flaws.",
+      "arxiv_id": "2508.10765v2",
+      "doi": "",
+      "url": "http://arxiv.org/abs/2508.10765v2",
+      "source": "arxiv",
+      "published": "2025-08-14T15:48:39Z",
+      "citation_count": 0,
+      "tier": "core"
+    },
+    {
+      "title": "The occurrence of riddled basins and blowout bifurcations in a parametric nonlinear system",
+      "authors": [
+        "M. Rabiee",
+        "F. H. Ghane",
+        "M. Zaj",
+        "S. Karimi"
+      ],
+      "year": 2021,
+      "abstract": "In this paper, a two parameters family $F_{β_1,β_2}$ of maps of the plane living two different subspaces invariant is studied. We observe that, our model exhibits two chaotic attractors $A_i$, $i=0,1$, lying in these invariant subspaces and identify the parameters at which $A_i$ has a locally riddled basin of attraction or becomes a chaotic saddle. Then, the occurrence of riddled basin in the global sense is investigated in an open region of $β_1β_2$-plane. We semi-conjugate our system to a random walk model and define a fractal boundary which separates the basins of attraction of the two chaotic attractors, then we describe riddled basin in detail. We show that the model undergos a sequence of bifurcations: \"a blowout bifurcation\", \"a bifurcation to normal repulsion\" and \"a bifurcation by creating a new chaotic attractor with an intermingled basin\". Numerical simulations are presented graphically to confirm the validity of our results.",
+      "arxiv_id": "2103.03308v1",
+      "doi": "https://doi.org/10.1016/j.physd.2022.133291",
+      "url": "http://arxiv.org/abs/2103.03308v1",
+      "source": "arxiv",
+      "published": "2021-03-04T20:25:31Z",
+      "citation_count": 0,
+      "tier": "core"
+    },
+    {
+      "title": "Basin entropy as an indicator of a bifurcation in a time-delayed system",
+      "authors": [
+        "Juan Pedro Tarigo",
+        "Cecilia Stari",
+        "Cristina Masoller",
+        "Arturo C. Marti"
+      ],
+      "year": 2024,
+      "abstract": "The basin entropy is a measure that quantifies, in a system that has two or more attractors, the predictability of a final state, as a function of the initial conditions. While the basin entropy has been demonstrated on a variety of multistable dynamical systems, to the best of our knowledge, it has not yet been tested in systems with a time delay, whose phase space is infinite dimensional because the initial conditions are functions defined in a time interval $[-τ,0]$, where $τ$ is the delay time. Here we consider a simple time delayed system consisting of a bistable system with a linear delayed feedback term. We show that the basin entropy captures relevant properties of the basins of attraction of the two coexisting attractors. Moreover, we show that the basin entropy can give an indication of the proximity of a Hopf bifurcation, but fails to capture the proximity of a pitchfork bifurcation. Our results suggest that the basin entropy can yield useful insights into the long-term predictability of time delayed systems, which often have coexisting attractors.",
+      "arxiv_id": "2402.03514v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/2402.03514v1",
+      "source": "arxiv",
+      "published": "2024-02-05T21:01:19Z",
+      "citation_count": 0,
+      "tier": "core"
+    },
+    {
+      "title": "Scaling Properties of Saddle-Node Bifurcations on Fractal Basin Boundaries",
+      "authors": [
+        "Romulus Breban",
+        "Helena E. Nusse",
+        "Edward Ott"
+      ],
+      "year": 2003,
+      "abstract": "We analyze situations where a saddle-node bifurcation occurs on a fractal basin boundary. Specifically, we are interested in what happens when a system parameter is slowly swept in time through the bifurcation. Such situations are known to be indeterminate in the sense that it is difficult to predict the eventual fate of an orbit that tracks the pre-bifurcation node attractor as the system parameter is swept through the bifurcation. In this paper we investigate the scaling of (1) the fractal basin boundary of the static (i.e., unswept) system near the saddle-node bifurcation, (2) the dependence of the orbit's final destination on the sweeping rate, (3) the dependence of the time it takes for an attractor to capture a swept orbit on the sweeping rate, and (4) the dependence of the final attractor capture probability on the noise level. With respect to noise, our main result is that the effect of noise scales with the 5/6 power of the parameter drift rate. Our approach is to first investigate all these issues using one-dimensional map models. The simplification of treatment inherent in one dimension greatly facilitates analysis and numerical experiment, aiding us in obtaining the new results listed above. Following our one-dimensional investigations, we explain that these results can be applied to two-dimensional systems. We show, through numerical experiments on a periodically forced second order differential equation example, that the scalings we have found also apply to systems that result in two dimensional maps.",
+      "arxiv_id": "nlin/0303059v1",
+      "doi": "https://doi.org/10.1103/PhysRevE.68.066213",
+      "url": "http://arxiv.org/abs/nlin/0303059v1",
+      "source": "arxiv",
+      "published": "2003-03-25T14:14:53Z",
+      "citation_count": 0,
+      "tier": "background"
+    },
+    {
+      "title": "Multifractal analysis of intermingled basins and blowout bifurcations in a parametetric family of skew product maps",
+      "authors": [
+        "Fatemeh Helen Ghane",
+        "Marc Kesseböhmer"
+      ],
+      "year": 2025,
+      "abstract": "In this paper we study a two-parameter family of planar maps characterized by two distinct invariant subspaces. The model reveals the existence of two chaotic attractors within these subspaces. We identify parameter values at which these attractors either exhibits a locally riddled basin of attraction or transitions into a chaotic saddle. In particular, we demonstrate that, for an open region in the parameter plane, their basins are intermingled. It is shown that a fractal boundary curve separates the basins of attraction of these two chaotic attractors, providing a detailed characterization of the riddled basin structure. Additionally, we show that the model undergoes a blowout bifurcation. An estimation of the stability index is examined using thermodynamic formalism. We also perform a multifractal analysis of the level sets of the stability index.",
+      "arxiv_id": "2502.04869v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/2502.04869v1",
+      "source": "arxiv",
+      "published": "2025-02-07T12:18:52Z",
+      "citation_count": 0,
+      "tier": "core"
+    },
+    {
+      "title": "Global bifurcations and basin geometry of the nonlinear non-Hermitian skin effect",
+      "authors": [
+        "Heng Lin",
+        "Yunyao Qi",
+        "Gui-Lu Long"
+      ],
+      "year": 2026,
+      "abstract": "We study a continuum Hatano--Nelson model with a saturating nonlinear nonreciprocity and analyze its stationary states via the associated phase-space flow. We uncover a global scenario controlled by a subcritical Hopf bifurcation and a saddle-node of limit cycles, which together generate a finite coexistence window. In this window, skin modes and extended states are both stable at a fixed energy $E$, separated by a nonlinear basin separatrix in phase space rather than a spectral (mobility-edge) mechanism in a linear system. An averaged amplitude equation yields closed-form predictions for the limit-cycle branches and the SNLC threshold. Building on the basin geometry, we introduce a basin-fraction order parameter that exhibits a first-order-like jump at SNLC. Intriguing physical phenomena in the coexistence window are also revealed, such as separatrix-induced long-lived spatial transients and hysteresis. Overall, our findings highlight that, beyond linear spectral concepts, global attractor-basin geometry provides a powerful and complementary lens for understanding stationary states in nonlinear non-Hermitian systems.",
+      "arxiv_id": "2602.17439v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/2602.17439v1",
+      "source": "arxiv",
+      "published": "2026-02-19T15:07:50Z",
+      "citation_count": 0,
+      "tier": "core"
+    },
+    {
+      "title": "Bifurcation From Networks of Unstable Attractors to Heteroclinic Switching",
+      "authors": [
+        "Christoph Kirst",
+        "Marc Timme"
+      ],
+      "year": 2007,
+      "abstract": "We present a dynamical system that naturally exhibits two unstable attractors that are completely enclosed by each others basin volume. This counter-intuitive phenomenon occurs in networks of pulse-coupled oscillators with delayed interactions. We analytically and numerically investigate this phenomenon and clarify the mechanism underlying it: Upon continuously removing the non-invertibility of the system, the set of two unstable attractors becomes a set of two non-attracting saddle states that are heteroclinically connected to each other. This transition from a network of unstable attractors to a heteroclinic cycle constitutes a new type of bifurcation in dynamical systems.",
+      "arxiv_id": "0709.3432v2",
+      "doi": "https://doi.org/10.1103/PhysRevE.78.065201",
+      "url": "http://arxiv.org/abs/0709.3432v2",
+      "source": "arxiv",
+      "published": "2007-09-21T13:22:37Z",
+      "citation_count": 0,
+      "tier": "background"
+    },
+    {
+      "title": "Ghost Attractor Networks: Basin-Structured Dynamical Decoders for Closed-Loop Sequential Generation",
+      "authors": [
+        "Tianyu Wang",
+        "Ying Wang",
+        "Zhihao Liu",
+        "Xi Vincent Wang",
+        "Lihui Wang"
+      ],
+      "year": 2026,
+      "abstract": "Sequential output generation with large-scale Transformer and diffusion decoders pays a memory cost that grows with sequence length, plus iterative per-step computation. Replacing them with small feed-forward decoders restores efficiency but produces unstructured latent representations that limit closed-loop control: phase-conditioned action generation and cross-step latent carry-over both require a latent geometry with stable basins. This article proposes Ghost Attractor Networks, a theoretically derived dynamical decoder whose latent evolves under a learned potential with drift and produces a basin-attractor structure by construction. Three desiderata (multi-modality, decoder-level single-pass switching, and constant memory) motivate the potential-drift form, and mode transitions arise as saddle-node bifurcations with ghost-attractor escape. A hierarchical phase-space decomposition separates first-order basin convergence from second-order proprioceptive refinement. Empirically, a Ghost trained end-to-end with a behavioral-cloning and contrastive objective exhibits the predicted gradient-flow contraction in its potential, with the gradient norm decaying by 67 percent across five integration steps on 1430 held-out samples. Ghost is evaluated as a robotic action decoder. A 2.3-million-parameter Ghost matches the offline accuracy of a 1.07-billion-parameter Diffusion Transformer at 462 times fewer parameters and 32 times lower latency, and beats five alternative 2M-parameter decoders (MLP, Neural ODE, CVAE, Transformer, 1-step Diffusion) on offline mean squared error by 5.9 to 29 percent. On the LIBERO-10 closed-loop benchmark, phase conditioning on Ghost's basin-structured latent yields a 13.5 percentage-point success-rate gain over a feed-forward MLP baseline, and persistent-latent ensembling reaches a 95.7 percent final success rate.",
+      "arxiv_id": "2606.18315v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/2606.18315v1",
+      "source": "arxiv",
+      "published": "2026-06-16T11:23:30Z",
+      "citation_count": 0,
+      "tier": "core"
+    },
+    {
+      "title": "Saddle-Node Bifurcation of Periodic Orbit Route to Hidden Attractors in Nonlinear Dynamical Systems",
+      "authors": [
+        "Suresh Kumarasamy",
+        "Malay Banerjee",
+        "Vaibhav Varshney",
+        "Manish Dev Shrimali",
+        "Nikolay V. Kuznetsov",
+        "Awadhesh Prasad"
+      ],
+      "year": 2023,
+      "abstract": "Hidden attractors are present in many nonlinear dynamical systems and are not associated with equilibria, making them difficult to locate. Recent studies have demonstrated methods of locating hidden attractors, but the route to these attractors is still not fully understood. In this letter, we present the route to hidden attractors in systems with stable equilibrium points and in systems without any equilibrium points. We show that hidden attractors emerge as a result of the saddle-node bifurcation of stable and unstable periodic orbits. Real-time hardware experiments were performed to demonstrate the existence of hidden attractors in these systems. Despite the difficulties in identifying the suitable initial conditions from the appropriate basin of attraction, we performed experiments to detect hidden attractors in nonlinear electronic circuits. Our results provide new insights into the generation of hidden attractors in nonlinear dynamical systems.",
+      "arxiv_id": "2303.09888v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/2303.09888v1",
+      "source": "arxiv",
+      "published": "2023-03-17T11:05:04Z",
+      "citation_count": 0,
+      "tier": "core"
+    },
+    {
+      "title": "Riddled-like Basin in Two-Dimensional Map for Bouncing Motion of an Inelastic Particle on a Vibrating Board",
+      "authors": [
+        "Shohei Fukano",
+        "Yumino Hayase",
+        "Hiizu Nakanishi"
+      ],
+      "year": 2002,
+      "abstract": "Motivated by bouncing motion of an inelastic particle on a vibrating board, a simple two-dimensional map is constructed and its behavior is studied numerically. In addition to the typical route to chaos through a periodic doubling bifurcation, we found peculiar behavior in the parameter region where two stable periodic attractors coexist. A typical orbit in the region goes through chaotic motion for an extended transient period before it converges into one of the two periodic attractors. The basin structure in this parameter region is almost riddling and the fractal dimension of the basin boundary is close to two, {\\it i.e.}, the dimension of the phase space.",
+      "arxiv_id": "nlin/0206006v1",
+      "doi": "https://doi.org/10.1143/JPSJ.71.2075",
+      "url": "http://arxiv.org/abs/nlin/0206006v1",
+      "source": "arxiv",
+      "published": "2002-06-07T09:36:11Z",
+      "citation_count": 0,
+      "tier": "background"
+    },
+    {
+      "title": "Constrained basin stability for studying transient phenomena in dynamical systems",
+      "authors": [
+        "Adrian van Kan",
+        "Jannes Jegminat",
+        "Jonathan Donges",
+        "Jürgen Kurths"
+      ],
+      "year": 2016,
+      "abstract": "Transient dynamics are of large interest in many areas of science. Here, a generalization of basin stability (BS) is presented: constrained basin stability (CBS) that is sensitive to various different types of transients arising from finite size perturbations. CBS is applied to the paradigmatic Lorenz system for uncovering nonlinear precursory phenomena of a boundary crisis bifurcation. Further, CBS is used in a model of the Earth's carbon cycle as a return time-dependent stability measure of the system's global attractor. Both case studies illustrate how CBS's sensitivity to transients complements BS in its function as an early warning signal and as a stability measure. CBS is broadly applicable in systems where transients matter, from physics and engineering to sustainability science. Thus, CBS complements stability analysis with BS as well as classical linear stability analysis and will be a useful tool for many applications.",
+      "arxiv_id": "1601.02162v2",
+      "doi": "https://doi.org/10.1103/PhysRevE.93.042205",
+      "url": "http://arxiv.org/abs/1601.02162v2",
+      "source": "arxiv",
+      "published": "2016-01-09T22:54:18Z",
+      "citation_count": 0,
+      "tier": "supporting"
+    },
+    {
+      "title": "Basins of convergence of equilibrium points in the generalized Hill problem",
+      "authors": [
+        "Euaggelos E. Zotos"
+      ],
+      "year": 2018,
+      "abstract": "The Newton-Raphson basins of attraction, associated with the libration points (attractors), are revealed in the generalized Hill problem. The parametric variation of the position and the linear stability of the equilibrium points is determined, when the value of the perturbation parameter $ε$ varies. The multivariate Newton-Raphson iterative scheme is used to determine the attracting domains on several types of two-dimensional planes. A systematic and thorough numerical investigation is performed in order to demonstrate the influence of the perturbation parameter on the geometry as well as of the basin entropy of the basins of convergence. The correlations between the basins of attraction and the corresponding required number of iterations are also illustrated and discussed. Our numerical analysis strongly indicates that the evolution of the attracting regions in this dynamical system is an extremely complicated yet very interesting issue.",
+      "arxiv_id": "1801.00710v1",
+      "doi": "https://doi.org/10.1142/S0218127417300439",
+      "url": "http://arxiv.org/abs/1801.00710v1",
+      "source": "arxiv",
+      "published": "2018-01-02T16:24:50Z",
+      "citation_count": 0,
+      "tier": "supporting"
+    },
+    {
+      "title": "A \"saddle-node\" bifurcation scenario for birth or destruction of a Smale-Williams solenoid",
+      "authors": [
+        "Olga B. Isaeva",
+        "Sergey P. Kuznetsov",
+        "Igor R. Sataev"
+      ],
+      "year": 2012,
+      "abstract": "Formation or destruction of hyperbolic chaotic attractor under parameter variation is considered with an example represented by Smale--Williams solenoid in stroboscopic Poincaré map of two alternately excited non-autonomous van der Pol oscillators. The transition occupies a narrow but finite parameter interval and progresses in such way that periodic orbits constituting a \"skeleton\" of the attractor undergo saddle-node bifurcation events involving partner orbits from the attractor and from a non-attracting invariant set, which forms together with its stable manifold a basin boundary of the attractor.",
+      "arxiv_id": "1201.6657v1",
+      "doi": "https://doi.org/10.1063/1.4766590",
+      "url": "http://arxiv.org/abs/1201.6657v1",
+      "source": "arxiv",
+      "published": "2012-01-31T19:41:45Z",
+      "citation_count": 0,
+      "tier": "supporting"
+    },
+    {
+      "title": "Basin Bifurcations in a Two-Dimensional Logistic Map",
+      "authors": [
+        "Daniele Fournier-Prunaret",
+        "Ricardo Lopez-Ruiz"
+      ],
+      "year": 2003,
+      "abstract": "Previous works have been devoted to the study of two-dimensional noninvertible maps, obtained using a coupling between one-dimensional logistic maps. This paper is devoted to the study of a specific one, in order to complete previous results (Ref. 5 and 7), regarding the evolution of basins and attractors, when considering the tool of critical manifolds.",
+      "arxiv_id": "nlin/0304059v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/nlin/0304059v1",
+      "source": "arxiv",
+      "published": "2003-04-29T20:32:02Z",
+      "citation_count": 0,
+      "tier": "background"
+    },
+    {
+      "title": "The effects of time-dependent dissipation on the basins of attraction for the pendulum with oscillating support",
+      "authors": [
+        "James A. Wright",
+        "Michele Bartuccelli",
+        "Guido Gentile"
+      ],
+      "year": 2014,
+      "abstract": "We consider a pendulum with vertically oscillating support and time-dependent damping coefficient which varies until reaching a finite final value. The sizes of the corresponding basins of attraction are found to depend strongly on the full evolution of the dissipation. In order to predict the behaviour of the system, it is essential to understand how the sizes of the basins of attraction for constant dissipation depend on the damping coefficient. For values of the parameters in the perturbation regime, we characterise analytically the conditions under which the attractors exist and study numerically how the sizes of their basins of attraction depend on the damping coefficient. Away from the perturbation regime, a numerical study of the attractors and the corresponding basins of attraction for different constant values of the damping coefficient produces a much more involved scenario: changing the magnitude of the dissipation causes some attractors to disappear either leaving no trace or producing new attractors by bifurcation, such as period doubling and saddle-node bifurcation. For an initially non-constant damping coefficient, both increasing and decreasing to some finite final value, we numerically observe that, when the damping coefficient varies slowly from a finite initial value to a different final value, without changing the set of attractors, the slower the variation the closer the sizes of the basins of attraction are to those they have for constant damping coefficient fixed at the initial value. If during the variation of the damping coefficient attractors appear or disappear, remarkable additional phenomena may occur. For instance, a fixed point asymptotically may attract the entire phase space, up to a zero measure set, even though no attractor with such a property exists for any value of the damping coefficient between the extreme values.",
+      "arxiv_id": "1403.4996v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/1403.4996v1",
+      "source": "arxiv",
+      "published": "2014-03-19T22:51:44Z",
+      "citation_count": 0,
+      "tier": "supporting"
+    },
+    {
+      "title": "Graphical structure of attraction basins of hidden attractors: the Rabinovich-Fabrikant system",
+      "authors": [
+        "Marius-F. Danca",
+        "Paul Bourke",
+        "Nikolay Kuznetsov"
+      ],
+      "year": 2018,
+      "abstract": "For systems with hidden attractors and unstable equilibria, the property that hidden attractors are not connected with unstable equilibria is now accepted as one of their main characteristics. To the best of our knowledge this property has not been explored using realtime interactive three-dimensions graphics. Aided by advanced computer graphic analysis, in this paper, we explore this characteristic of a particular nonlinear system with very rich and unusual dynamics, the Rabinovich-Fabrikant system. It is shown that there exists a neighborhood of one of the unstable equilibria within which the initial conditions do not lead to the considered hidden chaotic attractor, but to one of the stable equilibria or are divergent. The trajectories starting from any neighborhood of the other unstable equlibria are attracted either by the stable equilibria, or are divergent",
+      "arxiv_id": "1809.09530v1",
+      "doi": "https://doi.org/10.1142/S0218127419300015",
+      "url": "http://arxiv.org/abs/1809.09530v1",
+      "source": "arxiv",
+      "published": "2018-09-25T14:56:57Z",
+      "citation_count": 0,
+      "tier": "supporting"
+    },
+    {
+      "title": "Essential hyperbolicity and homoclinic bifurcations: a dichotomy phenomenon/mechanism for diffeomorphisms",
+      "authors": [
+        "Sylvain Crovisier",
+        "Enrique R. Pujals"
+      ],
+      "year": 2010,
+      "abstract": "We prove that any diffeomorphism of a compact manifold can be approximated in topology C1 by another diffeomorphism exhibiting a homoclinic bifurcation (a homoclinic tangency or a heterodimensional cycle) or by one which is essentially hyperbolic (it has a finite number of transitive hyperbolic attractors with open and dense basin of attraction).",
+      "arxiv_id": "1011.3836v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/1011.3836v1",
+      "source": "arxiv",
+      "published": "2010-11-16T21:35:46Z",
+      "citation_count": 0,
+      "tier": "supporting"
+    },
+    {
+      "title": "Hallucination as Trajectory Commitment: Causal Evidence for Asymmetric Attractor Dynamics in Transformer Generation",
+      "authors": [
+        "G. Aytug Akarlar"
+      ],
+      "year": 2026,
+      "abstract": "We present causal evidence that hallucination in autoregressive language models is an early trajectory commitment governed by asymmetric attractor dynamics. Using same-prompt bifurcation, in which we repeatedly sample identical inputs to observe spontaneous divergence, we isolate trajectory dynamics from prompt-level confounds. On Qwen2.5-1.5B across 61 prompts spanning six categories, 27 prompts (44.3%) bifurcate with factual and hallucinated trajectories diverging at the first generated token (KL = 0 at step 0, KL &gt; 1.0 at step 1). Activation patching across 28 layers reveals a pronounced causal asymmetry: injecting a hallucinated activation into a correct trajectory corrupts output in 87.5% of trials (layer 20), while the reverse recovers only 33.3% (layer 24); both exceed the 10.4% baseline (p = 0.025) and 12.5% random-patch control. Window patching shows correction requires sustained multi-step intervention, whereas corruption needs only a single perturbation. Probing the prompt encoding itself, step-0 residual states predict per-prompt hallucination rate at Pearson r = 0.776 at layer 15 (p &lt; 0.001 against a 1000-permutation null); unsupervised clustering identifies five regime-like groups (eta^2 = 0.55) whose saddle-adjacent cluster concentrates 12 of the 13 bifurcating false-premise prompts, indicating that the basin structure is organized around regime commitments fixed at prompt encoding. These findings characterize hallucination as a locally stable attractor basin: entry is probabilistic and rapid, exit demands coordinated intervention across layers and steps, and the relevant basins are selected by clusterable regimes already discernible at step 0.",
+      "arxiv_id": "2604.15400v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/2604.15400v1",
+      "source": "arxiv",
+      "published": "2026-04-16T12:16:53Z",
+      "citation_count": 0,
+      "tier": "core"
+    },
+    {
+      "title": "Quasipotentials for coupled escape problems and the gate-height bifurcation",
+      "authors": [
+        "Peter Ashwin",
+        "Jennifer Creaser",
+        "Krasimira Tsaneva-Atanasova"
+      ],
+      "year": 2022,
+      "abstract": "The escape statistics of a gradient dynamical system perturbed by noise can be estimated using properties of the associated potential landscape. More generally, the Freidlin and Wentzell quasipotential (QP) can be used for similar purposes, but computing this is non-trivial and it is only defined relative to some starting point. In this paper we focus on computing quasipotentials for coupled bistable units, numerically solving a Hamilton-Jacobi-Bellman type problem. We analyse noise induced transitions using the QP in cases where there is no potential for the coupled system. Gates (points on the boundary of basin of attraction that have minimal QP relative to that attractor) are used to understand the escape rates from the basin, but these gates can undergo a global change as coupling strength is changed. Such a global gate-height bifurcation is a generic qualitative transitions in the escape properties of parametrised non-gradient dynamical systems for small noise.",
+      "arxiv_id": "2209.11521v2",
+      "doi": "https://doi.org/10.1103/PhysRevE.107.014213",
+      "url": "http://arxiv.org/abs/2209.11521v2",
+      "source": "arxiv",
+      "published": "2022-09-23T11:03:12Z",
+      "citation_count": 0,
+      "tier": "core"
+    },
+    {
+      "title": "Labyrinthine pathways towards supercycle attractors in unimodal maps",
+      "authors": [
+        "L. G. Moyano",
+        "D. Silva",
+        "A. Robledo"
+      ],
+      "year": 2007,
+      "abstract": "We uncover previously unknown properties of the family of periodic superstable cycles in unimodal maps characterized each by a Lyapunov exponent that diverges to minus infinity. Amongst the main novel properties are the following: i) The basins of attraction for the phases of the cycles develop fractal boundaries of increasing complexity as the period-doubling structure advances towards the transition to chaos. ii) The fractal boundaries, formed by the preimages of the repellor, display hierarchical structures organized according to exponential clusterings that manifest in the dynamics as sensitivity to the final state and transient chaos. iii) There is a functional composition renormalization group (RG) fixed-point map associated to the family of supercycles. iv) This map is given in closed form by the same kind of $q$-exponential function found for both the pitchfork and tangent bifurcation attractors. v) There is a final stage ultra-fast dynamics towards the attractor with a sensitivity to initial conditions that decreases as an exponential of an exponential of time.",
+      "arxiv_id": "0706.4415v1",
+      "doi": "https://doi.org/10.2478/s11534-009-0065-1",
+      "url": "http://arxiv.org/abs/0706.4415v1",
+      "source": "arxiv",
+      "published": "2007-06-29T13:50:56Z",
+      "citation_count": 0,
+      "tier": "background"
+    },
+    {
+      "title": "Symmetry breaking perturbations and strange attractors",
+      "authors": [
+        "Anna Litvak Hinenzon",
+        "Vered Rom-Kedar"
+      ],
+      "year": 1996,
+      "abstract": "The asymmetrically forced, damped Duffing oscillator is introduced as a prototype model for analyzing the homoclinic tangle of symmetric dissipative systems with \\textit{symmetry breaking} disturbances. Even a slight fixed asymmetry in the perturbation may cause a substantial change in the asymptotic behavior of the system, e.g. transitions from two sided to one sided strange attractors as the other parameters are varied. Moreover, slight asymmetries may cause substantial asymmetries in the relative size of the basins of attraction of the unforced nearly symmetric attracting regions. These changes seems to be associated with homoclinic bifurcations. Numerical evidence indicates that \\textit{strange attractors} appear near curves corresponding to specific secondary homoclinic bifurcations. These curves are found using analytical perturbational tools.",
+      "arxiv_id": "math/9611217v1",
+      "doi": "https://doi.org/10.1103/PhysRevE.55.4964",
+      "url": "http://arxiv.org/abs/math/9611217v1",
+      "source": "arxiv",
+      "published": "1996-11-27T00:00:00Z",
+      "citation_count": 0,
+      "tier": "background"
+    },
+    {
+      "title": "Elliptic Curves as Attractors in ${\\mathbb P}^2$ Part 1: Dynamics",
+      "authors": [
+        "Araceli Bonifant",
+        "Marius Dabija",
+        "John Milnor"
+      ],
+      "year": 2006,
+      "abstract": "A study of rational maps of the real or complex projective plane of degree two or more, concentrating on those which map an elliptic curve onto itself, necessarily by an expanding map. We describe relatively simple examples with a rich variety of exotic dynamical behaviors which are perhaps familiar to the applied dynamics community but not to specialists in several complex variables. For example, we describe smooth attractors with riddled or intermingled attracting basins, and we observe ``blowout'' bifurcations when the transverse Lyapunov exponent for the invariant curve changes sign. In the complex case, the elliptic curve (a topological torus) can never have a trapping neighborhood, yet it can have an attracting basin of large measure (perhaps even of full measure). We also describe examples where there appear to be Herman rings (that is topological cylinders mapped to themselves with irrational rotation number) with open attracting basin. In some cases we provide proofs, but in other cases the discussion is empirical, based on numerical computation.",
+      "arxiv_id": "math/0601015v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/math/0601015v1",
+      "source": "arxiv",
+      "published": "2006-01-01T00:05:44Z",
+      "citation_count": 0,
+      "tier": "background"
+    },
+    {
+      "title": "Risk-Sensitive Learning in Population Games under Extreme Events: Bifurcations and Chaotic Dynamics",
+      "authors": [
+        "Konstantinos Metaxas",
+        "Themistoklis P. Sapsis"
+      ],
+      "year": 2026,
+      "abstract": "Inspired by nonequilibrium phenomena in game dynamics and behavioral evidence on the impact of extreme events on decision making, we investigate the nonlinear dynamics of a discrete-time multiagent learning rule in population congestion games under extreme events affecting one of the actions. The population state, following a risk-sensitive variant of the Multiplicative Weights Update (MWU), is coupled with a belief variable capturing the agents perceived risk and updated through an adaptive expectation rule. We perform a two-parameter bifurcation analysis with respect to the agents controlled parameters, identifying regions of qualitatively distinct behavior. Equilibria are studied first from both game-theoretic and dynamical perspectives. The resulting two-dimensional system exhibits complex behavior, including multi-stability among fixed points, invariant curves, periodic and chaotic attractors. Despite this complexity, the attractors can be grouped into distinct families, while the Cesàro averages of the trajectories are shown to converge to the stationary equilibrium. The incorporation of risk associated with the extreme event leads to new dynamical phenomena: attracting invariant curves arise and give rise to phase-locking Arnold tongues, within which the dynamics is qualitatively similar. In this setting, codimension-two resonances are identified as organizing centers, both within individual tongues and along the bifurcation curves associated with the fixed-point family. Chaotic attractors emerge and are destroyed through Feigenbaum cascades and forward or reverse boundary crises, with interior and merging crises also observed, along with transient chaos and narrow periodic windows. For each qualitatively distinct region, representative phase portraits and the associated basins of attraction are examined.",
+      "arxiv_id": "2606.29967v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/2606.29967v1",
+      "source": "arxiv",
+      "published": "2026-06-29T08:44:21Z",
+      "citation_count": 0,
+      "tier": "core"
+    },
+    {
+      "title": "Bifurcation analysis of the Yamada model for a pulsing semiconductor laser with saturable absorber and delayed optical feedback",
+      "authors": [
+        "Soizic Terrien",
+        "Bernd Krauskopf",
+        "Neil G. R. Broderick"
+      ],
+      "year": 2016,
+      "abstract": "Semiconductor lasers exhibit a wealth of dynamics, from emission of a constant beam of light, to periodic oscillations and excitability. Self-pulsing regimes, where the laser periodically releases a short pulse of light, are particularly interesting for many applications, from material science to telecommunications. Self-pulsing regimes need to produce pulses very regularly and, as such, they are also known to be particularly sensitive to perturbations, such as noise or light injection.\n  We investigate the effect of delayed optical feedback on the dynamics of a self-pulsing semiconductor laser with saturable absorber (SLSA). More precisely, we consider the Yamada model with delay -- a system of three delay-differential equations (DDEs) for two slow and one fast variable -- which has been shown to reproduce accurately self-pulsing features as observed in SLSA experimentally. This model is also of broader interest because it is quite closely related to mathematical models of other self-pulsing systems, such as excitable spiking neurons.\n  We perform a numerical bifurcation analysis of the Yamada model with delay, where we consider both the feedback delay, the feedback strength and the strength of pumping as bifurcation parameters. We find a rapidly increasing complexity of the system dynamics when the feedback delay is increased from zero. In particular, there are new feedback-induced dynamics: stable quasi-periodic oscillations on tori, as well as a large degree of multistability, with up to five pulse-like stable periodic solutions with different amplitudes and repetition rates. An attractor map in the plane of perturbations on the gain and intensity reveals a Cantor set-like, intermingled structure of the different basins of attraction. This suggests that, in practice, the multistable laser is extremely sensitive to small perturbations.",
+      "arxiv_id": "1610.06794v2",
+      "doi": "",
+      "url": "http://arxiv.org/abs/1610.06794v2",
+      "source": "arxiv",
+      "published": "2016-10-18T00:59:55Z",
+      "citation_count": 0,
+      "tier": "supporting"
+    },
+    {
+      "title": "Pattern Formation in Rayleigh Benard Convection",
+      "authors": [
+        "Taylan Sengul",
+        "Shouhong Wang"
+      ],
+      "year": 2011,
+      "abstract": "The main objective of this article is to study the three-dimensional Rayleigh-Benard convection in a rectangular domain from a pattern formation perspective. It is well known that as the Rayleigh number crosses a critical threshold, the system undergoes a Type-I transition, characterized by an attractor bifurcation. The bifurcated attractor is an (m-1)-dimensional homological sphere where m is the multiplicity of the first critical eigenvalue. When m=1, the structure of this attractor is trivial. When m=2, it is known that the bifurcated attractor consists of steady states and their connecting heteroclinic orbits. The main focus of this article is then on the pattern selection mechanism and stability of rolls, rectangles and mixed modes (including hexagons) for the case where m=2. We derive in particular a complete classification of all transition scenarios, determining the patterns of the bifurcated steady states, their stabilities and the basin of attraction of the stable ones. The theoretical results lead to interesting physical conclusions, which are in agreement with known experimental results. For example, it is shown in this article that only the pure modes are stable whereas the mixed modes are unstable.",
+      "arxiv_id": "1109.5655v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/1109.5655v1",
+      "source": "arxiv",
+      "published": "2011-09-26T17:53:09Z",
+      "citation_count": 0,
+      "tier": "supporting"
+    },
+    {
+      "title": "Analysis of a new chaotic system, electronic realization and use in navigation of differential drive mobile robot",
+      "authors": [
+        "Christian Nwachioma",
+        "J. Humberto Pérez-Cruz"
+      ],
+      "year": 2020,
+      "abstract": "This paper presents a new chaotic system having four attractors, including two fixed point attractors and two symmetrical chaotic strange attractors. Dynamical properties of the system, viz. sensitive dependence on initial conditions, Lyapunov spectrum, strangeness measure, attraction basin, including the class and size of it, existence of strange attractor, bifurcation analysis, multistability, electronic circuit design, and hardware implementation, are rigorously treated. Numerical computations are used to compute the basin of attraction and show that the system has a far-reaching composite basin of attraction. Such a basin of attraction is vital for engineering applications. Moreover, a circuit model of the system is realized using analog electronic components. A procedure is detailed for converting the system parameters into corresponding electronic component values such as the circuital resistances while ensuring the dynamic ranges are bounded. Besides, the system is used as the source of control inputs for independent navigation of a differential drive mobile robot, which is subject to the Pfaffian velocity constraint. Due to the properties of sensitivity on initial conditions and topological mixing, the robot's path becomes unpredictable and guaranteed to scan the workspace, respectively.",
+      "arxiv_id": "2101.00095v1",
+      "doi": "https://doi.org/10.1016/j.chaos.2021.110684",
+      "url": "http://arxiv.org/abs/2101.00095v1",
+      "source": "arxiv",
+      "published": "2020-12-11T05:54:23Z",
+      "citation_count": 0,
+      "tier": "core"
+    },
+    {
+      "title": "On repellers in quasi-periodically forced logistic map system",
+      "authors": [
+        "Tsuyoshi Chawanya",
+        "Takafumi Sakai"
+      ],
+      "year": 2014,
+      "abstract": "We propose a method to identify and to locate \"repellers'' in quasi-periodically forced logistic map (QPLM), using a kind of Morse decomposition of nested attracting invariant sets. In order to obtain the invariant sets, we use an auxiliary 1+2-dimensional skew-product map system describing the evolution of a line segment in the phase space of QPLM. With this method, detailed structure of repellers can be visualized, and the emergence of a repeller in QPLM can be detected as an easily observable bifurcation in the auxiliary system. In addition to the method to detect the repellers, we propose a new numerical method for distinguishing a strange non-chaotic attractor (SNA) from a smooth torus attractor, using a correspondence between SNAs in QPLM and attractors with riddled basin in the auxiliary system.",
+      "arxiv_id": "1403.0321v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/1403.0321v1",
+      "source": "arxiv",
+      "published": "2014-03-03T06:20:33Z",
+      "citation_count": 0,
+      "tier": "supporting"
+    },
+    {
+      "title": "Analysis of long transients and detection of early warning signals of extinction in a class of predator-prey models exhibiting bistable behavior",
+      "authors": [
+        "Susmita Sadhu",
+        "Saikat Chakraborty Thakur"
+      ],
+      "year": 2022,
+      "abstract": "In this paper, we develop a method of analyzing long transient dynamics in a class of predator-prey models with two species of predators competing explicitly for their common prey, where the prey evolves on a faster timescale than the predators. In a parameter regime near a {\\em{singular zero-Hopf bifurcation}} of the coexistence equilibrium state, we assume that the system under study exhibits bistability between a periodic attractor that bifurcates from the singular Hopf point and another attractor, which could be a periodic attractor or a point attractor, such that the invariant manifolds of the coexistence equilibrium point play central roles in organizing the dynamics. To find whether a solution that starts in a vicinity of the coexistence equilibrium approaches the periodic attractor or the other attractor, we reduce the equations to a suitable normal form, and examine the basin boundary near the singular Hopf point. A key component of our study includes an analysis of the long transient dynamics, characterized by their rapid oscillations with a slow variation in amplitude, by applying a moving average technique. We obtain a set of necessary and sufficient conditions on the initial values of a solution near the coexistence equilibrium to determine whether it lies in the basin of attraction of the periodic attractor. As a result of our analysis, we devise a method of identifying early warning signals, significantly in advance, of a future crisis that could lead to extinction of one of the predators. The analysis is applied to the predator-prey model considered in [\\emph{Discrete and Continuous Dynamical Systems - B} 2021, 26(10), pp. 5251-5279] and we find that our theory is in good agreement with the numerical simulations carried out for this model.",
+      "arxiv_id": "2210.04097v2",
+      "doi": "",
+      "url": "http://arxiv.org/abs/2210.04097v2",
+      "source": "arxiv",
+      "published": "2022-10-08T19:46:03Z",
+      "citation_count": 0,
+      "tier": "core"
+    },
+    {
+      "title": "Sequential escapes: onset of slow domino regime via a saddle connection",
+      "authors": [
+        "Peter Ashwin",
+        "Jennifer Creaser",
+        "Krasimira Tsaneva-Atanasova"
+      ],
+      "year": 2018,
+      "abstract": "We explore sequential escape behaviour of coupled bistable systems under the influence of stochastic perturbations. We consider transient escapes from a marginally stable \"quiescent\" equilibrium to a more stable \"active\" equilibrium. The presence of coupling introduces dependence between the escape processes: for diffusive coupling there is a strongly coupled limit (fast domino regime) where the escapes are strongly synchronised while for intermediate coupling (slow domino regime) without partially escaped stable states, there is still a delayed effect. These regimes can be associated with bifurcations of equilibria in the low-noise limit. In this paper we consider a localized form of non-diffusive (i.e pulse-like) coupling and find similar changes in the distribution of escape times with coupling strength. However we find transition to a slow domino regime that is not associated with any bifurcations of equilibria. We show that this transition can be understood as a codimension-one saddle connection bifurcation for the low-noise limit. At transition, the most likely escape path from one attractor hits the escape saddle from the basin of another partially escaped attractor. After this bifurcation we find increasing coefficient of variation of the subsequent escape times.",
+      "arxiv_id": "1804.00550v1",
+      "doi": "https://doi.org/10.1140/epjst/e2018-800038-5",
+      "url": "http://arxiv.org/abs/1804.00550v1",
+      "source": "arxiv",
+      "published": "2018-04-02T14:28:16Z",
+      "citation_count": 0,
+      "tier": "core"
+    },
+    {
+      "title": "Controlling systems that drift through a tipping point",
+      "authors": [
+        "Takashi Nishikawa",
+        "Edward Ott"
+      ],
+      "year": 2014,
+      "abstract": "Slow parameter drift is common in many systems (e.g., the amount of greenhouse gases in the terrestrial atmosphere is increasing). In such situations, the attractor on which the system trajectory lies can be destroyed, and the trajectory will then go to another attractor of the system. We consider the case where there are more than one of these possible final attractors, and we ask whether we can control the outcome (i.e., the attractor that ultimately captures the trajectory) using only small controlling perturbations. Specifically, we consider the problem of controlling a noisy system whose parameter slowly drifts through a saddle-node bifurcation taking place on a fractal boundary between the basins of multiple attractors. We show that, when the noise level is low, a small perturbation of size comparable to the noise amplitude applied at a single point in time can ensure that the system will evolve toward a target attracting state with high probability. For a range of noise levels, we find that the minimum size of perturbation required for control is much smaller within a time period that starts some time after the bifurcation, providing a \"window of opportunity\" for driving the system toward a desirable state. We refer to this procedure as tipping point control.",
+      "arxiv_id": "1407.0036v2",
+      "doi": "https://doi.org/10.1063/1.4887275",
+      "url": "http://arxiv.org/abs/1407.0036v2",
+      "source": "arxiv",
+      "published": "2014-06-30T20:06:12Z",
+      "citation_count": 0,
+      "tier": "supporting"
+    },
+    {
+      "title": "Analysis of a bistable climate toy model with physics-based machine learning methods",
+      "authors": [
+        "Maximilian Gelbrecht",
+        "Valerio Lucarini",
+        "Niklas Boers",
+        "Jürgen Kurths"
+      ],
+      "year": 2020,
+      "abstract": "We propose a comprehensive framework able to address both the predictability of the first and of the second kind for high-dimensional chaotic models. For this purpose, we analyse the properties of a newly introduced multistable climate toy model constructed by coupling the Lorenz '96 model with a zero-dimensional energy balance model. First, the attractors of the system are identified with Monte Carlo Basin Bifurcation Analysis. Additionally, we are able to detect the Melancholia state separating the two attractors. Then, Neural Ordinary Differential Equations are applied in order to predict the future state of the system in both of the identified attractors.",
+      "arxiv_id": "2011.12227v2",
+      "doi": "https://doi.org/10.1140/epjs/s11734-021-00175-0",
+      "url": "http://arxiv.org/abs/2011.12227v2",
+      "source": "arxiv",
+      "published": "2020-11-13T06:50:40Z",
+      "citation_count": 0,
+      "tier": "core"
+    },
+    {
+      "title": "A modified May-Holling-Tanner predator-prey model with multiple Allee effects on the prey and an alternative food source for the predator",
+      "authors": [
+        "Claudio Arancibia-Ibarra",
+        "Michael Bode",
+        "José Flores",
+        "Graeme Pettet",
+        "Peter van Heijster"
+      ],
+      "year": 2019,
+      "abstract": "We study a predator-prey model with Holling type I functional response, an alternative food source for the predator, and multiple Allee effects on the prey. We show that the model has at most two equilibrium points in the first quadrant, one is always a saddle point while the other can be a repeller or an attractor. Moreover, there is always a stable equilibrium point that corresponds to the persistence of the predator population and the extinction of the prey population. Additionally, we show that when the parameters are varied the model displays a wide range of different bifurcations, such as saddle-node bifurcations, Hopf bifurcations, Bogadonov-Takens bifurcations and homoclinic bifurcations. We use numerical simulations to illustrate the impact changing the predation rate, or the non-fertile prey population, and the proportion of alternative food source have on the basins of attraction of the stable equilibrium point in the first quadrant (when it exists). In particular, we also show that the basin of attraction of the stable positive equilibrium point in the first quadrant is bigger when we reduce the depensation in the model.",
+      "arxiv_id": "1904.02886v4",
+      "doi": "",
+      "url": "http://arxiv.org/abs/1904.02886v4",
+      "source": "arxiv",
+      "published": "2019-04-05T06:26:03Z",
+      "citation_count": 0,
+      "tier": "core"
+    },
+    {
+      "title": "Chaotic saddles in a generalized Lorenz model of magnetoconvection",
+      "authors": [
+        "Francis F. Franco",
+        "Erico L. Rempel"
+      ],
+      "year": 2020,
+      "abstract": "The nonlinear dynamics of a recently derived generalized Lorenz model (Macek and Strumik, Phys. Rev. E 82, 027301, 2010) of magnetoconvection is studied. A bifurcation diagram is constructed as a function of the Rayleigh number where attractors and nonattracting chaotic sets coexist inside a periodic window. The nonattracting chaotic sets, also called chaotic saddles, are responsible for fractal basin boundaries with a fractal dimension near the dimension of the phase space, which causes the presence of very long chaotic transients. It is shown that the chaotic saddles can be used to infer properties of chaotic attractors outside the periodic window, such as their maximum Lyapunov exponent.",
+      "arxiv_id": "2007.04896v1",
+      "doi": "https://doi.org/10.1142/S0218127420300347",
+      "url": "http://arxiv.org/abs/2007.04896v1",
+      "source": "arxiv",
+      "published": "2020-07-08T00:38:09Z",
+      "citation_count": 0,
+      "tier": "core"
+    },
+    {
+      "title": "Temporal Dynamics beyond the Exceptional Point in the Ikeda Map with Balanced Gain and Loss",
+      "authors": [
+        "Jyoti Prasad Deka",
+        "Amarendra K. Sarma"
+      ],
+      "year": 2024,
+      "abstract": "We investigate the temporal dynamics of the Ikeda Map with Balanced Gain and Loss and in the presence of feedback loops with saturation nonlinearity. From the bifurcation analysis, we find that the temporal evolution of optical power undergoes period quadrupling at the exceptional point (EP) of the system and beyond that, chaotic dynamics emerge in the system and this has been further corroborated from the Largest Lyapunov Exponent (LLE) of the model. For a closer inspection, we analyzed the parameter basin of the system, which further leads to our inference that the Ikeda Map with Balanced Gain and Loss exhibits the emergence of chaotic dynamics beyond the exceptional point (EP). Furthermore, we find that the temporal dynamics beyond the EP regime leads to the onset of Extreme Events (EE) in this system via attractor merging crisis.",
+      "arxiv_id": "2406.17783v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/2406.17783v1",
+      "source": "arxiv",
+      "published": "2024-05-13T04:40:39Z",
+      "citation_count": 0,
+      "tier": "core"
+    },
+    {
+      "title": "Chaotic discretization theorems for forced linear and nonlinear coupled oscillators",
+      "authors": [
+        "Stefano Disca",
+        "Vincenzo Coscia"
+      ],
+      "year": 2025,
+      "abstract": "We prove the holding of chaos in the sense of Li-Yorke for a family of four-dimensional discrete dynamical systems that are naturally associated to ODE systems describing coupled oscillators subject to an external non-conservative force, also giving an example of a discrete map that is Li-Yorke chaotic but not topologically transitive. Analytical results are generalized to a modular definition of the problem and to a system of nonlinear oscillators described by polynomial potentials in one coordinate. We perform numerical simulations looking for a strange attractor of the system; furthermore, we perform a bifurcation analysis of the system presenting 1D and 2D bifurcation diagrams, together with spectra of Lyapunov exponents and basins of attraction.",
+      "arxiv_id": "2512.10565v3",
+      "doi": "https://doi.org/10.1016/j.chaos.2026.118086",
+      "url": "http://arxiv.org/abs/2512.10565v3",
+      "source": "arxiv",
+      "published": "2025-12-11T11:55:33Z",
+      "citation_count": 0,
+      "tier": "core"
+    },
+    {
+      "title": "Equation of State of Chemical System: From True Equilibrium to True Chaos",
+      "authors": [
+        "B. Zilbergleyt"
+      ],
+      "year": 2002,
+      "abstract": "The article presents results of preliminary study of solutions to recently offered basic thermodynamic equation for equilibrium in chemical systems with focus on chaotic behavior. Classical part of that equation was investigated earlier in a series of papers. In this work a similarity between one-dimensional logistic map and non-classical (chaotic) term of the equation was discussed to introduce the problem. Results of this work allow us to evaluate the region where open equilibrium belongs to the basin of regular attractor and leads to trivial solutions with zero deviation from true thermodynamic equilibrium, and then to find first bifurcation threshold as a limit of open equilibrium and a limit of the classical region as well. Features of the basic equation are discussed with regard to relative values of the chaotic and thermodynamic temperatures. Obtained results prompt us to consider the basic equation of new theory to be the general equation of state of chemical systems.",
+      "arxiv_id": "physics/0209078v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/physics/0209078v1",
+      "source": "arxiv",
+      "published": "2002-09-20T15:32:47Z",
+      "citation_count": 0,
+      "tier": "background"
+    },
+    {
+      "title": "Dynamical analysis of r-Chialvo neuron map with cosine memristive",
+      "authors": [
+        "Ajay Kumar",
+        "V. V. M. S. Chandramouli"
+      ],
+      "year": 2026,
+      "abstract": "In this work, we construct a novel two-dimensional discrete neuron map by incorporating a cosine-based memristor into the reduced Chialvo neuron map to examine the dynamical analysis of electromagnetic modulation. The nonlinear current-voltage characteristics of the memristor enrich the neuron map's behavior, leading to diverse firing regimes, stability behaviors, and chaotic attractors. This study begins to establish the equilibrium points using both analytical and numerical methods. Additionally, we determine the conditions on parameters under which the proposed map exhibits a Neimark-Sacker bifurcation. Further, the numerical study reveals the antimonotonicity structure through the forward and backward bifurcation diagrams. The model exhibits a wide range of codimension-one and codimension-two bifurcation patterns, including Neimark-Sacker, period-doubling, saddle-node, generalized period-doubling, cusp-point, fold-flip, and various resonance structures (1:1, 1:2, 1:3, and 1:4). We also observe that the coexistence of multistable attractors including a stable limit cycle, a period-five attractor, and a chaotic attractor, along with their respective basins of attraction. Furthermore, we extend this analysis to the network of neurons under the ring-star configuration and discuss several spatiotemporal patterns. This network investigation reveals complex collective patterns, including imperfect synchronization, clustered patterns, and multi-chimera state phenomena, which have not been previously observed in existing Chialvo-based studies. These results highlight the potential of the discrete memristor-based neuron map for advancing theoretical neurodynamics and offer a robust framework for investigating low-dimensional yet dynamically rich neuron systems.",
+      "arxiv_id": "2605.00442v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/2605.00442v1",
+      "source": "arxiv",
+      "published": "2026-05-01T06:19:11Z",
+      "citation_count": 0,
+      "tier": "core"
+    },
+    {
+      "title": "A three-species model explaining cyclic dominance of pacific salmon",
+      "authors": [
+        "Christian Guill",
+        "Barbara Drossel",
+        "Wolfram Just",
+        "Eddy Carmack"
+      ],
+      "year": 2010,
+      "abstract": "The four-year oscillations of the number of spawning sockeye salmon (Oncorhynchus nerka) that return to their native stream within the Fraser River basin in Canada are a striking example of population oscillations. The period of the oscillation corresponds to the dominant generation time of these fish. Various - not fully convincing - explanations for these oscillations have been proposed, including stochastic influences, depensatory fishing, or genetic effects. Here, we show that the oscillations can be explained as a stable dynamical attractor of the population dynamics, resulting from a strong resonance near a Neimark Sacker bifurcation. This explains not only the long-term persistence of these oscillations, but also reproduces correctly the empirical sequence of salmon abundance within one period of the oscillations. Furthermore, it explains the observation that these oscillations occur only in sockeye stocks originating from large oligotrophic lakes, and that they are usually not observed in salmon species that have a longer generation time.",
+      "arxiv_id": "1006.2923v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/1006.2923v1",
+      "source": "arxiv",
+      "published": "2010-06-15T08:40:28Z",
+      "citation_count": 0,
+      "tier": "supporting"
+    },
+    {
+      "title": "Exploring Geometrical Properties of Chaotic Systems Through an Analysis of the Rulkov Neuron Maps",
+      "authors": [
+        "Brandon B. Le",
+        "Nivika A. Gandhi"
+      ],
+      "year": 2024,
+      "abstract": "While extensive research has been conducted on chaos emerging from a dynamical system's temporal dynamics, our research examines extreme sensitivity to initial conditions in discrete-time dynamical systems from a geometrical perspective. Specifically, we develop methods of detecting, classifying, and quantifying geometric structures that lead to chaotic behavior in maps, including certain bifurcations, fractal geometry, strange attractors, multistability, fractal basin boundaries, and Wada basins of attraction. We also develop slow-fast dynamical systems theory for discrete-time systems, with a specific application to modeling the spiking and bursting behavior emerging from the electrophysiology of biological neurons. Our research mainly focuses on two simple low-dimensional slow-fast Rulkov maps, which model both non-chaotic and chaotic spiking-bursting neuronal behavior. We begin by exploring the maps' individual dynamics and parameter spaces, performing bifurcation analyses, describing and quantifying their chaotic dynamics, and modeling an injection of current into them. Then, by putting these neurons into different physical arrangements and coupling them with a flow of current, we find that complex dynamics and geometries emerge from the existence of multistability and final state sensitivity in higher-dimensional state space. We then analyze the complexity and fractalization of these coupled neuron systems' attractors and basin boundaries using our mathematical and computational methods. This paper begins with a conversational introduction to the geometry of chaos, then integrates mathematics, physics, neurobiology, computational modeling, and electrochemistry to present original research that provides a novel perspective on how types of geometrical sensitivity to initial conditions appear in discrete-time neuron systems.",
+      "arxiv_id": "2406.08385v2",
+      "doi": "",
+      "url": "http://arxiv.org/abs/2406.08385v2",
+      "source": "arxiv",
+      "published": "2024-06-12T16:35:03Z",
+      "citation_count": 0,
+      "tier": "core"
+    },
+    {
+      "title": "Weak-noise-induced transitions with inhibition and modulation of neural oscillations",
+      "authors": [
+        "Marius E. Yamakou",
+        "Jürgen Jost"
+      ],
+      "year": 2017,
+      "abstract": "We analyze the effect of weak-noise-induced transitions on the dynamics of the FitzHugh-Nagumo neuron model in a bistable state consisting of a stable fixed point and a stable unforced limit cycle. Bifurcation and slow-fast analysis give conditions on the parameter space for the establishment of this bi-stability. In the parametric zone of bi-stability, weak-noise amplitudes may strongly inhibit the neuron's spiking activity. Surprisingly, increasing the noise strength leads to a minimum in the spiking activity, after which the activity starts to increase monotonically with increase in noise strength. We investigate this inhibition and modulation of neural oscillations by weak-noise amplitudes by looking at the variation of the mean number of spikes per unit time with the noise intensity. We show that this phenomenon always occurs when the initial conditions lie in the basin of attraction of the stable limit cycle. For initial conditions in the basin of attraction of the stable fixed point, the phenomenon however disappears, unless the time-scale separation parameter of the model is bounded within some interval. We provide a theoretical explanation of this phenomenon in terms of the stochastic sensitivity functions of the attractors and their minimum Mahalanobis distances from the separatrix isolating the basins of attraction.",
+      "arxiv_id": "1706.00293v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/1706.00293v1",
+      "source": "arxiv",
+      "published": "2017-06-01T13:38:53Z",
+      "citation_count": 0,
+      "tier": "supporting"
+    },
+    {
+      "title": "A Complete Analytical Study on the Dynamics of Simple Chaotic Systems",
+      "authors": [
+        "G. Sivaganesh",
+        "A. Arulgnanam",
+        "A. N. Seethalakshmi"
+      ],
+      "year": 2018,
+      "abstract": "We report in this paper a complete analytical study on the bifurcations and chaotic phenomena observed in certain second-order, non-autonomous, dissipative chaotic systems. One-parameter bifurcation diagrams obtained from the analytical solutions proving the numerically observed chaotic phenomena such as antimonotonicity, period-doubling sequences, Feignbaum remerging have been presented. Further, the analytical solutions are used to obtain the basins of attraction, phase-portraits and Poincare maps for different chaotic systems. Experimentally observed chaotic attractors in some of the systems are presented to confirm the analytical results. The bifurcations and chaotic phenomena studied through explicit analytical solutions is reported in the literature for the first time.",
+      "arxiv_id": "1801.05730v1",
+      "doi": "https://doi.org/10.1007/s12043-018-1705-z",
+      "url": "http://arxiv.org/abs/1801.05730v1",
+      "source": "arxiv",
+      "published": "2018-01-17T16:15:00Z",
+      "citation_count": 0,
+      "tier": "core"
+    },
+    {
+      "title": "Timing of Transients: Quantifying Reaching Times and Transient Behavior in Complex Systems",
+      "authors": [
+        "Tim Kittel",
+        "Jobst Heitzig",
+        "Kevin Webster",
+        "Juergen Kurths"
+      ],
+      "year": 2016,
+      "abstract": "When quantifying the time spent in the transient of a complex dynamical system, the fundamental problem is that for a large class of systems the actual time for reaching an attractor is infinite. Common methods for dealing with this problem usually introduce three additional problems: non-invariance, physical interpretation, and discontinuities, calling for carefully designed methods for quantifying transients.\n  In this article, we discuss how the aforementioned problems emerge and propose two novel metrics, Regularized Reaching Time ($T_{RR}$) and Area under Distance Curve (AUDIC), to solve them, capturing two complementary aspects of the transient dynamics.\n  $T_{RR}$ quantifies the additional time (positive or negative) that a trajectory starting at a chosen initial condition needs to reach the attractor after a reference trajectory has already arrived there. A positive or negative value means that it arrives by this much earlier or later than the reference. Because $T_{RR}$ is an analysis of return times after shocks, it is a systematic approach to the concept of critical slowing down [1]; hence it is naturally an early-warning signal [2] for bifurcations when central statistics over distributions of initial conditions are used.\n  AUDIC is the distance of the trajectory to the attractor integrated over time. Complementary to $T_{RR}$, it measures which trajectories are reluctant, i.e. stay away from the attractor for long, or eager to approach it right away.\n  (... shortened for arxiv listing, full abstract in paper ...) New features in these models can be uncovered, including the surprising regularity of the Roessler system's basin of attraction even in the regime of a chaotic attractor. Additionally, we demonstrate the critical slowing down interpretation by presenting the metrics' sensitivity to prebifurcational change and thus how they act as early-warning signals.",
+      "arxiv_id": "1611.07565v1",
+      "doi": "https://doi.org/10.1088/1367-2630/aa7b61",
+      "url": "http://arxiv.org/abs/1611.07565v1",
+      "source": "arxiv",
+      "published": "2016-11-21T10:25:36Z",
+      "citation_count": 0,
+      "tier": "supporting"
+    },
+    {
+      "title": "Collective Dynamics of coupled Lorenz oscillators near the Hopf Boundary: Intermittency and Chimera states",
+      "authors": [
+        "Anjuman Ara Khatun",
+        "Yusra Ahmed Saeed",
+        "Nirmal Punetha",
+        "Haider Hasan Jafri"
+      ],
+      "year": 2022,
+      "abstract": "We study collective dynamics of networks of mutually coupled identical Lorenz oscillators near subcritical Hopf bifurcation. This system shows induced multistable behavior with interesting spatio-temporal dynamics including synchronization, desynchronization and chimera states. We find this network may exhibit intermittent behavior due to the complex basin structures, where, temporal dynamics of the oscillators in the ensemble switches between different attractors. Consequently, different oscillators may show dynamics that is intermittently synchronized (or desynchronized), giving rise to {\\it intermittent chimera states}. The behaviour of the intermittent laminar phases is characterized by the characteristic time spend in the synchronization manifold, which decays as power law. This intermittent dynamics is quite general and can be extended for large number of oscillators interacting with nonlocal, global and local coupling schemes.",
+      "arxiv_id": "2207.09119v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/2207.09119v1",
+      "source": "arxiv",
+      "published": "2022-07-19T08:18:28Z",
+      "citation_count": 0,
+      "tier": "core"
+    },
+    {
+      "title": "Model-free prediction of multistability using echo state network",
+      "authors": [
+        "Mousumi Roy",
+        "Swarnendu Mandal",
+        "Chittaranjan Hens",
+        "Awadhesh Prasad",
+        "N. V. Kuznetsov",
+        "Manish Dev Shrimali"
+      ],
+      "year": 2022,
+      "abstract": "In the field of complex dynamics, multistable attractors have been gaining a significant attention due to its unpredictability in occurrence and extreme sensitivity to initial conditions. Co-existing attractors are abundant in diverse systems ranging from climate to finance, ecological to social systems. In this article, we investigate a data-driven approach to infer different dynamics of a multistable system using echo state network (ESN). We start with a parameter-aware reservoir and predict diverse dynamics for different parameter values. Interestingly, machine is able to reproduce the dynamics almost perfectly even at distant parameters which lie considerably far from the parameter values related to the training dynamics. In continuation, we can predict whole bifurcation diagram significant accuracy as well. We extend this study for exploring various dynamics of multistable attractors at unknown parameter value. While, we train the machine with the dynamics of only one attarctor at parameter $p$, it can capture the dynamics of co-existing attractor at a new parameter value $p+Δp$. Continuing the simulation for multiple set of initial conditions, we can identify the basins for different attractors. We generalize the results by applying the scheme on two distinct multistable systems.",
+      "arxiv_id": "2208.14805v1",
+      "doi": "https://doi.org/10.1063/5.0119963",
+      "url": "http://arxiv.org/abs/2208.14805v1",
+      "source": "arxiv",
+      "published": "2022-08-11T01:44:52Z",
+      "citation_count": 0,
+      "tier": "core"
+    },
+    {
+      "title": "Synchronization of internal and external degrees of freedom of atoms in a standing laser wave",
+      "authors": [
+        "V. Yu. Argonov",
+        "S. V. Prants"
+      ],
+      "year": 2004,
+      "abstract": "We consider dissipative dynamics of atoms in a strong standing laser wave and find a nonlinear dynamical effect of synchronization between center-of-mass motion and internal Rabi oscillations. The synchronization manifests itself in the phase space as limit cycles which may have different periods and riddled basins of attraction. The effect can be detected in the fluorescence spectra of atoms as equidistant sideband frequencies with the space between adjacent peaks to be inversely proportional to the value of the period of the respective limit cycle. With increasing the intensity of the laser field, we observe numerically cascades of bifurcations that eventually end up in settling a strange chaotic attractor. A broadband noise is shown to destroy a fine structure of the bifurcation scenario, but prominent features of period-1 and period-3 limit cycles survive under a weak noise. The character of the atomic motion is analyzed with the help of the friction force whose zeroes are attractor or repellor points in the velocity space. We find ranges of the laser parameters where the atomic motion resembles a random but deterministic walking of atoms erratically jumping between different wells of the optical potential. Such a random walking is shown to be fractal in the sense that the measured characteristic of the motion, time of exit of atoms from a given space of the standing wave, is a complicated function that has a self-similar structure with singularities on a Cantor set of values of one of the control parameters.",
+      "arxiv_id": "quant-ph/0409108v1",
+      "doi": "https://doi.org/10.1103/PhysRevA.71.053408",
+      "url": "http://arxiv.org/abs/quant-ph/0409108v1",
+      "source": "arxiv",
+      "published": "2004-09-17T04:55:14Z",
+      "citation_count": 0,
+      "tier": "background"
+    },
+    {
+      "title": "Dynamics of impurities in a three-dimensional volume-preserving map",
+      "authors": [
+        "Swetamber Das",
+        "Neelima Gupte"
+      ],
+      "year": 2014,
+      "abstract": "We study the dynamics of inertial particles in three dimensional incompressible maps, as representations of volume preserving flows. The impurity dynamics has been modeled, in the Lagrangian framework, by a six-dimensional dissipative bailout embedding map. The fluid-parcel dynamics of the base map is embedded in the particle dynamics governed by the map. The base map considered for the present study is the Arnold-Beltrami-Childress (ABC) map. We consider the behavior of the system both in the aerosol regime, where the density of the particle is larger than that of the base flow, as well as the bubble regime, where the particle density is less than that of the base flow. The phase spaces in both the regimes show rich and complex dynamics with three type of dynamical behaviors - chaotic structures, regular orbits and hyperchaotic regions. In the one-action case, the aerosol regime is found to have periodic attractors for certain values of the dissipation and inertia parameters. For the aerosol regime of the two-action ABC map, an attractor merging and widening crises is identified using the bifurcation diagram and the spectrum of Lyapunov exponents. After the crisis an attractor with two parts is seen, and trajectories hop between these parts with period 2. The bubble regime of the embedded map shows strong hyperchaotic regions as well as crisis induced intermittency with characteristic times between bursts that scale as a power law behavior as a function of the dissipation parameter. Furthermore, we observe riddled basin of attraction and unstable dimension variability in the phase space in the bubble regime. The bubble regime in one-action shows similar behavior. This study of a simple model of impurity dynamics may shed light upon the transport properties of passive scalars in three dimensional flows. We also compare our results with those seen earlier in two dimensional flows.",
+      "arxiv_id": "1406.4344v1",
+      "doi": "https://doi.org/10.1103/PhysRevE.90.012906",
+      "url": "http://arxiv.org/abs/1406.4344v1",
+      "source": "arxiv",
+      "published": "2014-06-17T12:27:57Z",
+      "citation_count": 0,
+      "tier": "supporting"
+    },
+    {
+      "title": "Limits to predictability of the asymptotic state of the Atlantic Meridional Overturning Circulation in a conceptual climate model",
+      "authors": [
+        "Oliver Mehling",
+        "Reyk Börner",
+        "Valerio Lucarini"
+      ],
+      "year": 2023,
+      "abstract": "Anticipating critical transitions in the Earth system is of great societal relevance, yet there may be intrinsic limitations to their predictability. For instance, from the theory of dynamical systems possessing multiple chaotic attractors, it is known that the asymptotic state depends sensitively on the initial condition in the proximity of a fractal basin boundary. Here, we approach the problem of final-state sensitivity of the Atlantic Meridional Overturning Circulation (AMOC) using a conceptual climate model, composed of a slow bistable ocean coupled to a fast chaotic atmosphere. First, we explore the occurrence of long chaotic transients in the monostable regime, which can mask a loss of stability near bifurcations. In the bistable regime, we explicitly construct the chaotic saddle using the edge tracking technique. Quantifying the final-state sensitivity through the maximum Lyapunov exponent and the lifetime of the saddle, we find that the system exhibits a fractal basin boundary with almost full phase space dimension, implying vanishing predictability of the second kind near the basin boundary. Our results demonstrate the usefulness of studying non-attracting chaotic sets in the context of predicting climatic tipping points, and provide guidance for the interpretation of higher-dimensional models such as general circulation models.",
+      "arxiv_id": "2308.16251v2",
+      "doi": "https://doi.org/10.1016/j.physd.2023.134043",
+      "url": "http://arxiv.org/abs/2308.16251v2",
+      "source": "arxiv",
+      "published": "2023-08-30T18:15:12Z",
+      "citation_count": 0,
+      "tier": "core"
+    },
+    {
+      "title": "Chaotic motion of particles in the spacetime of a Kerr black hole immersed in swirling universes",
+      "authors": [
+        "Deshui Cao",
+        "Lina Zhang",
+        "Songbai Chen",
+        "Qiyuan Pan",
+        "Jiliang Jing"
+      ],
+      "year": 2024,
+      "abstract": "We investigate the motion of particles in the spacetime of a Kerr black hole immersed in swirling universes. Using the Poincaré section, fast Lyapunov exponent indicator, bifurcation diagram and basins of attraction, we present the effects of the swirling parameter and the spin parameter on the dynamical behaviors of the motion of particles, and confirm the presence of chaos in the motion of particles in this background spacetime. We find that the swirling parameter can change the range of the spin parameter where the chaos occurs, and vice versa. Moreover, we observe clearly that, regardless of the spin parameter, there exist some self-similar fractal fine structures in the basins boundaries of attractors for the spacetime of a black hole immersed in swirling universes. The combination the swirling parameter and the spin parameter provides richer physics in the motion of particles.",
+      "arxiv_id": "2410.03214v2",
+      "doi": "",
+      "url": "http://arxiv.org/abs/2410.03214v2",
+      "source": "arxiv",
+      "published": "2024-10-04T08:00:42Z",
+      "citation_count": 0,
+      "tier": "core"
+    },
+    {
+      "title": "Transient Chaos Generates Small Chimeras",
+      "authors": [
+        "Amitava Banerjee",
+        "Debopriya Sikder"
+      ],
+      "year": 2018,
+      "abstract": "While the chimera states themselves are usually believed to be chaotic transients, the involvement of chaos behind their self-organization is not properly distinguished or studied. In this work, we demonstrate that small chimeras in the local flux dynamics of an array of magnetically coupled superconducting quantum interference devices (SQUIDs) driven by an external field are born through transiently chaotic dynamics. We deduce analytic expressions for small chimeras and synchronous states which correspond to nonchaotic attractors in the model. We also numerically study the bifurcations underlying the multistability responsible for their generation. Transient chaos manifests itself in the short term flux oscillations with erratically fluctuating amplitudes, exponential escape time distribution and irregular dependence of the escape time to initial conditions. We classify the small chimera states in terms of the position of the non-synchronized member and numerically construct their basin of attraction. The basin is shown to possess an interesting structure consisting of both ordered and fractal parts, which again can be attributed to transient chaos.",
+      "arxiv_id": "1809.02420v1",
+      "doi": "https://doi.org/10.1103/PhysRevE.98.032220",
+      "url": "http://arxiv.org/abs/1809.02420v1",
+      "source": "arxiv",
+      "published": "2018-09-07T11:57:45Z",
+      "citation_count": 0,
+      "tier": "core"
+    },
+    {
+      "title": "Dynamical effects of electromagnetic flux on Chialvo neuron map: nodal and network behaviors",
+      "authors": [
+        "Sishu Shankar Muni",
+        "Hammed Olawale Fatoyinbo",
+        "Indranil Ghosh"
+      ],
+      "year": 2022,
+      "abstract": "We consider the dynamical effects of electromagnetic flux on the discrete Chialvo neuron. It is shown that the model can exhibit rich dynamical behaviors such as multistability, firing patterns, antimonotonicity, closed invariant curves, various routes to chaos, fingered chaotic attractors. The system enters chaos via period-doubling cascades, reverse period-doubling route, antimonotonicity, via closed invariant curve to chaos. The results were confirmed using the techniques of bifurcation diagrams, Lyapunov exponent diagram, phase portraits, basins of attraction and numerical continuation of bifurcations. Different global bifurcations are also shown to exist via numerical continuation. After understanding a single neuron model, a network of Chialvo neuron is explored. A ring-star network of Chialvo neuron is considered and different dynamical regimes such as synchronous, asynchronous, chimera states are revealed. Different continuous and piecewise continuous wavy patterns were also found during the simulations for negative coupling strengths.",
+      "arxiv_id": "2201.03219v2",
+      "doi": "",
+      "url": "http://arxiv.org/abs/2201.03219v2",
+      "source": "arxiv",
+      "published": "2022-01-10T09:01:34Z",
+      "citation_count": 0,
+      "tier": "core"
+    }
+  ],
+  "count": 50,
+  "query": "bifurcation basin attractor",
+  "tiers": {
+    "core": 27,
+    "background": 9,
+    "supporting": 14
+  }
+}

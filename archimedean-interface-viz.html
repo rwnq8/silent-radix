@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Archimedeanizing the Ultrametric — Dual-Geometry Knowledge Interface</title>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg: #0d0d12;
+    --surface: #16161e;
+    --surface2: #1c1c28;
+    --text: #d4d4dc;
+    --textDim: #78788c;
+    --accent: #e8b86d;
+    --accent2: #7eb8da;
+    --accent3: #c47ebc;
+    --tree: #4a9e6b;
+    --street: #da7e4a;
+    --danger: #da4a4a;
+    --border: #2a2a3a;
+    --font-display: 'Instrument Serif', Georgia, serif;
+    --font-body: 'Newsreader', Georgia, serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    overflow: hidden;
+    height: 100vh;
+  }
+  .app { display: flex; flex-direction: column; height: 100vh; }
+  
+  /* Header */
+  .header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 12px 24px;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    flex-shrink: 0;
+  }
+  .header h1 {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 0.02em;
+  }
+  .header .subtitle {
+    font-size: 0.75rem;
+    color: var(--textDim);
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .metrics {
+    display: flex; gap: 18px; align-items: center;
+  }
+  .metric {
+    text-align: center;
+    padding: 6px 14px;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+  }
+  .metric .value {
+    font-family: var(--font-mono);
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+  .metric .label {
+    font-size: 0.6rem;
+    color: var(--textDim);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-top: 2px;
+  }
+  .metric.uvr .value { color: var(--street); }
+  .metric.we .value { color: var(--accent2); }
+  .metric.sq .value { color: var(--accent3); }
+  .metric.j .value { color: var(--accent); }
+
+  /* Main layout */
+  .main { display: flex; flex: 1; overflow: hidden; }
+  .panel {
+    flex: 1; position: relative; overflow: hidden;
+    border-right: 1px solid var(--border);
+  }
+  .panel:last-child { border-right: none; }
+  .panel-header {
+    position: absolute; top: 8px; left: 12px; z-index: 10;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 4px 10px;
+    border-radius: 4px;
+    opacity: 0.85;
+  }
+  .panel-header.scaffold { color: var(--tree); background: rgba(74,158,107,0.1); border: 1px solid rgba(74,158,107,0.2); }
+  .panel-header.streets { color: var(--street); background: rgba(218,126,74,0.1); border: 1px solid rgba(218,126,74,0.2); }
+  .panel-header.both { color: var(--accent2); background: rgba(126,184,218,0.1); border: 1px solid rgba(126,184,218,0.2); }
+  svg { width: 100%; height: 100%; }
+
+  /* Footer */
+  .footer {
+    padding: 8px 24px;
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between;
+    flex-shrink: 0;
+    font-size: 0.7rem;
+    color: var(--textDim);
+    font-family: var(--font-mono);
+  }
+  .footer .legend { display: flex; gap: 14px; }
+  .legend-item { display: flex; align-items: center; gap: 6px; }
+  .legend-swatch { width: 10px; height: 10px; border-radius: 50%; }
+  .legend-swatch.tree { background: var(--tree); }
+  .legend-swatch.street { background: var(--street); }
+  .legend-swatch.both { background: var(--accent2); }
+
+  /* Tooltip */
+  .tooltip {
+    position: absolute;
+    pointer-events: none;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    max-width: 260px;
+    opacity: 0;
+    transition: opacity 0.15s;
+    z-index: 100;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  }
+  .tooltip.visible { opacity: 1; }
+  .tooltip .title { font-weight: 600; color: var(--accent); margin-bottom: 4px; }
+  .tooltip .detail { font-size: 0.65rem; color: var(--textDim); }
+  .tooltip .metric-row { display: flex; gap: 12px; margin-top: 6px; }
+  .tooltip .metric-val { font-family: var(--font-mono); font-size: 0.75rem; }
+  .tooltip .metric-val.tree { color: var(--tree); }
+  .tooltip .metric-val.street { color: var(--street); }
+
+  /* Serendipity walk */
+  .walk-btn {
+    padding: 6px 14px;
+    background: var(--accent);
+    color: var(--bg);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    transition: background 0.2s;
+  }
+  .walk-btn:hover { background: #d4a55a; }
+  .walk-status {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: var(--accent2);
+    margin-left: 10px;
+  }
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="header">
+    <div>
+      <h1>Archimedeanizing the Ultrametric</h1>
+      <div class="subtitle">Dual-Geometry Interface — Scaffold &amp; Streets</div>
+    </div>
+    <div class="metrics">
+      <div class="metric uvr">
+        <div class="value" id="uvr-val">0.00</div>
+        <div class="label">UVR</div>
+      </div>
+      <div class="metric we">
+        <div class="value" id="we-val">0.00</div>
+        <div class="label">Walk-Entropy</div>
+      </div>
+      <div class="metric sq">
+        <div class="value" id="sq-val">0.00</div>
+        <div class="label">SQ</div>
+      </div>
+      <div class="metric j">
+        <div class="value" id="j-val">0.000</div>
+        <div class="label">J = SQ×C</div>
+      </div>
+      <button class="walk-btn" id="walk-btn">⟳ Start Walk</button>
+      <span class="walk-status" id="walk-status"></span>
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="panel" id="panel-scaffold">
+      <div class="panel-header scaffold">◈ Ultrametric Scaffold (dendrogram)</div>
+      <svg id="scaffold-svg"></svg>
+    </div>
+    <div class="panel" id="panel-streets">
+      <div class="panel-header streets">◇ Archimedean Streets (semantic graph)</div>
+      <svg id="streets-svg"></svg>
+    </div>
+    <div class="panel" id="panel-dual">
+      <div class="panel-header both">◎ Dual View (overlay)</div>
+      <svg id="dual-svg"></svg>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="legend">
+      <div class="legend-item"><span class="legend-swatch tree"></span> Tree edge (scaffold)</div>
+      <div class="legend-item"><span class="legend-swatch street"></span> Shortcut edge (street)</div>
+      <div class="legend-item"><span class="legend-swatch both"></span> Selected node</div>
+    </div>
+    <div style="display:flex;gap:12px">
+      <span id="total-nodes">N: 0</span>
+      <span id="total-tree-edges">Tree edges: 0</span>
+      <span id="total-street-edges">Street edges: 0</span>
+    </div>
+  </div>
+</div>
+<div class="tooltip" id="tooltip"></div>
+
+<script>
+// ─── SAMPLE CORPUS: 30 papers across 3 domains, 9 topics ───────────────
+const DOMAINS = { q: "QWAV Physics", i: "Infrastructure", c: "Content" };
+const TOPICS = {
+  q_qec:  "Quantum Error Correction",
+  q_ultra:"Ultrametric Theory",
+  q_gen:  "General Physics",
+  i_kd:   "Knowledge & Data",
+  i_ds:   "Deployment & Storage",
+  i_auto: "Automation",
+  c_pub:  "Publications",
+  c_site: "Sites & Design",
+  c_disc: "Discovery & Assets",
+};
+
+// 30 nodes: 3 domains × 3 topics × 3-4 papers each
+const nodes = [];
+let nodeId = 0;
+function N(topic, title) {
+  const t = TOPICS[topic];
+  const domainKey = topic.substring(0,1);
+  const domain = DOMAINS[domainKey];
+  nodes.push({ id: nodeId, title, topic, domain, label: title.split(" ").slice(0,3).join(" ")
+    .replace(/[^a-zA-Z0-9\s]/g,""), cluster: topic });
+  return nodeId++;
+}
+// QWAV Physics
+N("q_qec","Toward p-Adic Quantum Error Correction");
+N("q_qec","Ultrametric Benchmark for QEC Codes");
+N("q_qec","p-Adic Hardware Co-Design");
+N("q_qec","Adelic QEC Synthesis");
+N("q_ultra","Ultrametric Topology of p-Adic Numbers");
+N("q_ultra","Berkovich Spaces in Physics");
+N("q_ultra","Hasse Local-Global on Tree Lattices");
+N("q_gen","p-Adic Wavelets for QFT");
+N("q_gen","Non-Archimedean Quantum Mathematics");
+N("q_gen","Spectral Analysis of Tate Amice");
+// Infrastructure
+N("i_kd","Knowledge Graph as D1 Backend");
+N("i_kd","Living Papers Database Design");
+N("i_kd","Vectorize Semantic Index");
+N("i_ds","Cloudflare R2 Object Store");
+N("i_ds","Wrangler v4.95 Migration Guide");
+N("i_ds","Umbrella Router Deployment");
+N("i_auto","Lifecycle Automation Worker");
+N("i_auto","Citation Manager Pipeline");
+N("i_auto","Literature Search Engine");
+// Content
+N("c_pub","Ultrametric Hierarchy Paper");
+N("c_pub","Archimedean Interface Design");
+N("c_pub","Interface Functor Theorem");
+N("c_site","QNFO Hub Landing Page");
+N("c_site","Publications Portal");
+N("c_site","Legal Pages Deployment");
+N("c_disc","SEO Discoverability Audit");
+N("c_disc","Robots.txt Generator");
+N("c_disc","LLMs.txt Standard");
+
+// Tree edges: from root through domains to topics to leaves
+const treeEdges = [];
+function addTreeEdge(source, target) {
+  treeEdges.push({ source, target, type: "tree" });
+}
+
+// Domain nodes (30, 31, 32)
+const ROOT_ID = 30; addTreeEdge(ROOT_ID, ROOT_ID+1); addTreeEdge(ROOT_ID, ROOT_ID+2); addTreeEdge(ROOT_ID, ROOT_ID+3);
+nodes.push({ id: ROOT_ID, title: "QNFO Corpus", topic: "root", domain: "root", label: "ROOT", cluster: "root" });
+nodes.push({ id: 31, title: "QWAV Physics", topic: "q", domain: "q", label: "QWAV Physics", cluster: "d_q" });
+nodes.push({ id: 32, title: "Infrastructure", topic: "i", domain: "i", label: "Infrastructure", cluster: "d_i" });
+nodes.push({ id: 33, title: "Content & Publications", topic: "c", domain: "c", label: "Content", cluster: "d_c" });
+// Topic nodes (34-42)
+const topicNodes = {};
+let tnId = 34;
+for (const [k,v] of Object.entries(TOPICS)) {
+  const domainKey = k.substring(0,1);
+  const domainId = 31 + {q:0,i:1,c:2}[domainKey];
+  topicNodes[k] = tnId;
+  nodes.push({ id: tnId, title: v, topic: k, domain: domainKey, label: v, cluster: "t_"+k });
+  addTreeEdge(domainId, tnId);
+  tnId++;
+}
+// Leaf-to-topic edges
+for (const n of nodes) {
+  if (n.id < 30 && topicNodes[n.topic]) {
+    addTreeEdge(topicNodes[n.topic], n.id);
+  }
+}
+
+// Shortcut edges: cross-topic semantic connections
+const streetEdges = [
+  { source: 0, target: 13, weight: 0.78 },  // p-Adic QEC → LRAP
+  { source: 1, target: 8, weight: 0.72 },   // Benchmark → p-Adic Wavelets
+  { source: 3, target: 5, weight: 0.85 },   // Adelic → Berkovich
+  { source: 4, target: 18, weight: 0.65 },  // p-Adic Topology → Paper
+  { source: 6, target: 9, weight: 0.70 },   // Hasse → Spectral Analysis
+  { source: 10, target: 16, weight: 0.88 }, // KG → Lifecycle
+  { source: 11, target: 17, weight: 0.82 }, // Living Papers → Citation Manager
+  { source: 12, target: 24, weight: 0.75 }, // Vectorize → SEO
+  { source: 14, target: 21, weight: 0.79 }, // R2 → QNFO Hub
+  { source: 15, target: 22, weight: 0.68 }, // Umbrella → Publications
+  { source: 18, target: 0, weight: 0.73 },  // Paper → QEC
+  { source: 19, target: 11, weight: 0.81 }, // Interface Design → Living Papers
+  { source: 20, target: 4, weight: 0.77 },  // Functor Theorem → Ultrametric Topology
+  { source: 12, target: 2, weight: 0.64 },  // Vectorize → Hardware Co-Design
+  { source: 16, target: 19, weight: 0.71 }, // Lifecycle → Interface Design
+  { source: 23, target: 25, weight: 0.83 }, // Publications Portal → Robots.txt
+  { source: 26, target: 27, weight: 0.87 }, // SEO Audit → Robots.txt
+  { source: 13, target: 5, weight: 0.66 },  // LRAP → Berkovich
+  { source: 7, target: 10, weight: 0.69 },  // Wavelets → KG
+  { source: 1, target: 17, weight: 0.63 },  // Benchmark → Citation Manager
+  { source: 6, target: 20, weight: 0.76 },  // Hasse → Functor Theorem
+  { source: 28, target: 18, weight: 0.72 }, // LLMs.txt → UH Paper
+  { source: 29, target: 14, weight: 0.78 }, // Legal Pages → R2
+  { source: 3, target: 12, weight: 0.67 },  // Adelic → Vectorize
+  { source: 9, target: 4, weight: 0.84 },   // Spectral Analysis → Topology
+];
+streetEdges.forEach(e => { e.type = "street"; });
+
+const allEdges = [...treeEdges, ...streetEdges];
+
+// Create adjacency for force simulation
+const links = allEdges.map(e => ({ ...e }));
+// Also add edges for the dendrogram panel (tree only) and streets panel (street + key tree edges)
+
+// ─── METRICS COMPUTATION ──────────────────────────────────────────
+const totalEdges = treeEdges.length + streetEdges.length;
+const UVR = streetEdges.length / totalEdges;
+const treeAdj = {};
+treeEdges.forEach(e => {
+  if (!treeAdj[e.source]) treeAdj[e.source] = [];
+  if (!treeAdj[e.target]) treeAdj[e.target] = [];
+  treeAdj[e.source].push(e.target);
+  treeAdj[e.target].push(e.source);
+});
+const fullAdj = {};
+allEdges.forEach(e => {
+  if (!fullAdj[e.source]) fullAdj[e.source] = [];
+  if (!fullAdj[e.target]) fullAdj[e.target] = [];
+  fullAdj[e.source].push(e.target);
+  fullAdj[e.target].push(e.source);
+});
+
+// Walk-Entropy simulation
+function computeWE(graph, steps = 20, walks = 200) {
+  const A = graph || fullAdj;
+  let totalCrossings = 0, totalSteps = 0;
+  for (let w = 0; w < walks; w++) {
+    const start = Math.floor(Math.random() * 30);
+    let current = start;
+    let prevCluster = nodes[current].cluster;
+    let crossings = 0;
+    for (let s = 0; s < steps; s++) {
+      const nbrs = A[current] || [];
+      if (nbrs.length === 0) break;
+      current = nbrs[Math.floor(Math.random() * nbrs.length)];
+      if (current >= 30) { s--; continue; }
+      const c = nodes[current].cluster;
+      if (c !== prevCluster) { crossings++; prevCluster = c; }
+    }
+    totalCrossings += crossings;
+    totalSteps += steps;
+  }
+  return totalCrossings / totalSteps;
+}
+const WE = computeWE();
+
+// SQ simulation: random walks, measure fraction of "serendipitous" clicks
+function computeSQ(graph, steps = 15, walks = 200, tau = 0.5) {
+  const A = graph || fullAdj;
+  let totalSerendipitous = 0, totalClicks = 0;
+  // Simple ultrametric distance: 0=same topic, 1=same domain, 2=different domain
+  function uDist(a, b) {
+    if (a.topic === b.topic) return 0;
+    if (a.domain === b.domain) return 1;
+    return 2;
+  }
+  for (let w = 0; w < walks; w++) {
+    const startIdx = Math.floor(Math.random() * 30);
+    const start = nodes[startIdx];
+    let current = startIdx;
+    for (let s = 0; s < steps; s++) {
+      const nbrs = A[current] || [];
+      if (nbrs.length === 0) break;
+      current = nbrs[Math.floor(Math.random() * nbrs.length)];
+      if (current >= 30) { s--; continue; }
+      if (uDist(start, nodes[current]) >= 2) totalSerendipitous++;
+      totalClicks++;
+    }
+  }
+  return totalSerendipitous / totalClicks;
+}
+const SQ = computeSQ();
+
+// Consolidation: proportion of steps that stay in same cluster
+function computeC(graph, steps = 15, walks = 200) {
+  const A = graph || fullAdj;
+  let totalConsolidated = 0, totalSteps = 0;
+  for (let w = 0; w < walks; w++) {
+    let current = Math.floor(Math.random() * 30);
+    let streak = 1;
+    for (let s = 0; s < steps; s++) {
+      const nbrs = A[current] || [];
+      if (nbrs.length === 0) break;
+      const next = nbrs[Math.floor(Math.random() * nbrs.length)];
+      if (next >= 30) { s--; continue; }
+      if (nodes[current].cluster === nodes[next].cluster) streak++;
+      else { if (streak >= 3) totalConsolidated++; streak = 1; }
+      current = next;
+      totalSteps++;
+    }
+  }
+  return Math.min(1, totalConsolidated / totalSteps * 3);
+}
+const C = computeC();
+const J = SQ * C;
+
+// Update metric displays
+document.getElementById('uvr-val').textContent = UVR.toFixed(2);
+document.getElementById('we-val').textContent = WE.toFixed(2);
+document.getElementById('sq-val').textContent = SQ.toFixed(2);
+document.getElementById('j-val').textContent = J.toFixed(3);
+document.getElementById('total-nodes').textContent = "N: 30";
+document.getElementById('total-tree-edges').textContent = "Tree: " + treeEdges.length;
+document.getElementById('total-street-edges').textContent = "Streets: " + streetEdges.length;
+
+// ─── D3 VISUALIZATION ─────────────────────────────────────────────
+
+// Shared tooltip
+const tooltip = d3.select("#tooltip");
+
+// Color scales
+const domainColor = d3.scaleOrdinal()
+  .domain(["q","i","c"])
+  .range(["#4a9e6b", "#7eb8da", "#c47ebc"]);
+const topicColor = d3.scaleOrdinal()
+  .domain(["q_qec","q_ultra","q_gen","i_kd","i_ds","i_auto","c_pub","c_site","c_disc"])
+  .range(["#3d8b54","#2d6e42","#5aae7a","#5a9ec4","#4a8aae","#6db0d8","#a46ea8","#8e5a92","#b87ec0"]);
+
+function nodeColor(d) {
+  if (d.id >= 34) return topicColor(d.topic);
+  if (d.id >= 31) return domainColor(d.domain);
+  return topicColor(d.topic);
+}
+
+function showTooltip(event, d) {
+  if (d.id >= 30) return; // Skip internal nodes for tooltip
+  const n = nodes[d.id] || d;
+  const treeNbrs = treeAdj[d.id] ? treeAdj[d.id].filter(x => x < 30).length : 0;
+  const streetNbrs = fullAdj[d.id] ? fullAdj[d.id].filter(x => x < 30).length - treeNbrs : 0;
+  tooltip
+    .classed("visible", true)
+    .html(`
+      <div class="title">${n.title}</div>
+      <div class="detail">${n.domain} › ${n.topic ? TOPICS[n.topic] || n.topic : ""}</div>
+      <div class="metric-row">
+        <span class="metric-val tree">⬡ ${treeNbrs} tree edges</span>
+        <span class="metric-val street">◇ ${streetNbrs} shortcuts</span>
+      </div>
+    `)
+    .style("left", (event.pageX + 16) + "px")
+    .style("top", (event.pageY - 60) + "px");
+}
+function hideTooltip() { tooltip.classed("visible", false); }
+
+// ─── PANEL 1: Ultrametric Dendrogram ─────────────────────────────
+(function() {
+  const svg = d3.select("#scaffold-svg");
+  const width = svg.node().parentElement.clientWidth;
+  const height = svg.node().parentElement.clientHeight;
+  svg.attr("viewBox", [0,0,width,height]);
+
+  const g = svg.append("g").attr("transform", `translate(60,${height/2})`);
+
+  // Build hierarchy
+  const treeData = {
+    id: ROOT_ID,
+    children: [31,32,33].map(did => {
+      const tNodes = [];
+      for (const [tk, tid] of Object.entries(topicNodes)) {
+        if ((did===31 && tk[0]==="q") || (did===32 && tk[0]==="i") || (did===33 && tk[0]==="c")) {
+          tNodes.push({
+            id: tid,
+            children: nodes.filter(n => n.topic === tk && n.id < 30).map(n => ({ id: n.id }))
+          });
+        }
+      }
+      return { id: did, children: tNodes };
+    })
+  };
+
+  const treeLayout = d3.tree().size([height - 120, width - 140]);
+  const root = d3.hierarchy(treeData, d => d.children);
+  treeLayout(root);
+
+  // Links
+  g.append("g").selectAll("path")
+    .data(root.links())
+    .join("path")
+    .attr("d", d3.linkHorizontal().x(d => d.y).y(d => d.x))
+    .attr("fill", "none")
+    .attr("stroke", d => d.target.data.id >= 30 ? "#2a2a3a" : d3.rgb(nodeColor(d.target.data)).brighter(0.3))
+    .attr("stroke-width", d => d.target.data.id >= 30 ? 2.5 : 1.2)
+    .attr("stroke-dasharray", d => d.target.data.id >= 30 ? "none" : "4,3")
+    .attr("opacity", d => d.target.data.id >= 30 ? 0.6 : 0.4);
+
+  // Node circles
+  g.append("g").selectAll("circle")
+    .data(root.descendants().filter(d => d.data.id < 30))
+    .join("circle")
+    .attr("cx", d => d.y)
+    .attr("cy", d => d.x)
+    .attr("r", 4)
+    .attr("fill", d => nodeColor(d.data))
+    .attr("stroke", d => d3.color(nodeColor(d.data)).darker(0.5))
+    .attr("stroke-width", 1);
+
+  // Domain labels
+  g.append("g").selectAll("text")
+    .data(root.descendants().filter(d => d.data.id >= 31))
+    .join("text")
+    .attr("x", d => d.y)
+    .attr("y", d => d.x - 6)
+    .attr("text-anchor", "start")
+    .attr("font-size", d => d.data.id >= 34 ? 8 : 9)
+    .attr("fill", d => d.data.id >= 34 ? "#48485a" : "#78788c")
+    .attr("font-family", "JetBrains Mono, monospace")
+    .attr("dy", "0.35em")
+    .text(d => d.data.id >= 34 ? (nodes[d.data.id] ? nodes[d.data.id].label.substring(0,18) : "") : nodes[d.data.id] ? nodes[d.data.id].label : "");
+
+})();
+
+// ─── PANEL 2: Archimedean Force-Directed Graph ───────────────────
+(function() {
+  const svg = d3.select("#streets-svg");
+  const width = svg.node().parentElement.clientWidth;
+  const height = svg.node().parentElement.clientHeight;
+  svg.attr("viewBox", [0,0,width,height]);
+
+  // Only leaf nodes for force layout
+  const leafNodes = nodes.filter(n => n.id < 30);
+  const leafLinks = streetEdges.filter(e => e.source < 30 && e.target < 30);
+
+  const simulation = d3.forceSimulation(leafNodes)
+    .force("link", d3.forceLink(leafLinks).id(d => d.id).distance(60).strength(0.3))
+    .force("charge", d3.forceManyBody().strength(-120))
+    .force("center", d3.forceCenter(width/2, height/2))
+    .force("collision", d3.forceCollide(12));
+
+  const g = svg.append("g");
+
+  // Links
+  const link = g.append("g").selectAll("line")
+    .data(leafLinks)
+    .join("line")
+    .attr("stroke", "#da7e4a")
+    .attr("stroke-width", d => d.weight * 3)
+    .attr("stroke-opacity", d => d.weight * 0.5);
+
+  // Nodes
+  const node = g.append("g").selectAll("g")
+    .data(leafNodes)
+    .join("g")
+    .call(d3.drag()
+      .on("start", (event,d) => { if (!event.active) simulation.alphaTarget(0.3).restart(); d.fx = d.x; d.fy = d.y; })
+      .on("drag", (event,d) => { d.fx = event.x; d.fy = event.y; })
+      .on("end", (event,d) => { if (!event.active) simulation.alphaTarget(0); d.fx = null; d.fy = null; }));
+
+  node.append("circle")
+    .attr("r", 6)
+    .attr("fill", d => nodeColor(d))
+    .attr("stroke", d => d3.color(nodeColor(d)).darker(0.5))
+    .attr("stroke-width", 1.5);
+
+  node.append("text")
+    .attr("text-anchor", "middle")
+    .attr("dy", -10)
+    .attr("font-size", 7)
+    .attr("fill", "#78788c")
+    .attr("font-family", "JetBrains Mono, monospace")
+    .text(d => d.label.substring(0,12));
+
+  node.on("mouseenter", showTooltip).on("mouseleave", hideTooltip);
+
+  simulation.on("tick", () => {
+    link
+      .attr("x1", d => d.source.x)
+      .attr("y1", d => d.source.y)
+      .attr("x2", d => d.target.x)
+      .attr("y2", d => d.target.y);
+    node.attr("transform", d => `translate(${d.x},${d.y})`);
+  });
+
+  // Add faint tree edges for context
+  const leafTreeLinks = treeEdges.filter(e => e.source < 30 && e.target < 30);
+  g.insert("g",":first-child").selectAll("line")
+    .data(leafTreeLinks)
+    .join("line")
+    .attr("stroke", "#4a9e6b")
+    .attr("stroke-width", 0.8)
+    .attr("stroke-opacity", 0.15)
+    .attr("stroke-dasharray", "2,4")
+    .attr("x1", d => leafNodes.find(n => n.id === d.source)?.x || 0)
+    .attr("y1", d => leafNodes.find(n => n.id === d.source)?.y || 0)
+    .attr("x2", d => leafNodes.find(n => n.id === d.target)?.x || 0)
+    .attr("y2", d => leafNodes.find(n => n.id === d.target)?.y || 0);
+
+})();
+
+// ─── PANEL 3: Dual Overlay ───────────────────────────────────────
+(function() {
+  const svg = d3.select("#dual-svg");
+  const width = svg.node().parentElement.clientWidth;
+  const height = svg.node().parentElement.clientHeight;
+  svg.attr("viewBox", [0,0,width,height]);
+
+  const leafNodes = nodes.filter(n => n.id < 30);
+  const dualLinks = [...treeEdges.filter(e => e.source<30 && e.target<30).map(e=>({...e,isTree:true})),
+    ...streetEdges.filter(e => e.source<30 && e.target<30).map(e=>({...e,isTree:false}))];
+
+  const sim = d3.forceSimulation(leafNodes)
+    .force("link", d3.forceLink(dualLinks).id(d=>d.id).distance(d=>d.isTree?80:50).strength(d=>d.isTree?0.15:0.4))
+    .force("charge", d3.forceManyBody().strength(-100))
+    .force("center", d3.forceCenter(width/2, height/2))
+    .force("collision", d3.forceCollide(10));
+
+  const g = svg.append("g");
+
+  const link = g.append("g").selectAll("line")
+    .data(dualLinks)
+    .join("line")
+    .attr("stroke", d => d.isTree ? "#4a9e6b" : "#da7e4a")
+    .attr("stroke-width", d => d.isTree ? 1 : (d.weight||0.5)*2.5)
+    .attr("stroke-opacity", d => d.isTree ? 0.25 : (d.weight||0.5)*0.6)
+    .attr("stroke-dasharray", d => d.isTree ? "3,5" : "none");
+
+  const node = g.append("g").selectAll("g")
+    .data(leafNodes)
+    .join("g")
+    .call(d3.drag()
+      .on("start", (e,d)=>{if(!e.active) sim.alphaTarget(0.3).restart();d.fx=d.x;d.fy=d.y;})
+      .on("drag", (e,d)=>{d.fx=e.x;d.fy=e.y;})
+      .on("end", (e,d)=>{if(!e.active) sim.alphaTarget(0);d.fx=null;d.fy=null;}));
+
+  node.append("circle")
+    .attr("r", 5)
+    .attr("fill", d => nodeColor(d))
+    .attr("stroke", "#0d0d12")
+    .attr("stroke-width", 2);
+
+  node.append("text")
+    .attr("text-anchor","middle").attr("dy",-9)
+    .attr("font-size",6).attr("fill","#78788c")
+    .attr("font-family","JetBrains Mono, monospace")
+    .text(d=>d.label.substring(0,10));
+
+  node.on("mouseenter", showTooltip).on("mouseleave", hideTooltip);
+
+  sim.on("tick", () => {
+    link.attr("x1",d=>d.source.x).attr("y1",d=>d.source.y)
+      .attr("x2",d=>d.target.x).attr("y2",d=>d.target.y);
+    node.attr("transform",d=>`translate(${d.x},${d.y})`);
+  });
+})();
+
+// ─── SERENDIPITY WALK ────────────────────────────────────────────
+let walkActive = false;
+let walkInterval = null;
+document.getElementById("walk-btn").addEventListener("click", () => {
+  if (walkActive) {
+    clearInterval(walkInterval);
+    walkActive = false;
+    document.getElementById("walk-btn").textContent = "⟳ Start Walk";
+    document.getElementById("walk-status").textContent = "";
+    return;
+  }
+  walkActive = true;
+  document.getElementById("walk-btn").textContent = "■ Stop Walk";
+  let current = Math.floor(Math.random() * 30);
+  let steps = 0, discovered = new Set(), crossings = 0;
+  let prevCluster = nodes[current].cluster;
+  discovered.add(current);
+
+  function step() {
+    if (steps >= 30 || discovered.size >= 25) {
+      document.getElementById("walk-status").textContent =
+        `Walk: ${steps} steps, ${discovered.size} nodes, ${crossings} crossings (SQ=${(crossings/steps).toFixed(2)})`;
+      clearInterval(walkInterval);
+      walkActive = false;
+      document.getElementById("walk-btn").textContent = "⟳ Start Walk";
+      return;
+    }
+    const nbrs = fullAdj[current] || [];
+    if (nbrs.length === 0) return;
+    current = nbrs[Math.floor(Math.random() * nbrs.length)];
+    if (current >= 30) return;
+    if (!discovered.has(current)) discovered.add(current);
+    if (nodes[current].cluster !== prevCluster) { crossings++; prevCluster = nodes[current].cluster; }
+    steps++;
+    document.getElementById("walk-status").textContent =
+      `Walking… ${steps} steps, ${discovered.size} nodes, ${crossings} crossings`;
+  }
+  walkInterval = setInterval(step, 800);
+});
+
+// ─── INIT ────────────────────────────────────────────────────────
+console.log("Archimedeanizing the Ultrametric — Ready");
+console.log(`UVR=${UVR.toFixed(2)} WE=${WE.toFixed(2)} SQ=${SQ.toFixed(2)} C=${C.toFixed(2)} J=${J.toFixed(4)}`);
+console.log(`${treeEdges.length} tree edges, ${streetEdges.length} street edges, ${30} leaf nodes`);
+</script>
+</body>
+</html>

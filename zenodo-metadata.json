@@ -1,0 +1,51 @@
+{
+  "metadata": {
+    "title": "The Silent Radix: Positional Notation as Ultrametric Tree and the Calculus of Indications as Remedy",
+    "description": "A consilient research program demonstrating that positional notation is an ultrametric tree whose radix encodes a chosen grouping cycle; that the systematic errors of silent radices, silent metrics, and assumed linearity arise from substituting a monocultural decimal default and flattening the tree into an Archimedean line; and that re-founding on Spencer-Brown's calculus of indications restores the observer, the ultrametric, and the self-measuring '10' as the seed of all self-aware quantity.\n\nDeliverables:\n- Consequence Atlas: 65 documented silent-frame errors across computing, science, cognition, and history\n- Synthesis Paper: 9-section research paper with literature anchoring\n- Formal Appendix: 8 theorems including Silent Radix Fixed-Point Lemma and Observer Necessity Theorem\n- Explicit Frame Pattern Language: 9 design patterns for self-aware numeric communication\n- LoF Number Builder Specification: Interactive web application design\n- Cross-Reference Index: Bidirectional Atlas-to-paper claim mapping",
+    "creators": [
+      {
+        "name": "QNFO Research",
+        "affiliation": "QWAV / QNFO",
+        "orcid": "0009-0008-4151-7387"
+      }
+    ],
+    "contributors": [
+      {
+        "name": "DeepSeek V4 Pro",
+        "type": "Other",
+        "affiliation": "AI Research Assistant (LLM orchestration)"
+      }
+    ],
+    "keywords": [
+      "positional notation",
+      "ultrametric",
+      "silent radix",
+      "Laws of Form",
+      "p-adic",
+      "foundation of mathematics",
+      "measurement theory",
+      "cycles",
+      "Spencer-Brown",
+      "calculus of indications",
+      "explicit frames",
+      "second-order cybernetics",
+      "observer",
+      "re-entry",
+      "consequence atlas",
+      "number systems"
+    ],
+    "license": "cc-by-4.0",
+    "upload_type": "publication",
+    "publication_type": "workingpaper",
+    "communities": [
+      {"identifier": "philosophy"},
+      {"identifier": "mathematics"},
+      {"identifier": "computer-science"}
+    ],
+    "access_right": "open",
+    "version": "1.0.0",
+    "language": "eng",
+    "notes": "One-month research sprint. Single researcher with LLM orchestration. All claims anchored in published literature. Consequence Atlas contains 65 verified silent-frame errors. Formal Appendix contains 8 theorems with proof sketches. Companion interactive tool specification (LoF Number Builder) included.",
+    "related_identifiers": []
+  }
+}

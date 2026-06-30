@@ -1,0 +1,844 @@
+{
+  "papers": [
+    {
+      "title": "Theoretical Models of Self-Organized Criticality (SOC) Systems",
+      "authors": [
+        "Markus J. Aschwanden"
+      ],
+      "year": 2012,
+      "abstract": "In this chapter 2 of the e-book \"Self-Organized Criticality Systems\" we summarize the classical cellular automaton models, which consist of a statistical aspect that is universal to all SOC systems, and a physical aspect that depends on the physical definition of the observable. Then we derive some general analytical formulations of SOC processes, such as the exponential-growth SOC model and the fractal-diffusive SOC model, which also have universal validity for SOC processes, while specific applications to observations require additional physical scaling laws (e.g., for astrophysical or geophysical observations). Finally we discuss alternative SOC processes, SOC-related, or non-SOC processes, such as: self-organization (without criticality), forced SOC model, Brownian motion or classical diffusion, hyper-diffusion and Levy flight, nonextensive Tsallis entropy, turbulence, percolation, phase transitions, network systems, and chaotic systems. We synthesize a metrics that specifies which observational SOC properties are shared by these processes.",
+      "arxiv_id": "1204.5119v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/1204.5119v1",
+      "source": "arxiv",
+      "published": "2012-04-23T17:26:38Z",
+      "citation_count": 0,
+      "tier": "supporting"
+    },
+    {
+      "title": "25 Years of Self-Organized Criticality: Solar and Astrophysics",
+      "authors": [
+        "Markus J. Aschwanden",
+        "Norma Crosby",
+        "Michaila Dimitropoulou",
+        "Manolis Georgoulis",
+        "Stefan Hergarten",
+        "James MdAteer",
+        "Alexander V. Milovanov",
+        "Shin Mineshige",
+        "Laura Morales",
+        "Naoto Nishizuka",
+        "Gunnar Pruessner",
+        "Raul Sanchez",
+        "Surja Sharma",
+        "Antoine Strugarek",
+        "Vadim Uritsky"
+      ],
+      "year": 2014,
+      "abstract": "Shortly after the seminal paper {\\sl \"Self-Organized Criticality: An explanation of 1/f noise\"} by Bak, Tang, and Wiesenfeld (1987), the idea has been applied to solar physics, in {\\sl \"Avalanches and the Distribution of Solar Flares\"} by Lu and Hamilton (1991). In the following years, an inspiring cross-fertilization from complexity theory to solar and astrophysics took place, where the SOC concept was initially applied to solar flares, stellar flares, and magnetospheric substorms, and later extended to the radiation belt, the heliosphere, lunar craters, the asteroid belt, the Saturn ring, pulsar glitches, soft X-ray repeaters, blazars, black-hole objects, cosmic rays, and boson clouds. The application of SOC concepts has been performed by numerical cellular automaton simulations, by analytical calculations of statistical (powerlaw-like) distributions based on physical scaling laws, and by observational tests of theoretically predicted size distributions and waiting time distributions. Attempts have been undertaken to import physical models into the numerical SOC toy models, such as the discretization of magneto-hydrodynamics (MHD) processes. The novel applications stimulated also vigorous debates about the discrimination between SOC models, SOC-like, and non-SOC processes, such as phase transitions, turbulence, random-walk diffusion, percolation, branching processes, network theory, chaos theory, fractality, multi-scale, and other complexity phenomena. We review SOC studies from the last 25 years and highlight new trends, open questions, and future challenges, as discussed during two recent ISSI workshops on this theme.",
+      "arxiv_id": "1403.6528v1",
+      "doi": "https://doi.org/10.1007/s11214-014-0054-6",
+      "url": "http://arxiv.org/abs/1403.6528v1",
+      "source": "arxiv",
+      "published": "2014-03-25T22:45:47Z",
+      "citation_count": 0,
+      "tier": "supporting"
+    },
+    {
+      "title": "Self-Organized Criticality in Daily Incidence of Acute Myocardial Infarction",
+      "authors": [
+        "A. M. Selvam",
+        "D. Sen",
+        "S. M. S. Mody"
+      ],
+      "year": 1998,
+      "abstract": "Continuous periodogram power spectral analysis of daily incidence of acute myocardial infarction (AMI) reported at a leading hospital for cardiology in Pune, India for the two-year period June 1992 to May 1994 show that the power spectra follow the universal and unique inverse power law form of the statistical normal distribution. Inverse power law form for power spectra of space-time fluctuations are ubiquitous to dynamical systems in nature and have been identified as signatures of self-organized criticality. The unique quantification for self-organized criticality presented in this paper is shown to be intrinsic to quantumlike mechanics governing fractal space-time fluctuation patterns in dynamical systems. The results are consistent with El Naschie's concept of cantorian fractal spacetime characteristics for quantum systems.",
+      "arxiv_id": "chao-dyn/9810017v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/chao-dyn/9810017v1",
+      "source": "arxiv",
+      "published": "1998-10-14T09:25:34Z",
+      "citation_count": 0,
+      "tier": "background"
+    },
+    {
+      "title": "Simple model of fractal networks formed by self-organized critical dynamics",
+      "authors": [
+        "Shogo Mizutaka"
+      ],
+      "year": 2018,
+      "abstract": "In this paper, a simple dynamical model in which fractal networks are formed by self-organized critical (SOC) dynamics is proposed; the proposed model consists of growth and collapse processes. It has been shown that SOC dynamics are realized by the combined processes in the model. Thus, the distributions of the cluster size and collapse size follow a power-law function in the stationary state. Moreover, through SOC dynamics, the networks become fractal in nature. The criticality of SOC dynamics is the same as the universality class of mean-field theory. The model explains the possibility that the fractal nature in complex networks emerges by SOC dynamics in a manner similar to the case with fractal objects embedded in a Euclidean space.",
+      "arxiv_id": "1806.05397v1",
+      "doi": "https://doi.org/10.7566/JPSJ.88.014002",
+      "url": "http://arxiv.org/abs/1806.05397v1",
+      "source": "arxiv",
+      "published": "2018-06-14T07:25:01Z",
+      "citation_count": 0,
+      "tier": "core"
+    },
+    {
+      "title": "Fractal and Small-World Networks Formed by Self-Organized Critical Dynamics",
+      "authors": [
+        "Akitomo Watanabe",
+        "Shogo Mizutaka",
+        "Kousuke Yakubo"
+      ],
+      "year": 2015,
+      "abstract": "We propose a dynamical model in which a network structure evolves in a self-organized critical (SOC) manner and explain a possible origin of the emergence of fractal and small-world networks. Our model combines a network growth and its decay by failures of nodes. The decay mechanism reflects the instability of large functional networks against cascading overload failures. It is demonstrated that the dynamical system surely exhibits SOC characteristics, such as power-law forms of the avalanche size distribution, the cluster size distribution, and the distribution of the time interval between intermittent avalanches. During the network evolution, fractal networks are spontaneously generated when networks experience critical cascades of failures that lead to a percolation transition. In contrast, networks far from criticality have small-world structures. We also observe the crossover behavior from fractal to small-world structure in the network evolution.",
+      "arxiv_id": "1507.05716v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/1507.05716v1",
+      "source": "arxiv",
+      "published": "2015-07-21T06:24:42Z",
+      "citation_count": 0,
+      "tier": "supporting"
+    },
+    {
+      "title": "Some fractal aspects of Self-Organized Criticality",
+      "authors": [
+        "B. Cessac"
+      ],
+      "year": 2004,
+      "abstract": "The concept of Self-Organized Criticality (SOC) was proposed in an attempt to explain the widespread appearance of power-law in nature. It describes a mechanism in which a system reaches spontaneously a state where the characteristic events (avalanches) are distributed according to a power law. We present a dynamical systems approach to Self-Organized Criticality where the dynamics is described either in terms of Iterated Function Systems, or as a piecewise hyperbolic dynamical system of skew-product type. Some results linking the structure of the attractor and some characteristic properties of avalanches are discussed.",
+      "arxiv_id": "nlin/0409004v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/nlin/0409004v1",
+      "source": "arxiv",
+      "published": "2004-09-02T11:18:47Z",
+      "citation_count": 0,
+      "tier": "background"
+    },
+    {
+      "title": "Metaphorical Language Change Is Self-Organized Criticality",
+      "authors": [
+        "Xuri Tang",
+        "Huifang Ye"
+      ],
+      "year": 2022,
+      "abstract": "One way to resolve the actuation problem of metaphorical language change is to provide a statistical profile of metaphorical constructions and generative rules with antecedent conditions. Based on arguments from the view of language as complex systems and the dynamic view of metaphor, this paper argues that metaphorical language change qualifies as a self-organized criticality state and the linguistic expressions of a metaphor can be profiled as a fractal with spatio-temporal correlations. Synchronously, these metaphorical expressions self-organize into a self-similar, scale-invariant fractal that follows a power-law distribution; temporally, long range inter-dependence constrains the self-organization process by the way of transformation rules that are intrinsic of a language system. This argument is verified in the paper with statistical analyses of twelve randomly selected Chinese verb metaphors in a large-scale diachronic corpus.",
+      "arxiv_id": "2211.10709v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/2211.10709v1",
+      "source": "arxiv",
+      "published": "2022-11-19T14:38:38Z",
+      "citation_count": 0,
+      "tier": "core"
+    },
+    {
+      "title": "Mapping Self-Organized Criticality onto Criticality",
+      "authors": [
+        "Didier Sornette",
+        "Anders Johansen",
+        "Ivan Dornic"
+      ],
+      "year": 1994,
+      "abstract": "We present a general conceptual framework for self-organized criticality (SOC), based on the recognition that it is nothing but the expression, ''unfolded'' in a suitable parameter space, of an underlying {\\em unstable} dynamical critical point. More precisely, SOC is shown to result from the tuning of the {\\em order parameter} to a vanishingly small, but {\\em positive} value, thus ensuring that the corresponding control parameter lies exactly at its critical value for the underlying transition. This clarifies the role and nature of the {\\em very slow driving rate} common to all systems exhibiting SOC. This mechanism is shown to apply to models of sandpiles, earthquakes, depinning, fractal growth and forest-fires, which have been proposed as examples of SOC.",
+      "arxiv_id": "adap-org/9411002v1",
+      "doi": "https://doi.org/10.1051/jp1:1995129",
+      "url": "http://arxiv.org/abs/adap-org/9411002v1",
+      "source": "arxiv",
+      "published": "1994-11-28T14:12:28Z",
+      "citation_count": 0,
+      "tier": "background"
+    },
+    {
+      "title": "Self Organized Critical Dynamic on the Sierpinski Carpet",
+      "authors": [
+        "Viviana Gomez",
+        "Gabriel Tellez"
+      ],
+      "year": 2024,
+      "abstract": "Self-organized criticality is a dynamical system property where, without external tuning, a system naturally evolves towards its critical state, characterized by scale-invariant patterns and power-law distributions. In this paper, we explored a self-organized critical dynamic on the Sierpinski carpet lattice, a scale-invariant structure whose dimension is defined as a power-law with a non-integer exponent, i.e. a fractal. To achieve this, we proposed an Ising-BCP (bond-correlated percolation) model as the foundation for investigating critical dynamics. Within this framework, we outlined a feedback mechanism for critical self-organization and followed an algorithm for its numerical implementation. The results obtained from the algorithm demonstrated enhanced efficiency when driving the Sierpinski carpet towards critical self-organization compared to a two-dimensional lattice. This efficiency was attributed to the iterative construction of the lattice and the distribution of spins within it. The key outcome of our findings is a novel dependence of self-organized criticality on topology for this particular model, which may have several applications in fields regarding information transmission.",
+      "arxiv_id": "2412.09771v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/2412.09771v1",
+      "source": "arxiv",
+      "published": "2024-12-13T00:31:33Z",
+      "citation_count": 0,
+      "tier": "core"
+    },
+    {
+      "title": "A Self-Organized Critical Universe",
+      "authors": [
+        "J. W. Moffat"
+      ],
+      "year": 1997,
+      "abstract": "A model of the universe as a self-organized critical system is considered. The universe evolves to a state independently of the initial conditions at the edge of chaos. The critical state is an attractor of the dynamics. Random metric fluctuations exhibit noise without any characteristic length scales, and the power spectrum for the fluctuations has a self-similar fractal behavior. In the early universe, the metric fluctuations smear out the local light cones removing the horizon problem.",
+      "arxiv_id": "gr-qc/9702014v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/gr-qc/9702014v1",
+      "source": "arxiv",
+      "published": "1997-02-06T18:47:09Z",
+      "citation_count": 0,
+      "tier": "background"
+    },
+    {
+      "title": "A Universal Scaling Law for the Fractal Energy Dissipation Domain in Self-Organized Criticality Systems",
+      "authors": [
+        "Markus J. Aschwanden"
+      ],
+      "year": 2010,
+      "abstract": "Nonlinear dissipative systems in the state of self-organized criticality release energy sporadically in avalanches of all sizes, such as in earthquakes, auroral substorms, solar and stellar flares, soft gamma-ray repeaters, and pulsar glitches. The statistical occurrence frequency distributions of event energies $E$ generally exhibit a powerlaw-like function $N(E)\\propto E^{-α_E}$ with a powerlaw slope of $α_E \\approx 1.5$. The powerlaw slope $α_E$ of energies can be related to the fractal dimension $D$ of the spatial energy dissipation domain by $D=3/α_E$, which predicts a powerlaw slope $α_E=1.5$ for area-rupturing or area-spreading processes with $D=2$. For solar and stellar flares, 2-D area-spreading dissipation domains are naturally provided in current sheets or separatrix surfaces in a magnetic reconnection region. Thus, this universal scaling law provides a useful new diagnostic on the topology of the spatial energy dissipation domain in geophysical and astrophysical observations.",
+      "arxiv_id": "1008.0873v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/1008.0873v1",
+      "source": "arxiv",
+      "published": "2010-08-04T20:42:35Z",
+      "citation_count": 0,
+      "tier": "supporting"
+    },
+    {
+      "title": "Activated random walk exhibits self-organized criticality",
+      "authors": [
+        "Christopher Hoffman",
+        "Tobias Johnson",
+        "Matthew Junge",
+        "Josh Meisel"
+      ],
+      "year": 2026,
+      "abstract": "To explain the ubiquity of power laws and fractals in nature, Bak, Tang, and Wiesenfeld formulated simple conditions for a system to self-organize into a critical state. Dickman, Muñoz, Vespignani, and Zapperi postulated that the self-organized critical state matches the critical state in corresponding fixed-energy models undergoing traditional phase transitions. Although the theory has been applied broadly over the past five decades, no mathematical model has been proven to exhibit the conjectured behavior. Indeed, the originally proposed abelian sandpile model displays nonuniversal behavior stemming from its slow mixing. Marking the first result of its kind, we prove that the 1-d activated random walk model mixes quickly into a stationary state with power-law avalanches and limiting critical density that equals the critical value for the fixed-energy version.",
+      "arxiv_id": "2605.00207v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/2605.00207v1",
+      "source": "arxiv",
+      "published": "2026-04-30T20:30:53Z",
+      "citation_count": 0,
+      "tier": "core"
+    },
+    {
+      "title": "Zipf's law, 1/f noise, and fractal hierarchy",
+      "authors": [
+        "Yanguang Chen"
+      ],
+      "year": 2011,
+      "abstract": "Fractals, 1/f noise, Zipf's law, and the occurrence of large catastrophic events are typical ubiquitous general empirical observations across the individual sciences which cannot be understood within the set of references developed within the specific scientific domains. All these observations are associated with scaling laws and have caused a broad research interest in the scientific circle. However, the inherent relationships between these scaling phenomena are still pending questions remaining to be researched. In this paper, theoretical derivation and mathematical experiments are employed to reveal the analogy between fractal patterns, 1/f noise, and the Zipf distribution. First, the multifractal process follows the generalized Zipf's law empirically. Second, a 1/f spectrum is identical in mathematical form to Zipf's law. Third, both 1/f spectra and Zipf's law can be converted into a self-similar hierarchy. Fourth, fractals, 1/f spectra, Zipf's law, and the occurrence of large catastrophic events can be described with similar exponential laws and power laws. The self-similar hierarchy is a more general framework or structure which can be used to encompass or unify different scaling phenomena and rules in both physical and social systems such as cities, rivers, earthquakes, fractals, 1/f noise, and rank-size distributions. The mathematical laws on the hierarchical structure can provide us with a holistic perspective of looking at complexity such as self-organized criticality (SOC).",
+      "arxiv_id": "1104.4528v1",
+      "doi": "https://doi.org/10.1016/j.chaos.2011.10.001",
+      "url": "http://arxiv.org/abs/1104.4528v1",
+      "source": "arxiv",
+      "published": "2011-04-23T03:50:16Z",
+      "citation_count": 0,
+      "tier": "supporting"
+    },
+    {
+      "title": "Self-Organized Criticality Systems in Astrophysics (Chapter 13)",
+      "authors": [
+        "Markus J. Aschwanden"
+      ],
+      "year": 2012,
+      "abstract": "Chapter 13: SOC Systems in Astrophysics --- Content list: 13.1 Theory -- 13.1.1 The Sacle-Free Probability Theorem - 13.1.2 The Fractal-Diffusive Spatio-Temporal Relationship - 13.1.3 Size Distributions of Astrophysical Observables - 13.1.4 Scaling Laws for Thermal Emission of Astrophysical Plasmas - 13.1.5 Scaling Laws for Astrophysical Acceleration Mechanisms - 13.2 Observations -- 13.2.1 Lunar Craters - 13.2.2 Asteroid Belt - 13.2.3 Saturn Ring - 13.2.4 Magnetospheric Substorms and Auroras - 13.2.5 Solar Flares - 13.2.6 Stellar Flares - 13.2.7 Pulsars - 13.2.8 Soft Gamma-Ray Repeaters - 13.2.9 Black-Hole Objects - 13.2.10 Blazars - 13.2.11 Cosmic Rays - 13.3 Conclusions",
+      "arxiv_id": "1207.4413v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/1207.4413v1",
+      "source": "arxiv",
+      "published": "2012-07-18T16:59:01Z",
+      "citation_count": 0,
+      "tier": "supporting"
+    },
+    {
+      "title": "A Statistical Fractal-Diffusive Avalanche Model of a Slowly-Driven Self-Organized Criticality System",
+      "authors": [
+        "Markus J. Aschwanden"
+      ],
+      "year": 2011,
+      "abstract": "We develop a statistical analytical model that predicts the occurrence frequency distributions and parameter correlations of avalanches in nonlinear dissipative systems in the state of a slowly-driven self-organized criticality (SOC) system. This model, called the fractal-diffusive SOC model, is based on the following four assumptions: (i) The avalanche size $L$ grows as a diffusive random walk with time $T$, following $L \\propto T^{1/2}$; (ii) The instantaneous energy dissipation rate $f(t)$ occupies a fractal volume with dimension $D_S$, which predicts the relationships $F = f(t=T) \\propto L^{D_S} \\propto T^{D_S/2}$, $P \\propto L^{S} \\propto T^{S/2}$ for the peak energy dissipation rate, and $E \\propto F T \\propto T^{1+D_S/2}$ for the total dissipated energy; (iii) The mean fractal dimension of avalanches in Euclidean space $S=1,2,3$ is $D_S \\approx (1+S)/2$; and (iv) The occurrence frequency distributions $N(x) \\propto x^{-α_x}$ based on spatially uniform probabilities in a SOC system are given by $N(L) \\propto L^{-S}$, which predicts powerlaw distributions for all parameters, with the slopes $α_T=(1+S)/2$, $α_F=1+(S-1)/D_S$, $α_P=2-1/S$, and $α_E=1+(S-1)/(D_S+2)$. We test the predicted fractal dimensions, occurrence frequency distributions, and correlations with numerical simulations of cellular automaton models in three dimensions $S=1,2,3$ and find satisfactory agreement within $\\approx 10%$. One profound prediction of this universal SOC model is that the energy distribution has a powerlaw slope in the range of $α_E=1.40-1.67$, and the peak energy distribution has a slope of $α_P=1.67$ (for any fractal dimension $D_S=1,...,3$ in Euclidean space S=3), and thus predicts that the bulk energy is always contained in the largest events, which rules out significant nanoflare heating in the case of solar flares.",
+      "arxiv_id": "1112.4859v1",
+      "doi": "https://doi.org/10.1051/0004-6361/201118237",
+      "url": "http://arxiv.org/abs/1112.4859v1",
+      "source": "arxiv",
+      "published": "2011-12-20T21:22:30Z",
+      "citation_count": 0,
+      "tier": "supporting"
+    },
+    {
+      "title": "Self-Organized Criticality and $1/f$ Noise in Traffic",
+      "authors": [
+        "Maya Paczuski",
+        "Kai Nagel"
+      ],
+      "year": 1996,
+      "abstract": "Phantom traffic jams may emerge ``out of nowhere'' from small fluctuations rather than being triggered by large, exceptional events. We show how phantom jams arise in a model of single lane highway traffic, which mimics human driving behavior. Surprisingly, the optimal state of highest efficiency, with the largest throughput, is a critical state with traffic jams of all sizes. We demonstrate that open systems self-organize to the most efficient state. In the model we study, this critical state is a percolation transition for the phantom traffic jams. At criticality, the individual jams have a complicated fractal structure where cars follow an intermittent stop and go pattern. We analytically derive the form of the corresponding power spectrum to be $1/f^α$ with $α=1$ exactly. This theoretical prediction agrees with our numerical simulations and with observations of $1/f$ noise in real traffic.",
+      "arxiv_id": "cond-mat/9602011v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/cond-mat/9602011v1",
+      "source": "arxiv",
+      "published": "1996-02-02T16:54:08Z",
+      "citation_count": 0,
+      "tier": "background"
+    },
+    {
+      "title": "Nonequilibrium Phase Transition and Self-Organized Criticality in a Sandpile Model with Stochastic Dynamics",
+      "authors": [
+        "S. Luebeck",
+        "B. Tadic",
+        "K. D. Usadel"
+      ],
+      "year": 1996,
+      "abstract": "We introduce and study numerically a directed two-dimensional sandpile automaton with probabilistic toppling (probability parameter p) which provides a good laboratory to study both self-organized criticality and the far-from-equilibrium phase transition. In the limit p=1 our model reduces to the critical height model in which the self-organized critical behavior was found by exact solution [D. Dhar and R. Ramaswamy, Phys. Rev. Lett. 63, 1659 (1989)]. For 0&lt;p&lt;1 metastable columns of sand may be formed, which are relaxed when one of the local slopes exceeds a critical value sigma _c. By varying the probability of toppling p we find that a continuous phase transition occurs at the critical probability p_c, at which the steady states with zero average slope (above p_c) are replaced by states characterized by a finite average slope (below p_c). We study this phase transition in detail by introducing an appropriate order parameter and the order-parameter susceptibility chi. In a certain range of p&lt;1 we find the self- organized critical behavior which is characterized by nonuniversal p-dependent scaling exponents for the probability distributions of size and length of avalanches. We also calculate the anisotropy exponent zeta and the fractal dimension d_f of relaxation clusters in the entire range of values of the toppling parameter p. We show that the relaxation clusters in our model are anisotropic and can be described as fractals for values of $p$ above the transition point. Below the transition they are isotropic and compact.",
+      "arxiv_id": "cond-mat/9605037v1",
+      "doi": "https://doi.org/10.1103/PhysRevE.53.2182",
+      "url": "http://arxiv.org/abs/cond-mat/9605037v1",
+      "source": "arxiv",
+      "published": "1996-05-07T16:40:50Z",
+      "citation_count": 0,
+      "tier": "background"
+    },
+    {
+      "title": "Self-Organization and Complex Networks",
+      "authors": [
+        "Guido Caldarelli",
+        "Diego Garlaschelli"
+      ],
+      "year": 2008,
+      "abstract": "In this chapter we discuss how the results developed within the theory of fractals and Self-Organized Criticality (SOC) can be fruitfully exploited as ingredients of adaptive network models. In order to maintain the presentation self-contained, we first review the basic ideas behind fractal theory and SOC. We then briefly review some results in the field of complex networks, and some of the models that have been proposed. Finally, we present a self-organized model recently proposed by Garlaschelli et al. [Nat. Phys. 3, 813 (2007)] that couples the fitness network model defined by Caldarelli et al. [Phys. Rev. Lett. 89, 258702 (2002)] with the evolution model proposed by Bak and Sneppen [Phys. Rev. Lett. 71, 4083 (1993)] as a prototype of SOC. Remarkably, we show that the results obtained for the two models separately change dramatically when they are coupled together. This indicates that self-organized networks may represent an entirely novel class of complex systems, whose properties cannot be straightforwardly understood in terms of what we have learnt so far.",
+      "arxiv_id": "0806.1655v1",
+      "doi": "https://doi.org/10.1007/978-3-642-01284-6_6",
+      "url": "http://arxiv.org/abs/0806.1655v1",
+      "source": "arxiv",
+      "published": "2008-06-10T13:18:48Z",
+      "citation_count": 0,
+      "tier": "background"
+    },
+    {
+      "title": "Field theory of self-organized fractal etching",
+      "authors": [
+        "Andrea Gabrielli",
+        "Miguel A. Munoz",
+        "Bernard Sapoval"
+      ],
+      "year": 2001,
+      "abstract": "We propose a phenomenological field theoretical approach to the chemical etching of a disordered-solid. The theory is based on a recently proposed dynamical etching model. Through the introduction of a set of Langevin equations for the model evolution, we are able to map the problem into a field theory related to isotropic percolation. To the best of the authors knowledge, it constitutes the first application of field theory to a problem of chemical dynamics. By using this mapping, many of the etching process critical properties are seen to be describable in terms of the percolation renormalization group fixed point. The emerging field theory has the peculiarity of being ``{\\it self-organized}'', in the sense that without any parameter fine-tuning, the system develops fractal properties up to certain scale controlled solely by the volume, $V$, of the etching solution.\n  In the limit $V \\to \\infty$ the upper cut-off goes to infinity and the system becomes scale invariant. We present also a finite size scaling analysis and discuss the relation of this particular etching mechanism with Gradient Percolation.\n  Finally, the possibility of considering this mechanism as a new generic path to self-organized criticality is analyzed, with the characteristics of being closely related to a real physical system and therefore more directly accessible to experiments.",
+      "arxiv_id": "cond-mat/0102158v1",
+      "doi": "https://doi.org/10.1103/PhysRevE.64.016108",
+      "url": "http://arxiv.org/abs/cond-mat/0102158v1",
+      "source": "arxiv",
+      "published": "2001-02-08T17:57:38Z",
+      "citation_count": 0,
+      "tier": "background"
+    },
+    {
+      "title": "Is the atmospheric river operating at a self-organized criticality state?",
+      "authors": [
+        "Shang Wang",
+        "Jun Meng",
+        "Sheng Fang",
+        "Teng Liu",
+        "Kim Christensen",
+        "Jürgen Kurths",
+        "Jingfang Fan"
+      ],
+      "year": 2025,
+      "abstract": "Atmospheric rivers (ARs) are essential components of the global hydrological cycle, with profound implications for water resources, extreme weather events, and climate dynamics. Yet, the statistical organization and underlying physical mechanisms of AR intensity and evolution remain poorly understood. Here we apply methods from statistical physics to analyze the full life cycle of ARs and identify universal signatures of self-organized criticality (SOC). We demonstrate that AR morphology exhibits nontrivial fractal geometry, while AR event sizes, quantified via integrated water vapor transport, follow robust power-law distributions, displaying finite-size scaling. These scaling behaviors persist under warming scenarios, suggesting that ARs operate near a critical state as emergent, self-regulating systems. Concurrently, we observe a systematic poleward migration and intensification of ARs, linked to thermodynamic amplification and dynamical reorganization. Our findings establish a statistical physics framework for ARs, linking critical phenomena to the spatiotemporal structure of extreme events in a warming climate.",
+      "arxiv_id": "2504.07674v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/2504.07674v1",
+      "source": "arxiv",
+      "published": "2025-04-10T11:55:22Z",
+      "citation_count": 0,
+      "tier": "core"
+    },
+    {
+      "title": "A Superstring Theory for Fractal Spacetime, Chaos and Quantumlike Mechanics in Atmospheric Flows",
+      "authors": [
+        "A. M. Selvam",
+        "Suvarna Fadnavis"
+      ],
+      "year": 1998,
+      "abstract": "Atmospheric flows exhibit long-range spatiotemporal correlations manifested as the fractal geometry to the global cloud cover pattern concomitant with inverse power law form for spectra of temporal fluctuations. Such non-local connections are ubiquitous to dynamical systems in nature and are identified as signatures of self-organized criticality A recently developed cell dynamical system model for atmospheric flows predicts the observed self-organized criticality as intrinsic to quantumlike mechanics governing flow dynamics. The model predicts the following: (a) The flow structure consists of an overall logarithmic spiral trajectory with the quasiperiodic Penrose tiling pattern for the internal structure. (b) The universal algorithm for self-organized criticality is expressed in terms of the universal Feigenbaum's constants. (c) The Feigenbaum's constants are expressed as functions of the golden mean. (d) The quantum mechanical constants ' fine structure constant' and 'ratio of proton mass to electron mass' which are pure numbers and obtained by experimental observations only, are now derived in terms of the Feigenbaum's constant a. (e) Atmospheric flow structure follows Kepler's third law of planetary motion. Therefore Newton's inverse square law for gravitation applies to eddy masses also. The centripetal acceleration representing inertial masses (of eddies) are equivalent to gravitational masses. Fractal structure to the space-time continuum can be visualized as a nested continuum of vortex (eddy) circulations whose inertial masses obey Newton's inverse square law of gravitation. The model concepts are equivalent to a superstring model for subatomic dynamics which incorporates gravitational forces.",
+      "arxiv_id": "chao-dyn/9806002v1",
+      "doi": "https://doi.org/10.1016/S0960-0779(98)00150-7",
+      "url": "http://arxiv.org/abs/chao-dyn/9806002v1",
+      "source": "arxiv",
+      "published": "1998-06-03T08:36:06Z",
+      "citation_count": 0,
+      "tier": "background"
+    },
+    {
+      "title": "Universal Quantification for Self-Organized Criticality in Atmospheric Flows",
+      "authors": [
+        "A. Mary Selvam"
+      ],
+      "year": 1997,
+      "abstract": "Atmospheric flows exhibit selfsimilar fluctuations on all scales(space-time) ranging from climate(kilometers/years) to turbulence(millimeters/seconds) manifested as fractal geometry to the global cloud cover pattern concomitant with inverse power law form for power spectra of temporal fluctuations. Selfsimilar fluctuations implying long-range correlations are ubiquitous to dynamical systems in nature and are identified as signatures of self-organized criticality in atmospheric flows. Also, mathematical models for simulation and prediction of atmospheric flows are nonlinear and computer realizations give unrealistic solutions because of deterministic chaos, a direct consequence of finite precision round-off error doubling for each iteration of iterative computations incorporated in long-term numerical integration schemes used for model solutions An alternative non-deterministic cell dynamical system model predicts, (a): the observed self organized criticality as a consequence of quantumlike mechanics governing flow dynamics,.(b):atmospheric flows trace an overall logarithmic spiral trajectory with the quasiperiodic Penrose tiling pattern for the internal structure,(c): eddy circulation structure follows Kepler's third law of planetary motion and results in inverse square law form for centripetal acceleration. The inertial masses representing the eddy circulation therefore follow laws analogous to the Newton's inverse square law for gravitation. The model is similar to a superstring model for subatomic dynamics which unifies quantum mechanical and classical concept and incorporates gravitational forces along with nuclear and electromagnetic forces.",
+      "arxiv_id": "chao-dyn/9710004v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/chao-dyn/9710004v1",
+      "source": "arxiv",
+      "published": "1997-10-09T06:31:06Z",
+      "citation_count": 0,
+      "tier": "background"
+    },
+    {
+      "title": "Self-organized Criticality in Multi-pulse Gamma-Ray Bursts",
+      "authors": [
+        "Fen Lyu",
+        "Ya-Ping Li",
+        "Shu-Jin Hou",
+        "Jun-Jie Wei",
+        "Jin-Jun Geng",
+        "Xue-Feng Wu"
+      ],
+      "year": 2020,
+      "abstract": "The variability in multi-pulse gamma-ray bursts (GRBs) may help to reveal the mechanism of underlying processes from the central engine. To investigate whether the self-organized criticality (SOC) phenomena exist in the prompt phase of GRBs, we statistically study the properties of GRBs with more than 3 pulses in each burst by fitting the distributions of several observed physical variables with a Markov Chain Monte Carlo approach, including the isotropic energy $E_{\\rm iso}$, the duration time $T$ and the peak count rate $P$ of each pulse. Our sample consists of 454 pulses in 93 GRBs observed by the CGRO/BATSE satellite. The best-fitting values and uncertainties for these power-law indices of the differential frequency distributions are: $α^d_{E}=1.54 \\pm 0.09$, $α^d_{T}=1.82_{-0.15}^{+0.14}$ and $α^d_{P}=2.09_{-0.19}^{+0.18}$, while the power-law indices in the cumulative frequency distributions are: $α^c_{E}=1.44_{-0.10}^{+0.08}$, $α^c_{T}=1.75_{-0.13}^{+0.11}$ and $α^c_{P}=1.99_{-0.19}^{+0.16}$. We find that these distributions are roughly consistent with the physical framework of a Fractal-Diffusive, Self-Organized Criticality (FD-SOC) system with the spatial dimension $S=3$ and the classical diffusion $β$=1. Our results support that the jet responsible for the GRBs should be magnetically dominated and magnetic instabilities (e.g., kink model, or tearing-model instability) lead the GRB emission region into the SOC state.",
+      "arxiv_id": "2009.06180v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/2009.06180v1",
+      "source": "arxiv",
+      "published": "2020-09-14T03:51:49Z",
+      "citation_count": 0,
+      "tier": "core"
+    },
+    {
+      "title": "What can one learn about Self-Organized Criticality from Dynamical Systems theory ?",
+      "authors": [
+        "Ph. Blanchard",
+        "B. Cessac",
+        "T. Krueger"
+      ],
+      "year": 1999,
+      "abstract": "We develop a dynamical system approach for the Zhang's model of Self-Organized Criticality, for which the dynamics can be described either in terms of Iterated Function Systems, or as a piecewise hyperbolic dynamical system of skew-product type. In this setting we describe the SOC attractor, and discuss its fractal structure. We show how the Lyapunov exponents, the Hausdorff dimensions, and the system size are related to the probability distribution of the avalanche size, via the Ledrappier-Young formula.",
+      "arxiv_id": "cond-mat/9912081v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/cond-mat/9912081v1",
+      "source": "arxiv",
+      "published": "1999-12-06T10:23:11Z",
+      "citation_count": 0,
+      "tier": "background"
+    },
+    {
+      "title": "25 Years of Self-Organized Criticality: Concepts and Controversies",
+      "authors": [
+        "Nicholas Watkins",
+        "Gunnar Pruessner",
+        "Sandra Chapman",
+        "Norma Bock Crosby",
+        "Henrik Jensen"
+      ],
+      "year": 2015,
+      "abstract": "Introduced by the late Per Bak and his colleagues, self-organized criticality (SOC) has been one of the most stimulating concepts to come out of statistical mechanics and condensed matter theory in the last few decades, and has played a significant role in the development of complexity science. SOC, and more generally fractals and power laws, have attacted much comment, ranging from the very positive to the polemical. The other papers in this special issue (Aschwanden et al, 2014; McAteer et al, 2014; Sharma et al, 2015) showcase the considerable body of observations in solar, magnetospheric and fusion plasma inspired by the SOC idea, and expose the fertile role the new paradigm has played in approaches to modeling and understanding multiscale plasma instabilities. This very broad impact, and the necessary process of adapting a scientific hypothesis to the conditions of a given physical system, has meant that SOC as studied in these fields has sometimes differed significantly from the definition originally given by its creators. In Bak's own field of theoretical physics there are significant observational and theoretical open questions, even 25 years on (Pruessner, 2012). One aim of the present review is to address the dichotomy between the great reception SOC has received in some areas, and its shortcomings, as they became manifest in the controversies it triggered. Our article tries to clear up what we think are misunderstandings of SOC in fields more remote from its origins in statistical mechanics, condensed matter and dynamical systems by revisiting Bak, Tang and Wiesenfeld's original papers.",
+      "arxiv_id": "1504.04991v1",
+      "doi": "https://doi.org/10.1007/s11214-015-0155-x",
+      "url": "http://arxiv.org/abs/1504.04991v1",
+      "source": "arxiv",
+      "published": "2015-04-20T09:45:43Z",
+      "citation_count": 0,
+      "tier": "supporting"
+    },
+    {
+      "title": "Evidence for self-organized criticality phenomena in prompt phase of short gamma-ray bursts",
+      "authors": [
+        "Xiu-Juan Li",
+        "Wen-Long Zhang",
+        "Shuang-Xi Yi",
+        "Yu-Peng Yang",
+        "Jia-Lun Li"
+      ],
+      "year": 2023,
+      "abstract": "The prompt phase of gamma-ray burst (GRB) contains essential information regarding the physical nature and central engine, which are as yet unknown. In this paper, we investigate the self-organized criticality (SOC) phenomena in GRB prompt phase as done in X-ray flares of GRBs. We obtain the differential and cumulative distributions of 243 short GRB pulses, such as peak flux, FWHM, rise time, decay time, and peak time in the fourth BATSE TTE Catalog with the Markov Chain Monte Carlo (MCMC) technique. It is found that these distributions can be well described by power-law models. In particular, comparisons are made in 182 short GRB pulses in the third Swift GRB Catalog from 2004 December to 2019 July. The results are essentially consistent with those in BATSE ones. We notice that there is no obvious power-law index evolution across different energy bands for either BATSE or Swift sGRBs. The joint analysis suggests that GRB prompt phase can be explained by a Fractal-Diffusive, Self-Organized Criticality (FD-SOC) system with the spatial dimension S = 3 and the classical diffusion ? = 1. Our findings show that GRB prompt phases and X-ray flares possess the very same magnetically dominated stochastic process and mechanism.",
+      "arxiv_id": "2303.06667v1",
+      "doi": "https://doi.org/10.3847/1538-4365/acc398",
+      "url": "http://arxiv.org/abs/2303.06667v1",
+      "source": "arxiv",
+      "published": "2023-03-12T14:10:38Z",
+      "citation_count": 0,
+      "tier": "core"
+    },
+    {
+      "title": "The Energy-Duration Relationship in Astrophysical Self-Organized Criticality Systems",
+      "authors": [
+        "Markus J. Aschwanden",
+        "Alexandre Araujo"
+      ],
+      "year": 2026,
+      "abstract": "Scaling laws in astrophysical systems that involve the energy, the geometry, and the spatio-temporal evolution, provide the theoretical framework for physical models of energy dissipation processes. A leading model is the standard fractal-diffusive self-organized criticality (FD-SOC) model, which is built on four fundamental assumptions: (i) the dimensionality $d=3$, (ii) the fractal dimension $D_V=d-1/2=2.5$, (iii) classical diffusion $L \\propto T^{(1/2)}$, and (iv) the proportionality of the dissipated energy to the fractal volume $E \\propto V$. Based on these assumptions, the FD-SOC model predicts a scaling law of $T \\propto E^k \\propto E^{(4/5)} = E^{0.8}$. On the observational side, we find empirical scaling laws of $T \\propto E^{0.81\\pm0.03}$ by Peng et al.~(2023) and $T \\propto E^{0.86\\pm0.03}$ by Araujo \\&amp; Valio (2021) that are self-consistent with the theoretical prediction of the FD-SOC model. However, cases with a small time range $q_T = \\log{(T_{max}/T_{min})} \\lapprox 2$ have large statistical uncertainties and systematic errors, which produces smaller scaling law exponents ($k \\approx 0.3, ..., 0.6$) as a consequence. The close correlation of the scaling exponent $k$ with the truncation bias $q_T$ implies that the dispersion of k-values is an observational effect, rather than a physical property.",
+      "arxiv_id": "2601.06277v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/2601.06277v1",
+      "source": "arxiv",
+      "published": "2026-01-09T19:45:38Z",
+      "citation_count": 0,
+      "tier": "core"
+    },
+    {
+      "title": "Self-organized criticality induced by quenched disorder: experiments on flux avalanches in NbH$_x$ films",
+      "authors": [
+        "M. S. Welling",
+        "C. M. Aegerter",
+        "R. J. Wijngaarden"
+      ],
+      "year": 2004,
+      "abstract": "We present an experimental study of the influence of quenched disorder on the distribution of flux avalanches in type-II superconductors. In the presence of much quenched disorder, the avalanche sizes are power-law distributed and show finite size scaling, as expected from self-organized criticality (SOC). Furthermore, the shape of the avalanches is observed to be fractal. In the absence of quenched disorder, a preferred size of avalanches is observed and avalanches are smooth. These observations indicate that a certain minimum amount of disorder is necessary for SOC behavior. We relate these findings to the appearance or non-appearance of SOC in other experimental systems, particularly piles of sand.",
+      "arxiv_id": "cond-mat/0410369v1",
+      "doi": "https://doi.org/10.1103/PhysRevB.71.104515",
+      "url": "http://arxiv.org/abs/cond-mat/0410369v1",
+      "source": "arxiv",
+      "published": "2004-10-14T14:25:28Z",
+      "citation_count": 0,
+      "tier": "background"
+    },
+    {
+      "title": "Simulating Cumulus Clouds based on Self-Organized Criticality",
+      "authors": [
+        "J. Cheraghalizadeh",
+        "M. Luković",
+        "M. N. Najafi"
+      ],
+      "year": 2022,
+      "abstract": "Recently it was shown that self-organized criticality is an important ingredient of the dynamics of cumulus clouds (Physical Review E, 103(5), p.052106, 2021). Here we introduce a new algorithm to simulate cumulus clouds in two-dimensional square lattices, based on two important facts: the cohesive energy of wet air parcels and a sandpile-type diffusion of cloud segments. The latter is realized by considering the evaporation/condensation of air parcels in various regions of the cloud, which enables them to diffuse to the neighboring regions. The results stemming from this model are in excellent agreement with the observational results reported in the above-cited paper, where the exponents have been obtained for the two-dimensional earth-to-sky RGB images of clouds. The exponents that are obtained at the lowest condensation level in our model are consistent with the observational exponents. We observed that the cloud fields that we obtain from our model are fractal, with the outer perimeter having a fractal dimension of $D_f = 1.25 \\pm 0.01$. Furthermore, the distributions of the radius of gyration and the loop length follow a power-law function with exponents $τ_r = 2.3 \\pm 0.1$ and $τ_l = 2.1 \\pm 0.1$, respectively. The loop Green function is found to be logarithmic with the radius of gyration of the loops following the observational results. The winding angle statistic of the external perimeter of the cloud field is also analyzed, showing an exponent in agreement with the fractal dimension, which may serve as the conformal invariance of the system.",
+      "arxiv_id": "2212.02580v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/2212.02580v1",
+      "source": "arxiv",
+      "published": "2022-12-05T20:20:43Z",
+      "citation_count": 0,
+      "tier": "core"
+    },
+    {
+      "title": "A Macroscopic Description of a Generalized Self-Organized Criticality System: Astrophysical Applications",
+      "authors": [
+        "Markus J. Aschwanden"
+      ],
+      "year": 2013,
+      "abstract": "We suggest a generalized definition of self-organized criticality (SOC) systems: SOC is a critical state of a nonlinear energy dissipation system that is slowly and continuously driven towards a critical value of a system-wide instability threshold, producing scale-free, fractal-diffusive, and intermittent avalanches with powerlaw-like size distributions. We develop here a macroscopic description of SOC systems that provides an equivalent description of the complex microscopic fine structure, in terms of fractal-diffusive transport (FD-SOC). Quantitative values for the size distributions of SOC parameters (length scales $L$, time scales $T$, waiting times $Δt$, fluxes $F$, and energies $E$) are derived from first principles, using the scale-free probability conjecture, $N(L) dL \\propto L^{-d}$, for Euclidean space dimension $d$. We apply this model to astrophysical SOC systems, such as lunar craters, the asteroid belt, Saturn ring particles, magnetospheric substorms, radiation belt electrons, solar flares, stellar flares, pulsar glitches, soft gamma-ray repeaters, black-hole objects, blazars, and cosmic rays. The FD-SOC model predicts correctly the size distributions of 8 out of these 12 astrophysical phenomena, and indicates non-standard scaling laws and measurement biases for the others.",
+      "arxiv_id": "1310.4191v2",
+      "doi": "https://doi.org/10.1088/0004-637X/782/1/54",
+      "url": "http://arxiv.org/abs/1310.4191v2",
+      "source": "arxiv",
+      "published": "2013-10-15T20:15:09Z",
+      "citation_count": 0,
+      "tier": "supporting"
+    },
+    {
+      "title": "Water Propagation in the Porous Media, Self-Organized Criticality and Ising Model",
+      "authors": [
+        "M. N. Najafi",
+        "M. Ghaedi"
+      ],
+      "year": 2013,
+      "abstract": "In this paper we propose the Ising model to study the propagation of water in 2 dimensional (2D) petroleum reservoir in which each bond between its pores has the probability $p$ of being activated. We analyze the water movement pattern in porous media described by Darcy equations by focusing on its geometrical objects. Using Schramm-Loewner evolution (SLE) technique we numerically show that at $p=p_c\\simeq 0.59$, this model lies within the Ising universality class with the diffusivity parameter $κ=3$ and the fractal dimension $D_f=\\frac{11}{8}$. We introduce a self-organized critical model in which the water movement is modeled by a chain of topplings taking place when the amount of water exceeds the critical value and numerically show that it coincides with the numerical reservoir simulation. For this model, the behaviors of distribution functions of the geometrical quantities and the Green function are investigated in terms of $p$. We show that percolation probability has a maximum around $p=0.68$, in contrast to common belief.",
+      "arxiv_id": "1306.0201v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/1306.0201v1",
+      "source": "arxiv",
+      "published": "2013-06-02T12:30:46Z",
+      "citation_count": 0,
+      "tier": "supporting"
+    },
+    {
+      "title": "Avalanche dynamics, surface roughening and self-organized criticality - experiments on a 3 dimensional pile of rice",
+      "authors": [
+        "C. M. Aegerter",
+        "R. Günther",
+        "R. J. Wijngaarden"
+      ],
+      "year": 2003,
+      "abstract": "We present a two-dimensional system which exhibits features of self-organized criticality. The avalanches which occur on the surface of a pile of rice are found to exhibit finite size scaling in their probability distribution. The critical exponents are $τ$ = 1.21(2) for the avalanche size distribution and $D$ = 1.99(2) for the cut-off size. Furthermore the geometry of the avalanches is studied leading to a fractal dimension of the active sites of $d_B$ = 1.58(2). Using a set of scaling relations, we can calculate the roughness exponent $α= D - d_B$ = 0.41(3) and the dynamic exponent $z = D(2 - τ)$ = 1.56(8). This result is compared with that obtained from a power spectrum analysis of the surface roughness, which yields $α$ = 0.42(3) and $z$ = 1.5(1) in excellent agreement with those obtained from the scaling relations.",
+      "arxiv_id": "cond-mat/0305592v1",
+      "doi": "https://doi.org/10.1103/PhysRevE.67.051306",
+      "url": "http://arxiv.org/abs/cond-mat/0305592v1",
+      "source": "arxiv",
+      "published": "2003-05-26T12:00:27Z",
+      "citation_count": 0,
+      "tier": "background"
+    },
+    {
+      "title": "Self-Organized Criticality Across Thirteen Orders of Magnitude in the Solar-Stellar Connection",
+      "authors": [
+        "Markus J. Aschwanden",
+        " Carolus",
+        "J. Schrijver"
+      ],
+      "year": 2025,
+      "abstract": "The observed size distributions of solar and stellar flares is found to be consistent with the predictions of the fractal-diffusive self-organized criticality (FD-SOC) model, which predicts power law slopes with universal constants of $α_F=(9/5)=1.80$ for the flux, and $α_E=(5/3)\\approx 1.67$ for the fluence, respectively. In this Letter we explore the solar-stellar connection under this aspect, which extends over an unprecedented dynamic range of 13 orders of magnitude between the smallest detected solar nanoflare event ($E_{min}=10^{24}$ erg) and the largest superflare ($E_{max}=10^{37}$ erg) on solar-like G-type stars, observed with the KEPLER mission. The FD-SOC model predicts a scaling law of $L \\propto E^{(2/9)}$ for the length scale $L$ as a function of the flare energy $E$, which limits the largest flare size to $L_{max} \\lapprox 0.14 R_\\odot$ for solar flares, and $L_{stellar} \\lapprox 1.04\\ R_{\\odot}$ for stellar flares on G-type stars. In the overall we conclude that the universality of power laws (and their slopes) is a consequence of SOC properties (fractality, classical diffusion, scale-freeness, volume-flux proportionality), rather than identical physical processes at different wavelengths.",
+      "arxiv_id": "2503.18136v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/2503.18136v1",
+      "source": "arxiv",
+      "published": "2025-03-23T16:47:15Z",
+      "citation_count": 0,
+      "tier": "core"
+    },
+    {
+      "title": "Universal Constants and Energy Integral in Self-Organized Criticality Systems",
+      "authors": [
+        "Markus Aschwanden"
+      ],
+      "year": 2024,
+      "abstract": "The occurrence frequency distributions of fluxes (F) and fluences or energies (E) observed in astrophysical observations are found to be consistent with the predictions of the fractal-diffusive self-organized criticality (FD-SOC) model, which predicts power law slopes with universal constants of $α_F=(9/5)=1.80$ for the flux and $α_E=(5/3)\\approx 1.67$ for the fluence. The energy integrated over the power law-like (size distribution) energy range is found to be finite for these power law slopes with $α_E &lt; 2$, which refutes earlier claims of a divergent energy integral that has been postulated in the energy budget of solar and stellar nanoflare scenarios. The theoretial FD-SOC model approximates the microscopic cellular automaton models satisfactorily with the macroscopic scaling law of classical diffusion. The universal scaling laws predict the size distributions of numerous astrophysical phenomena, such as solar flares, stellar flares, coronal mass ejections (CME), auroras, blazars, galactic fast radio bursts (FRB), active galactic nuclei (AGN), gamma-ray bursts (GRB), soft gamma-ray repeaters (SGB), and black-hole systems (BH), while coherent solar radio bursts, random radio bursts, solar energetic partices (SEP), cosmic rays, and pulsar glitches require non-standard SOC models.",
+      "arxiv_id": "2412.03481v2",
+      "doi": "",
+      "url": "http://arxiv.org/abs/2412.03481v2",
+      "source": "arxiv",
+      "published": "2024-12-04T17:17:17Z",
+      "citation_count": 0,
+      "tier": "core"
+    },
+    {
+      "title": "Power Laws Associated with Self-Organized Criticality: A Comparison of Empirical Data with Model Predictions",
+      "authors": [
+        "Markus J. Aschwanden",
+        "Felix Scholkmann"
+      ],
+      "year": 2025,
+      "abstract": "We investigate the relevance of {\\sl self-organized criticality (SOC)} models in previously published empirical datasets, which includes statistical observations in astrophysics, geophysics, biophysics, sociophysics, and informatics. We study 25 interdisciplinary phenomena with five different event detection and power law fitting methods. The total number of analyzed size distributions amounts to 64 cases, of which 80\\% are found to be nearly consistent ($α_s=1.99\\pm0.30$) with the SOC model predictions. The fractal-diffusive SOC model predicts power law slopes of $α_F=(9/5)=1.80$ for the flux $F$, $α_E=(5/3)\\sim1.67$ for the fluence or energy $E$, and $α_T=2.00$ for the avalanche duration $T$. We find that the phenomena of solar flares, earthquakes, and forest fires are consistent with the theoretical predictions, while the size distributions of other phenomena are not conclusive due to neglected background treatment, inadequacy of power law fitting range, small-number statistics, and finite-system size effects.",
+      "arxiv_id": "2505.00748v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/2505.00748v1",
+      "source": "arxiv",
+      "published": "2025-04-30T16:35:01Z",
+      "citation_count": 0,
+      "tier": "core"
+    },
+    {
+      "title": "Testing the Universality of Self-Organized Criticality in Galactic, Extra-Galactic, and Black-Hole Systems",
+      "authors": [
+        "Markus Aschwanden",
+        "Ersin Gogus"
+      ],
+      "year": 2024,
+      "abstract": "In this study we are testing whether the power law slopes ($α_F$, $α_E$) of fluxes $(F)$, fluences or energies $(E)$ are universal in their size distributions, $N(F) \\propto F^{-α_F}$ and $N(E) \\propto E^{-α_E}$, in astrophysical observations of galactic, extragalactic, and black-hole systems. This is a test of fundamental importance for self-organized criticality (SOC) systems. The test decides whether (i) power laws are a natural consequence of the scale-freeness and inherent universality of SOC systems, or (ii) if they depend on more complex physical scaling laws. The former criterion allows quantitative predictions of the power law-like size distributions, while the later criterion requires individual physical modeling for each SOC variable and data set. Our statistical test, carried out with 61 published data sets, yields strong support for the former option, which implies that observed power laws can simply be derived from the scale-freeness and do not require specific physical models to understand their statistical distributions. The observations show a mean and standard deviation of $α_F=1.78\\pm0.29$ for SOC fluxes, and $α_E=1.66\\pm0.22$ for SOC fluences, and thus are consistent with the prediction of the fractal-diffusive SOC model, with $α_F=1.80$ and $α_E=1.67$.",
+      "arxiv_id": "2412.03499v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/2412.03499v1",
+      "source": "arxiv",
+      "published": "2024-12-04T17:40:44Z",
+      "citation_count": 0,
+      "tier": "core"
+    },
+    {
+      "title": "Evidence of Self-Organization in Time Series of Capital Markets",
+      "authors": [
+        "Leopoldo Sánchez-Cantú",
+        "Carlos Arturo Soto-Campos",
+        "Andriy Kryvko"
+      ],
+      "year": 2016,
+      "abstract": "A methodology is developed to identify, as units of study, each decrease in the value of a stock from a given maximum price level. A critical level in the amount of price declines is found to separate a segment operating under a random walk from a segment operating under a power law. This level is interpreted as a point of phase transition into a self-organized system. Evidence of self-organization was found in all the stock market indices studied but in none of the control synthetic random series. Findings partially explain the fractal structure characteristic of financial time series and suggest that price fluctuations adopt two different operating regimes. We propose to identify downward movements larger than the critical level apparently subject to the power law, as self-organized states, and price decreases smaller than the critical level, as a random walk with the Markov property.",
+      "arxiv_id": "1604.03996v2",
+      "doi": "",
+      "url": "http://arxiv.org/abs/1604.03996v2",
+      "source": "arxiv",
+      "published": "2016-04-13T23:18:02Z",
+      "citation_count": 0,
+      "tier": "supporting"
+    },
+    {
+      "title": "Self-Consistent Closure of Fractal Dimension, Nonextensive Statistics, and Non-Markovian Dynamics in Critical Systems",
+      "authors": [
+        "O. Sotolongo-Costa",
+        "J. Weberszpil",
+        "M. E. Mora-Ramos"
+      ],
+      "year": 2026,
+      "abstract": "Self-organized critical systems often exhibit three macroscopic features simultaneously: nonextensive thermodynamics (quantified by the Tsallis index $q$), structural fractality (measured by the Hausdorff dimension $D$), and non-Markovian dynamics (characterized by the memory exponent $α$). Historically, these parameters have been treated as independent, to be empirically fitted case by case. Here we demonstrate that phase-space self-consistency imposes a unique algebraic closure: $α=D/(2D-1)$. This relation, together with $q=1+1/D$ derived from the extensivity of Tsallis entropy on fractal supports, yields the known result $α=1/(3-q)$ as a consequence, not as an independent assumption. The closure contains no free parameters and satisfies the physical boundary conditions $α(1)=1$ (ballistic transport in Euclidean spaces) and $α\\to1/2$ as $D\\to\\infty$ (maximally subdiffusive regime). We validate the Troika relation across eight independent experimental systems, including seismicity, electromagnetic precursors, EEG, urban networks, botanical architectures, and space plasma. All measured values fall within error bars of the theoretical prediction, establishing the universality of the closure.",
+      "arxiv_id": "2606.15750v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/2606.15750v1",
+      "source": "arxiv",
+      "published": "2026-06-14T11:22:41Z",
+      "citation_count": 0,
+      "tier": "supporting"
+    },
+    {
+      "title": "Fractals in the Nervous System: conceptual Implications for Theoretical Neuroscience",
+      "authors": [
+        "Gerhard Werner"
+      ],
+      "year": 2009,
+      "abstract": "This essay is presented  with two principal objectives in mind: first, to document the prevalence of fractals at all levels of the nervous system, giving credence to the notion of their functional relevance; and second, to draw attention to the as yet still unresolved issues of the detailed relationships among power law scaling, self-similarity, and self-organized criticality. As regards criticality, I will document that it has become a pivotal reference point in Neurodynamics. Furthermore, I will emphasize the not yet fully appreciated significance of allometric control processes. For dynamic fractals, I will assemble reasons for attributing to them the capacity to adapt task execution to contextual changes across a range of scales.   The final Section consists of general reflections on the implications of the reviewed data, and identifies what appear to be issues of fundamental importance for future research in the rapidly evolving topic of this review.",
+      "arxiv_id": "0910.2741v2",
+      "doi": "",
+      "url": "http://arxiv.org/abs/0910.2741v2",
+      "source": "arxiv",
+      "published": "2009-10-14T22:26:12Z",
+      "citation_count": 0,
+      "tier": "background"
+    },
+    {
+      "title": "Role of Defects in Self-Organized Criticality: A Directed Coupled Map Lattice Model",
+      "authors": [
+        "Bosiljka Tadic",
+        "Ramakrishna Ramaswamy"
+      ],
+      "year": 1996,
+      "abstract": "We study a directed coupled map lattice model in two dimensions, with two degrees of freedom associated with each lattice site. The two freedoms are coupled at a fraction $c$ of lattice bonds acting as quenched random defects. In the case of conservative dynamics, at any concentration of defects the system reaches a self-organized critical state with universal critical exponents close to the mean-field values. The probability distributions follow the general scaling form $P(X,L)= L^{-α}{\\cal{P}}(XL^{-D_X})$, where $α\\approx 1$ is the scaling exponent for the distribution of avalanche lengths, $X$ stands for duration, size or released energy, and $D_X$ is the fractal dimension with respect to $X$. The distribution of current is nonuniversal, and does not show any apparent scaling form. In the case of nonconservative dynamics---obtained by incomplete energy transfer at the defect bonds--- the system is driven out of the critical state. In the scaling region close to $c=0$ the probability distributions exhibit the general scaling form $P(X,c,L)=X^{-τ_X }{\\cal{P}}(X/ξ_X (c), XL^{-D_X})$, where $τ_X =α/D_X$ and the coherence length $ξ_X (c)$ depends on the concentration of defect bonds $c$ as $ξ_X (c)\\sim c^{-D_X}$.",
+      "arxiv_id": "cond-mat/9602092v1",
+      "doi": "https://doi.org/10.1103/PhysRevE.54.3157",
+      "url": "http://arxiv.org/abs/cond-mat/9602092v1",
+      "source": "arxiv",
+      "published": "1996-02-16T10:40:16Z",
+      "citation_count": 0,
+      "tier": "background"
+    },
+    {
+      "title": "Fractal Structures Driven by Self-Gravity: Molecular clouds and the Universe",
+      "authors": [
+        "Francoise Combes"
+      ],
+      "year": 1998,
+      "abstract": "In the interstellar medium, as well as in the Universe, large density fluctuations are observed, that obey power-law density distributions and correlation functions.\n These structures are hierarchical, chaotic, turbulent, but are also self-organizing. The apparent disorder is not random noise, but can be described by a fractal, with a deterministic fractal dimension. We discuss the theories advanced to describe these fractal structures, and in particular a new theory of the self-gravity thermodynamics, that could explain their existence, and predict their fractal dimension. The media obeying scaling laws can be considered critical, as in second order phase transitions for instance.",
+      "arxiv_id": "astro-ph/9804048v1",
+      "doi": "https://doi.org/10.1023/A:1008370831608",
+      "url": "http://arxiv.org/abs/astro-ph/9804048v1",
+      "source": "arxiv",
+      "published": "1998-04-05T14:19:50Z",
+      "citation_count": 0,
+      "tier": "background"
+    },
+    {
+      "title": "Surface Hardening and Self-Organized Fractality Through Etching of Random Solids",
+      "authors": [
+        "A. Gabrielli",
+        "A. Baldassarri",
+        "B. Sapoval"
+      ],
+      "year": 2000,
+      "abstract": "When a finite volume of etching solution is in contact with a disordered solid, complex dynamics of the solid-solution interface develop. If the etchant is consumed in the chemical reaction, the dynamics stop spontaneously on a self-similar fractal surface. As only the weakest sites are corroded, the solid surface gets progressively harder and harder. At the same time it becomes rougher and rougher uncovering the critical spatial correlations typical of percolation. From this, the chemical process reveals the latent percolation criticality hidden in any random system. Recently, a simple minimal model has been introduced by Sapoval et al. to describe this phenomenon. Through analytic and numerical study, we obtain a detailed description of the process. The time evolution of the solution corroding power and of the distribution of resistance of surface sites is studied in detail. This study explains the progressive hardening of the solid surface. Finally, this dynamical model appears to belong to the universality class of Gra dient Percolation.",
+      "arxiv_id": "cond-mat/0002298v1",
+      "doi": "https://doi.org/10.1103/PhysRevE.62.3103",
+      "url": "http://arxiv.org/abs/cond-mat/0002298v1",
+      "source": "arxiv",
+      "published": "2000-02-18T15:54:46Z",
+      "citation_count": 0,
+      "tier": "background"
+    },
+    {
+      "title": "Self-Organized Percolation Power Laws with and without Fractal Geometry in the Etching of Random Solids",
+      "authors": [
+        "Agnes Desolneux",
+        "Bernard Sapoval",
+        "Andrea Baldassarri"
+      ],
+      "year": 2003,
+      "abstract": "Classically, percolation critical exponents are linked to the power laws that characterize percolation cluster fractal properties. It is found here that the gradient percolation power laws are conserved even for extreme gradient values for which the frontier of the infinite cluster is no more fractal. In particular the exponent 7/4 which was recently demonstrated to be the exact value for the dimension of the so-called \"hull\" or external perimeter of the incipient percolation cluster, controls the width and length of gradient percolation frontiers whatever the gradient magnitude. This behavior is extended to previous model studies of etching by a finite volume of etching solution in contact with a disordered solid. In such a model, the dynamics stop spontaneously on an equilibrium self-similar surface similar to the fractal frontier of gradient percolation. It is shown that the power laws describing the system geometry involves also the fractal dimension of the percolation hull, whatever the value of the dynamically generated gradient, i.e. even for a non-fractal frontier. The comparison between numerical results and the exact results that can be obtained analytically for extreme values of the gradient suggests that there exist a unique power law valid from the smallest possible scale up to infinity. These results suggest the possible existence of an underlying conservation law, relating the length and the statistical width of percolation gradient frontiers.",
+      "arxiv_id": "cond-mat/0302072v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/cond-mat/0302072v1",
+      "source": "arxiv",
+      "published": "2003-02-04T13:01:08Z",
+      "citation_count": 0,
+      "tier": "background"
+    },
+    {
+      "title": "Fractal Fluctuations and Statistical Normal Distribution",
+      "authors": [
+        "A. M. Selvam"
+      ],
+      "year": 2008,
+      "abstract": "Dynamical systems in nature exhibit selfsimilar fractal fluctuations and the corresponding power spectra follow inverse power law form signifying long-range space-time correlations identified as self-organized criticality. The physics of self-organized criticality is not yet identified. The Gaussian probability distribution used widely for analysis and description of large data sets underestimates the probabilities of occurrence of extreme events such as stock market crashes, earthquakes, heavy rainfall, etc. The assumptions underlying the normal distribution such as fixed mean and standard deviation, independence of data, are not valid for real world fractal data sets exhibiting a scale-free power law distribution with fat tails. A general systems theory for fractals visualizes the emergence of successively larger scale fluctuations to result from the space-time integration of enclosed smaller scale fluctuations. The model predicts a universal inverse power law incorporating the golden mean for fractal fluctuations and for the corresponding power spectra, i.e., the variance spectrum represents the probabilities, a signature of quantum systems. Fractal fluctuations therefore exhibit quantum-like chaos. The model predicted inverse power law is very close to the Gaussian distribution for small-scale fluctuations, but exhibits a fat long tail for large-scale fluctuations. Extensive data sets of Dow Jones index, Human DNA, Takifugu rubripes (Puffer fish) DNA are analysed to show that the space/time data sets are close to the model predicted power law distribution.",
+      "arxiv_id": "0805.3426v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/0805.3426v1",
+      "source": "arxiv",
+      "published": "2008-05-22T10:25:04Z",
+      "citation_count": 0,
+      "tier": "background"
+    },
+    {
+      "title": "Deterministic Chaos Model for Self-Organized Adaptive Networks in Atmospheric Flows",
+      "authors": [
+        "A. Mary Selvam"
+      ],
+      "year": 2003,
+      "abstract": "The complex spatiotemporal patterns of atmospheric flows resulting from the cooperative existence of fluctuations ranging in size from millimeters to thousands of kilometers are found to exhibit long-range spatial and temporal correlations manifested as the selfsimilar fractal geometry to the global cloud cover pattern and the inverse power law form for the atmospheric eddy energy spectrum. Such long-range spatial and temporal correlations are ubiquitous to extended natural dynamical systems and is a signature of the strange attractor design characterizing deterministic chaos or self-organized criticality. The unified network of global atmospheric circulations is analogous to the neural networks of the human brain.",
+      "arxiv_id": "physics/0308094v1",
+      "doi": "https://doi.org/10.1109/NAECON.1989.40353",
+      "url": "http://arxiv.org/abs/physics/0308094v1",
+      "source": "arxiv",
+      "published": "2003-08-26T14:41:44Z",
+      "citation_count": 0,
+      "tier": "background"
+    },
+    {
+      "title": "Homeostatic Criticality in Neuronal Networks",
+      "authors": [
+        "Gustavo Menesse",
+        "Bóris Marin",
+        "Mauricio Girardi-Schappo",
+        "Osame Kinouchi"
+      ],
+      "year": 2021,
+      "abstract": "In self-organized criticality (SOC) models, as well as in standard phase transitions, criticality is only present for vanishing external fields $h \\to 0$. Considering that this is rarely the case for natural systems, such a restriction poses a challenge to the explanatory power of these models. Besides that, in models of dissipative systems like earthquakes, forest fires, and neuronal networks, there is no true critical behavior, as expressed in clean power laws obeying finite-size scaling, but a scenario called \"dirty\" criticality or self-organized quasi-criticality (SOqC). Here, we propose simple homeostatic mechanisms which promote self-organization of coupling strengths, gains, and firing thresholds in neuronal networks. We show that with an adequate separation of the timescales for the coupling strength and firing threshold dynamics, near criticality (SOqC) can be reached and sustained even in the presence of significant external input. The firing thresholds adapt to and cancel the inputs ($h$ decreases towards zero). Similar mechanisms can be proposed for the couplings and local thresholds in spin systems and cellular automata, which could lead to applications in earthquake, forest fire, stellar flare, voting, and epidemic modeling.",
+      "arxiv_id": "2109.02718v3",
+      "doi": "https://doi.org/10.1016/j.chaos.2022.111877",
+      "url": "http://arxiv.org/abs/2109.02718v3",
+      "source": "arxiv",
+      "published": "2021-09-06T20:06:54Z",
+      "citation_count": 0,
+      "tier": "core"
+    },
+    {
+      "title": "Random walk through fractal environments",
+      "authors": [
+        "H. Isliker",
+        "L. Vlahos"
+      ],
+      "year": 2002,
+      "abstract": "We analyze random walk through fractal environments, embedded in 3-dimensional, permeable space. Particles travel freely and are scattered off into random directions when they hit the fractal. The statistical distribution of the flight increments (i.e. of the displacements between two consecutive hittings) is analytically derived from a common, practical definition of fractal dimension, and it turns out to approximate quite well a power-law in the case where the dimension D of the fractal is less than 2, there is though always a finite rate of unaffected escape. Random walks through fractal sets with D less or equal 2 can thus be considered as defective Levy walks. The distribution of jump increments for D &gt; 2 is decaying exponentially. The diffusive behavior of the random walk is analyzed in the frame of continuous time random walk, which we generalize to include the case of defective distributions of walk-increments. It is shown that the particles undergo anomalous, enhanced diffusion for D_F &lt; 2, the diffusion is dominated by the finite escape rate. Diffusion for D_F &gt; 2 is normal for large times, enhanced though for small and intermediate times. In particular, it follows that fractals generated by a particular class of self-organized criticality (SOC) models give rise to enhanced diffusion. The analytical results are illustrated by Monte-Carlo simulations.",
+      "arxiv_id": "physics/0211113v1",
+      "doi": "https://doi.org/10.1103/PhysRevE.67.026413",
+      "url": "http://arxiv.org/abs/physics/0211113v1",
+      "source": "arxiv",
+      "published": "2002-11-27T19:34:53Z",
+      "citation_count": 0,
+      "tier": "background"
+    },
+    {
+      "title": "Self-Organized Networks with Long-Range Interactions: Tandem Darwinian Evolution of $α$ and $β$ Tubulin",
+      "authors": [
+        "J. C. Phillips"
+      ],
+      "year": 2020,
+      "abstract": "Cytoskeletons are self-organized networks based on polymerized proteins: actin, tubulin, and driven by motor proteins, such as myosin, kinesin and dynein. Their positive Darwinian evolution enables them to approach optimized functionality (self-organized criticality). Our theoretical analysis uses hydropathic waves to identify and contrast the functional differences between the polymerizing $α$ and $β$ tubulin monomers, which are similar in length and secondary structures, as well as having indistinguishable phylogenetic trees. We show how evolution has improved water-driven flexibility especially for $α$ tubulin, and thus facilitated heterodimer microtubule assembly, in agreement with recent atomistic simulations and topological models. We conclude that the failure of phylogenetic analysis to identify functionally specific positive Darwinian evolution has been caused by 20th century technical limitations. These are overcome using 21st century quantitative mathematical methods based on thermodynamic scaling and hydropathic modular averaging. Our most surprising result is the identification of large level sets, especially in hydrophobic extrema, with both thermodynamically first- and second-order scaled water waves. Our calculations include explicitly long-range water-protein interactions described by fractals. We also suggest a much-needed corrective for large protein drug development costs.",
+      "arxiv_id": "2008.08668v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/2008.08668v1",
+      "source": "arxiv",
+      "published": "2020-08-19T21:09:13Z",
+      "citation_count": 0,
+      "tier": "core"
+    },
+    {
+      "title": "Automated Solar Flare Statistics in Soft X-rays over 37 Years of GOES Observations - The Invariance of Self-Organized Criticality during Three Solar Cycles",
+      "authors": [
+        "Markus J. Aschwanden",
+        "Samuel L. Freeland"
+      ],
+      "year": 2012,
+      "abstract": "We analyzed the soft X-ray light curves from the {\\sl Geostationary Operational Environmental Satellites (GOES)} over the last 37 years (1975-2011) and measured with an automated flare detection algorithm over 300,000 solar flare events (amounting to $\\approx 5$ times higher sensitivity than the NOAA flare catalog). We find a powerlaw slope of $α_F=1.98\\pm0.11$ for the (background-subtracted) soft X-ray peak fluxes that is invariant through three solar cycles and agrees with the theoretical prediction $α_F=2.0$ of the {\\sl fractal-diffusive self-organized criticality (FD-SOC)} model. For the soft X-ray flare rise times we find a powerlaw slope of $α_T =2.02\\pm0.04$ during solar cycle minima years, which is also consistent with the prediction $α_T=2.0$ of the FD-SOC model. During solar cycle maxima years, the powerlaw slope is steeper in the range of $α_T \\approx 2.0-5.0$, which can be modeled by a solar cycle-dependent flare pile-up bias effect. These results corroborate the FD-SOC model, which predicts a powerlaw slope of $α_E=1.5$ for flare energies and thus rules out significant nanoflare heating. While the FD-SOC model predicts the probability distribution functions of spatio-temporal scaling laws of nonlinear energy dissipation processes, additional physical models are needed to derive the scaling laws between the geometric SOC parameters and the observed emissivity in different wavelength regimes, as we derive here for soft X-ray emission. The FD-SOC model yields also statistical probabilities for solar flare forecasting.",
+      "arxiv_id": "1205.6712v1",
+      "doi": "https://doi.org/10.1088/0004-637X/754/2/112",
+      "url": "http://arxiv.org/abs/1205.6712v1",
+      "source": "arxiv",
+      "published": "2012-05-30T14:58:55Z",
+      "citation_count": 0,
+      "tier": "supporting"
+    },
+    {
+      "title": "Scaling theory of continuum dislocation dynamics in three dimensions: Self-organized fractal pattern formation",
+      "authors": [
+        "Yong S. Chen",
+        "Woosong Choi",
+        "Stefanos Papanikolaou",
+        "Matthew Bierbaum",
+        "James P. Sethna"
+      ],
+      "year": 2011,
+      "abstract": "We focus on mesoscopic dislocation patterning via a continuum dislocation dynamics theory (CDD) in three dimensions (3D). We study three distinct physically motivated dynamics which consistently lead to fractal formation in 3D with rather similar morphologies, and therefore we suggest that this is a general feature of the 3D collective behavior of geometrically necessary dislocation (GND) ensembles. The striking self-similar features are measured in terms of correlation functions of physical observables, such as the GND density, the plastic distortion, and the crystalline orientation. Remarkably, all these correlation functions exhibit spatial power-law behaviors, sharing a single underlying universal critical exponent for each type of dynamics.",
+      "arxiv_id": "1106.0195v4",
+      "doi": "https://doi.org/10.1016/j.ijplas.2013.02.011",
+      "url": "http://arxiv.org/abs/1106.0195v4",
+      "source": "arxiv",
+      "published": "2011-06-01T14:54:49Z",
+      "citation_count": 0,
+      "tier": "supporting"
+    }
+  ],
+  "count": 50,
+  "query": "self-organized criticality fractals",
+  "tiers": {
+    "supporting": 14,
+    "background": 21,
+    "core": 15
+  }
+}

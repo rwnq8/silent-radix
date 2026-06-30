@@ -1,0 +1,322 @@
+{
+  "papers": [
+    {
+      "title": "Strange attractors in a dynamical system inspired by a seasonally forced SIR model",
+      "authors": [
+        "João P. S. Maurício de Carvalho",
+        "Alexandre A. Rodrigues"
+      ],
+      "year": 2021,
+      "abstract": "We analyze a multiparameter periodically-forced dynamical system inspired in the SIR endemic model. We show that the condition on the \\emph{basic reproduction number} $\\mathcal{R}_0 &lt; 1$ is not sufficient to guarantee the elimination of \\emph{Infectious} individuals due to a \\emph{backward bifurcation}. Using the theory of rank-one attractors, for an open subset in the space of parameters where $\\mathcal{R}_0&lt;1$, the flow exhibits \\emph{persistent strange attractors}. These sets are not confined to a tubular neighbourhood in the phase space, are numerically observable and shadow the ghost of a two-dimensional invariant torus. Although numerical experiments have already suggested that periodically-forced biological models may exhibit observable chaos, a rigorous proof was not given before. Our results agree well with the empirical belief that intense seasonality induces chaos.\n  This work provides a preliminary investigation of the interplay between seasonality, deterministic dynamics and the prevalence of strange attractors in a nonlinear forced system inspired by biology.",
+      "arxiv_id": "2103.13160v3",
+      "doi": "",
+      "url": "http://arxiv.org/abs/2103.13160v3",
+      "source": "arxiv",
+      "published": "2021-03-24T13:05:32Z",
+      "citation_count": 0,
+      "tier": "core"
+    },
+    {
+      "title": "Universal quantification for deterministic chaos in dynamical systems",
+      "authors": [
+        "A. Mary Selvam"
+      ],
+      "year": 2000,
+      "abstract": "A cell dynamical system model for deterministic chaos enables precise quantification of the round-off error growth,i.e., deterministic chaos in digital computer realizations of mathematical models of continuum dynamical systems. The model predicts the following: (a) The phase space trajectory (strange attractor) when resolved as a function of the computer accuracy has intrinsic logarithmic spiral curvature with the quasiperiodic Penrose tiling pattern for the internal structure. (b) The universal constant for deterministic chaos is identified as the steady-state fractional round-off error k for each computational step and is equal to 1 /sqr(tau) (=0.382) where tau is the golden mean. (c) The Feigenbaum's universal constants a and d are functions of k and, further, the expression 2(a**2) = (pie)*d quantifies the steady-state ordered emergence of the fractal geometry of the strange attractor. (d) The power spectra of chaotic dynamical systems follow the universal and unique inverse power law form of the statistical normal distribution.",
+      "arxiv_id": "physics/0008010v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/physics/0008010v1",
+      "source": "arxiv",
+      "published": "2000-08-04T09:21:45Z",
+      "citation_count": 0,
+      "tier": "background"
+    },
+    {
+      "title": "Strange Attractors in Multipath propagation: Detection and characterisation",
+      "authors": [
+        "C. Tannous",
+        "R. Davies",
+        "A. Angus"
+      ],
+      "year": 2001,
+      "abstract": "Multipath propagation of radio waves in indoor/outdoor environments shows a highly irregular behavior as a function of time. Typical modeling of this phenomenon assumes the received signal is a stochastic process composed of the superposition of various altered replicas of the transmitted one, their amplitudes and phases being drawn from specific probability densities. We set out to explore the hypothesis of the presence of deterministic chaos in signals propagating inside various buildings at the University of Calgary. The correlation dimension versus embedding dimension saturates to a value between 3 and 4 for various antenna polarizations. The full Liapunov spectrum calculated contains two positive exponents and yields through the Kaplan-Yorke conjecture the same dimension obtained from the correlation sum. The presence of strange attractors in multipath propagation hints to better ways to predict the behaviour of the signal and better methods to counter the effects of interference. The use of Neural Networks in non linear prediction will be illustrated in an example and potential applications of same will be highlighted.",
+      "arxiv_id": "physics/0103048v2",
+      "doi": "",
+      "url": "http://arxiv.org/abs/physics/0103048v2",
+      "source": "arxiv",
+      "published": "2001-03-16T18:48:33Z",
+      "citation_count": 0,
+      "tier": "background"
+    },
+    {
+      "title": "Experimental evidence of a strange nonchaotic attractor in a Nd:YVO4 laser with saturable absorber",
+      "authors": [
+        "Juliana Bourdieu",
+        "Mónica Agüero",
+        "Marcelo Kovalsky"
+      ],
+      "year": 2025,
+      "abstract": "The diode-pumped Nd: Vanadate laser is one of the most widely used lasers in the near-infrared range. Using passive Q-switching with a Cr:YAG saturable absorber (SA), it generates nanosecond pulses at tens of kilohertz. It is well known to display either regular pulsing or low-dimensional deterministic chaos, depending on the absorber's position within the cavity. However, to our knowledge, a strange nonchaotic attractor (SNA) has never been reported in this system. Our experiments provide the first evidence that, for a specific absorber position, the laser dynamics correspond to a strange nonchaotic attractor.\n  SNAs exhibit complex dynamical behavior that is neither periodic nor chaotic, positioning them as a valuable resource for applications requiring high spectral diversity while preserving predictable dynamics.\n  By experimentally obtaining time series of two laser variables, we reconstruct the underlying attractor. For a certain position of the SA, we find that all Lyapunov exponents are negative and that the energy spectra exhibit a broad frequency range, indicating that the attractor is nonchaotic and lacks periodicity. Using Higuchi's method, we estimate the fractal dimension (df) and find that 13 percent of the nonchaotic time series exhibit a well-defined df, confirming the presence of an SNA.",
+      "arxiv_id": "2504.11548v3",
+      "doi": "",
+      "url": "http://arxiv.org/abs/2504.11548v3",
+      "source": "arxiv",
+      "published": "2025-04-15T18:41:54Z",
+      "citation_count": 0,
+      "tier": "core"
+    },
+    {
+      "title": "Deterministic Chaos Model for Self-Organized Adaptive Networks in Atmospheric Flows",
+      "authors": [
+        "A. Mary Selvam"
+      ],
+      "year": 2003,
+      "abstract": "The complex spatiotemporal patterns of atmospheric flows resulting from the cooperative existence of fluctuations ranging in size from millimeters to thousands of kilometers are found to exhibit long-range spatial and temporal correlations manifested as the selfsimilar fractal geometry to the global cloud cover pattern and the inverse power law form for the atmospheric eddy energy spectrum. Such long-range spatial and temporal correlations are ubiquitous to extended natural dynamical systems and is a signature of the strange attractor design characterizing deterministic chaos or self-organized criticality. The unified network of global atmospheric circulations is analogous to the neural networks of the human brain.",
+      "arxiv_id": "physics/0308094v1",
+      "doi": "https://doi.org/10.1109/NAECON.1989.40353",
+      "url": "http://arxiv.org/abs/physics/0308094v1",
+      "source": "arxiv",
+      "published": "2003-08-26T14:41:44Z",
+      "citation_count": 0,
+      "tier": "background"
+    },
+    {
+      "title": "Deterministic chaos, fractals and quantumlike mechanics in atmospheric flows",
+      "authors": [
+        "A. Mary Selvam"
+      ],
+      "year": 2000,
+      "abstract": "The complex spaciotemporal patterns of atmospheric flows that result from the cooperative existence of fluctuations ranging in size from millimetres to thousands of kilometres are found to exhibit long-range spacial and temporal correlations. These correlations are manifested as the self-similar fractal geometry of the global cloud cover pattern and the inverse power-law form for the atmospheric eddy energy spectrum. Such long-range spaciotemporal correlations are ubiquitous in extended natural dynamical systems and are signatures of deterministic chaos or self-organized criticality. In this paper, a cell dynamical system model for atmospheric flows is developed by consideration of microscopic domain eddy dynamical processes. This nondeterministic model enables formulation of a simple closed set of governing equations for the prediction and description of observed atmospheric flow structure characteristics as follows. The strange-attractor design of the field of deterministic chaos in atmospheric flows consists of a nested continuum of logarithmic spiral circulations that trace out the quasi-periodic Penrose tiling pattern, identified as the quasi-crystalline structure in condensed matter physics. The atmospheric eddy energy structure follows laws similar to quantum mechanical laws. The apparent wave-particle duality that characterize quantum mechanical laws is attributed to the bimodal phenomenological form of energy display in the bidirectional energy flow that is intrinsic to eddy circulations, e.g., formation of clouds in updrafts and dissipation of clouds in downdrafts that result in the observed discrete cellular geometry of cloud structure.",
+      "arxiv_id": "physics/0010046v1",
+      "doi": "https://doi.org/10.1139/p90-121",
+      "url": "http://arxiv.org/abs/physics/0010046v1",
+      "source": "arxiv",
+      "published": "2000-10-19T07:38:12Z",
+      "citation_count": 0,
+      "tier": "background"
+    },
+    {
+      "title": "Visual Analysis of Nonlinear Dynamical Systems: Chaos, Fractals, Self-Similarity and the Limits of Prediction",
+      "authors": [
+        "Geoff Boeing"
+      ],
+      "year": 2016,
+      "abstract": "Nearly all nontrivial real-world systems are nonlinear dynamical systems. Chaos describes certain nonlinear dynamical systems that have a very sensitive dependence on initial conditions. Chaotic systems are always deterministic and may be very simple, yet they produce completely unpredictable and divergent behavior. Systems of nonlinear equations are difficult to solve analytically, and scientists have relied heavily on visual and qualitative approaches to discover and analyze the dynamics of nonlinearity. Indeed, few fields have drawn as heavily from visualization methods for their seminal innovations: from strange attractors, to bifurcation diagrams, to cobweb plots, to phase diagrams and embedding. Although the social sciences are increasingly studying these types of systems, seminal concepts remain murky or loosely adopted. This article has three aims. First, it argues for several visualization methods to critically analyze and understand the behavior of nonlinear dynamical systems. Second, it uses these visualizations to introduce the foundations of nonlinear dynamics, chaos, fractals, self-similarity and the limits of prediction. Finally, it presents Pynamical, an open-source Python package to easily visualize and explore nonlinear dynamical systems' behavior.",
+      "arxiv_id": "1608.04416v2",
+      "doi": "https://doi.org/10.3390/systems4040037",
+      "url": "http://arxiv.org/abs/1608.04416v2",
+      "source": "arxiv",
+      "published": "2016-08-15T21:36:26Z",
+      "citation_count": 0,
+      "tier": "supporting"
+    },
+    {
+      "title": "Stochastic to deterministic crossover of fractal dimension for a Langevin equation",
+      "authors": [
+        "David A. Egolf",
+        "Henry S. Greenside"
+      ],
+      "year": 1993,
+      "abstract": "Using algorithms of Higuchi and of Grassberger and Procaccia, we study numerically how fractal dimensions cross over from finite-dimensional Brownian noise at short time scales to finite values of deterministic chaos at longer time scales for data generated from a Langevin equation that has a strange attractor in the limit of zero noise. Our results suggest that the crossover occurs at such short time scales that there is little chance of finite-dimensional Brownian noise being incorrectly identified as deterministic chaos.",
+      "arxiv_id": "chao-dyn/9303004v1",
+      "doi": "https://doi.org/10.1103/PhysRevE.47.3753",
+      "url": "http://arxiv.org/abs/chao-dyn/9303004v1",
+      "source": "arxiv",
+      "published": "1993-03-12T21:53:56Z",
+      "citation_count": 0,
+      "tier": "background"
+    },
+    {
+      "title": "Chaos and noise in evolutionary game dynamics",
+      "authors": [
+        "Maria Alejandra Ramirez",
+        "George Datseris",
+        "Arne Traulsen"
+      ],
+      "year": 2025,
+      "abstract": "Evolutionary game theory has traditionally employed deterministic models to describe population dynamics. These models, due to their inherent nonlinearities, can exhibit deterministic chaos, where population fluctuations follow complex, aperiodic patterns. Recently, the focus has shifted towards stochastic models, quantifying fixation probabilities and analysing systems with constants of motion. Yet, the role of stochastic effects in systems with chaotic dynamics remains largely unexplored within evolutionary game theory. This study addresses how demographic noise -- arising from probabilistic birth and death events -- impacts chaotic dynamics in finite populations. We show that despite stochasticity, large populations retain a signature of chaotic dynamics, as evidenced by comparing a chaotic deterministic system with its stochastic counterpart. More concretely, the strange attractor observed in the deterministic model is qualitatively recovered in the stochastic model, where the term deterministic chaos loses its meaning. We employ tools from nonlinear dynamics to quantify how the population size influences the dynamics. We observe that for small populations, stochasticity dominates, overshadowing deterministic selection effects. However, as population size increases, the dynamics increasingly reflect the underlying chaotic structure. This resilience to demographic noise can be essential for maintaining diversity in populations, even in non-equilibrium dynamics. Overall, our results broaden our understanding of population dynamics, and revisit the boundaries between chaos and noise, showing how they maintain structure when considering finite populations in systems that are chaotic in the deterministic limit.",
+      "arxiv_id": "2504.00028v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/2504.00028v1",
+      "source": "arxiv",
+      "published": "2025-03-28T21:37:59Z",
+      "citation_count": 0,
+      "tier": "core"
+    },
+    {
+      "title": "Spatiotemporal chaos induces extreme events in an extended microcavity laser",
+      "authors": [
+        "F Selmi",
+        "S Coulibaly",
+        "Z Loghmari",
+        "Isabelle Sagnes",
+        "Gregoire Beaudoin",
+        "Marcel G. Clerc",
+        "Sylvain Barbay"
+      ],
+      "year": 2015,
+      "abstract": "Extreme events such as rogue wave in optics and fluids are often associated with the merging dynamics of coherent structures. We present experimental and numerical results on the physics of extreme events appearance in a spatially extended semiconductor microcavity laser with intracavity saturable absorber. This system can display deterministic irregular dynamics only thanks to spatial coupling through diffraction of light. We have identified parameter regions where extreme events are encountered and established the origin of this dynamics in the emergence of deterministic spatiotemporal chaos, through the correspondence between the proportion of extreme events and the dimension of the strange attractor.",
+      "arxiv_id": "1511.08045v2",
+      "doi": "https://doi.org/10.1103/PhysRevLett.116.013901",
+      "url": "http://arxiv.org/abs/1511.08045v2",
+      "source": "arxiv",
+      "published": "2015-11-25T13:00:17Z",
+      "citation_count": 0,
+      "tier": "supporting"
+    },
+    {
+      "title": "Topological field theory of dynamical systems",
+      "authors": [
+        "Igor V. Ovchinnikov"
+      ],
+      "year": 2012,
+      "abstract": "Here, it is shown that the path-integral representation of any stochastic or deterministic continuous-time dynamical model is a cohomological or Witten-type topological field theory, i.e., a model with global topological supersymmetry (Q-symmetry). As many other supersymmetries, Q-symmetry must be perturbatively stable due to what is generically known as non-renormalization theorems. As a result, all (equilibrium) dynamical models are divided into three major categories: Markovian models with unbroken Q-symmetry, chaotic models with Q-symmetry spontaneously broken on the mean-field level by, e.g., fractal invariant sets (e.g., strange attractors), and intermittent or self-organized critical (SOC) models with Q-symmetry dynamically broken by the condensation of instanton-antiinstanton configurations (earthquakes, avalanches etc.) SOC is a full-dimensional phase separating chaos and Markovian dynamics. In the deterministic limit, however, antiinstantons disappear and SOC collapses into the \"edge of chaos\". Goldstone theorem stands behind spatio-temporal self-similarity of Q-broken phases known under such names as algebraic statistics of avalanches, 1/f noise, sensitivity to initial conditions etc. Other fundamental differences of Q-broken phases is that they can be effectively viewed as quantum dynamics and that they must also have time-reversal symmetry spontaneously broken. Q-symmetry breaking in non-equilibrium situations (quenches, Barkhausen effect, etc.) is also briefly discussed.",
+      "arxiv_id": "1203.5162v3",
+      "doi": "https://doi.org/10.1063/1.4746037",
+      "url": "http://arxiv.org/abs/1203.5162v3",
+      "source": "arxiv",
+      "published": "2012-03-23T02:52:14Z",
+      "citation_count": 0,
+      "tier": "supporting"
+    },
+    {
+      "title": "Noise Can Reduce Disorder in Chaotic Dynamics",
+      "authors": [
+        "Denis S. Goldobin"
+      ],
+      "year": 2010,
+      "abstract": "We evoke the idea of representation of the chaotic attractor by the set of unstable periodic orbits and disclose a novel noise-induced ordering phenomenon. For long unstable periodic orbits forming the strange attractor the weights (or natural measure) is generally highly inhomogeneous over the set, either diminishing or enhancing the contribution of these orbits into system dynamics. We show analytically and numerically a weak noise to reduce this inhomogeneity and, additionally to obvious perturbing impact, make a regularizing influence on the chaotic dynamics. This universal effect is rooted into the nature of deterministic chaos.",
+      "arxiv_id": "1008.0073v5",
+      "doi": "https://doi.org/10.1140/epjst/e2014-02179-9",
+      "url": "http://arxiv.org/abs/1008.0073v5",
+      "source": "arxiv",
+      "published": "2010-07-31T08:41:38Z",
+      "citation_count": 0,
+      "tier": "supporting"
+    },
+    {
+      "title": "Structural Instability of a Biochemical Process",
+      "authors": [
+        "V. I. Grytsay"
+      ],
+      "year": 2017,
+      "abstract": "By the example of a mathematical model of a biochemical process, the structural instability of dynamical systems is studied by calculating the full spectrum of Lyapunov indices with the use of the generalized Benettin algorithm. For the reliability of the results obtained, the higher Lyapunov index determined with the orthogonalization of perturbation vectors by the Gram-Schmidt method is compared with that determined with the overdetermination of only the norm of a perturbation vector. Specific features of these methods and the comparison of their efficiencies for a multidimensional phase space are presented. A scenario of the formation of strange attractors at a change of the dissipation parameter is studied. The main regularities and the mechanism of formation of a deterministic chaos due to the appearance of a fold or a funnel, which leads to the uncertainty of the evolution of a biosystem, are determined.",
+      "arxiv_id": "1707.08724v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/1707.08724v1",
+      "source": "arxiv",
+      "published": "2017-07-27T07:02:00Z",
+      "citation_count": 0,
+      "tier": "supporting"
+    },
+    {
+      "title": "Chaotic time series Part I: Estimation of invariant properies in state space",
+      "authors": [
+        "Dimitris Kugiumtzis",
+        "Bjoern Lillekjendlie",
+        "Nils Christophersen"
+      ],
+      "year": 1994,
+      "abstract": "Certain deterministic non-linear systems may show chaotic behaviour. Time series derived from such systems seem stochastic when analyzed with linear techniques. However, uncovering the deterministic structure is important because it allows for construction of more realistic and better models and thus improved predictive capabilities. This paper describes key features of chaotic systems including strange attractors and Lyapunov exponents. The emphasis is on state space reconstruction techniques that are used to estimate these properties, given scalar observations. Data generated from equations known to display chaotic behaviour are used for illustration. A compilation of applications to real data from widely different fields is given. If chaos is found to be present, one may proceed to build non-linear models, which is the topic of the second paper in this series.",
+      "arxiv_id": "chao-dyn/9401004v3",
+      "doi": "",
+      "url": "http://arxiv.org/abs/chao-dyn/9401004v3",
+      "source": "arxiv",
+      "published": "1994-01-14T15:52:45Z",
+      "citation_count": 0,
+      "tier": "background"
+    },
+    {
+      "title": "Chaotic regimes of antiferromagnetic resonance in a quasi-two-dimensional easy-axis antiferromagnet (NH_3)_2 (CH_2)_4 MnCl_4",
+      "authors": [
+        "Mikhail M. Bogdan",
+        "Mikhail I. Kobets",
+        "Eugene N. Khats'ko"
+      ],
+      "year": 2001,
+      "abstract": "Chaotic regimes of the microwave energy absorption are experimentally observed and analyzed for two-dimensional metallorganic antiferromagnet (NH_3)_2(CH_2)_4MnCl_4 at low temperatures under the conditions of nonlinear antiferromagnetic resonance. Relaxation oscillations of energy absorption are investigated in detail. Their frequency spectra, frequency-amplitude characteristics, and dependences of absorbed power on driving power and static magnetic field are studied. It is shown that the dynamics of relaxation oscillations undergoes a transition to chaos by \"irregular periods\". Peculiarities of the transition are described consistently. Among other things, the conditions for the emergence of energy absorption regimes with a spike-like and a saw-tooth signal structure are determined, and the characteristics of chaotic oscillations such as the dimensions of strange attractors are calculated. The chaotic dynamics is found to be high-dimensional with a large contribution from noise which is of deterministic origin in the antiferromagnet under investigation.",
+      "arxiv_id": "nlin/0104032v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/nlin/0104032v1",
+      "source": "arxiv",
+      "published": "2001-04-11T15:16:30Z",
+      "citation_count": 0,
+      "tier": "background"
+    },
+    {
+      "title": "Nonlinear Dynamics in Complexity Quantification",
+      "authors": [
+        "Amin Gasmi"
+      ],
+      "year": 2022,
+      "abstract": "Chaotic systems which are due to nonlinearity have attracted a great concern in the current world and chaotic models. Systems for a wide range of operation conditions have their application in almost all branches of engineering and science. In the history of chaotic studies and nonlinearity, many different but co-existent phases can be distinguished [1]. In the initial phase, chaos was considered as a deterministic regime which, most probably, was responsible for the variations that was regarded as noise and thus was being modeled as a stochastic process. In the second phase, it was of great significance to establish criteria for detecting chaotic dynamics and thus establishing dynamical invariants which were necessary in quantifying chaos. The third step which was to develop machine learning models which could learn the dynamics and chaos from the data of the strange attractor [2]. With respect to this aspect, various model structures were developed and investigated on their ability to detect chaos from a given set of data [3]. These model structures included radial basis functions, and local linear mapping among others. The third phase is currently being investigated together with other issues surrounding nonlinear dynamics and chaos, for instance in noise reduction and control, among other issues.",
+      "arxiv_id": "2209.03731v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/2209.03731v1",
+      "source": "arxiv",
+      "published": "2022-08-02T14:25:29Z",
+      "citation_count": 0,
+      "tier": "core"
+    },
+    {
+      "title": "Evidence of Deterministic Components in the Apparent Randomness of GRBs: Clues of a Chaotic Dynamic",
+      "authors": [
+        "G. Greco",
+        "R. Rosa",
+        "G. Beskin",
+        "S. Karpov",
+        "L. Romano",
+        "A. Guarnieri",
+        "C. Bartolini",
+        "R. Bedogni"
+      ],
+      "year": 2011,
+      "abstract": "Prompt γ-ray emissions from gamma-ray bursts (GRBs) exhibit a vast range of extremely complex temporal structures with a typical variability time-scale significantly short - as fast as milliseconds. This work aims to investigate the apparent randomness of the GRB time profiles making extensive use of nonlinear techniques combining the advanced spectral method of the Singular Spectrum Analysis (SSA) with the classical tools provided by the Chaos Theory. Despite their morphological complexity, we detect evidence of a non stochastic short-term variability during the overall burst duration - seemingly consistent with a chaotic behavior. The phase space portrait of such variability shows the existence of a well-defined strange attractor underlying the erratic prompt emission structures. This scenario can shed new light on the ultra-relativistic processes believed to take place in GRB explosions and usually associated with the birth of a fast-spinning magnetar or accretion of matter onto a newly formed black hole.",
+      "arxiv_id": "1109.5891v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/1109.5891v1",
+      "source": "arxiv",
+      "published": "2011-09-27T13:53:13Z",
+      "citation_count": 0,
+      "tier": "supporting"
+    },
+    {
+      "title": "The Origins of Computational Mechanics: A Brief Intellectual History and Several Clarifications",
+      "authors": [
+        "James P. Crutchfield"
+      ],
+      "year": 2017,
+      "abstract": "The principle goal of computational mechanics is to define pattern and structure so that the organization of complex systems can be detected and quantified. Computational mechanics developed from efforts in the 1970s and early 1980s to identify strange attractors as the mechanism driving weak fluid turbulence via the method of reconstructing attractor geometry from measurement time series and in the mid-1980s to estimate equations of motion directly from complex time series. In providing a mathematical and operational definition of structure it addressed weaknesses of these early approaches to discovering patterns in natural systems.\n  Since then, computational mechanics has led to a range of results from theoretical physics and nonlinear mathematics to diverse applications---from closed-form analysis of Markov and non-Markov stochastic processes that are ergodic or nonergodic and their measures of information and intrinsic computation to complex materials and deterministic chaos and intelligence in Maxwellian demons to quantum compression of classical processes and the evolution of computation and language.\n  This brief review clarifies several misunderstandings and addresses concerns recently raised regarding early works in the field (1980s). We show that misguided evaluations of the contributions of computational mechanics are groundless and stem from a lack of familiarity with its basic goals and from a failure to consider its historical context. For all practical purposes, its modern methods and results largely supersede the early works. This not only renders recent criticism moot and shows the solid ground on which computational mechanics stands but, most importantly, shows the significant progress achieved over three decades and points to the many intriguing and outstanding challenges in understanding the computational nature of complex dynamic systems.",
+      "arxiv_id": "1710.06832v1",
+      "doi": "",
+      "url": "http://arxiv.org/abs/1710.06832v1",
+      "source": "arxiv",
+      "published": "2017-10-18T17:21:20Z",
+      "citation_count": 0,
+      "tier": "supporting"
+    },
+    {
+      "title": "Polynomial-time solution of prime factorization and NP-hard problems with digital memcomputing machines",
+      "authors": [
+        "Fabio L. Traversa",
+        "Massimiliano Di Ventra"
+      ],
+      "year": 2015,
+      "abstract": "We introduce a class of digital machines we name Digital Memcomputing Machines (DMMs) able to solve a wide range of problems including Non-deterministic Polynomial (NP) ones with polynomial resources (in time, space and energy). An abstract DMM with this power must satisfy a set of compatible mathematical constraints underlying its practical realization. We initially prove this by introducing the complexity classes for these machines. We then make a connection with dynamical systems theory. This leads to the set of physical constraints for poly-resource resolvability. Once the mathematical requirements have been assessed, we propose a practical scheme to solve the above class of problems based on the novel concept of self-organizing logic gates and circuits (SOLCs). These are logic gates and circuits able to accept input signals from any terminal, without distinction between conventional input and output terminals. They can solve boolean problems by self-organizing into their solution. They can be fabricated either with circuit elements with memory (such as memristors) and/or standard MOS technology. Using tools of functional analysis, we prove mathematically the following constraints for the poly-resource resolvability: i) SOLCs possess a global attractor; ii) their only equilibrium points are the solutions of the problems to solve; iii) the system converges exponentially fast to the solutions; iv) the equilibrium convergence rate scales at most polynomially with input size. We finally provide arguments that periodic orbits and strange attractors cannot coexist with equilibria. As examples we show how to solve the prime factorization and the NP-hard version of the subset-sum problem. Since DMMs map integers into integers they are robust against noise, and hence scalable. We finally discuss the implications of the DMM realization through SOLCs to the NP=P question related to...",
+      "arxiv_id": "1512.05064v2",
+      "doi": "https://doi.org/10.1063/1.4975761",
+      "url": "http://arxiv.org/abs/1512.05064v2",
+      "source": "arxiv",
+      "published": "2015-12-16T06:35:32Z",
+      "citation_count": 0,
+      "tier": "supporting"
+    }
+  ],
+  "count": 19,
+  "query": "deterministic chaos strange attractors",
+  "tiers": {
+    "core": 4,
+    "background": 7,
+    "supporting": 8
+  }
+}
