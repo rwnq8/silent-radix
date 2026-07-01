@@ -326,6 +326,7 @@ The chain is mathematically coherent and consilient with established results in 
 ### Foundational (Pre-2000)
 - DeWitt, B. S. (1967). Quantum Theory of Gravity. I. The Canonical Theory. *Physical Review*, 160(5), 1113–1148.
 - Bruhat, F. & Tits, J. (1972). Groupes réductifs sur un corps local. *Publications Mathématiques de l'IHÉS*, 41, 5–251.
+- Serre, J.-P. (1980). *Trees*. Springer-Verlag.
 - Parisi, G. (1979). Infinite Number of Order Parameters for Spin-Glasses. *Physical Review Letters*, 43(23), 1754–1756.
 - Page, D. N. & Wootters, W. K. (1983). Evolution without evolution: Dynamics described by stationary observables. *Physical Review D*, 27(12), 2885–2892.
 - Mézard, M., Parisi, G. & Virasoro, M. A. (1987). *Spin Glass Theory and Beyond*. World Scientific.
