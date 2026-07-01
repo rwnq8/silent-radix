@@ -247,3 +247,50 @@ e432598 chore(closeout): final cleanup — tex whitespace normalization, PDF art
 - **Systems touched:** R2, D1 (living-paper, qnfo-cms), KG, Cloudflare Pages, Zenodo API
 - **Entities created:** `paper-silent-radix-synthesis` (KG node), `silent-radix-synthesis-v1.0` (D1 paper row), Zenodo deposition 21090642
 - **Entities modified:** index.html (DOI + SEO), KG nodes (doi propagation)
+
+
+---
+
+# QACP-HANDOFF — silent-radix Phase 4 Cont'd (Post-Restart)
+
+> **Handoff ID:** `H-2026-07-01-silent-radix-ph4-postrestart`
+> **Created:** 2026-07-01T02:19:49Z
+> **From:** QNFO Research Agent (qnfo-agent, deepseek-v4-pro)
+
+## Session Summary (Post-Restart)
+
+**3/3 additional tasks EXECUTED after DeepChat restart.** Completed the remaining silent-radix publication pipeline items: Vectorize embeddings seeded into qwav-research-v2 index, Discovery Index updated on R2, and final DoD enforcement check (7/7 passed, exit 0). All 9 tasks across both session segments are now complete.
+
+## Task Register (Post-Restart)
+
+| # | Task | Status | Evidence |
+|---|------|--------|----------|
+| T7 | Vectorize embeddings | [EXECUTED] | bge-m3 1024-dim embedding via Workers AI, upserted to qwav-research-v2 (count: 1) via wrangler CLI |
+| T8 | Update Discovery Index | [EXECUTED] | R2 qnfo/discovery/index.json: publication entry added, last_active reset |
+| T9 | Final _dod_enforce.py | [EXECUTED] | 7/7 passed, exit 0 |
+
+## Infrastructure Snapshot (Final)
+
+| System | State | Detail |
+|:-------|:------|:-------|
+| **R2** | Active | PDF + DI updated |
+| **D1 (living-paper)** | Updated | 114 papers total |
+| **KG** | Updated | 816 nodes / 1718 edges |
+| **Pages** | Deployed | papers.qnfo.org/silent-radix/ |
+| **Zenodo** | Published | 10.5281/zenodo.21090642 |
+| **Vectorize** | Seeded | qwav-research-v2 (count: 1) |
+| **DoD** | Passed | 7/7, exit 0 |
+
+## Gaps — All Resolved
+
+| GAP-KG-001 | RESOLVED | GAP-ZENODO-001 | RESOLVED |
+| GAP-SEO-001 | RESOLVED | GAP-VECTORIZE-001 | RESOLVED |
+
+## Pending for Next Session
+
+**None.** All planned tasks completed. Paper fully published and discoverable.
+
+## Commits
+```
+1c23b34 ACTION:CREATE|EDIT FILE: projects/silent-radix/ RATIONALE:Phase 4 publication pipeline complete
+```
