@@ -44,7 +44,7 @@ The conjecture driving this investigation [my conjecture] is that the conditiona
 
 ### 1.3 This Paper
 
-This paper presents a systematic investigation of ultrametricity in PW conditional states. We proceed as follows:
+This paper presents a systematic investigation of ultrametricity in PW conditional states. The paper is organized as follows:
 
 - **Section 2** reviews the PW formalism and defines the conditional state distance metric
 - **Section 3** presents computational falsification: systematic testing of ultrametricity across generic Wheeler-DeWitt systems
