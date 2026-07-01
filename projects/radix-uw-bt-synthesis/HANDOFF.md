@@ -75,4 +75,77 @@ All six planned tasks executed with evidence:
 
 ---
 
-*Handoff 2026-07-01. Start: `CONTINUE` with full Wikipedia UVR run or Cloudflare Pages deploy.*
+## Research Extension: No-Go → P-Adic Clock
+
+The central correction (D=4/N=8 sampling artifact) opens a new research direction:
+
+### What We Proved
+- **No finite-D real energy spectrum** produces strictly ultrametric PW conditional state distances for continuous $\tau \in \mathbb{R}$. Connectedness of $\mathbb{R}$ forces triviality.
+- Ultrametricity requires **additional physical structure** beyond the WDW constraint.
+
+### Where Ultrametricity CAN Come From
+Three non-exclusive paths:
+1. **Discrete clock on $\mathbb{Q}_p$**: Replace clock Hilbert space $L^2(\mathbb{R})$ with $L^2(\mathbb{Q}_p)$. On totally disconnected space, ultrametric is natural. Reference: Aniello & Guglielmi (2025, arXiv:2510.07504) formalizes tensor products of p-adic Hilbert spaces.
+2. **Coarse-graining / MERA**: Hierarchical entanglement renormalization produces ultrametric clustering (Vidal 2007). MERA lives on a tree that approximates a Bruhat-Tits building.
+3. **Early-universe pre-geometry**: If time emerges from a fundamentally p-adic structure (Vishal-Nandy 2026, arXiv:2605.06093), conditional state distances inherit ultrametricity from the clock manifold, not the energy spectrum.
+
+### Key References for Continuation
+| Paper | arXiv | Relevance |
+|:------|:------|:----------|
+| Aniello & Guglielmi (2025) | 2510.07504 | Tensor products of p-adic Hilbert spaces — formal foundation |
+| Vishal & Nandy (2026) | 2605.06093 | PW cosmology, singularity resolution |
+| Gubser & Parikh (2017) | 1704.01149 | BT tree as holographic bulk |
+| Chen & Liu (2021) | 2102.12023 | Tensor networks on BT tree → Einstein eqns |
+| Marcolli (2018) | 1801.09623 | Holographic codes on BT buildings |
+
+---
+
+## CONTINUATION PROMPT (Copy/Paste into New Session)
+
+```
+LOAD ALL QNFO SKILLS. CONTINUE FROM HANDOFF IN
+qnfo/projects/radix-uw-bt-synthesis/HANDOFF.md.
+
+CRITICAL CONTEXT FROM v1.1 CORRECTION:
+- D=4/N=8 ultrametric "pass" was SAMPLING ARTIFACT (Task 9, no-go theorem)
+- No finite-D real energy spectrum produces ultrametricity for continuous tau
+- Ultrametricity MUST come from additional structure: p-adic clock, MERA, or pre-geometry
+- Both papers published on Zenodo with DOIs (see Zenodo Publications section)
+
+EXECUTE IN PRIORITY ORDER:
+
+1. PUSH git to remote:
+   git push origin feature/radix-to-bruhat-tits-synthesis
+
+2. UPLOAD to R2:
+   npx wrangler r2 object put qnfo/projects/radix-uw-bt-synthesis/synthesis.md --file=projects/radix-uw-bt-synthesis/synthesis.md
+   npx wrangler r2 object put qnfo/projects/radix-uw-bt-synthesis/HANDOFF.md --file=projects/radix-uw-bt-synthesis/HANDOFF.md
+
+3. P-ADIC CLOCK EXTENSION (RESEARCH):
+   Construct |Psi>_CR with clock Hilbert space H_C = L^2(Q_p) instead of L^2(R).
+   On Q_p, the 2-adic distance d(tau1,tau2) = |tau1-tau2|_p IS ultrametric.
+   Define conditional state distance and show it INHERITS ultrametricity
+   from the clock manifold topology.
+   Reference: Aniello & Guglielmi (2025, arXiv:2510.07504) for p-adic Hilbert spaces.
+
+4. FORMALIZE:
+   - Does the Vishal-Nandy (2026) PW cosmology admit a p-adic clock?
+   - What determines the physical radix p? (dimensionality? branching ratio?)
+   - Archimedean limit: does p→∞ recover standard QM on R?
+
+5. ARXIV SUBMISSION UPDATE:
+   - Update bridge-theorem.tex with no-go theorem as "Theorem 1 (Negative)"
+   - Add p-adic clock construction as "Theorem 2 (Positive)" 
+   - Resubmit to arXiv with correction
+
+6. FULL WIKIPEDIA UVR RUN:
+   Download Wikipedia dump → run pipeline on 50,000 articles
+   python wikipedia_uvr_pipeline.py --dump-dir ./enwiki-dump/ --sample 50000
+
+7. CLOUDFLARE PAGES DEPLOY:
+   Build HTML from synthesis.md → deploy to papers.qnfo.org/
+   Include both papers with MathJax rendering
+
+CRITICAL: Every action must have verification evidence. No claim without tool output.
+The p-adic clock direction is the most promising path forward given the no-go theorem.
+```
