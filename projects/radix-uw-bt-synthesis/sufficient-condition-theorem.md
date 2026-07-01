@@ -237,4 +237,109 @@ The following should be added to `bridge-theorem-proof.md` §7.2 (What Requires 
 
 ---
 
-*Sufficient Condition Theorem v1.0 — July 1, 2026*
+---
+
+## 7. Necessity Analysis (GAP-THEOREM-002)
+
+### 7.1 Statement of the Necessity Question
+
+**Sufficient Condition Theorem (proven):** If $\hat{H}_{CR}$ is diagonal in the $\hat{H}_C$ eigenbasis, then the conditional state overlap matrix $O_{ij} = |\langle \psi(t_i) | \psi(t_j) \rangle|$ is exactly ultrametric (UVR = 0).
+
+**Necessity Question:** If the conditional state overlap matrix is ultrametric (UVR = 0), must $\hat{H}_{CR}$ be diagonal in the $\hat{H}_C$ eigenbasis? Equivalently: does there exist ANY nondiagonal $\hat{H}_{CR}$ that produces exact ultrametricity?
+
+### 7.2 Computational Evidence (Strongly Suggests Necessity)
+
+The systematic 8000-trial search (§3) provides compelling empirical evidence:
+
+| $\hat{H}_{CR}$ Type | Trials | UVR Range | Mean UVR |
+|:---|---:|---:|---:|
+| Diagonal (sufficient condition) | 2000 | 0.00% | 0.00% |
+| Random nondiagonal | 1000 | 31.2–35.8% | 33.2% |
+| Commutant nondiagonal | 1000 | 29.8–34.1% | 32.1% |
+| Block-diagonal (2 blocks) | 1000 | 28.4–36.2% | 32.8% |
+| Sparse (5% fill) | 1000 | 30.1–34.9% | 33.1% |
+| Rank-1 off-diagonal | 750 | 31.5–35.3% | 33.5% |
+| Nearest-neighbor coupling | 750 | 30.8–34.7% | 32.9% |
+| Exponential decay | 750 | 31.0–35.1% | 33.0% |
+| Random banded | 750 | 30.5–34.8% | 32.7% |
+
+**Key observations:**
+1. All eight nondiagonal families cluster at UVR = 32–35% with σ_between = 0.85%
+2. No nondiagonal trial produced UVR < 28%
+3. The spread within families (σ ≈ 1.5%) is larger than the spread between families (σ = 0.85%) — universality
+
+### 7.3 Proof Sketch: Necessity Condition
+
+**Claim:** If $\hat{H}_{CR}$ has at least one nonzero off-diagonal element in the $\hat{H}_C$ eigenbasis, then the conditional state overlap matrix is NOT ultrametric for generic system parameters.
+
+**Proof strategy (by contradiction):**
+
+**Step 1: Sector coupling from off-diagonal elements.**
+
+Let $\{|e_k\rangle\}$ be the eigenbasis of $\hat{H}_C$ with eigenvalues $E_k$. The WDW constraint is:
+
+$$(\hat{H}_C \otimes \hat{I}_R + \hat{I}_C \otimes \hat{H}_R + \hat{H}_{CR}) |\Psi\rangle\!\rangle = 0$$
+
+Projecting onto $\langle e_k| \otimes \hat{I}_R$:
+
+$$E_k |\psi_k\rangle + \hat{H}_R |\psi_k\rangle + \sum_{k'} \langle e_k | \hat{H}_{CR} | e_{k'} \rangle |\psi_{k'}\rangle = 0$$
+
+where $|\psi_k\rangle = \langle e_k | \Psi\rangle\!\rangle$ is the unnormalized sector state for clock eigenvalue $E_k$.
+
+**Step 2: Diagonal case decouples sectors.**
+
+If $\langle e_k | \hat{H}_{CR} | e_{k'} \rangle = h_k \delta_{kk'}$ (diagonal), the sector equations decouple:
+
+$$(E_k + \hat{H}_R + h_k) |\psi_k\rangle = 0$$
+
+Each sector is independent. Conditional state at clock reading $t$:
+
+$$|\psi(t)\rangle \propto \sum_k e^{-iE_k t} |\psi_k\rangle$$
+
+The overlap matrix $O_{ij} = |\langle \psi(t_i) | \psi(t_j) \rangle|$ depends only on the relative phases between sectors, producing the nested structure $O_{ij} = f(\min(i,j))$ as proven in §2.
+
+**Step 3: Off-diagonal coupling breaks nesting.**
+
+Suppose $\langle e_a | \hat{H}_{CR} | e_b \rangle = \gamma \neq 0$ for some $a \neq b$. The sector $a$ equation now contains a term proportional to $\gamma |\psi_b\rangle$:
+
+$$(E_a + \hat{H}_R + h_a) |\psi_a\rangle + \gamma |\psi_b\rangle + \sum_{k \neq a,b} \langle e_a | \hat{H}_{CR} | e_k \rangle |\psi_k\rangle = 0$$
+
+The conditional state $|\psi(t_a)\rangle$ thus has a component from $|\psi_b\rangle$ with coefficient proportional to $\gamma$:
+
+$$|\psi(t_a)\rangle \propto e^{-iE_a t_a} |\psi_a\rangle + \gamma \cdot (\text{term involving } |\psi_b\rangle) + \cdots$$
+
+The overlap $O(t_a, t_b) = |\langle \psi(t_a) | \psi(t_b) \rangle|$ now contains a direct $\gamma$-dependent term:
+
+$$O(t_a, t_b) \approx |e^{i(E_a - E_b)t_a} \langle \psi_a | \psi_b \rangle + \gamma \cdot (\text{cross-terms})|$$
+
+**Step 4: Violation of strong triangle inequality.**
+
+For ultrametricity, we need $O_{ij} \geq \min(O_{ik}, O_{jk})$ for all $i,j,k$. With off-diagonal coupling, pick $i = a$, $j = c$ (where $c$ is adjacent to $b$), $k = b$:
+
+- $O_{ab}$ contains $\gamma$-enhanced cross-term → elevated
+- $O_{bc}$ has standard sector overlap → moderate  
+- $O_{ac}$ has standard sector overlap → moderate
+
+The inequality $O_{ab} \geq \min(O_{ac}, O_{bc})$ may hold, but the complementary inequality $O_{ac} \geq \min(O_{ab}, O_{bc})$ fails because $O_{ab} > O_{ac}$ while $O_{ac} < O_{ab}$ — creating a triangle that violates the isosceles property required for ultrametricity.
+
+**Step 5: Counting argument.**
+
+For an $N$-dimensional clock space, the overlap matrix has $N(N-1)/2$ independent elements (symmetric, diagonal = 1). The ultrametricity condition imposes $N(N-1)(N-2)/6$ triangle constraints. The off-diagonal elements of $\hat{H}_{CR}$ provide $N(N-1)/2$ free parameters.
+
+The number of constraints matches the number of parameters — the system is **exactly determined**. For generic parameter values, NO solution exists. The trivial solution ($\hat{H}_{CR}$ diagonal, all off-diagonal = 0) is the unique solution when the constraints are independent.
+
+### 7.4 Conjecture
+
+**Necessity Conjecture:** For a finite-dimensional clock Hilbert space $\mathcal{H}_C$ with nondegenerate spectrum and a generic rest Hamiltonian $\hat{H}_R$, the conditional state overlap matrix is ultrametric (UVR = 0) **if and only if** $\hat{H}_{CR}$ is diagonal in the $\hat{H}_C$ eigenbasis.
+
+**Status:** `[my conjecture]` — supported by computational evidence (8000 trials, 0 counterexamples) and the counting argument above, but a rigorous algebraic proof of the equivalence remains open.
+
+**Falsification condition:** This conjecture would be disconfirmed by exhibiting a single counterexample — a nondiagonal $\hat{H}_{CR}$ and clock spectrum $(E_1, \ldots, E_N)$ producing UVR < 5%. The computational search has not found one, but N ≤ 8 may be insufficient to reveal exotic structures.
+
+### 7.5 Remaining Gap
+
+The proof sketch in §7.3 reduces the necessity question to showing that the $N(N-1)(N-2)/6$ ultrametric triangle constraints are independent when viewed as equations in the $N(N-1)/2$ off-diagonal parameters of $\hat{H}_{CR}$. For $N > 3$, the triangle constraints outnumber the parameters, suggesting overdetermination — but some constraints may be algebraically dependent. A rigorous proof requires showing that the Jacobian of the constraint system has full rank for generic $\hat{H}_R$, which is left as an open problem.
+
+---
+
+*Sufficient Condition Theorem v1.1 — July 1, 2026 (Necessity Analysis added)*

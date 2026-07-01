@@ -1,14 +1,7 @@
 {
-  "synthesis": {
-    "doi": "10.5281/zenodo.21102764",
-    "conceptdoi": "10.5281/zenodo.21102763",
-    "deposition_id": 21102764,
-    "record_url": "https://zenodo.org/api/records/21102764"
-  },
-  "bridge": {
-    "doi": "10.5281/zenodo.21102770",
-    "conceptdoi": "10.5281/zenodo.21102769",
-    "deposition_id": 21102770,
-    "record_url": "https://zenodo.org/api/records/21102770"
-  }
+  "doi": "10.5281/zenodo.21115364",
+  "deposition_id": "21115364",
+  "record_url": "https://zenodo.org/records/21115364",
+  "title": "Conditional State Distances in Page-Wootters Quantum Clocks: When Does Ultrametricity Emerge?",
+  "slug": "conditional-state-distances-pw-clocks"
 }
