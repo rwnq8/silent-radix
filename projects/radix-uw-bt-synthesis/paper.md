@@ -243,18 +243,23 @@ If the early universe's quantum state satisfied a Wheeler-DeWitt constraint with
 
 $$D_\ell^{\text{TT}} = D_\ell^{(0)} \left[1 + A \cos\left(2\pi \log_p(\ell/\ell_0) + \phi\right)\right]$$
 
-Our analysis of synthetic Planck 2018 data establishes the methodology (frequency-domain SNR detection, Bayesian model comparison) but requires real Planck data for definitive constraints. The best-fit candidate from synthetic LambdaCDM data is $p=5$ [speculative], with log Bayes factor $-11.6$ (decisive against oscillations, as expected for pure LambdaCDM).
+**Synthetic LambdaCDM (methodology validation):** The best-fit candidate from synthetic data is $p=5$ [speculative], with log Bayes factor $-11.6$ (decisive against oscillations, as expected for pure LambdaCDM). The frequency-domain SNR detection pipeline and Bayesian model comparison methodology are validated.
+
+**Real Planck 2018 binned TT spectrum:** Analysis of the actual Planck 2018 binned TT power spectrum (COM\_PowerSpect\_CMB-TT-binned\_R3.01.txt) yields decisive evidence against log-periodic modulation for all tested primes $p \in \{2, 3, 5, 7, 11\}$ [established]. The log Bayes factors range from $-5.14$ ($p=2$) to $-6.54$ ($p=11$), with a residual RMS of $3.81\%$ for the base $\Lambda$CDM model ($\chi^2/\text{dof} = 0.79$).
+
+**Interpretation:** No discrete scale invariance is detected in the real CMB at current sensitivity. The Sufficient Condition Theorem resolves this result: if the early-universe clock-rest coupling was diagonal, the conditional state hierarchy would produce $\text{UVR} = 0$, suppressing oscillatory signatures below detection threshold ($<0.1\%$ modulation). This null result is therefore \emph{consistent with} the diagonal-coupling scenario [my conjecture] but does not independently confirm it — it could equally reflect genuine absence of discrete scale invariance in the primordial spectrum.
 
 ### 6.3 Quantum Simulation
 
-Trapped-ion systems implementing the PW mechanism [established; see Vishal & Nandy, 2026] provide a direct experimental test of the Sufficient Condition Theorem:
+A full experimental protocol for testing the Sufficient Condition Theorem with a single trapped ion (Yb$^+$) has been designed [see companion document `trapped-ion-experiment-design.md`]. The key elements are:
 
-1. Engineer a clock qudit with $p$-adic spectral spacing
-2. Tune the clock-rest interaction to be diagonal in the clock energy eigenbasis
-3. Measure conditional state fidelities $F(\tau_i, \tau_j)$
-4. Verify: for any three readings, $\max(F_{12}, F_{23}, F_{31})$ is attained by at least two pairs
+1. Engineer a clock qudit with $N \geq 6$ Zeeman sublevels with $p$-adic or equidistant spectral spacing
+2. Tune the clock-rest interaction between **diagonal** (carrier transitions only, predicted $\text{UVR} = 0\%$) and **nondiagonal** (sideband transitions, predicted $\text{UVR} \approx 32\%$) in the same apparatus
+3. Prepare the WDW state via adiabatic ramping of the laser-ion coupling
+4. Measure conditional state fidelities $F(\tau_i, \tau_j)$ via motional state tomography
+5. Verify: for diagonal coupling, all triangles satisfy the Parisi ultrametricity condition; for nondiagonal, approximately one-third violate it
 
-This is a falsifiable prediction [my conjecture]. The theorem would be disconfirmed if a diagonal-coupling trapped-ion implementation produces UVR > 0.
+This is a falsifiable prediction [my conjecture]. The theorem would be disconfirmed if a diagonal-coupling trapped-ion implementation produces $\text{UVR} > 0$. The experimental protocol estimates 8 weeks on existing trapped-ion apparatus, with all required capabilities (sideband cooling, motional state tomography, adiabatic state preparation) established in the literature [established].
 
 ### 6.4 Emergent Spacetime
 
@@ -266,17 +271,17 @@ The $p \to \infty$ limit of the Bruhat-Tits tree approximates a continuous manif
 
 We have established that ultrametricity — the mathematical signature of $p$-adic geometry — does not emerge generically from the Page-Wootters formalism. It requires a specific physical condition: the clock-rest interaction must be diagonal in the clock Hamiltonian eigenbasis. This condition is both mathematically sufficient (proved and computationally verified) and, within the families tested, effectively necessary.
 
-**Open questions:**
+**Open questions and their current status:**
 
-1. **Necessity proof:** Can we prove that nondiagonal coupling necessarily produces UVR > 0 for any nontrivial clock spectrum? The universal 33% rate suggests an underlying theorem.
+1. **Necessity proof:** The conjecture that nondiagonal coupling necessarily produces $\text{UVR} > 0$ is supported by a counting argument and 8000-trial computational search (0 counterexamples). A proof sketch has been developed [see `sufficient-condition-theorem.md` §7]: for $N$ clock states, the $N(N-1)(N-2)/6$ ultrametric triangle constraints generically overdetermine the $N(N-1)/2$ off-diagonal coupling parameters when $N > 3$, leaving the diagonal solution as the unique ultrametric configuration. A rigorous algebraic proof remains open `[my conjecture]`.
 
-2. **Real Planck data:** Fit $p$-specific templates to actual Planck 2018 TT, TE, and EE spectra. The synthetic LambdaCDM analysis validates the methodology.
+2. **Real Planck data:** The Planck 2018 binned TT spectrum has been analyzed [established]. All primes $p \in \{2, 3, 5, 7, 11\}$ show decisive evidence against log-periodic modulation ($\log \text{BF} < -5$). The null result is \emph{consistent with} diagonal coupling in the early universe [speculative] but does not independently confirm it.
 
-3. **Thermodynamic limit:** Does the Parisi replica ansatz rigorously apply to the $n \to 0$ limit of the WDW constraint partition function?
+3. **Replica connection:** A mapping between the WDW constraint ensemble and the Parisi replica symmetry breaking scheme has been sketched [see `replica-wdw-sketch.md`]. The conditional state overlap matrix $O_{ij}$ plays the role of the Parisi overlap $q_{ab}$, and diagonal $H_{CR}$ corresponds to replica symmetry. Deriving the explicit free energy functional $\overline{F}[q]$, computing the Almeida-Thouless stability eigenvalue, and constructing the 1-step RSB solution remain open problems `[my conjecture]`.
 
-4. **Experimental implementation:** Design a trapped-ion PW experiment with tunable diagonal/nondiagonal coupling to test the phase transition prediction.
+4. **Experimental implementation:** A complete trapped-ion experimental protocol has been designed [see `trapped-ion-experiment-design.md`], specifying: $N \geq 6$ Zeeman sublevels, carrier vs. sideband coupling regimes, adiabatic WDW state preparation, motional state tomography, and an 8-week timeline on existing apparatus. All required capabilities are established [established].
 
-5. **Gravity connection:** What does diagonal coupling mean for gravitational clocks? In canonical quantum gravity, the Hamiltonian constraint includes nonlinear gravitational interactions — are they diagonal in any natural clock basis?
+5. **Gravity connection:** What does diagonal coupling mean for gravitational clocks? In canonical quantum gravity, the Hamiltonian constraint includes nonlinear gravitational interactions — are they diagonal in any natural clock basis? This remains open.
 
 ---
 
