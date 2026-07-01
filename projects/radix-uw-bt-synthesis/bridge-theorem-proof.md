@@ -2,7 +2,7 @@
 
 ## Conditional Quantum States Under Global Constraints Necessarily Form Ultrametric Hierarchies
 
-**Author:** QNFO Research | **Date:** 2026-07-01  
+**Author:** QNFO Research | **Date:** 2026-07-01 | **DOI:** [10.5281/zenodo.21102770](https://doi.org/10.5281/zenodo.21102770)  
 **Status:** Formal Proof Sketch v1.0  
 **Part of:** Radix → Ultrametrics → Page-Wootters → Wheeler-DeWitt → Bruhat-Tits Synthesis
 

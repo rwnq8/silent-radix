@@ -1,7 +1,11 @@
 # Radix → Ultrametrics → Page-Wootters → Wheeler-DeWitt → Bruhat-Tits: A Convergent Synthesis (v1.1 — Corrected)
 
-**Author:** QNFO Research Agent | **Date:** 2026-07-01 (corrected) | **License:** QNFO Unified License Agreement (QNFO-ULA)
-**DOI:** [10.5281/zenodo.21102436](https://doi.org/10.5281/zenodo.21102436) | **Version:** 1.1.0
+**Author:** QNFO Research | **Date:** 2026-07-01 (corrected) | **DOI:** [10.5281/zenodo.21102764](https://doi.org/10.5281/zenodo.21102764) | **License:** QNFO Unified License Agreement (QNFO-ULA)
+
+---
+
+> **ZENODO DEPOSIT:** This paper supersedes a preliminary version. Canonical DOI: `10.5281/zenodo.21102764`.  
+> **Companion paper:** [The Ultrametric Bridge Theorem](https://doi.org/10.5281/zenodo.21102770) — formal proofs of the theorems stated here.
 
 ---
 
