@@ -45,7 +45,7 @@ class WikipediaSQLDumpParser:
     """Parses Wikipedia SQL dump files (INSERT INTO ... VALUES ... format)."""
     
     INSERT_RE = re.compile(
-        r"INSERT\s+INTO\s+`(\w+)`\s+VALUES\s*(.+?);", 
+        r"INSERT\s+INTO\s+`(\w+)`\s*\([^)]*\)\s*VALUES\s*(.+?);", 
         re.IGNORECASE | re.DOTALL
     )
     VALUE_RE = re.compile(r"\(([^()]*(?:\([^()]*\)[^()]*)*)\)")
