@@ -36,7 +36,7 @@ def download_file(url, dest_path, retries=3):
         try:
             print(f"  Downloading {url} ...", end=' ', flush=True)
             req = urllib.request.Request(url, headers={'User-Agent': 'QNFO-UVR/1.0'})
-            resp = urllib.request.urlopen(req, timeout=300)
+            resp = urllib.request.urlopen(req, timeout=7200)
             total = int(resp.headers.get('Content-Length', 0))
             downloaded = 0
             chunk_size = 1024 * 1024  # 1 MB

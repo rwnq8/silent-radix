@@ -715,7 +715,7 @@ var papers_server_v3_default = {
         const papers = await getAllPapers(env);
         return new Response(indexPage(papers), { headers: htmlHeaders(CORS) });
       }
-      const paperMatch = path.match(/^\/papers\/([a-zA-Z0-9_-]+)\/?$/);
+      const paperMatch = path.match(/^\/papers\/([a-zA-Z0-9_.-]+)\/?$/);
       if (paperMatch) {
         const slug = paperMatch[1];
         const papers = await getAllPapers(env);
