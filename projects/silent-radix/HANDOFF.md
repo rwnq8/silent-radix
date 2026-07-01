@@ -155,3 +155,95 @@ THEN EXECUTE IN ORDER:
 CRITICAL: Every action must have verification evidence. No claim without tool output.
 DO NOT re-edit LaTeX, re-run Lean proofs, or re-post to Buffer — all already done.
 ```
+
+
+---
+
+# QACP-HANDOFF v1.2 — silent-radix Phase 4 Complete (Publication Pipeline)
+
+> **Protocol:** `QACP-HANDOFF` | **Version:** `1.2.0` | **Handoff ID:** `H-2026-07-01-silent-radix-ph4`
+> **Created:** 2026-07-01T02:08:53Z | **From:** QNFO Research Agent (qnfo-agent, deepseek-v4-pro)
+> **To:** `urn:qacp:agent:next-session`
+
+---
+
+## Session Summary
+
+**silent-radix Phase 4 — 6/6 tasks EXECUTED (publication pipeline).** Completed the full publication chain for the Cyclic Measurement / Silent Radix synthesis paper: Knowledge Graph seeding, CMS registration in D1 living-paper, Cloudflare Pages deployment, SEO metadata generation, Zenodo DOI deposition, and DoD enforcement check (7/7 passed, exit 0).
+
+---
+
+## Task Register — This Session
+
+### Executed
+
+| # | Task | Status | Evidence |
+|---|------|--------|----------|
+| 1 | SEED Knowledge Graph | [EXECUTED] | `paper-silent-radix-synthesis` Paper node + BELONGS_TO `concept-program-silent-radix` + RELATES_TO `project-silent-radix`; KG auto-added PRODUCES edge. 816 nodes / 1718 edges |
+| 2 | REGISTER in CMS (D1) | [EXECUTED] | Inserted into `living-paper.papers` (identifier: `silent-radix-synthesis-v1.0`, kg_node_id linked, status: published) |
+| 3 | DEPLOY to Pages | [EXECUTED] | `https://papers.qnfo.org/silent-radix/` HTTP 200, MathJax config-before-script verified |
+| 4 | GENERATE SEO metadata | [EXECUTED] | 10/10 SEO score: OG tags, Twitter card, JSON-LD ScholarlyArticle, canonical, sitemap.xml, keywords |
+| 5 | CREATE Zenodo DOI | [EXECUTED] | DOI: `10.5281/zenodo.21090642`, PDF 341KB uploaded, DOI propagated to D1, KG, index.html |
+| 6 | RUN _dod_enforce.py | [EXECUTED] | 7/7 passed, exit 0: token, smoke test, D1 integrity, no orphans, dark-theme clean |
+
+---
+
+## Publication URLs
+
+| Resource | URL |
+|:---------|:----|
+| Page | `https://papers.qnfo.org/silent-radix/` |
+| DOI | `https://doi.org/10.5281/zenodo.21090642` |
+| PDF | `https://papers.qnfo.org/silent-radix/silent-radix-synthesis-paper-v1.0.pdf` |
+| Zenodo | `https://zenodo.org/records/21090642` |
+
+---
+
+## Infrastructure State
+
+| System | State | Detail |
+|:-------|:------|:-------|
+| **R2** | Active | PDF at `qnfo/projects/silent-radix/silent-radix-synthesis-paper-v1.0.pdf` (341KB) |
+| **D1 (living-paper)** | Updated | `silent-radix-synthesis-v1.0` paper row with DOI, kg_node_id, metadata |
+| **KG** | Updated | `paper-silent-radix-synthesis` node, 816 nodes / 1718 edges |
+| **Pages** | Deployed | `qnfo-publications` project, route: /silent-radix/ |
+| **Zenodo** | Published | DOI: 10.5281/zenodo.21090642, state: done |
+| **Cloudflare Token** | Valid | Account: quniverse |
+
+---
+
+## Gaps (from prior + this session)
+
+| ID | Category | Severity | Status |
+|:---|:---------|:--------:|:------:|
+| GAP-KG-001 | infrastructure | LOW | RESOLVED — KG now seeded (was read-only concern from prior handoff) |
+| GAP-ZENODO-001 | publication | MEDIUM | RESOLVED — DOI assigned |
+| GAP-SEO-001 | discoverability | MEDIUM | RESOLVED — SEO 10/10 |
+| GAP-VECTORIZE-001 | semantic-search | LOW | **Remains.** Vectorize embeddings not seeded. Next session could add to `qwav-research-v2` index |
+
+---
+
+## 🔜 Pending for Next Session
+
+| ID | Task | Priority | Dependencies |
+|:---|:-----|:--------:|:-------------|
+| T10 | Vectorize embeddings (semantic search index) | 4 | Paper finalized on Pages |
+
+---
+
+## Commits
+
+```
+26e1a31 docs(closeout): session handoff — all 5 silent-radix tasks completed, ADR-001 rescinded
+e432598 chore(closeout): final cleanup — tex whitespace normalization, PDF artifact
+```
+
+(No new commits this session — all work was API-based: KG sync, D1 insert, Pages deploy, Zenodo API, SEO injection.)
+
+---
+
+## Cross-References
+
+- **Systems touched:** R2, D1 (living-paper, qnfo-cms), KG, Cloudflare Pages, Zenodo API
+- **Entities created:** `paper-silent-radix-synthesis` (KG node), `silent-radix-synthesis-v1.0` (D1 paper row), Zenodo deposition 21090642
+- **Entities modified:** index.html (DOI + SEO), KG nodes (doi propagation)
