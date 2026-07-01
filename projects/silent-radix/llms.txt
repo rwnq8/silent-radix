@@ -1,0 +1,32 @@
+# llms.txt — AI crawler manifest for deep.qwav.tech (llmstxt.org standard)
+# Last updated: 2026-07-01
+
+# QWAV Deep Research Feed
+> Research publications, experimental results, and theoretical developments in ultrametric quantum computing.
+
+## Papers
+
+### The Silent Radix: Positional Notation as Ultrametric Tree and the Calculus of Indications as Remedy
+- URL: https://deep.qwav.tech/papers/silent-radix-synthesis/
+- Published: 2026-07-01
+- DOI: 10.5281/zenodo.21090347
+- Topics: mathematics, ultrametric, p-adic, laws-of-form, foundations, measurement-theory
+- Summary: Formalizes positional notation as an ultrametric tree, traces historical errors to the silent decimal default, and recovers the ultrametric via p-adic numbers and Spencer-Brown calculus of indications.
+
+### Radix to Ultrametrics to Page-Wootters to Wheeler-DeWitt to Bruhat-Tits: A Convergent Synthesis
+- URL: https://deep.qwav.tech/papers/radix-uw-bt-synthesis/
+- Published: 2026-07-01
+- DOI: 10.5281/zenodo.21102764
+- Topics: mathematics, ultrametric, p-adic, quantum-mechanics, bruhat-tits, page-wootters, wheeler-dewitt
+- Summary: Convergent synthesis connecting positional notation foundations to ultrametric quantum mechanics, Page-Wootters formalism, Wheeler-DeWitt equation, and Bruhat-Tits buildings.
+
+### The Ultrametric Bridge Theorem
+- URL: https://deep.qwav.tech/papers/radix-uw-bt-synthesis/ (bridge section)
+- Published: 2026-07-01
+- DOI: 10.5281/zenodo.21102770
+- Topics: mathematics, ultrametric, quantum-mechanics, theorem
+- Summary: Conditional quantum states under global constraints necessarily form ultrametric hierarchies.
+
+## Optional
+- Full text (Markdown): Contact via https://qnfo.org
+- PDF: Available via Zenodo (DOIs above)
