@@ -135,13 +135,53 @@ b8c5c00 — Bridge theorem infinite-dimensional extension
 ## Continuation Prompt
 
 ```
-PROJECT COMPLETE — 9/9 gaps resolved. Paper published, theorem proven, experiments designed.
+SESSION 2026-07-01 (2) — Cloudflare Deploy + Tomita-Takesaki Bridge Proof
 
-NEXT STEPS (optional):
-1. Merge feature branch to main
-2. Add CMB results and necessity analysis to paper.md as a v1.1 revision
-3. SEO optimization for papers.qnfo.org
-4. Present to experimentalists for trapped-ion collaboration
-5. Pursue rigorous replica derivation (open mathematical physics problem)
+## Completed — This Session (3/4 tasks)
+
+| ID | Task | Status | Key Evidence |
+|:---|:-----|:------:|:-------------|
+| TASK-02a | Build QNFO index.html | ✅ [EXECUTED] | `_pages_deploy/index.html` 47,822 bytes; QNFO Design System v3.0 (Inter+Source Serif 4, #1a56db, 960px); MathJax config BEFORE script |
+| TASK-02b | Cloudflare Pages Deploy | ✅ [EXECUTED] | `https://6de6a8ca.qnfo-publications.pages.dev` — HTTP 200, 47,822B; All 8 design checks pass |
+| TASK-03 | Bridge Proof §9 Tomita-Takesaki | ✅ [EXECUTED] | `bridge-theorem-proof.md` 340→451 lines (+111). Modular automorphisms, split inclusions [Aₖ₊₁:Aₖ]=p, type III factors, Connes spectrum={pⁿ}, GNS/KMS. Commit `b8c5c00`. |
+| TASK-01a | Wikipedia UVR Dump Download | ⚠ [PARTIAL] | 2/4 files: category.sql.gz (33 MB), categorylinks.sql.gz (216 MB). pagelinks (~5.6 GB) + page (~1.5+ GB) exceed tool ~5 min timeout. |
+| TASK-01b | UVR Pipeline Run | 🔒 [BLOCKED] | `wikipedia_uvr_pipeline.py` missing from disk AND R2. `download_wiki_dumps.py` also missing (ephemeral, never committed). |
+
+## New Key Deliverables
+
+| File | Size | Description |
+|:-----|-----:|:------------|
+| `bridge-theorem-proof.md` | 22KB | v1.0 + §9 Tomita-Takesaki (451 lines) |
+| (deployed) | 48KB | `https://6de6a8ca.qnfo-publications.pages.dev` |
+| `enwiki-20260601-category.sql.gz` | 33 MB | Wikipedia category dump (downloaded) |
+| `enwiki-20260601-categorylinks.sql.gz` | 216 MB | Wikipedia categorylinks dump (downloaded) |
+
+## Updated Infrastructure
+
+| System | State | Detail |
+|:-------|:------|:-------|
+| **Cloudflare Pages** | DEPLOYED | qnfo-publications: 6de6a8ca.qnfo-publications.pages.dev |
+| **synthesis.md** | DEPLOYED | 31KB synthesis paper rendered with MathJax |
+| **bridge-theorem-proof.md** | ENHANCED | +111 lines Tomita-Takesaki §9 |
+| **D1** | UNCHANGED | No new rows this session |
+| **Git** | 2 NEW COMMITS | b8c5c00 (bridge §9), d17cc15 (HANDOFF update) |
+| **Wikipedia dumps** | PARTIAL | 2/4 files (249 MB of ~8 GB) |
+
+## Continuation Prompt
+
+```
+LOAD ALL QNFO SKILLS. CONTINUE FROM HANDOFF IN projects/radix-uw-bt-synthesis/HANDOFF.md.
+
+PENDING:
+1. RECOVER SCRIPTS: download_wiki_dumps.py and wikipedia_uvr_pipeline.py missing from disk and R2.
+   Recreate or pull from git history: git show e04504b:download_wiki_dumps.py
+2. DOWNLOAD DUMP: The remaining 2 Wikipedia files (pagelinks ~5.6 GB, page ~1.5 GB) need
+   a terminal session without timeout. Run: python download_wiki_dumps.py --output-dir ./enwiki-dump/ --date 20260601
+3. RUN PIPELINE: python wikipedia_uvr_pipeline.py --dump-dir ./enwiki-dump/ --sample 50000
+4. MERGE: Merge feature/radix-to-bruhat-tits-synthesis to main
+
+DEPLOYED: https://6de6a8ca.qnfo-publications.pages.dev (synthesis paper, QNFO Design System v3.0)
+BRIDGE PROOF: §9 Tomita-Takesaki (451 lines, commit b8c5c00)
+```
 ```
 
