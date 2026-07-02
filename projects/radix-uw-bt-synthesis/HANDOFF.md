@@ -240,3 +240,74 @@ REMAINING OPTIONAL WORK:
 
 **Closeout complete.** Project is published (Zenodo DOI: 10.5281/zenodo.21115364). All work product preserved in `projects/radix-uw-bt-synthesis/`.
 ```
+
+---
+
+## Session 5 Continuation — 2026-07-02 (k-Step RSB Extension)
+
+> **Branch:** `main` @ `dc5bf68`
+> **Agent:** deepseek-v4-pro
+> **Commit:** `dc5bf68`
+
+### Tasks Executed (5/5)
+
+| # | Task | Status | Evidence |
+|---|------|--------|----------|
+| 1 | MERGE feature/necessity-proof-convergence → main | [EXECUTED] | `5caa4be` — 1 conflict in parisi_pde_solver.py resolved (accepted feature branch) |
+| 2 | EXTEND Parisi solver to k-step RSB | [EXECUTED] | `dc5bf68` — +559 lines: KRSBConfig, ParisiKRSBSolver, main_krsb() |
+| 3 | k-RSB test suite | [EXECUTED] | 8/8 pass (19.9s). K=1,2,3 converge. RS phase at βJ=1.0 (λ_AT=0.8004) |
+| 4 | D1 handoffs | [EXECUTED] | portfolio-state.handoffs + qnfo-audit.audit_sessions rows verified |
+| 5 | Final verification | [EXECUTED] | Solver: 753 lines, 29,555 chars, zero conflict markers, zero ephemeral files |
+
+### k-Step RSB Extension Details
+
+**Classes/Components added to `parisi_pde_solver.py`:**
+
+| Component | Lines | Purpose |
+|:----------|:-----|:--------|
+| `KRSBConfig` | ~15 | Extended config: k_rsb, x_breaks (Parisi breaking points) |
+| `ParisiKRSBSolver` | ~200 | Core solver class |
+| `ParisiKRSBSolver._init_q()` | ~25 | Initialize q levels from RS solution via 50-iteration descent |
+| `ParisiKRSBSolver._solve()` | ~55 | Iterative self-consistent solver (vectorized GH-16 quadrature) |
+| `ParisiKRSBSolver.reconstruct_qx()` | ~15 | Piecewise-constant q(x) reconstruction from level values |
+| `ParisiKRSBSolver.compute_at_krsb()` | ~10 | AT stability eigenvalues per RSB level |
+| `ParisiKRSBSolver.phase_diagram_krsb()` | ~20 | βJ sweep for phase diagram |
+| `ParisiKRSBSolver.padic_overlap_matrix()` | ~15 | p-adic tree overlap from k-step q(x) |
+| `ParisiKRSBSolver.compute_uvr_krsb()` | ~15 | UVR from k-step overlap matrix |
+| `main_krsb()` | ~50 | Demo: K=1,2,3 solve + phase diagram |
+
+**K=1,2,3 RSB Results (βJ=1.0, N=5, M=3):**
+
+| K | q_levels | AT | UVR |
+|:--|:---------|:---|:----|
+| 1 | [0.553218, 0.553218] | λ_AT_0,1 = 0.8004 | 0.000000 (ultrametric) |
+| 2 | [0.553218, 0.553218, 0.553218] | λ_AT_0,1,2 = 0.8004 | 0.000000 (ultrametric) |
+| 3 | [0.553218, 0.553218, 0.553218, 0.553218] | λ_AT_0,1,2,3 = 0.8004 | 0.000000 (ultrametric) |
+
+All levels equal → RS phase. RSB expected when βJ exceeds AT threshold (λ_AT becomes negative). The infrastructure to find non-trivial RSB solutions (q₀ < q₁ < ... < qₖ) is in place.
+
+**D1 Handoffs:**
+
+| Database | Table | Row | Key |
+|:---------|:------|:----|:----|
+| portfolio-state | handoffs | H-2026-07-02-radix-uw-bt-session5 | urn:qnfo:handoff:H-2026-07-02-radix-uw-bt-session5 |
+| qnfo-audit | audit_sessions | 2026-07-02-radix-uw-bt-session5 | id=16 |
+
+**Solver File Health:**
+
+| Metric | Value |
+|:-------|:------|
+| Lines | 753 |
+| Chars | 29,555 |
+| Classes | Config, ParisiWDWSolver, KRSBConfig, ParisiKRSBSolver |
+| Functions | main(), main_krsb() |
+| Conflict markers | 0 |
+| Synax valid | ✅ |
+
+### Next Steps (Session 6)
+
+1. **Threshold sweep**: Run solver at high βJ values to find AT instability and RSB onset
+2. **Continuous limit**: Numerical verification that as k→∞, piecewise q(x) approaches continuous Parisi solution
+3. **Clock-sector dependence**: How different spectral distributions affect RSB structure
+4. **Publication**: Write up k-step RSB findings for the WDW ensemble
+5. **Zenodo deposit v2**: Update DOI with k-RSB solver and new results
