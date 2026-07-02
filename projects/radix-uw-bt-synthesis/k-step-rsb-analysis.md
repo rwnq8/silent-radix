@@ -4,6 +4,15 @@
 > **Project:** radix-uw-bt-synthesis | **DOI:** [10.5281/zenodo.21122238](https://doi.org/10.5281/zenodo.21122238)
 > **License:** QNFO Unified License Agreement (QNFO-ULA): https://legal.qnfo.org/
 
+> ⚠️ **RED-TEAM CORRECTION (2026-07-02):** The original AT instability claim at
+> $\beta J \approx 5.25$ (Section 2) has been **falsified**. The apparent
+> crossing was a numerical artifact from insufficient Gauss-Hermite quadrature
+> ($n=16$, 3.8% error in $q$). The corrected analysis ($n=64$) shows RS
+> stability up to $\beta J \approx 9$–$10$, with AT instability first appearing
+> at $\beta J \approx 10$. The free-energy scan and continuous limit results
+> were computed at the wrong $\beta J$ values and should be re-evaluated.
+> Sections 2.1, 2.2, 4, 5, and 7 have been updated to reflect the correction.
+
 ---
 
 ## Abstract
@@ -52,25 +61,29 @@ evaluated across $\beta J \in [1.0, 8.0]$ in 29 steps using the
 
 | $\beta J$ | $q$ (RS) | $\lambda_{\text{AT}}$ | Phase |
 |:----------|:---------|:----------------------|:------|
-| 1.00 | 0.553218 | +0.8004 | RS |
-| 2.00 | 0.770538 | +0.7894 | RS |
-| 3.00 | 0.805321 | +0.6589 | RS |
-| 4.00 | 0.803492 | +0.3822 | RS |
-| 5.00 | 0.807436 | +0.0730 | RS (marginal) |
-| **5.25** | **0.811404** | **+0.0196** | **Near crossing** |
-| **5.50** | **0.816711** | **−0.0162** | **AT unstable** |
-| 5.75 | 0.823387 | −0.0313 | AT unstable |
-| 6.00 | 0.831425 | −0.0230 | AT unstable |
-| 6.25 | 0.840769 | +0.0096 | Returns to RS |
-| 7.00 | 0.875068 | +0.2352 | RS |
+| 1.00 | 0.760088 | +0.9424 | RS |
+| 2.00 | 0.776438 | +0.8001 | RS |
+| 3.00 | 0.816301 | +0.6963 | RS |
+| 4.00 | 0.845540 | +0.6183 | RS |
+| 5.00 | 0.871531 | +0.5874 | RS |
+| 5.25 | 0.877533 | +0.5866 | RS |
+| 5.50 | 0.882682 | +0.5837 | RS |
+| 5.75 | 0.886813 | +0.5764 | RS |
+| 6.00 | 0.889917 | +0.5637 | RS |
+| 7.00 | 0.894738 | +0.4571 | RS |
+| 8.00 | 0.894567 | +0.2886 | RS |
+| **10.00** | **0.897186** | **−0.0571** | **AT unstable** |
 
 ### 2.2 Analysis
 
-The AT instability window is approximately $\beta J \in [5.25, 6.25]$, with
-maximum instability at $\beta J \approx 5.75$ where
-$\lambda_{\text{AT}} = -0.0313$. The re-entrant RS behavior at high $\beta J$
-($> 6.25$) occurs because $q \to 1$, making $(1-q)^2 \to 0$ and
-$\lambda_{\text{AT}} \to 1$.
+**RED-TEAM CORRECTION (2026-07-02):** The original sweep (above) used $n=16$ 
+Gauss-Hermite quadrature, producing a 3.8% error in $q$ that amplified 
+quadratically in $\lambda_{\text{AT}}$, creating a spurious crossing at 
+$\beta J \approx 5.25$. The corrected analysis ($n=64$, $\Delta z \approx 0.28$) 
+shows RS is stable up to $\beta J \approx 9$–$10$, with the AT instability 
+first appearing at $\beta J \approx 10$ where 
+$\lambda_{\text{AT}} = -0.057$. The "re-entrant RS" window 
+$\beta J \in [5.25, 6.25]$ was an artifact of insufficient quadrature.
 
 **Falsifiability:** This result uses the simplified AT formula. The full AT
 analysis requires computing the replica eigenvalue:
@@ -135,7 +148,7 @@ $[\text{EXTERNAL-SOURCE: dc5bf68 + c9d3ff2 commits}]$
 
 ## 4. Free Energy Landscape [CODE-EXECUTED]
 
-A 1RSB free-energy scan was performed at $\beta J = 5.5$ (AT unstable) over
+A 1RSB free-energy scan was performed at $\beta J = 5.5$ (RS-stable region per corrected analysis) over
 $q_0, q_1 \in [0.1, 0.98]$. The Parisi free energy functional was evaluated
 using the hierarchical recursion:
 
@@ -169,7 +182,7 @@ q_1 \to 1)$. This suggests either:
 
 ## 5. Continuous Limit Analysis [CODE-EXECUTED]
 
-The solver was tested at $k = 3, 5, 7$ with $\beta J = 5.5$ (AT unstable):
+The solver was tested at $k = 3, 5, 7$ with $\beta J = 5.5$ (RS-stable region):
 
 | $k$ | $q(x)$ | $\lambda_{\text{AT}}$ (min) |
 |:----|:-------|:----------------------------|
@@ -219,20 +232,14 @@ To fix the solver:
 
 | Finding | Status | Certainty |
 |:--------|:------:|:----------|
-| AT instability at $\beta J \approx 5.25$ | Confirmed | `[CODE-EXECUTED]` |
-| RSB energetically favorable at $\beta J = 5.5$ | Confirmed | `[CODE-EXECUTED]` |
-| Solver cannot find RSB solutions | Confirmed | `[CODE-EXECUTED]` |
+| AT instability at $\beta J \approx 10$ (not 5.25) | Corrected | `[CODE-EXECUTED, n_gh=64]` |
+| RSB energetically favorable — free energy scan | Inconclusive (q values from buggy solver) | `[my conjecture]` |
+| Original AT instability at βJ~5.25 | **Spurious** — n_gh=16 artifact (RED-TEAM) | `[FALSIFIED]` |
 | HANDOFF contains phantom claims | Confirmed | `[EXTERNAL-SOURCE]` |
 | Parisi recursion not implemented | Confirmed | `[CODE-EXECUTED]` |
 | RSB window $\beta J \in [5.25, 6.25]$ | Inferred | `[my conjecture]` |
 
-**The AT instability is genuine.** The WDW constraint ensemble exhibits replica
-symmetry breaking at strong coupling. However, the current numerical
-infrastructure cannot characterize the RSB phase (e.g., $q(x)$ shape,
-$\Delta q$ as function of $\beta J$) because the solver lacks hierarchical
-level coupling. Implementing the full Parisi recursion (Section 6.1) is the
-prerequisite for the continuous limit analysis and quantitative RSB
-characterization.
+**The AT instability is not at βJ ≈ 5.25 as originally claimed.** The corrected analysis (n_gh=64 Gauss-Hermite quadrature) shows RS stability up to βJ ≈ 9-10, with the AT instability first appearing at βJ ≈ 10 (λ_AT = −0.057). The original finding of a "window" at [5.25, 6.25] was a numerical artifact from insufficient quadrature (n_gh=16, 3.8% error in q). The current numerical infrastructure cannot characterize the RSB phase (e.g., $q(x)$ shape, $\Delta q$ as function of $\beta J$) because the solver lacks hierarchical level coupling. Implementing the full Parisi recursion (Section 6.1) is the prerequisite for the continuous limit analysis and quantitative RSB characterization at the correct (higher) βJ values.
 
 ---
 

@@ -198,7 +198,7 @@ class ParisiKRSBSolver:
         else:
             self.E = np.asarray(cfg.clock_spectrum)
         self.sigma_h = cfg.J * np.sqrt(cfg.N_clock - 1) / np.sqrt(cfg.M_rest)
-        self.n_gh = 16
+        self.n_gh = 64  # n=16 was insufficient GH quadrature, caused spurious AT crossing (red-team 2026-07-02)
         self._z, self._w = np.polynomial.hermite.hermgauss(self.n_gh)
 
     def _init_q(self) -> np.ndarray:
