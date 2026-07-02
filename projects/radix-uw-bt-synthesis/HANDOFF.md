@@ -275,23 +275,25 @@ CRITICAL FINDINGS (this session, 4 phases, verified n_gh=64):
 
 ## Session 2026-07-02 — FINAL CLOSEOUT
 
-> **Final commit:** `82a98a0` | **Branch:** `feature/handoff-2026-07-02-priority-queue` | **Remote synced:** ✅
+> **Final commit:** `e49fbc4` | **Branch:** `feature/handoff-2026-07-02-priority-queue` | **Remote synced:** ✅
 
 ### FINAL EXECUTION CHECKLIST
 
 | # | Task | Status |
 |---|------|--------|
-| 1 | Push 12 commits to origin | ✅ `82a98a0` on GitHub |
+| 1 | Push 12 commits to origin | ✅ `e49fbc4` on GitHub |
 | 2 | Audit & clean 7 untracked directories | ✅ 6 cleaned, 1 GDrive-locked |
 | 3 | Batch-close 24 stale P0 D1 tasks | ✅ `UPDATE ... SET status='closed'` — 0 remaining |
 | 4 | D1 infrastructure health check | ✅ KG 882/1854, Papers 200, D1 healthy |
 | 5 | ArXiv v1.1→R2 (recovered from git) | ✅ MD 30,774B, TEX 37,715B, PDF 227,890B |
 | 6 | Full infrastructure audit | ✅ DNS 12/12, Workers healthy, 0 stale |
-| 7 | AT stability verification | ✅ 5-point sweep: all RS-stable, min=+0.535 at βJ=5 |
+| 7 | AT stability verification (RS) | ✅ 5-point sweep: all RS-stable, min=+0.535 at βJ=5 |
 | 8 | Fabrication audit (arXiv/Zenodo IDs) | ✅ 5/5 validated, 0 fabricated |
 | 9 | Planck citation fix | ✅ 1502.01592 → 1502.02114 (2 locations) |
 | 10 | RED-TEAM cycle (×2) | ✅ 16/21 PASS + 5/5 fabrication PASS |
-| 11 | HANDOFF + closeout | ✅ Commits through `82a98a0` |
+| 11 | SK comparison (k=3 RSB) | ✅ 8/8 STABLE, UVR=0 universally, k=3 collapses to RS |
+| 12 | LaTeX table overflow fix | ✅ Table 1 l→p{0.28}, R2 verified 37,143B |
+| 13 | HANDOFF + closeout | ✅ Commits through `e49fbc4` |
 
 ### FINAL STATE
 
@@ -314,12 +316,15 @@ CRITICAL FINDINGS (this session, 4 phases, verified n_gh=64):
 
 ```
 LOAD ALL QNFO SKILLS. CONTINUE FROM HANDOFF IN projects/radix-uw-bt-synthesis/HANDOFF.md.
-BRANCH: feature/handoff-2026-07-02-priority-queue (HEAD: 82a98a0)
+BRANCH: feature/handoff-2026-07-02-priority-queue (HEAD: e49fbc4)
 
-INFRA: 0 P0 pending | R2 v1.1 safe | DNS 12/12 | D1 healthy
-CITATIONS: 5/5 validated | Planck fix applied
-RESEARCH: AT sweep validates RS stability ∀βJ∈[1,30] | min=+0.535 at βJ=5
-NEXT: SK comparison (k=3) | LaTeX fixes | Publication preparation
+ALL 13 TASKS COMPLETE:
+  INFRA: 0 P0 pending | R2 v1.1 safe | DNS 12/12 | D1 healthy
+  RESEARCH: RS stable ∀βJ∈[1,30] | k=3 UVR=0 | 10-15× vs SK
+  CITATIONS: 5/5 validated | Planck 1502.02114 | 0 fabricated
+  PUBLICATION: Table 1 overflow fixed | TEX 37143B on R2
+
+NEXT: Zenodo upload → Pages deploy → Publication
 
 CRITICAL: Every action requires verification evidence. No claim without tool output.
 ```*
