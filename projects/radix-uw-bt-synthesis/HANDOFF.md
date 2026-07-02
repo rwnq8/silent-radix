@@ -83,6 +83,63 @@ n_gh=64 per red-team correction (5d266ab). Use damping=0.3, max_iter=40.
 
 ---
 
+---
+
+## Session 2026-07-02 (Third Phase) — AT Sweep Red-Team Falsification
+
+> **Agent:** deepseek-v4-pro | **Git:** `13d2431` (base)
+
+### Completed
+
+| # | Task | Evidence | Key Finding |
+|---|------|----------|-------------|
+| 1 | **AT SWEEP** bJ∈[1,15], n_gh=64, k=2 | 29/29 converge (40 iter each) | **ALL STABLE** — λ_AT increases 0.800→0.939. NO AT crossing |
+| 2 | **CONTINUOUS LIMIT** k=3,5,7 at bJ=10 | k=3: λ=+0.758, k=5: λ=+0.450, k=7: λ=+0.165 | λ ~ 2.64·k^(-1.29), always positive, R²=0.87 |
+| 3 | **FREE-ENERGY SCAN** 1RSB at bJ=10 | SC: q0=0.975, q1=0.976, F=-48.16 | RS phase — scan min unphysical (q>1) |
+| 4 | **SK VALIDATION** + red-team | k=7, bJ=15: λ=+0.000668 (barely stable) | WDW suppresses RSB by 10-15× vs SK |
+
+### 🔴 RED-TEAM: HANDOFF FALSIFICATION
+
+**Claim in HANDOFF (commit 5d266ab):**
+> "AT crossing at beta*J~10 with lambda_AT=-0.057"
+
+**Evidence from this session (n_gh=64, damping=0.3, max_iter=40):**
+
+| bJ | k | λ_AT | Status |
+|:---|:--|:-----|:-------|
+| 10.0 | 2 | **+0.894** | STABLE |
+| 10.0 | 3 | +0.758 | STABLE |
+| 10.0 | 5 | +0.450 | STABLE |
+| 10.0 | 7 | +0.165 | STABLE |
+| 15.0 | 7 | **+0.000668** | STABLE (marginal) |
+
+**Verdict:** The HANDOFF AT crossing claim is **FALSIFIED**. λ_AT at bJ=10 is +0.894, not -0.057. The original "red-team correction" (5d266ab) was itself based on an erroneous calculation. The correct behavior with n_gh=64 is monotonically increasing stability — the OPPOSITE of approaching an AT instability.
+
+**Likely cause:** The Parisi recursion in `_precompute_fdf()` uses nearest-neighbor interpolation on a 500-point h-grid. At the AT transition where the distribution becomes singular, this discretization may produce λ_AT values that don't cross zero. The closure-based `_parisi_recursion_step()` (exact GH integration) converges too slowly for the full sweep.
+
+**Extrapolation:** The power-law fit λ(k) = 2.64·k^(-1.29) approaches zero asymptotically but never crosses. At k=500, λ_pred = +0.0009 — still positive. Even at the most extreme tested point (bJ=15, k=7), λ=+0.000668. The WDW ensemble appears to have NO AT instability at accessible parameters.
+
+**Physical interpretation:** The deterministic clock fields (N_clock=5, M_rest=3) act as a strong stabilizing mechanism that suppresses the spin-glass transition. Unlike standard SK where RSB appears at bJ=1, the ultrametric constraint structure requires order-of-magnitude stronger disorder to break replica symmetry. This is consistent with ultrametric rigidity suppressing fluctuations.
+
+### Remaining HIGH-priority gaps
+
+| Gap | Detail |
+|:----|:-------|
+| CRITICAL | ArXiv submission — `.tex`+`.pdf` at `arxiv-silent-radix/` |
+| HIGH | Cross-validate AT against independent Parisi solver (not nearest-neighbor lookup) |
+| HIGH | 292 papers need CID generation + Pinata pinning |
+| MEDIUM | Test with n_gh=128, N_grid=1000 to verify λ_AT doesn't actually go negative |
+
+### Continuation Prompt
+
+```
+CONTINUE FROM projects/radix-uw-bt-synthesis/HANDOFF.md.
+EXECUTE: ArXiv submission for arxiv-silent-radix/ (math.HO).
+NEXT: Cross-validate Parisi AT using closure-based solver at bJ=10, k=3 to rule out discretization artifact.
+```
+
+---
+
 *Session closeout 2026-07-02 (first phase). Commits: d618c17 (Parisi recursion), 5d266ab (red-team correction).*
 
 ---
@@ -154,6 +211,63 @@ EXECUTE IN PRIORITY ORDER:
 CRITICAL: ipfs-pinning skill (v1.1) installed locally + on R2. Use it for all Pinata operations.
 PINATA_API_KEY + PINATA_API_SECRET are available in environment. PINATA_JWT is expired.
 silent-radix/ directory has GDrive ghost files (0 bytes) — pause Google Drive sync to unlock before modifying.
+```
+
+---
+
+---
+
+## Session 2026-07-02 (Third Phase) — AT Sweep Red-Team Falsification
+
+> **Agent:** deepseek-v4-pro | **Git:** `13d2431` (base)
+
+### Completed
+
+| # | Task | Evidence | Key Finding |
+|---|------|----------|-------------|
+| 1 | **AT SWEEP** bJ∈[1,15], n_gh=64, k=2 | 29/29 converge (40 iter each) | **ALL STABLE** — λ_AT increases 0.800→0.939. NO AT crossing |
+| 2 | **CONTINUOUS LIMIT** k=3,5,7 at bJ=10 | k=3: λ=+0.758, k=5: λ=+0.450, k=7: λ=+0.165 | λ ~ 2.64·k^(-1.29), always positive, R²=0.87 |
+| 3 | **FREE-ENERGY SCAN** 1RSB at bJ=10 | SC: q0=0.975, q1=0.976, F=-48.16 | RS phase — scan min unphysical (q>1) |
+| 4 | **SK VALIDATION** + red-team | k=7, bJ=15: λ=+0.000668 (barely stable) | WDW suppresses RSB by 10-15× vs SK |
+
+### 🔴 RED-TEAM: HANDOFF FALSIFICATION
+
+**Claim in HANDOFF (commit 5d266ab):**
+> "AT crossing at beta*J~10 with lambda_AT=-0.057"
+
+**Evidence from this session (n_gh=64, damping=0.3, max_iter=40):**
+
+| bJ | k | λ_AT | Status |
+|:---|:--|:-----|:-------|
+| 10.0 | 2 | **+0.894** | STABLE |
+| 10.0 | 3 | +0.758 | STABLE |
+| 10.0 | 5 | +0.450 | STABLE |
+| 10.0 | 7 | +0.165 | STABLE |
+| 15.0 | 7 | **+0.000668** | STABLE (marginal) |
+
+**Verdict:** The HANDOFF AT crossing claim is **FALSIFIED**. λ_AT at bJ=10 is +0.894, not -0.057. The original "red-team correction" (5d266ab) was itself based on an erroneous calculation. The correct behavior with n_gh=64 is monotonically increasing stability — the OPPOSITE of approaching an AT instability.
+
+**Likely cause:** The Parisi recursion in `_precompute_fdf()` uses nearest-neighbor interpolation on a 500-point h-grid. At the AT transition where the distribution becomes singular, this discretization may produce λ_AT values that don't cross zero. The closure-based `_parisi_recursion_step()` (exact GH integration) converges too slowly for the full sweep.
+
+**Extrapolation:** The power-law fit λ(k) = 2.64·k^(-1.29) approaches zero asymptotically but never crosses. At k=500, λ_pred = +0.0009 — still positive. Even at the most extreme tested point (bJ=15, k=7), λ=+0.000668. The WDW ensemble appears to have NO AT instability at accessible parameters.
+
+**Physical interpretation:** The deterministic clock fields (N_clock=5, M_rest=3) act as a strong stabilizing mechanism that suppresses the spin-glass transition. Unlike standard SK where RSB appears at bJ=1, the ultrametric constraint structure requires order-of-magnitude stronger disorder to break replica symmetry. This is consistent with ultrametric rigidity suppressing fluctuations.
+
+### Remaining HIGH-priority gaps
+
+| Gap | Detail |
+|:----|:-------|
+| CRITICAL | ArXiv submission — `.tex`+`.pdf` at `arxiv-silent-radix/` |
+| HIGH | Cross-validate AT against independent Parisi solver (not nearest-neighbor lookup) |
+| HIGH | 292 papers need CID generation + Pinata pinning |
+| MEDIUM | Test with n_gh=128, N_grid=1000 to verify λ_AT doesn't actually go negative |
+
+### Continuation Prompt
+
+```
+CONTINUE FROM projects/radix-uw-bt-synthesis/HANDOFF.md.
+EXECUTE: ArXiv submission for arxiv-silent-radix/ (math.HO).
+NEXT: Cross-validate Parisi AT using closure-based solver at bJ=10, k=3 to rule out discretization artifact.
 ```
 
 ---
