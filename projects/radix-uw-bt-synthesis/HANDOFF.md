@@ -1,5 +1,49 @@
 ---
 
+---
+
+## Session 2026-07-02 (Publication Phase) — Zenodo + Pages Deployment
+
+> **Agent:** deepseek-v4-pro | **Git:** `bc5db87` | **Status:** PUBLICATION COMPLETE
+
+### PUBLICATION EXECUTED
+
+| Step | Action | Evidence |
+|:-----|:-------|:---------|
+| 1 | Zenodo deposition | ID: 21134188, DOI: `10.5281/zenodo.21134188` |
+| 2 | Files uploaded | MD 30,774B, TEX 37,143B, PDF 227,890B |
+| 3 | Zenodo published | State: `done`, Concept DOI: `10.5281/zenodo.21134187` |
+| 4 | DOI added to paper MD | Author block updated with DOI link |
+| 5 | R2 releases path | `qnfo/releases/2026/07/silent-radix/paper.md` + `.pdf` |
+| 6 | D1 registration | `living-paper.papers`, identifier `silent-radix-synthesis-v1.1` |
+| 7 | Dynamic serving | `papers.qnfo.org/papers/silent-radix-synthesis/` -> HTTP 200, 15KB |
+| 8 | Zenodo API verified | All 3 files confirmed, state=done |
+
+### PUBLICATION URLS
+
+- **Paper:** https://papers.qnfo.org/papers/silent-radix-synthesis/
+- **DOI:** https://doi.org/10.5281/zenodo.21134188
+- **Zenodo Record:** https://zenodo.org/records/21134188
+- **R2 Release:** `qnfo/releases/2026/07/silent-radix/`
+
+### CONTINUATION PROMPT
+
+```
+LOAD ALL QNFO SKILLS. CONTINUE FROM HANDOFF IN projects/radix-uw-bt-synthesis/HANDOFF.md.
+BRANCH: feature/handoff-2026-07-02-priority-queue
+
+PUBLICATION COMPLETE:
+  Zenodo DOI: 10.5281/zenodo.21134188 (3 files, state=done)
+  Paper live: https://papers.qnfo.org/papers/silent-radix-synthesis/
+  D1 registered: silent-radix-synthesis-v1.1 (living-paper.papers)
+  R2 releases: qnfo/releases/2026/07/silent-radix/
+
+NEXT:
+- SEO discoverability optimization for new publication
+- Social media dissemination via Buffer (Phase 5 of LRAP)
+- Knowledge Graph seeding for new paper node
+```
+
 ## Session 2026-07-02 (Fifth Phase) � Infrastructure Remediation, Red-Team, & Phases A-E
 
 > **Agent:** deepseek-v4-pro | **Git:** 199096 | **Status:** ALL 12 TASKS EXECUTED
