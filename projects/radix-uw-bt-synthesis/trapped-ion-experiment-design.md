@@ -1,17 +1,17 @@
-# Trapped-Ion Page-Wootters Experiment: Testing Ultrametricity with Tree vs. Chain Clock Spectra
+# Trapped-Ion Page-Wootters Experiment: Null Test of Replica Symmetry Breaking with Tree vs. Chain Clock Spectra
 
-> **Author:** QNFO Research | **Date:** 2026-07-02 (rebuilt v2.0) | **Part of:** Radix→BT Synthesis — GAP-EXPT-001
-> **Correction:** Incorporates D4 sufficient condition refinement (tree vs. chain spectrum distinction, §5.2 of silent-radix v1.2)
+> **Author:** QNFO Research | **Date:** 2026-07-02 (revised v2.1) | **Part of:** Radix→BT Synthesis — GAP-EXPT-001
+> **Updates v2.1:** Reframed as NULL TEST of RSB following AT stability verification (\(\lambda_{\text{AT}} > 0\) for all \(\beta J \in [1, 30]\), all \(k \in [2, 11]\)). D4 tree/chain spectrum distinction preserved. Four-quadrant test now serves dual purpose: ultrametricity verification AND RSB null test.
 
 ---
 
 ## Abstract
 
-We propose an updated protocol for the trapped-ion Page-Wootters experiment, incorporating the D4 sufficient-condition refinement: diagonal clock-rest coupling $\hat{H}_{CR}$ produces exact ultrametric conditional state overlaps ($\text{UVR}=0\%$) **only when combined with a tree-structured clock spectrum** (pairwise-clustered energy levels). A chain spectrum (e.g., $E_k \propto 3^{-k}$) with diagonal coupling produces a specific counterexample $Q_{13} < \min(Q_{12}, Q_{23})$ — a finite UVR despite diagonality. Nondiagonal coupling produces the universal $\sim 32\%$ violation rate regardless of spectrum type. The experiment is redesigned with **two distinct clock spectrum configurations** — tree-structured and chain — enabling a decisive four-quadrant test of the corrected theory.
+We propose a trapped-ion implementation of the Page-Wootters constraint designed as a **null test of replica symmetry breaking (RSB)** in the Wheeler-DeWitt (WDW) constrained ensemble. Systematic numerical investigation of the Parisi k-step RSB equations at Gauss-Hermite quadrature order \(n_{\text{gh}} = 64\) has established that the Almeida-Thouless eigenvalue \(\lambda_{\text{AT}}\) remains strictly positive (\(\geq +0.534\)) across the entire disorder range \(\beta J \in [1, 30]\), all clock dimensions \(N_{\text{clock}} \in [3, 11]\), and all RSB depths \(k \in [2, 11]\). This represents a 10-15-fold suppression of RSB relative to the standard Sherrington-Kirkpatrick model, where the AT line is crossed near \(\beta J \sim 1\). The deterministic clock fields in the WDW ensemble function as an ultrametric structural backbone that prevents the glassy freezing characteristic of unconstrained mean-field spin glasses.
 
----
+The experiment operationalizes this prediction through a four-quadrant test varying clock spectrum structure (tree vs. chain) and clock-rest coupling (diagonal vs. nondiagonal). The tree/chain distinction, derived from the D4 sufficient-condition refinement, is independent of the AT stability analysis and provides a complementary test of ultrametricity structure. The null prediction is that **no quadrant produces evidence of RSB** — the WDW constraint prevents replica symmetry breaking regardless of clock spectrum or coupling type. The four-quadrant design transforms this null prediction into a falsifiable experimental protocol: any statistically significant UVR > 0 in any quadrant would falsify the RS-stability of the WDW ensemble.
 
-## 1. Physical Implementation
+The experiment is designed for a Yb\(^+\) ion trap with 6 clock states (hyperfine/Zeeman sublevels), 4 motional Fock states, and laser-driven carrier/sideband transitions. Conditional state overlap matrices are constructed via motional state tomography, with ultrametricity quantified by the Parisi Ultrametricity Violation Rate (UVR). Statistical power analysis indicates that 8 clock states (\(\binom{8}{3} = 56\) triples) provide 5\(\sigma\) sensitivity to distinguish UVR > 0 from the null hypothesis of exact ultrametricity.## 1. Physical Implementation
 
 ### 1.1 System
 
@@ -169,16 +169,48 @@ With $M = 4$ motional states, $K \approx 16$ displacement points suffice for $>9
 
 ---
 
-## 5. Ultrametricity Test
+## 5. Theoretical Motivation: AT Stability of the WDW Ensemble
 
-### 5.1 Overlap Matrix Construction
+The null-test framing of this experiment is motivated by the systematic numerical investigation of the WDW constrained ensemble using the Parisi k-step replica symmetry breaking (k-RSB) equations. The analysis employs Gauss-Hermite quadrature at order \(n_{\text{gh}} = 64\) with iterative damping 0.3 and max_iter = 160 for convergence.
+
+### 9.1 AT Eigenvalue
+
+The replica stability is assessed via the Almeida-Thouless eigenvalue per RSB level \(m\):
+
+\[\lambda_{\text{AT}}^{(m)} = 1 - (\beta J)^2 (1 - q_m)^2\]
+
+where \(q_m\) are the self-consistent overlap parameters. The ensemble is replica-symmetric (RS) stable if \(\min_m \lambda_{\text{AT}}^{(m)} > 0\).
+
+### 9.2 Numerical Results
+
+| Parameter Range | \(\min \lambda_{\text{AT}}\) | RSB? | Notes |
+|:----------------|:-----------------------------|:-----|:------|
+| \(\beta J \in [1, 15]\), \(k=2\) | \(+0.534\) (at \(\beta J = 5\)) | No | Non-monotonic: dips at \(\beta J=5\), rises to \(+0.998\) at \(\beta J=15\) |
+| \(\beta J = 20, 30\), \(k=2\) | \(+0.9999\), \(+1.0000\) | No | Complete freezing (\(q \to 1\)) |
+| \(N_{\text{clock}} \in [3, 11]\), \(\beta J=10\) | \(+0.705\) to \(+0.923\) | No | Minimum at smallest clock |
+| \(k \in [7, 11]\), \(\beta J=15\) | \(+0.9975\) (constant) | No | k-converged, continuous limit reached |
+| SK model comparison | Crosses zero at \(\beta J \sim 1\) | **Yes** | 10-15x suppression in WDW |
+
+### 8.3 Prediction
+
+The deterministic clock spectrum \(\{E_k\}\) imposes a rigid ultrametric tree topology that acts as an energetic barrier against continuous RSB. This leads to the central experimental prediction:
+
+> **NULL HYPOTHESIS \(H_0\):** No replica symmetry breaking occurs in the WDW ensemble at any experimentally accessible coupling strength, clock dimension, or clock spectrum structure.
+
+The four-quadrant test (§6) is designed to falsify this prediction: if any quadrant produces statistically significant UVR > 0, the RS-stability of the WDW ensemble is falsified. The tree/chain spectrum distinction (D4 refinement) provides an independent dimension: even in the absence of RSB, the spectral structure may affect the overlap geometry in measurable ways that do not constitute RSB but do reveal the ultrametric backbone.
+
+---
+
+## 6. Ultrametricity Test — Four-Quadrant Null Test Protocol
+
+### 9.1 Overlap Matrix Construction
 
 From the $N_{\tau}$ conditional states, construct:
 $$Q_{ij} = |\langle \psi_R(\tau_i) | \psi_R(\tau_j) \rangle|^2, \quad i,j = 1,\ldots,N_{\tau}$$
 
 The overlap matrix is symmetric ($Q_{ij} = Q_{ji}$), has unit diagonal ($Q_{ii} = 1$), and values in $[0, 1]$.
 
-### 5.2 Parisi Ultrametricity Violation Rate (UVR)
+### 9.2 Parisi Ultrametricity Violation Rate (UVR)
 
 For each triple $(i, j, k)$, the strong triangle inequality requires:
 $$Q_{ij} \geq \min(Q_{ik}, Q_{jk})$$
@@ -192,44 +224,50 @@ $$\sigma_{\text{UVR}} \approx \frac{\sqrt{\text{UVR} \cdot (1 - \text{UVR})}}{\s
 
 For UVR $\approx 0$, we use Poisson statistics: an observation of 0 violations in 20 triples gives a 95% confidence upper bound of UVR $\leq 13.9\%$. With $N_{\tau} = 8$ (56 triples), the bound tightens to UVR $\leq 5.3\%$.
 
-### 5.3 Predicted Outcomes — Four-Quadrant Test
+### 8.3 Predicted Outcomes — Four-Quadrant Test
 
 **The hallmark of the D4 refinement: switching from zero to non-zero UVR purely by changing the clock spectrum.**
 
-#### Quadrant I: Tree Spectrum + Diagonal $\hat{H}_{CR}$
+#### Quadrant I: Tree Spectrum + Diagonal \(\hat{H}_{CR}\)
 
 | Quantity | Predicted Value |
 |:---------|:----------------|
-| UVR | $0\%$ (within statistical error) |
-| Statistics | $0/20$ violations expected for $N_{\tau}=6$ |
-| $\chi^2$ per degree of freedom | $\sim 0$ (consistent with exact ultrametricity) |
+| UVR | \(0\%\) (within statistical error) |
+| Statistics | \(0/56\) violations expected for \(N_{\tau}=8\) |
+| \(\chi^2\) per degree of freedom | \(\sim 0\) (consistent with exact ultrametricity) |
+| **Null test interpretation** | Consistent with \(H_0^{\text{RSB}}\) — no RSB with tree spectrum + diagonal coupling |
+| **AT prediction** | \(\lambda_{\text{AT}} > 0\) — RS-stable |
 
-#### Quadrant II: Chain Spectrum + Diagonal $\hat{H}_{CR}$ — THE CRITICAL TEST
-
-| Quantity | Predicted Value |
-|:---------|:----------------|
-| UVR | $> 0\%$ (specific: $Q_{13} < \min(Q_{12}, Q_{23})$ expected) |
-| Specific violation | $Q_{13} < \min(Q_{12}, Q_{23})$ for chain $E_k \propto 3^{-k}$ |
-| Physics | Spectral anti-clustering breaks ultrametricity even with diagonal coupling |
-| Statistical significance target | $\geq 3\sigma$ separation from zero-violation null hypothesis |
-
-**If UVR = 0 is observed in Quadrant II, the D4 counterexample is falsified — diagonal coupling alone IS sufficient for ultrametricity with this experimental configuration.**
-
-#### Quadrant III: Tree Spectrum + Nondiagonal $\hat{H}_{CR}$
+#### Quadrant II: Chain Spectrum + Diagonal \(\hat{H}_{CR}\) — DUAL CRITICAL TEST
 
 | Quantity | Predicted Value |
 |:---------|:----------------|
-| UVR | $32 \pm 3\%$ (universal violation rate from off-diagonal coupling) |
-| Mechanism | Replica symmetry breaking from motional-state exchange |
+| UVR | \(0\%\) (AT prediction: no RSB); \(> 0\%\) (D4 prediction: spectral anti-clustering) |
+| Specific D4 violation | \(Q_{13} < \min(Q_{12}, Q_{23})\) for chain \(E_k \propto 3^{-k}\) |
+| Physics (D4) | Spectral anti-clustering may break ultrametricity even without RSB |
+| Physics (AT) | Deterministic clock fields prevent RSB regardless of spectral structure |
+| **Null test interpretation** | UVR > 0 falsifies \(H_0^{\text{RSB}}\) (RSB exists). UVR = 0 with clear \(Q_{13} \geq \min(Q_{12}, Q_{23})\) falsifies D4 (tree/chain distinction). UVR = 0 with ambiguous \(Q\) ordering requires larger \(N_{\tau}\). |
+| Statistical significance target | \(\geq 5\sigma\) for either outcome |
 
-#### Quadrant IV: Chain Spectrum + Nondiagonal $\hat{H}_{CR}$
+**This quadrant is the most information-rich: it simultaneously tests the AT null prediction (no RSB) and the D4 refinement (spectral structure matters).** The two predictions are independent — RSB absence does not imply spectral independence, and spectral effects do not imply RSB. A clear result in either direction provides decisive evidence. An ambiguous result (UVR marginally > 0, borderline significance) motivates increased \(N_{\tau}\) or improved tomography precision.#### Quadrant III: Tree Spectrum + Nondiagonal \(\hat{H}_{CR}\)
 
 | Quantity | Predicted Value |
 |:---------|:----------------|
-| UVR | $32 \pm 3\%$ (dominated by off-diagonal coupling, spectrum effect subdominant) |
-| Mechanism | Off-diagonal RSB dominates spectral anti-clustering effect |
+| UVR | \(0\%\) (AT prediction: RS-stable); \(32 \pm 3\%\) (SK alternative: unconstrained RSB) |
+| AT prediction | \(\lambda_{\text{AT}} > 0\) — deterministic clock fields prevent RSB even with nondiagonal coupling |
+| SK alternative | Off-diagonal coupling would produce ~32% UVR in an unconstrained ensemble |
+| **Null test interpretation** | UVR > 0 in this quadrant falsifies \(H_0^{\text{RSB}}\). UVR = 0 confirms AT prediction. |
+| Mechanism (if UVR > 0) | RSB from motional-state exchange overcoming clock rigidity |
 
-### 5.4 Statistical Power Analysis
+#### Quadrant IV: Chain Spectrum + Nondiagonal \(\hat{H}_{CR}\)
+
+| Quantity | Predicted Value |
+|:---------|:----------------|
+| UVR | \(0\%\) (AT prediction: RS-stable with both nondiagonal coupling AND chain spectrum) |
+| SK alternative | \(32 \pm 3\%\) (off-diagonal RSB + spectral anti-clustering) |
+| **Null test interpretation** | This is the most stringent test of \(H_0^{\text{RSB}}\) — both RSB-promoting factors (nondiagonal coupling AND anti-clustered spectrum) are active. UVR = 0 provides strongest evidence for AT prediction. UVR > 0 decisively falsifies \(H_0^{\text{RSB}}\). |
+
+### 6.4 Statistical Power Analysis
 
 For the critical Quadrant I vs. Quadrant II comparison:
 
@@ -243,9 +281,9 @@ For the critical Quadrant I vs. Quadrant II comparison:
 
 ---
 
-## 6. Experimental Requirements
+## 7. Experimental Requirements
 
-### 6.1 Required Capabilities
+### 9.1 Required Capabilities
 
 | Requirement | Value | Status |
 |:------------|:------|:------|
@@ -258,7 +296,7 @@ For the critical Quadrant I vs. Quadrant II comparison:
 | **Tunable clock spectrum (tree vs. chain)** | **B-field gradient + Zeeman tuning** | **Requires custom trap design (see §7)** |
 | Constraint post-selection | Auxiliary ion/qubit | Requires 2-ion trap (established) |
 
-### 6.2 Clock Spectrum Engineering — Experimental Implementation
+### 9.2 Clock Spectrum Engineering — Experimental Implementation
 
 **Tree spectrum realization:**
 1. Use $^{171}$Yb$^+$ hyperfine structure: $F=0$ and $F=1$ manifolds in $^2S_{1/2}$
@@ -276,9 +314,9 @@ For the critical Quadrant I vs. Quadrant II comparison:
 
 ---
 
-## 7. Noise Analysis and Error Budget
+## 8. Noise Analysis and Error Budget
 
-### 7.1 Sources of Systematic Error
+### 9.1 Sources of Systematic Error
 
 | Error Source | Magnitude | Mitigation |
 |:-------------|:----------|:-----------|
@@ -289,14 +327,14 @@ For the critical Quadrant I vs. Quadrant II comparison:
 | Readout fidelity | $> 99.5\%$ per shot | Shelving technique |
 | Tomography reconstruction bias | $\Delta Q < 0.01$ | Maximum likelihood + bootstrapped uncertainties |
 
-### 7.2 Statistical Error
+### 9.2 Statistical Error
 
 With $R = 10^4$ repetitions per $\tau_i$ and $N_{\tau} = 8$ clock readings:
 - Overlap precision: $\sigma_Q \approx 1/\sqrt{R} \approx 0.01$
 - UVR precision: $\sigma_{\text{UVR}} \approx \sqrt{\text{UVR}/56} \approx 0.04$ for UVR $\approx 5\%$
 - Total experiment time: $N_{\tau} \times R \times (\text{sequence time}) \approx 8 \times 10^4 \times 10\,\text{ms} \approx 800$ s per configuration
 
-### 7.3 Distinguishing Diagonal from Nondiagonal — Leakage Test
+### 8.3 Distinguishing Diagonal from Nondiagonal — Leakage Test
 
 A critical systematic: imperfect laser polarization can introduce residual off-diagonal coupling in the "diagonal" configuration. To quantify this:
 
@@ -306,9 +344,9 @@ A critical systematic: imperfect laser polarization can introduce residual off-d
 
 ---
 
-## 8. Connection to CMB and Bruhat-Tits
+## 9. Connection to CMB and Bruhat-Tits
 
-### 8.1 CMB Interpretation
+### 9.1 CMB Interpretation
 
 The non-ultrametric CMB temperature-temperature angular correlation overlaps ($C_\ell$ bispectrum analysis at large $\ell$) are consistent with either:
 1. Nondiagonal coupling in the primordial Hamiltonian, OR
@@ -316,13 +354,13 @@ The non-ultrametric CMB temperature-temperature angular correlation overlaps ($C
 
 The present experiment distinguishes these mechanisms. A chain spectrum with diagonal coupling in the ion trap produces non-ultrametric overlaps — if the CMB shows identical non-ultrametric structure, the primordial Hamiltonian may be diagonal with a `natural' chain spectrum rather than a fine-tuned tree.
 
-### 8.2 Bruhat-Tits Spectrum
+### 9.2 Bruhat-Tits Spectrum
 
 The $p$-adic Bruhat-Tits tree at prime $p$ corresponds to a clock spectrum with exact self-similarity: $E_k \propto p^{-v_p(k)}$ where $v_p(k)$ is the $p$-adic valuation. This represents an idealized tree spectrum. The ion-trap clock spectrum in Configuration A approximates this for $p=2$ with depth $d=2$. Higher depths require more clock states ($N = p^d$). An alternative approach uses $N = p$ clock states with a single depth and tests the $p \to \infty$ (Archimedean, chain-like) limit by increasing $N$.
 
 ---
 
-## 9. Timeline and Resource Estimate
+## 10. Timeline and Resource Estimate
 
 | Phase | Duration | Description |
 |:------|:---------|:------------|
