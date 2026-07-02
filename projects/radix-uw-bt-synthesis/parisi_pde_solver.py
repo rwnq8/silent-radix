@@ -160,343 +160,9 @@ class ParisiWDWSolver:
         return results
 
 
-# ============================================================================
-# K-STEP RSB EXTENSION — Hierarchical Parisi Structure for WDW Clock Sectors
-# ============================================================================
-
-@dataclass
-class KRSBConfig(Config):
-    """Extended config for k-step replica symmetry breaking."""
-    k_rsb: int = 2
-    x_breaks: list = None  # Parisi breaking points, defaults to linear spacing if None
-
-
-class ParisiKRSBSolver:
-    """
-    Solves the k-step replica symmetry breaking equations for the WDW ensemble.
-
-    For k-step RSB with breaking points x_0=0 < x_1 < ... < x_k < x_{k+1}=1:
-      - q(x) takes values q_0 < q_1 < ... < q_k
-      - The cavity equations are solved hierarchically from level k down to 0
-
-    Hierarchical recursion (standard SK form adapted to WDW):
-      f_{k+1}(h) = ln[2 cosh(beta * h)]
-      f_m(h) = (1/x_{m+1}) * ln Integral[Dz exp(x_{m+1} * f_{m+1}(h + z*sqrt(q_m - q_{m-1})))]
-      q_m = E_z E_h [(df_{m+1}/dh)^2]  for the overlap self-consistency
-    """
-
-    def __init__(self, cfg: KRSBConfig):
-        self.cfg = cfg
-        if cfg.x_breaks is None:
-            xs = np.linspace(0.0, 1.0, cfg.k_rsb + 2)
-            self.x_breaks = np.asarray(xs)
-        else:
-            self.x_breaks = np.asarray([0.0] + list(cfg.x_breaks) + [1.0])
-        self.k = cfg.k_rsb
-        if cfg.clock_spectrum is None:
-            self.E = np.linspace(-1, 1, cfg.N_clock)
-        else:
-            self.E = np.asarray(cfg.clock_spectrum)
-        self.sigma_h = cfg.J * np.sqrt(cfg.N_clock - 1) / np.sqrt(cfg.M_rest)
-        self.gh_n = 32
-
-    def _init_q_levels(self) -> np.ndarray:
-        """Initialize q levels from the continuous RS solution."""
-        q_rs = self._solve_rs_quick()
-        q_base = float(q_rs[0])
-        delta_q = 0.0
-        levels = np.linspace(q_base * 0.9, q_base * 1.1, self.k + 1)
-        return np.clip(levels, 0.01, 0.99)
-
-    def _solve_rs_quick(self) -> np.ndarray:
-        """Quick RS solve for initialization."""
-        q = 0.5
-        for _ in range(50):
-            q_new = self._tanh2_avg_rs(q)
-            if abs(q_new - q) < 1e-10:
-                break
-            q = 0.5 * q_new + 0.5 * q
-        return np.array([q])
-
-    def _tanh2_avg_rs(self, q: float) -> float:
-        """RS tanh^2 average via Gauss-Hermite."""
-        beta = self.cfg.beta
-        sigma_tot2 = self.sigma_h ** 2 + q
-        if sigma_tot2 < 1e-16:
-            return sum(np.tanh(-beta * Ek) ** 2 for Ek in self.E) / self.cfg.N_clock
-        sigma_tot = np.sqrt(sigma_tot2)
-        gh_points, gh_weights = np.polynomial.hermite.hermgauss(self.gh_n)
-        result = 0.0
-        for Ek in self.E:
-            integral = sum(w * np.tanh(beta * (-Ek + sigma_tot * np.sqrt(2) * z)) ** 2
-                          for z, w in zip(gh_points, gh_weights))
-            result += integral / np.sqrt(np.pi)
-        return result / self.cfg.N_clock
-
-    def _f_kplus1(self, h: np.ndarray, beta: float) -> np.ndarray:
-        """Terminal level: f_{k+1}(h) = ln[2 cosh(beta * h)]."""
-        return np.log(2.0 * np.cosh(beta * h))
-
-    def _df_kplus1(self, h: np.ndarray, beta: float) -> np.ndarray:
-        """Derivative: df_{k+1}/dh = beta * tanh(beta * h)."""
-        return beta * np.tanh(beta * h)
-
-    def _recursion_step(self, f_next, q_diff, x_m, beta, n_gh=None):
-        """
-        Single recursion step:
-          f_m(h) = (1/x_m) * ln Integral[Dz exp(x_m * f_{m+1}(h + z*sqrt(q_diff)))]
-
-        Returns (f_m, df_m) tuple for the current level.
-        """
-        if n_gh is None:
-            n_gh = self.gh_n
-        z_pts, z_w = np.polynomial.hermite.hermgauss(n_gh)
-
-        def f_m(h_in):
-            h_in = np.atleast_1d(h_in)
-            result = np.zeros_like(h_in, dtype=np.float64)
-            for i, hi in enumerate(h_in):
-                integrand = np.exp(x_m * f_next(hi + np.sqrt(2.0 * max(q_diff, 0)) * z_pts))
-                integral = np.sum(z_w * integrand) / np.sqrt(np.pi)
-                result[i] = np.log(max(integral, 1e-300)) / x_m
-            return result[0] if len(result) == 1 else result
-
-        def df_m(h_in):
-            """Numerical derivative: (f(h+eps) - f(h-eps)) / (2*eps)."""
-            h_in = np.atleast_1d(np.asarray(h_in, dtype=np.float64))
-            eps = 1e-6
-            fp = f_m(h_in + eps)
-            fm = f_m(h_in - eps)
-            return (fp - fm) / (2.0 * eps)
-
-        return f_m, df_m
-
-    def _self_consistent_iteration(self, q_levels: np.ndarray) -> np.ndarray:
-        """
-        One self-consistent iteration for all k+1 q levels.
-
-        The self-consistency condition:
-          q_m = E_z[ (df_{m+1}(h + z*sqrt(q_m - q_{m-1}))/dh)^2 ]
-
-        averaged over the effective field distribution from clock sectors.
-        """
-        beta = self.cfg.beta
-        n_gh = self.gh_n
-        z_pts, z_w = np.polynomial.hermite.hermgauss(n_gh)
-        q_new = np.zeros_like(q_levels)
-
-        for m in range(self.k + 1):
-            if m == 0:
-                q_diff = q_levels[0]
-            else:
-                q_diff = q_levels[m] - q_levels[m - 1]
-            q_diff = max(q_diff, 1e-10)
-
-            total = 0.0
-            for Ek in self.E:
-                for z1, w1 in zip(z_pts, z_w):
-                    h_eff = -Ek + np.sqrt(2.0 * max(q_diff, 0)) * z1
-                    df_val = beta * np.tanh(beta * h_eff)
-                    total += w1 * df_val ** 2
-
-            total /= (np.sqrt(np.pi) * self.cfg.N_clock)
-            q_new[m] = total
-
-        return q_new
-
-    def _hierarchical_self_consistent_iteration(self, q_levels: np.ndarray) -> np.ndarray:
-        """
-        Full hierarchical self-consistent iteration using the Parisi recursion.
-
-        For k-step RSB:
-        1. Start with f_{k+1}(h) at the terminal level
-        2. Recursively compute f_k, f_{k-1}, ..., f_0
-        3. At each level m, q_m = E[(df_{m+1}/dh)^2]
-        4. Average over WDW clock-sector field distribution
-
-        This is the physically correct implementation of k-step RSB.
-        """
-        beta = self.cfg.beta
-        n_gh = self.gh_n
-        z_pts, z_w = np.polynomial.hermite.hermgauss(n_gh)
-        q_new = np.zeros_like(q_levels)
-
-        f_next = lambda h: self._f_kplus1(h, beta)
-        df_next = lambda h: self._df_kplus1(h, beta)
-
-        for m in range(self.k, -1, -1):
-            if m == 0:
-                q_diff = q_levels[0]
-            else:
-                q_diff = q_levels[m] - q_levels[m - 1]
-            q_diff = max(q_diff, 1e-12)
-            x_m = self.x_breaks[m + 1]
-
-            h_samples = []
-            w_samples = []
-            for Ek in self.E:
-                for z_field, w_field in zip(z_pts, z_w):
-                    h_val = -Ek + self.sigma_h * np.sqrt(2) * z_field
-                    h_samples.append(h_val)
-                    w_samples.append(w_field / self.cfg.N_clock)
-
-            h_samples = np.array(h_samples)
-            w_samples = np.array(w_samples)
-
-            sum_q = 0.0
-            for hi, wh in zip(h_samples, w_samples):
-                integrand_df2 = 0.0
-                for z_inner, w_inner in zip(z_pts, z_w):
-                    h_arg = hi + np.sqrt(2.0 * q_diff) * z_inner
-                    df_val = df_next(np.array([h_arg]))[0] if hasattr(df_next(np.array([h_arg])), '__iter__') else df_next(np.array([h_arg]))
-                    try:
-                        df_val = float(df_val.flat[0]) if hasattr(df_val, 'flat') else float(df_val)
-                    except (TypeError, ValueError):
-                        df_val = float(np.asarray(df_val).flat[0])
-                    integrand_df2 += w_inner * df_val ** 2
-                sum_q += wh * integrand_df2 / np.sqrt(np.pi)
-
-            q_new[m] = sum_q
-
-            if m > 0:
-                f_next_new, df_next_new = self._recursion_step(f_next, q_diff, x_m, beta)
-                f_next = f_next_new
-                df_next = df_next_new
-
-        return q_new
-
-    def solve_krsb(self, tol=None, max_iter=None, damping=None) -> tuple:
-        """
-        Solve the k-step RSB equations iteratively.
-
-        Returns (q_levels, info_dict) where q_levels = [q_0, q_1, ..., q_k].
-        """
-        if tol is None:
-            tol = self.cfg.tol
-        if max_iter is None:
-            max_iter = self.cfg.max_iter
-        if damping is None:
-            damping = self.cfg.damping
-
-        q_levels = self._init_q_levels()
-        history = []
-        t0 = time.time()
-
-        for it in range(max_iter):
-            try:
-                q_new = self._hierarchical_self_consistent_iteration(q_levels)
-            except Exception:
-                q_new = self._self_consistent_iteration(q_levels)
-
-            delta = np.max(np.abs(q_new - q_levels))
-            history.append(delta)
-            q_levels = damping * q_new + (1.0 - damping) * q_levels
-            if delta < tol:
-                break
-
-        elapsed = time.time() - t0
-        info = {
-            'converged': delta < tol,
-            'iterations': len(history),
-            'final_delta': float(delta),
-            'history': history,
-            'elapsed_s': elapsed,
-            'beta_J': self.cfg.beta * self.cfg.J,
-            'k_rsb': self.k,
-            'x_breaks': self.x_breaks.tolist()
-        }
-        return q_levels, info
-
-    def reconstruct_qx(self, q_levels: np.ndarray, n_x: int = 200) -> np.ndarray:
-        """Reconstruct piecewise-constant q(x) from level values."""
-        x_grid = np.linspace(0, 1, n_x)
-        qx = np.zeros(n_x)
-        for i in range(n_x):
-            xi = x_grid[i]
-            for m in range(self.k + 1):
-                if xi <= self.x_breaks[m + 1]:
-                    qx[i] = q_levels[m]
-                    break
-            else:
-                qx[i] = q_levels[-1]
-        return qx, x_grid
-
-    def compute_at_krsb(self, q_levels: np.ndarray) -> dict:
-        """Compute AT stability eigenvalue for each RSB step."""
-        beta_J = self.cfg.beta * self.cfg.J
-        at_values = {}
-        for m in range(self.k + 1):
-            dq = q_levels[m] if m == 0 else q_levels[m] - q_levels[m - 1]
-            at_val = 1.0 - beta_J ** 2 * (1.0 - q_levels[m]) ** 2
-            if dq > 1e-8:
-                at_val = -abs(at_val)
-            at_values[f'lambda_AT_{m}'] = float(at_val)
-        return at_values
-
-    def phase_diagram_krsb(self, beta_J_vals: np.ndarray) -> dict:
-        """Compute RSB phase diagram over beta*J sweep."""
-        orig_J = self.cfg.J
-        results = {
-            'beta_J': [], 'q0': [], 'q1': [], 'q_max': [],
-            'lambda_AT_0': [], 'converged': [], 'iterations': []
-        }
-        for bj in beta_J_vals:
-            self.cfg.J = bj / self.cfg.beta
-            self.sigma_h = self.cfg.J * np.sqrt(self.cfg.N_clock - 1) / np.sqrt(self.cfg.M_rest)
-            q_levels, info = self.solve_krsb()
-            at_vals = self.compute_at_krsb(q_levels)
-            results['beta_J'].append(bj)
-            results['q0'].append(float(q_levels[0]))
-            results['q1'].append(float(q_levels[-1]))
-            results['q_max'].append(float(np.max(q_levels)))
-            results['lambda_AT_0'].append(float(at_vals.get('lambda_AT_0', 0)))
-            results['converged'].append(info['converged'])
-            results['iterations'].append(info['iterations'])
-        self.cfg.J = orig_J
-        self.sigma_h = orig_J * np.sqrt(self.cfg.N_clock - 1) / np.sqrt(self.cfg.M_rest)
-        return results
-
-    def p_adic_tree_overlap(self, q_levels: np.ndarray) -> np.ndarray:
-        """Construct WDW clock-sector overlap matrix from k-step q(x)."""
-        N = self.cfg.N_clock
-        p = self.cfg.p_adic_p
-        depth = min(self.k, self.cfg.p_adic_depth)
-        overlaps = np.eye(N)
-        qx, xg = self.reconstruct_qx(q_levels, n_x=200)
-        for i in range(N):
-            for j in range(i + 1, N):
-                level = depth
-                for k in range(depth):
-                    if (i // (p ** k)) % p != (j // (p ** k)) % p:
-                        level = k
-                        break
-                x_val = 1.0 - level / depth
-                idx = min(int(x_val * (len(xg) - 1)), len(xg) - 1)
-                overlaps[i, j] = overlaps[j, i] = float(qx[idx])
-        return overlaps
-
-    def compute_uvr_krsb(self, q_levels: np.ndarray) -> float:
-        """Compute UVR from k-step overlap matrix."""
-        S = self.p_adic_tree_overlap(q_levels)
-        N = S.shape[0]
-        if N < 3:
-            return 0.0
-        violations = 0
-        total = 0
-        for i in range(N):
-            for j in range(i + 1, N):
-                for k in range(j + 1, N):
-                    sij, sik, sjk = abs(S[i, j]), abs(S[i, k]), abs(S[j, k])
-                    max_two = max(min(sij, sik), min(sij, sjk), min(sik, sjk))
-                    max_all = max(sij, sik, sjk)
-                    if max_two < max_all - 1e-10:
-                        violations += 1
-                    total += 1
-        return violations / total if total > 0 else 0.0
-
 
 # ============================================================================
-# K-STEP RSB EXTENSION — Hierarchical Parisi Structure for WDW Clock Sectors
+# K-STEP RSB EXTENSION â€” Hierarchical Parisi Structure for WDW Clock Sectors
 # ============================================================================
 
 @dataclass
@@ -536,10 +202,16 @@ class ParisiKRSBSolver:
         self._z, self._w = np.polynomial.hermite.hermgauss(self.n_gh)
 
     def _init_q(self) -> np.ndarray:
-        """Initialize q levels from RS solution."""
+        """Initialize q levels with symmetry-broken spread > 10%.
+
+        Uses the RS solution as baseline and creates a monotonic increasing
+        staircase q_0 < q_1 < ... < q_k with >10% spread to break RS symmetry.
+        Initial values are clipped to [0.01, 0.99] for numerical stability.
+        """
+        # Compute RS self-consistent q as baseline
         q = 0.5
-        for _ in range(50):
-            beta = self.cfg.beta
+        beta = self.cfg.beta
+        for _ in range(80):
             st2 = self.sigma_h**2 + q
             if st2 < 1e-16:
                 q_new = sum(np.tanh(-beta*Ek)**2 for Ek in self.E)/self.cfg.N_clock
@@ -550,60 +222,262 @@ class ParisiKRSBSolver:
                     for z_i, w_i in zip(self._z, self._w):
                         total += w_i*np.tanh(beta*(-Ek + st*np.sqrt(2)*z_i))**2
                 q_new = total/(np.sqrt(np.pi)*self.cfg.N_clock)
-            if abs(q_new-q) < 1e-10:
+            if abs(q_new-q) < 1e-12:
                 break
-            q = 0.5*q_new + 0.5*q
-        return np.full(self.k+1, max(q, 0.01))
+            q = 0.6*q_new + 0.4*q
 
-    def _solve(self, q_levels, tol, max_iter, damping):
-        """Iterative self-consistent update using optimized numerics.
+        q_rs = max(q, 0.01)
+        # Symmetry-broken staircase: spread 25% below/above RS value
+        spread = 0.25  # >10% spread ensures escape from RS basin
+        q_min = max(q_rs * (1.0 - spread), 0.01)
+        q_max = min(q_rs * (1.0 + spread), 0.99)
+        levels = np.linspace(q_min, q_max, self.k + 1)
+        # Ensure monotonic: q_0 < q_1 < ... < q_k
+        levels = np.sort(levels)
+        # Add small epsilon to ensure strict inequality
+        for m in range(1, self.k + 1):
+            if levels[m] <= levels[m-1]:
+                levels[m] = levels[m-1] + 0.005
+        return levels
 
-        For k-step RSB the self-consistency is:
-          q_m = E_{h,z} [tanh^2(beta * (h + sqrt(q_m)*z))]
-        with h ~ N(-E_k, sigma_h^2) and z ~ N(0,1).
+    def _terminal_f(self, h: np.ndarray) -> np.ndarray:
+        """Terminal level: f_{k+1}(h) = ln(2 cosh(beta*h))."""
+        beta = self.cfg.beta
+        return np.log(2.0 * np.cosh(beta * h))
 
-        The multi-level coupling enters through the hierarchical field distribution
-        where each sector experiences an effective field variance that depends
-        on the entire q-staircase. We use the standard RSB ansatz:
-          q(x) = sum_m I(x in [x_m, x_{m+1})) * q_m
-        and compute overlaps self-consistently level by level.
+    def _terminal_df(self, h: np.ndarray) -> np.ndarray:
+        """Derivative of terminal: df_{k+1}/dh = beta * tanh(beta*h)."""
+        beta = self.cfg.beta
+        return beta * np.tanh(beta * h)
+
+    def _parisi_recursion_step(self, f_next, df_next, q_diff, x_m):
+        """Single Parisi recursion step using exact GH integration.
+
+        Returns (f_m, df_m) as callable functions (closures).
+        """
+        z_pts, z_w = self._z, self._w
+        sqrt_factor = np.sqrt(2.0 * max(q_diff, 1e-12))
+        inv_sqrt_pi = 1.0 / np.sqrt(np.pi)
+
+        def f_m(h_in):
+            h_in = np.atleast_1d(np.asarray(h_in, dtype=np.float64))
+            result = np.zeros(len(h_in), dtype=np.float64)
+            for i, hi in enumerate(h_in):
+                args = hi + sqrt_factor * z_pts
+                integrand = np.exp(x_m * f_next(args))
+                integral = np.sum(z_w * integrand) * inv_sqrt_pi
+                integral = max(integral, 1e-300)
+                result[i] = np.log(integral) / x_m
+            return result if len(result) > 1 else result[0]
+
+        def df_m(h_in):
+            h_in = np.atleast_1d(np.asarray(h_in, dtype=np.float64))
+            result = np.zeros(len(h_in), dtype=np.float64)
+            for i, hi in enumerate(h_in):
+                args = hi + sqrt_factor * z_pts
+                f_vals = f_next(args)
+                exp_vals = np.exp(x_m * f_vals)
+                num = np.sum(z_w * df_next(args) * exp_vals) * inv_sqrt_pi
+                den = np.sum(z_w * exp_vals) * inv_sqrt_pi
+                den = max(den, 1e-300)
+                result[i] = num / den
+            return result if len(result) > 1 else result[0]
+
+        return f_m, df_m
+
+    def _precompute_fdf(self, f_next, df_next, q_diff, x_m, h_grid):
+        """Precompute f_m, df_m on h_grid using vectorized NumPy.
+
+        Args:
+            f_next, df_next: callables for level m+1
+            q_diff: q_m - q_{m-1}
+            x_m: breaking parameter x_{m+1}
+            h_grid: (N,) array of h values
+
+        Returns (f_vals, df_vals) as (N,) arrays.
+        """
+        z_pts, z_w = self._z, self._w
+        sf = np.sqrt(2.0 * max(q_diff, 1e-12))
+        inv_sqrt_pi = 1.0 / np.sqrt(np.pi)
+
+        # args: (N_h, N_z)
+        args = h_grid[:, np.newaxis] + sf * z_pts[np.newaxis, :]
+        flat = args.ravel()
+
+        f_2d = np.asarray(f_next(flat), dtype=np.float64).reshape(len(h_grid), len(z_pts))
+        integrand = np.exp(x_m * f_2d)
+        integral = np.dot(integrand, z_w) * inv_sqrt_pi
+        integral = np.maximum(integral, 1e-300)
+        f_vals = np.log(integral) / x_m
+
+        df_2d = np.asarray(df_next(flat), dtype=np.float64).reshape(len(h_grid), len(z_pts))
+        df_vals = np.dot(df_2d * integrand, z_w) * inv_sqrt_pi / integral
+
+        return f_vals, df_vals
+
+    def _compute_q_self_consistent(self, df_func, q_m):
+        """Compute self-consistent q at level m.
+
+        q_m = E_{h,z}[ (df_{m+1}(h_eff) / beta)^2 ]
+
+        The effective field at level m:
+          h_eff = -E_k + sqrt(sigma_h^2 + q_m) * z_m
+
+        where z_m ~ N(0,1). Uses Gauss-Hermite quadrature.
+        The beta^-2 normalization ensures q ∈ [0,1].
         """
         beta = self.cfg.beta
+        inv_beta2 = 1.0 / (beta * beta)
         z, w = self._z, self._w
+        sigma_tot = np.sqrt(max(self.sigma_h**2 + q_m, 1e-16))
+
+        total = 0.0
+        for Ek in self.E:
+            for z_i, w_i in zip(z, w):
+                h_eff = -Ek + sigma_tot * np.sqrt(2.0) * z_i
+                df_val = float(np.atleast_1d(df_func(np.array([h_eff])))[0])
+                total += w_i * df_val * df_val * inv_beta2
+        return total / (np.sqrt(np.pi) * self.cfg.N_clock)
+
+    def _solve(self, q_levels, tol, max_iter, damping):
+        """Parisi hierarchical self-consistent iteration.
+
+        Uses precomputed f/df on the exact self-consistency h-grid
+        to avoid O(n_gh^k) blowup while maintaining numerical accuracy.
+        """
+        beta = self.cfg.beta
+        inv_beta2 = 1.0 / (beta * beta)
+        z, w = self._z, self._w
+        inv_sqrt_pi = 1.0 / np.sqrt(np.pi)
         history = []
         t0 = time.time()
+        delta = float('inf')
+        E_neg = -np.array(self.E, dtype=np.float64)
 
         for it in range(max_iter):
             q_new = np.zeros_like(q_levels)
-            for m in range(self.k + 1):
-                sigma_m2 = self.sigma_h**2 + q_levels[m]
-                if sigma_m2 < 1e-16:
-                    q_new[m] = sum(np.tanh(-beta*Ek)**2 for Ek in self.E)/self.cfg.N_clock
-                else:
-                    sigma_m = np.sqrt(sigma_m2)
-                    total = 0.0
-                    for Ek in self.E:
-                        integrand = sum(w_j * np.tanh(beta*(-Ek + sigma_m*np.sqrt(2)*z_j))**2
-                                       for z_j, w_j in zip(z, w))
-                        total += integrand
-                    q_new[m] = total/(np.sqrt(np.pi)*self.cfg.N_clock)
+
+            # Terminal: f and df are direct functions
+            f_next = self._terminal_f
+            df_next = self._terminal_df
+
+            for m in range(self.k, -1, -1):
+                # Build self-consistency h-grid for level m
+                sigma_m = np.sqrt(max(self.sigma_h**2 + q_levels[m], 1e-16))
+                h_grid_m = (E_neg[:, np.newaxis]
+                            + sigma_m * np.sqrt(2.0) * z[np.newaxis, :])
+                h_flat = h_grid_m.ravel()
+
+                # Evaluate df on this grid
+                df_vals = np.asarray(df_next(h_flat), dtype=np.float64)
+                # q = <(df/beta)^2> weighted by GH weights
+                df2 = (df_vals * df_vals * inv_beta2).reshape(len(self.E), len(z))
+                q_new[m] = float(np.dot(np.dot(w, df2.T), np.ones(len(self.E))) 
+                                 / (np.sqrt(np.pi) * self.cfg.N_clock))
+
+                if m > 0:
+                    q_diff = max(q_levels[m] - q_levels[m-1], 1e-12)
+                    x_param = self.x_breaks[m + 1]
+                    if x_param < 1e-12:
+                        x_param = 1e-6
+
+                    # Precompute f_m and df_m on a dense grid
+                    # covering all possible h_eff values for levels <= m
+                    sigma_max = np.sqrt(self.sigma_h**2 + 1.0)
+                    h_dense = np.linspace(-4.0 - 4.0*sigma_max, 4.0 + 4.0*sigma_max, 500)
+
+                    f_vals, df_vals = self._precompute_fdf(
+                        f_next, df_next, q_diff, x_param, h_dense)
+
+                    # Create lookup closures
+                    h_ref = h_dense.copy()
+
+                    def make_lookup(h_ref, vals):
+                        def lookup(h_in):
+                            h_in = np.atleast_1d(np.asarray(h_in, dtype=np.float64))
+                            idx = np.clip(np.searchsorted(h_ref, h_in), 1, len(h_ref)-1)
+                            # Linear interpolation between idx-1 and idx
+                            lo = h_ref[idx-1]
+                            hi_val = h_ref[idx]
+                            t = np.clip((h_in - lo) / np.maximum(hi_val - lo, 1e-16), 0, 1)
+                            return vals[idx-1] * (1-t) + vals[idx] * t
+                        return lookup
+
+                    f_next = make_lookup(h_ref, f_vals)
+                    df_next = make_lookup(h_ref, df_vals)
 
             delta = np.max(np.abs(q_new - q_levels))
             history.append(float(delta))
-            q_levels = damping*q_new + (1.0-damping)*q_levels
+            q_levels = damping * q_new + (1.0 - damping) * q_levels
+
+            for m in range(1, self.k + 1):
+                if q_levels[m] < q_levels[m-1]:
+                    q_levels[m] = q_levels[m-1] + 1e-8
+
             if delta < tol:
                 break
 
+        elapsed = time.time() - t0
         return q_levels, {
             'converged': delta < tol,
             'iterations': len(history),
             'final_delta': float(delta),
             'history': history,
-            'elapsed_s': time.time()-t0,
-            'beta_J': self.cfg.beta*self.cfg.J,
+            'elapsed_s': elapsed,
+            'beta_J': self.cfg.beta * self.cfg.J,
             'k_rsb': self.k,
             'x_breaks': self.x_breaks.tolist()
         }
+
+    def compute_free_energy(self, q_levels):
+        """Parisi k-step RSB free-energy functional.
+
+        F = -(beta*J)^2/4 * [1 + sum_m (x_{m+1} - x_m) * q_m^2]
+            + (1/(beta*N)) * sum_k f_0(-E_k)
+
+        where f_0 is obtained via the full Parisi recursion to level 0.
+        """
+        beta, J = self.cfg.beta, self.cfg.J
+        betaJ2 = (beta * J) ** 2
+        N = self.cfg.N_clock
+
+        # Energetic term
+        energy = 1.0  # self-overlap (diagonal)
+        for m in range(self.k + 1):
+            dx = self.x_breaks[m + 1] - self.x_breaks[m]
+            energy += dx * q_levels[m]**2
+        F_energy = -0.25 * betaJ2 * energy
+
+        # Entropic term: f_0 via full Parisi recursion
+        E_neg = -np.array(self.E, dtype=np.float64)
+        z, w = self._z, self._w
+
+        f_next = self._terminal_f
+        df_next = self._terminal_df
+        for m in range(self.k, 0, -1):
+            q_diff = max(q_levels[m] - q_levels[m-1], 1e-12)
+            x_param = self.x_breaks[m + 1]
+            if x_param < 1e-12:
+                x_param = 1e-6
+            sigma_max = np.sqrt(self.sigma_h**2 + 1.0)
+            h_dense = np.linspace(-4.0 - 4.0*sigma_max, 4.0 + 4.0*sigma_max, 500)
+            f_vals, df_vals = self._precompute_fdf(f_next, df_next, q_diff, x_param, h_dense)
+            def make_lookup(h_ref, vals):
+                def lookup(h_in):
+                    h_in = np.atleast_1d(np.asarray(h_in, dtype=np.float64))
+                    idx = np.clip(np.searchsorted(h_ref, h_in), 1, len(h_ref)-1)
+                    lo, hi = h_ref[idx-1], h_ref[idx]
+                    t = np.clip((h_in - lo) / np.maximum(hi - lo, 1e-16), 0, 1)
+                    return vals[idx-1] * (1-t) + vals[idx] * t
+                return lookup
+            f_next = make_lookup(h_dense, f_vals)
+            df_next = make_lookup(h_dense, df_vals)
+
+        # Evaluate f_0 at -E_k (the bare cavity fields)
+        f0_vals = np.asarray(f_next(E_neg), dtype=np.float64)
+        F_entropic = np.sum(f0_vals) / (beta * N)
+
+        return F_energy + F_entropic, {'F_energy': F_energy, 'F_entropic': F_entropic}
 
     def solve_krsb(self, tol=None, max_iter=None, damping=None):
         if tol is None: tol = self.cfg.tol
@@ -688,7 +562,7 @@ class ParisiKRSBSolver:
 def main_krsb():
     """Demo: k-step RSB solver for WDW constraint ensemble."""
     print("="*70)
-    print("K-STEP RSB SOLVER — WDW CONSTRAINT ENSEMBLE")
+    print("K-STEP RSB SOLVER â€” WDW CONSTRAINT ENSEMBLE")
     print("="*70)
 
     for k in [1, 2, 3]:
@@ -721,7 +595,7 @@ def main_krsb():
 
 def main():
     print("=" * 70)
-    print("PARISI PDE SOLVER — WDW CONSTRAINT ENSEMBLE")
+    print("PARISI PDE SOLVER â€” WDW CONSTRAINT ENSEMBLE")
     print("=" * 70)
     cfg = Config(beta=1.0, J=1.0, N_clock=5, M_rest=3, n_x=200)
     solver = ParisiWDWSolver(cfg)
