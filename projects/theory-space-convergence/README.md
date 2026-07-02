@@ -18,9 +18,10 @@
 | `integration-silent-radix.md` | Preamble + Epilogue + cross-reference table. **Now inserted** into Silent Radix synthesis paper (lines 16 and 250) | 8.4 KB | ✅ |
 | `literature-addendum.md` | Constructor theory comparison, Tegmark MUH 3-point critique, Wigner reframing, additional references | 7.8 KB | ✅ |
 | `alphabet-completeness.md` | Plausibility argument for closure of M1-M7 from locality, conservation, thermodynamic-limit existence | 9.8 KB | ✅ |
+| `silent-measuring-stick.md` | **UPDATED v1.1:** Fundamental constants as silent-radix phenomena — c, ℏ, G, k_B as ciphertexts. NEW Section 8: dimensionless α, base-10 natural numbers, Ostrowski's theorem as complete classification of silent measuring sticks on ℚ | ~10 KB | ✅ |
 | `README.md` | This index | — | ✅ |
 
-**Total:** 9 files, **62.9 KB** — covering all 5 original directions + 10 action items
+**Total:** 10 files, **69.9 KB** — covering all 5 original directions + 10 action items + Silent Measuring Stick supplementary
 
 ---
 
@@ -43,6 +44,9 @@ Constructor theory (Deutsch 2013/2014), MUH (Tegmark 2014) with 3-point critique
 
 ### 6. Alphabet Completeness Has a Plausibility Argument
 The three constraints (locality, conservation, thermodynamic-limit) plausibly force M1-M7. Not yet a rigorous proof — the weakest link in the thesis and the highest-priority open problem.
+
+### 7. The Silent Measuring Stick — v1.1: Three Layers of Silent Conventions
+Fundamental physical constants are silent-radix ciphertexts. Their numerical values depend entirely on the silent measuring stick (unit convention). Natural units (c = ℏ = G = k_B = 1) are the "trivial base" that collapses dimensional scaffolding, revealing pure scale. **Section 8** extends this to dimensionless constants (α as base-10 ciphertext) and natural numbers, culminating in **Ostrowski's theorem** — the complete classification of all possible silent measuring sticks on ℚ: archimedean (|·|∞, the line) or non-archimedean (|·|p, p-adic trees). The convergence chain argues frustrated selection selects the tree. Document: `silent-measuring-stick.md`
 
 ---
 

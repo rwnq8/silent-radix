@@ -624,6 +624,71 @@ For the per-symbol-base variant where each block uses a fresh base `bᵢ ← CSP
 
 ---
 
+## 13. PHILOSOPHICAL INTERPRETATION: THE SILENT MEASURING STICK
+
+`[PHILOSOPHY]` The silent radix primitive has a concrete physical instantiation that illuminates both its cryptographic structure and its philosophical significance: **fundamental physical constants are silent-radix ciphertexts.**
+
+### 13.1 The Analogy
+
+| Cryptographic Domain | Physical Domain |
+|:---------------------|:----------------|
+| Ciphertext = digit string | Numerical value = "299792458" |
+| Secret base $b$ | Unit convention (SI: meter + second) |
+| Infinite valid decryptions for different $b$ | Infinite valid numerical values for different unit systems |
+| Trivial base = $\max(d_i) + 1$ | Natural/Planck units: $c = \hbar = G = k_B = 1$ |
+| Adversary's problem (UWIK) | Recovering the "true" measuring stick from numbers alone |
+
+The speed of light is the canonical example: $c = 1$ in natural units (the "trivial base" that collapses dimensional distinctions and reveals the underlying structure) versus $c = 299792458$ in SI units (a historically contingent ciphertext under an anthropocentric measuring stick). Every dimensionful constant — $\hbar$, $G$, $k_B$, $\varepsilon_0$ — exhibits the same silent-radix structure.
+
+### 13.2 The 2019 SI Redefinition
+
+On May 20, 2019, the International System of Units was redefined so that $c$, $\hbar$, $k_B$, $e$, and $N_A$ became exact by definition. The meter, kilogram, and other units became **determined by** the constants rather than the constants being **measured in** the units. This is the formal admission that the base is chosen, not discovered — precisely the silent radix principle.
+
+### 13.3 Connection to Theory-Space Convergence
+
+This insight strengthens the thesis that mathematical structures are **shadows of process** rather than Platonic forms [see companion essay: `projects/theory-space-convergence/silent-measuring-stick.md`]. The elaborate numerical scaffolding of physics — the constants, their ratios, their apparent "fine-tuning" — is a convention-dependent ciphertext. In the trivial base (natural units), dimensional scaffolding collapses, and what remains is pure scale — the natural domain of the ultrametric tree and p-adic geometry.
+
+### 13.4 Implication for the Primitive
+
+The analogy is not merely illustrative. It clarifies what the silent radix IS: a **deliberate construction** of what physics has always done accidentally — hide the base, expose the digits, let the adversary guess. The cryptographic silent radix makes the normally implicit dependence of meaning on convention into an explicit security property.
+
+### 13.5 Beyond Dimensionful Constants: The Second-Order Silent Measuring Stick
+
+The analysis above concerns **dimensionful** constants (c, ℏ, G, k_B) whose silent base is the unit convention. But the silent-radix dependency goes deeper — as developed in Section 8 of the companion essay:
+
+**Even dimensionless constants** like the fine-structure constant α ≈ 1/137.035999084 are silent-radix ciphertexts. The digit string `"0.0072973525693..."` depends on the silent convention of base-10 numeral representation. In base 2, base 7, or base 16, α takes completely different digit strings. And **α⁻¹ ≈ 137** — the "near-integer" mystery that has puzzled physicists for a century — is an artifact of base 10. In base 7, α⁻¹ ≈ 254₍₇₎; in base 16, α⁻¹ ≈ 89₍₁₆₎. Neither is "near-integer" in any meaningful sense.
+
+**Even natural numbers** are silent-radix ciphertexts. The integer we call "137" is a digit string — the same integer appears as "254" in base 7, "10001001" in base 2, and "89" in base 16. Counting itself — the most basic mathematical act — is a silent-radix phenomenon conducted in base 10 by biological accident (ten fingers), not mathematical necessity.
+
+This establishes a **three-layer hierarchy** of silent measuring sticks:
+
+1. **Unit convention** (m/s vs c = 1) → dimensionful constants are ciphertexts
+2. **Numeral base** (base-10 vs base-p) → even dimensionless numbers are ciphertexts
+3. **Absolute value on ℚ** (archimedean vs p-adic) → the most fundamental layer
+
+### 13.6 Ostrowski's Theorem: The Complete Classification
+
+**Ostrowski's theorem (1916)** provides the rigorous mathematical foundation: every non-trivial absolute value on the rational numbers ℚ is equivalent to either the usual real absolute value |·|∞ or a p-adic absolute value |·|p for some prime p.
+
+An "absolute value" is a formal way of measuring the **size** or **distance** of rational numbers — a silent measuring stick for ℚ itself. Ostrowski's theorem is the **complete classification** of all possible silent measuring sticks on ℚ:
+
+| Type | Absolute Value | Geometry | Cryptographic Analog |
+|:-----|:---------------|:---------|:---------------------|
+| Archimedean | |·|∞ (usual, base-10, real) | Flat, line-like | The "obvious" decryption base |
+| Non-Archimedean | |·|p (one per prime p) | Tree-like, ultrametric | Hidden p-adic bases |
+
+For non-archimedean absolute values, the strong triangle inequality |x+z|p ≤ max(|x|p, |z|p) holds — forcing **ultrametric (tree-like) geometry.** This directly connects the silent radix to the Bruhat-Tits building interpretation: p-adic digit strings naturally encode ultrametric tree structure.
+
+### 13.7 Cryptographic Generalization
+
+Ostrowski's theorem suggests a deeper generalization of the silent radix primitive: an adversary who intercepts only a digit string is uncertain not just about the numeral base, but about **which absolute value** (which "place" — the real ∞ or a prime p) the digits are meaningful under. A ciphertext decrypted under |·|∞ (usual base-10 arithmetic) may produce a completely different plaintext than the same digits interpreted under |·|p (p-adic arithmetic). The silent radix can be generalized from withholding the numeral base to **withholding the absolute value** — representing the deepest possible layer of the silent measuring stick.
+
+The connection to the ultrametric tree is rigorous: the p-adic absolute values (one per prime p) produce non-archimedean (tree-like) geometry, while the real absolute value produces archimedean (line-like) geometry. The choice between these two geometries — the deepest silent convention — is precisely the bifurcation that the theory-space convergence chain identifies: frustrated selection dynamics select the tree, not the line.
+
+---
+
 *This document is part of the Silent Radix Research Program. The cryptographic primitive described herein is novel and unproven — the next critical step is tightening the reduction from SRA to HSSP and proving (or disproving) that the single-parameter structured case retains general HSSP hardness.*
+
+*Companion essay: "The Silent Measuring Stick" — `projects/theory-space-convergence/silent-measuring-stick.md`*
 
 *Phase 7 reference implementation: `silent-radix/silent_radix.py` (encode, decode, per-symbol encryption, lattice attack demo).*

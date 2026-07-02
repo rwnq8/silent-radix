@@ -65,6 +65,14 @@ The map is the shadow. The territory is the process. The Silent Radix — the po
 | Archimedean vs non-archimedean = detail-preserving vs scale-preserving | Two geometries are two shadows of two different dynamical regimes | "The Tree vs. The Line" section |
 | Calculus of indications = operational calculus on buildings | The alphabet generates structures; we need a calculus to navigate them | "Laws of Form" section |
 
+## SUPPLEMENTARY NOTE: THE SILENT MEASURING STICK
+
+A companion essay, "The Silent Measuring Stick: Fundamental Constants as Silent Radix Phenomena" (`silent-measuring-stick.md`), develops a concrete physical instantiation of the Silent Radix principle: **fundamental constants are silent-radix ciphertexts.** The numerical value of any dimensionful constant (c, ℏ, G, k_B) is a digit string whose meaning depends entirely on the silent measuring stick — the unit convention. Natural units (c = ℏ = G = k_B = 1) represent the "trivial base" that collapses all dimensional conventions, revealing pure scale as the only surviving parameter.
+
+**Section 8** extends this to the second and third orders: (1) even dimensionless constants like α are silent-radix ciphertexts whose "silent base" is the numeral radix (base-10 vs base-p), and the apparent near-integer α⁻¹ ≈ 137 is an artifact of base-10; (2) **Ostrowski's theorem** classifies ALL possible silent measuring sticks on ℚ — the archimedean |·|∞ (the real line) and the non-archimedean |·|p (p-adic trees). The choice between these two geometries is itself the deepest silent convention, and the convergence chain argues that frustrated selection selects the tree. This strengthens the essay's claim that mathematical structures are shadows of process by showing that even the numerical scaffolding of physics — the constants we treat as "facts about the world" — is a convention-dependent ciphertext.
+
+---
+
 ## PROPOSED INSERTION POINTS
 
 1. **After Abstract, before Section 1:** Insert "PHILOSOPHICAL PREAMBLE" (above)

@@ -64,3 +64,24 @@ The p-adic numbers are not the START of this chain (Platonism). They are its END
 3. Resource-constrained learning systems (neural, evolutionary, cultural) develop ultrametric internal representations [speculative]
 
 **This would be disconfirmed if:** a system governed by the dynamical alphabet (frustrated, selection-driven, coarse-grained) fails to produce ultrametric organization over relevant timescales.
+
+---
+
+## SUPPLEMENTARY: THE SILENT MEASURING STICK
+
+A companion note, "The Silent Measuring Stick: Fundamental Constants as Silent Radix Phenomena" (`silent-measuring-stick.md`), extends this convergence chain one meta-level further. It argues that **dimensionful physical constants themselves are silent-radix ciphertexts** — their numerical values are artifacts of a hidden convention (unit system), not facts about the world. In the trivial base (natural units: $c = \hbar = G = k_B = 1$), the dimensional scaffolding collapses and only scale survives. This strengthens the chain:
+
+```
+Silent Measuring Stick trivialized
+    → Only scale remains
+    → Scale organizes hierarchically under frustrated selection
+    → Ultrametric tree = universal geometry
+    → p-adic numbers = formal vocabulary
+    → Bruhat-Tits buildings = universal geometric attractor
+```
+
+The silent measuring stick is the **first shadow** — the most basic convention whose arbitrary choice generates the illusion of a structured "constant space." Trivializing it reveals that the tree was always there, waiting beneath the dimensional ciphertext.
+
+### Extension: Ostrowski's Theorem — The Deepest Silent Measuring Stick
+
+Section 8 of `silent-measuring-stick.md` extends the insight one level deeper. Even dimensionless constants (α, π, e) and natural numbers are silent-radix ciphertexts — their digit strings depend on the silent convention of base-10 representation. And **Ostrowski's theorem** (1916) provides the complete classification: every absolute value (every "measuring stick" for distance on ℚ) is equivalent either to the archimedean |·|∞ (the real line, base-10, usual geometry) or a non-archimedean |·|p (a p-adic tree). This is the deepest silent convention: the choice between archimedean and non-archimedean geometry is itself a silent measuring stick, and the convergence chain argues that frustrated selection selects the tree — not the line.
