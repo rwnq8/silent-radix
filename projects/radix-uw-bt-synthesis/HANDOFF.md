@@ -1,4 +1,4 @@
-﻿# QACP-HANDOFF v4.0 â€” Parisi Recursion Implemented
+﻿# QACP-HANDOFF v4.1 — Full Session Closeout (CMB + Trapped-Ion + Parisi PDE)
 
 > **Handoff ID:** `H-2026-07-02-rsb-parisi-recursion`
 > **Created:** 2026-07-02 | **Agent:** deepseek-v4-pro
