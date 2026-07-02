@@ -18,7 +18,7 @@ If the early universe's Hamiltonian constraint $\hat{H}|\Psi\rangle = 0$ produce
 | Reference | Finding | Significance |
 |:----------|:--------|:------------|
 | arXiv:1812.05105 (2018) | Best-fit log-oscillation at $\log_{10}\omega = 1.5$, $\Delta\chi^2 = -9$ (CMB) to $-13$ (CMB+LSS) | $\sim 2$–$2.8\sigma$ |
-| Planck 2015 XX (1502.01592) | No statistically significant oscillatory features at $> 3\sigma$ | Consistent with $\Lambda$CDM |
+| Planck 2015 XX (1502.02114) | No statistically significant oscillatory features at $> 3\sigma$ | Consistent with $\Lambda$CDM |
 | Planck 2018 VII (1906.02552) | CMB Gaussian and isotropic; large-angle anomalies persist | Established [established] |
 
 **Key paper (1812.05105):** Mehrabi & Aghamousa search for oscillations logarithmic in wavenumber, inspired by axion-monodromy inflation. They find:
@@ -162,7 +162,7 @@ If Quadrant II shows UVR=0, Hypothesis B is falsified and Hypothesis A is favore
 ## References
 
 1. Mehrabi, A. & Aghamousa, A. (2018). Searching for Oscillations in the Primordial Power Spectrum with CMB and LSS Data. arXiv:1812.05105.
-2. Planck Collaboration (2015). Planck 2015 results. XX. Constraints on inflation. arXiv:1502.01592.
+2. Planck Collaboration (2015). Planck 2015 results. XX. Constraints on inflation. arXiv:1502.02114.
 3. Planck Collaboration (2019). Planck 2018 results. VII. Isotropy and Statistics of the CMB. arXiv:1906.02552.
 4. QNFO Research (2026). The Silent Radix: Convergent Synthesis (v1.2). DOI: [10.5281/zenodo.21129799](https://doi.org/10.5281/zenodo.21129799).
 5. QNFO Research (2026). Trapped-Ion Page-Wootters Experiment: Testing Ultrametricity with Tree vs. Chain Clock Spectra (v2.0, this session).
