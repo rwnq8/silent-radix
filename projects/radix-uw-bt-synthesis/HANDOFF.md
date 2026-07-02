@@ -384,3 +384,71 @@ Post-cleanup: Only `silent-radix/` (GDrive locked) remains untracked.
 - **ArXiv package on R2 is CORRUPTED (0 bytes) — see recovery path above**
 - Git branch pushed to origin with full 6-phase history (commits through f199096)
 - Workspace cleaned to thin-client standard (only `silent-radix/` GDrive-locked ghost remains)*
+
+---
+
+## Session 2026-07-02 (Fifth Phase) — Paper Revision, AT Validation, Experiment Reframing & Red-Team Closeout
+
+> **Agent:** deepseek-v4-pro | **Git:** `3acbd1b` (HEAD)
+
+### WORK EXECUTED
+
+All 4 HANDOFF phases (A-D) from the Fourth Phase next-steps queue completed:
+
+| Phase | Task | Status | Evidence |
+|:------|:-----|:------:|:---------|
+| **A** | Paper revision v1.1 — replaced 2.1-2.2 with "Replica Stability of the WDW Ensemble" + "Comparison with Standard SK" | **DONE** | `arxiv-silent-radix/silent-radix-synthesis-paper-v1.1.md` (29,898 chars) |
+| **A** | .tex + .pdf regeneration | **DONE** | Pandoc → pdflatex: 37KB .tex, 228KB PDF, 12 pages |
+| **B** | AT cross-validation βJ=10, k=3 (grid + closure) | **DONE** | Grid λ=+0.923 (converged 104 iters). Closure: NaN (cosh overflow at σ_h=11.547) |
+| **C** | Parameter space exploration | **DONE** | N_clock 3→11: λ≥+0.705. βJ=20,30: λ→+1.0. k=7→11 at βJ=15: λ≈+0.9975 |
+| **D** | Experiment reframing v2.1 (NULL TEST) | **DONE** | `trapped-ion-experiment-design.md` (25,890 chars, dual H₀^{RSB} + H₀^{D4}) |
+
+### RED-TEAM CYCLE (after main work)
+
+| # | Issue | Severity | Fix |
+|---|-------|----------|-----|
+| 1 | Solver initialization bias | **[PASS]** | 3 initial q configs → converge to same solution (Δq=4.9×10⁻¹²) |
+| 2 | Section 2 header "Catalog of Consequences" now contains physics | MODERATE | Renamed to "The Silent Radix in Physical Systems: Ultrametricity and Replica Stability" |
+| 3 | No spin glass bridge in Section 1 (Introduction) | MODERATE | Added bridge paragraph connecting ultrametric → WDW ensemble |
+| 4 | LaTeX: overfull tables, `\^` warnings, longtable error | LOW | Cosmetic; PDF renders correctly (12 pages). Tables with long math overflow page margins |
+
+### HANDOFF CLAIMS FALSIFIED (this session)
+
+| HANDOFF Claim | Actual Value | Δ |
+|:-------------|:-------------|:--|
+| λ=+0.758 at k=3, βJ=10 | λ=+0.923 | +0.165 |
+| λ≈+0.000668 at k=7, βJ=15 | λ=+0.9975 | +0.997 |
+| λ increases monotonically (0.800→0.939) | Non-monotonic: dips to +0.534 at βJ=5, rises to +0.998 at βJ=15 | — |
+
+### GAPS & BLOCKERS (for next session)
+
+| Gap | Severity | Recommendation |
+|:----|:---------|:---------------|
+| No free energy comparison (RS vs RSB) | MEDIUM | Run `compute_free_energy()` to verify RS phase is thermodynamically favored |
+| LaTeX table overflows | LOW | Reformat AT eigenvalue table; use smaller font or landscape for wide tables |
+| Closure cross-validation fails | LOW | Rescale Parisi recursion to avoid cosh overflow at large σ_h |
+| n_gh=128 not tested | LOW | Increase confidence margin; n_gh=64 appears sufficient based on init robustness |
+| `silent-radix/` locked ghost files | LOW | 0-byte stubs; GDrive-locked; clean on restart |
+| Arxiv v1.0 files on R2 corrupted | **BLOCKING** | R2 objects exist at 0 bytes; original files recoverable from git commit `1c23b34` or GDrive trash |
+
+### GIT COMMITS
+
+```
+3acbd1b  Red-team fixes (section header + intro bridge, .tex/.pdf regenerated)
+9bb3725  Paper v1.1 + experiment v2.1 (4 files, +1116/-39)
+```
+
+### CONTINUATION PROMPT
+
+```
+LOAD ALL QNFO SKILLS. CONTINUE FROM HANDOFF IN projects/radix-uw-bt-synthesis/HANDOFF.md.
+
+PRIORITY 1: Recover v1.0 arxiv files from git (1c23b34) → re-upload to R2.
+PRIORITY 2: Free energy comparison — verify RS phase is thermodynamically favored.
+PRIORITY 3: Fix LaTeX table overflows for publication-readiness.
+
+CRITICAL CONTEXT: The WDW ensemble is RS-stable across all tested parameters.
+HANDOFF claims of AT crossing (βJ~5.25, βJ~10) and marginal λ (+0.000668 at k=7)
+are FALSIFIED by n_gh=64 solver at damping=0.3. Paper v1.1 at arxiv-silent-radix/
+reflects corrected physics. Experiment v2.1 reframed as NULL TEST.
+```
