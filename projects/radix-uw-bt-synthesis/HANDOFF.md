@@ -97,3 +97,20 @@ REMAINING OPTIONAL WORK:
 4. Full replica free-energy derivation (open mathematical problem)
 5. Deploy trapped-ion protocol as standalone publication
 ```
+
+---
+
+## Session Closeout — 2026-07-01
+
+| Field | Detail |
+|:------|:-------|
+| **Agent** | deepseek-v4-pro |
+| **Closeout reason** | User CLOSEOUT. Project 9/9 gaps closed. Wikipedia pagelinks download (8GB) infeasible — abandoned. |
+| **Files cleaned** | `download_wiki_dumps.py`, `wikipedia_uvr_pipeline.py`, `_pipeline_recovered.py`, `tools/skill_health.py` |
+| **Git status** | `feature/radix-to-bruhat-tits-synthesis` @ 186220e. 5 commits ahead of origin (needs push). |
+| **Gaps** | 1 MEDIUM: unpushed commits. All BLOCKING gaps resolved. |
+| **Cloudflare token** | Alive (quniverse) |
+| **Next session** | Push unpushed commits. Optional: PDF rebuild, Zenodo re-publish, algebraic necessity proof. |
+
+**Closeout complete.** Project is published (Zenodo DOI: 10.5281/zenodo.21115364). All work product preserved in `projects/radix-uw-bt-synthesis/`.
+```

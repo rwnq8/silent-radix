@@ -78,14 +78,24 @@ def main():
     output_dir = Path(args.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
 
+    MIN_SIZES = {
+        'page.sql.gz': 2000,
+        'categorylinks.sql.gz': 180,
+        'pagelinks.sql.gz': 2500,
+        'category.sql.gz': 25,
+    }
     for dump_file in DUMP_FILES:
         filename = f'enwiki-{dump_date}-{dump_file}'
         url = f'{base_url}{filename}'
         dest = output_dir / filename
+        min_size = MIN_SIZES.get(dump_file, 0) * 1024 * 1024
         if dest.exists():
             size_mb = dest.stat().st_size / (1024*1024)
-            print(f"  [SKIP] {filename} already exists ({size_mb:.0f} MB)")
-            continue
+            if dest.stat().st_size >= min_size:
+                print(f"  [SKIP] {filename} already exists ({size_mb:.0f} MB)")
+                continue
+            else:
+                print(f"  [RE-DOWNLOAD] {filename} too small ({size_mb:.0f} MB < {min_size/1024/1024:.0f} MB expected), re-downloading...")
         
         success = download_file(url, dest)
         if not success:
