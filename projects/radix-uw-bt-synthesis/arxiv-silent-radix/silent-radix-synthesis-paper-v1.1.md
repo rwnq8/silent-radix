@@ -19,9 +19,11 @@ This observation — often presented as the joke "There are 10 types of people i
 
 This paper argues that this "silent radix" is not a minor design flaw but the signature of a structural law with consequences spanning computing, science, cognition, and the foundations of mathematics. We trace these consequences through a catalog of 50 documented failures (the Consequence Atlas), demonstrate that the silent radix has a twin — the silent metric of the assumed Euclidean number line — and propose a remedy rooted in Spencer-Brown's *Laws of Form* (1969).
 
+This ultrametric structure has a concrete physical realization: when a spin glass is constrained by deterministic clock fields with a tree-structured spectrum, the resulting Wheeler-DeWitt (WDW) ensemble inherits the ultrametric topology as a rigid constraint. The replica stability analysis in Section 2 demonstrates that this constraint suppresses the glassy ordering characteristic of unconstrained spin systems by 10-15-fold, providing a direct physical manifestation of the thesis: the ultrametric tree, like the silent radix, is a structural principle whose presence or absence determines the qualitative behavior of the system.
+
 ---
 
-## 2. The Silent Radix in Practice: A Catalog of Consequences
+## 2. The Silent Radix in Physical Systems: Ultrametricity and Replica Stability
 
 The Consequence Atlas (accompanying this paper) documents 50 verified failures where a hidden interpretive frame — radix, metric, unit, or scale type — caused error. The taxonomy reveals a consistent pattern.
 
