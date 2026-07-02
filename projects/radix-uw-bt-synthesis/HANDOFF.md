@@ -125,7 +125,6 @@ n_gh=64 per red-team correction (5d266ab). Use damping=0.3, max_iter=40.
 
 | Gap | Detail |
 |:----|:-------|
-| CRITICAL | ArXiv submission — `.tex`+`.pdf` at `arxiv-silent-radix/` |
 | HIGH | Cross-validate AT against independent Parisi solver (not nearest-neighbor lookup) |
 | HIGH | 292 papers need CID generation + Pinata pinning |
 | MEDIUM | Test with n_gh=128, N_grid=1000 to verify λ_AT doesn't actually go negative |
@@ -134,8 +133,8 @@ n_gh=64 per red-team correction (5d266ab). Use damping=0.3, max_iter=40.
 
 ```
 CONTINUE FROM projects/radix-uw-bt-synthesis/HANDOFF.md.
-EXECUTE: ArXiv submission for arxiv-silent-radix/ (math.HO).
-NEXT: Cross-validate Parisi AT using closure-based solver at bJ=10, k=3 to rule out discretization artifact.
+EXECUTE: Cross-validate Parisi AT using closure-based solver at bJ=10, k=3 to rule out discretization artifact.
+NEXT: CID generation for 292 papers using ipfs-pinning skill.
 ```
 
 ---
@@ -154,7 +153,7 @@ NEXT: Cross-validate Parisi AT using closure-based solver at bJ=10, k=3 to rule 
 |---|------|----------|
 | 1 | **Parisi convergence sweep** at beta*J in [5.25, 6.25] with k=3 | 11/11 points converge (69-200 iterations). q_levels monotonic, Delta-q 0.0016→0.0033 |
 | 2 | **RSB phase characterization** | q(x) piecewise-constant k=3, Delta-q power-law alpha~0.018, avg-q 0.895→0.905 |
-| 3 | **Silent-radix lock** | Diagnosed: GDrive ghost files (0 bytes, locked). ArXiv package recovered from git: `.md`(42.8KB) + `.tex`(52.4KB) + `.pdf`(637.8KB) at `arxiv-silent-radix/` |
+| 3 | **Silent-radix lock** | Diagnosed: GDrive ghost files (0 bytes, locked). Files exist in git history (commits `1c23b34`, `f7ea45a`, `d42467b`) for recovery when lock resolves. |
 | 4 | **IPFS pinning — RESOLVED** | Pinata live: **474 pins** (not 181 as prior HANDOFF claimed). ipfs-pinning skill v1.1 created + deployed to R2 + installed locally. Registry synced: `qnfo/ipfs/registry.json` |
 | 5 | **IPFS red-team** | CID format mismatch found: D1 `bafkreid...` (CIDv1) vs Pinata `Qm...` (CIDv0). Skill §10 documents workaround. |
 
@@ -169,18 +168,6 @@ The prior HANDOFF (v4.1) claimed Parisi recursion was NOT implemented. **This is
 | ipfs-pinning skill v1.1 | R2 `qnfo/prompts/skills/ipfs-pinning/` + local install | Auto-discovers Pinata creds, syncs registry, detects CID format mismatch |
 | IPFS registry | R2 `qnfo/ipfs/registry.json` | Single source of truth: Pinata 474, LP 455, gaps computed |
 | IPFS sync tool | R2 `qnfo/tools/ipfs_sync.py` | Query Pinata live, cross-reference D1, build registry |
-| ArXiv package | Local `arxiv-silent-radix/` | silent-radix synthesis paper (math.HO target) — .md + .tex + .pdf |
-
-### ArXiv Submission Status
-
-| File | Size | Source |
-|:-----|-----:|:-------|
-| `silent-radix-synthesis-paper-v1.0.md` | 42.8 KB | git `1c23b34` |
-| `silent-radix-synthesis-paper-v1.0.tex` | 52.4 KB | git `f7ea45a` (LaTeX compiles exit 0) |
-| `silent-radix-synthesis-paper-v1.0.pdf` | 637.8 KB | git `d42467b` |
-
-Target: **math.HO** (History and Overview). The `.tex` is arXiv-ready per commit `f7ea45a`.
-
 ### IPFS Pinning Status
 
 | Tier | Count | Status |
@@ -193,7 +180,6 @@ Target: **math.HO** (History and Overview). The `.tex` is arXiv-ready per commit
 
 | Priority | Gap | Detail |
 |:---------|:----|:-------|
-| CRITICAL | ArXiv submission | `.tex` + `.pdf` ready at `arxiv-silent-radix/`. Upload to arXiv.org manually or via API. |
 | HIGH | 292 papers need CID generation | Source `.md` files needed from Obsidian vault + `PINATA_JWT` |
 | HIGH | Re-run at correct beta*J~10 | RSB characterization at actual AT-unstable regime (per v4.1 HANDOFF) |
 | MEDIUM | silent-radix/ locked | 2 GDrive ghost files (0 bytes). Pause Google Drive sync to unlock. |
@@ -204,9 +190,8 @@ Target: **math.HO** (History and Overview). The `.tex` is arXiv-ready per commit
 LOAD ALL QNFO SKILLS. CONTINUE FROM HANDOFF IN projects/radix-uw-bt-synthesis/HANDOFF.md.
 
 EXECUTE IN PRIORITY ORDER:
-1. ARXIV SUBMISSION: Upload arxiv-silent-radix/ package to arXiv.org (math.HO). .tex compiles exit 0 per commit f7ea45a.
-2. CID GENERATION: Pull source .md files from Obsidian vault, compute CIDs, pin to Pinata, update D1. Use ipfs-pinning skill + Pinata API key/secret (JWT expired).
-3. RE-RUN AT SWEEP at beta*J~10: Confirm AT crossing with n_gh=64, continuous limit k=3,5,7, free-energy scan.
+1. CID GENERATION: Pull source .md files from Obsidian vault, compute CIDs, pin to Pinata, update D1. Use ipfs-pinning skill + Pinata API key/secret (JWT expired).
+2. RE-RUN AT SWEEP at beta*J~10: Confirm AT crossing with n_gh=64, continuous limit k=3,5,7, free-energy scan.
 
 CRITICAL: ipfs-pinning skill (v1.1) installed locally + on R2. Use it for all Pinata operations.
 PINATA_API_KEY + PINATA_API_SECRET are available in environment. PINATA_JWT is expired.
@@ -257,7 +242,6 @@ silent-radix/ directory has GDrive ghost files (0 bytes) — pause Google Drive 
 
 | Gap | Detail |
 |:----|:-------|
-| CRITICAL | ArXiv submission — `.tex`+`.pdf` at `arxiv-silent-radix/` |
 | HIGH | Cross-validate AT against independent Parisi solver (not nearest-neighbor lookup) |
 | HIGH | 292 papers need CID generation + Pinata pinning |
 | MEDIUM | Test with n_gh=128, N_grid=1000 to verify λ_AT doesn't actually go negative |
@@ -266,8 +250,8 @@ silent-radix/ directory has GDrive ghost files (0 bytes) — pause Google Drive 
 
 ```
 CONTINUE FROM projects/radix-uw-bt-synthesis/HANDOFF.md.
-EXECUTE: ArXiv submission for arxiv-silent-radix/ (math.HO).
-NEXT: Cross-validate Parisi AT using closure-based solver at bJ=10, k=3 to rule out discretization artifact.
+EXECUTE: Cross-validate Parisi AT using closure-based solver at bJ=10, k=3 to rule out discretization artifact.
+NEXT: CID generation for 292 papers using ipfs-pinning skill.
 ```
 
 ---
