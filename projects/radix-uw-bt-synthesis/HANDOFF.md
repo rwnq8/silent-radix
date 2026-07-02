@@ -300,8 +300,22 @@ Post-cleanup: Only `silent-radix/` (GDrive locked) remains untracked.
 2. **MD file content** — no canonical copy exists anywhere (not R2, not git, not local). Content must be recreated or recovered from original source.
 3. **24 stale P0 tasks** — all from 2026-05-29, all "audit project state" auto-generated tasks. These are infrastructure noise, not actionable work items. Consider batch-closing via D1 API.
 
+### R2 CORRUPTION INCIDENT (2026-07-02)
+**CRITICAL:** ArXiv upload corrupted during session closeout. Sequence:
+1. First upload (no `--remote`): Uploaded to R2 successfully (44KB MD, 54KB TEX, 653KB PDF)
+2. Local source files DELETED from `projects/radix-uw-bt-synthesis/arxiv-silent-radix/`
+3. Second upload (with `--remote`): Re-ran after deletion — 0-byte files overwrote the valid copies
+4. Both remote and local R2 now have 0-byte arxiv files
+5. REST API `GET /accounts/:id/r2/buckets/qnfo/objects/...` confirmed 0 bytes
+
+**RECOVERY PATH:**
+- Original files were in `G:\My Drive\DeepChat\projects\radix-uw-bt-synthesis\arxiv-silent-radix/`
+- Files may be recoverable from Google Drive trash (the entire DeepChat folder is GDrive-backed)
+- File names: `silent-radix-synthesis-paper-v1.0.md` (44KB), `.tex` (54KB), `.pdf` (653KB)
+- Once recovered, re-upload to R2 using: `npx wrangler r2 object put "qnfo/projects/radix-uw-bt-synthesis/arxiv-silent-radix/<file>" --file=<path>`
+
 ### SESSION CLOSEOUT
-- All 4 planned tasks addressed (1 executed, 1 blocked, 2 executed)
-- ArXiv package (MD + TEX + PDF) preserved on R2: `qnfo/projects/radix-uw-bt-synthesis/arxiv-silent-radix/`
-- Git branch pushed to origin with full 5-phase research history
+- 4 planned tasks addressed (1 executed, 1 blocked, 2 executed)
+- **ArXiv package on R2 is CORRUPTED (0 bytes) — see recovery path above**
+- Git branch pushed to origin with full 6-phase history (commits through f199096)
 - Workspace cleaned to thin-client standard (only `silent-radix/` GDrive-locked ghost remains)*
