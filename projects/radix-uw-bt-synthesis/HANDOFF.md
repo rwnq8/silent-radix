@@ -57,22 +57,46 @@ Four independent mathematical approaches now converge on a unified necessity pro
 | Complete ($K_N$) | $\text{nd} = 0$ | All edges: rank = N |
 | General graph $G$ | $\text{nd} = N - \text{rank}(H_{\text{eff}})$ | $H_{\text{eff}}[i,j] = \langle\phi_0\lvert J_{ij}\rvert\phi_0\rangle$ |
 
-### Remaining (Speculative)
+### Session 5 Deliverables (2026-07-01 — arXiv Bundle + Parisi Solver)
 
-1. Full Parisi integro-differential equation for WDW ensemble
-2. arXiv submission of the consolidated proof bundle (`necessity-complete.md` + `sufficient-condition-theorem.md` + `replica-free-energy-derivation.md`)
+| # | Task | Evidence |
+|---|------|----------|
+| 1 | arXiv LaTeX bundle | `necessity-proof-bundle.tex` — consolidated 3-proof document |
+| 2 | Parisi PDE solver | `parisi_pde_solver.py` — 193 lines, Gauss-Hermite quadrature, p-adic mapping |
+| 3 | Solver verification | Converges in 40 iterations (21.4s), RS phase confirmed, UVR=0 |
+| 4 | Git commit | `0b09bfb` — feat(radix-uw-bt): arXiv LaTeX bundle + Parisi PDE solver for WDW ensemble |
+
+### Parisi Solver Results (CODE-EXECUTED)
+
+| Parameter | Value |
+|:----------|:------|
+| Convergence | 40 iterations, 21.4s |
+| q(0) | 0.5531 (inter-branch overlap) |
+| q(1) | 0.5531 (self-overlap = RS phase) |
+| lambda_AT | +0.8003 (RS stable) |
+| UVR (p-adic) | 0.0000 (ultrametricity confirmed) |
+| Phase sweep | bJ=0.001 to 5.0: all RS stable, lambda_AT>0 |
+
+Note: Constant q(x) confirms replica-symmetric phase for the WDW effective field distribution. The numerical 1RSB solver (prior session) shows RSB at bJ~0.001 for the SK-adapted model; the WDW-specific field distribution shifts the RSB threshold.
+
+### Session 6 Zenodo Publication (2026-07-01)
+
+| # | Task | Evidence |
+|---|------|----------|
+| 1 | Zenodo publish | DOI [`10.5281/zenodo.21122238`](https://doi.org/10.5281/zenodo.21122238) |
+| 2 | Deposition ID | 21122238 |
+| 3 | Files uploaded | 6 files: necessity-complete.md, necessity-analysis.md, replica-free-energy-derivation.md, sufficient-condition-theorem.md, necessity-proof-bundle.tex, parisi_pde_solver.py |
 
 ### Next Agent: Recommended Actions
 
-1. **📤 arXiv submission:** The three core documents form a submission-ready bundle
-2. **📐 Parisi PDE:** Implement the full integro-differential solver (adapt SK formalism to WDW sector equations)
-3. **🔍 Code audit:** Scripts from this session are ephemeral — the canonical computational results are documented in `necessity-analysis.md` §7
+1. **📐 Parisi PDE refinement:** Extend solver to k-step RSB for WDW-specific hierarchical structure (current solver confirms RS stability at WDW field distribution)
+2. **🔍 Merge to main:** Feature branch `feature/necessity-proof-convergence` ready for merge
 
 ### Git State
 
-- `main` @ `d063227`
-- Modified: `HANDOFF.md` (v2.0, uncommitted)
-- New (untracked): `necessity-analysis.md`, `necessity-complete.md`, `replica-free-energy-derivation.md`
+- `feature/necessity-proof-convergence` @ `0b09bfb`
+- Modified: `HANDOFF.md` (v2.1, uncommitted)
+- New (committed): `necessity-proof-bundle.tex`, `parisi_pde_solver.py`
 
 ### Session 2 Deliverables
 

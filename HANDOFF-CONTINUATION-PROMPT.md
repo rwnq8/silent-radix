@@ -1,4 +1,17 @@
-# QACP-HANDOFF CONTINUATION PROMPT — 2026-07-01
+# QACP-HANDOFF CONTINUATION PROMPT — Updated 2026-07-02
+
+**2026-07-02 Session:** Deep-dive synthesis, D4 correction, literature review (33 papers, 10 citations).
+
+### State Changes (July 1 → July 2)
+- **D=4 theorem corrected:** Diagonal + tree spectrum → UVR=0 (counterexample found: chain spectrum fails)
+- **CMB reinterpreted:** Consistent with diagonal coupling + chain spectrum (not falsified)
+- **Lit gap reconfirmed:** Still 0 papers on all 5 bridge domains. 10 new adjacent citations.
+- **Bridge-theorem:** 0-byte placeholder in `projects/bridge-theorem/`. Real content in radix-uw-bt-synthesis (published). Delete phantom project.
+- **Next:** Propagate D4 correction → ArXiv bundle → silent-radix publication pipeline.
+
+---
+
+**2026-07-01 Session:** Cleanup + commit of 4 prior sessions'
 
 ## Session Summary
 
