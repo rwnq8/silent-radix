@@ -1,0 +1,13 @@
+name = "seo-metadata-injector"
+main = "_seo_worker.js"
+compatibility_date = "2024-01-01"
+
+# Route: inject OG/Twitter/JSON-LD into paper pages
+# This must be more specific than papers.qnfo.org/* to take priority
+[[routes]]
+pattern = "papers.qnfo.org/papers/*"
+zone_name = "qnfo.org"
+
+[[routes]]
+pattern = "primer.qwav.tech/*"
+zone_name = "qwav.tech"

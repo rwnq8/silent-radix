@@ -732,6 +732,26 @@ var papers_server_v3_default = {
           headers: { ...CORS, "Content-Type": "application/json" }
         });
       }
+      // Dynamic sitemap.xml from D1
+      if (path === '/sitemap.xml') {
+        try {
+          const allPapers = await getAllPapers(env);
+          let xml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+          for (const p of allPapers) {
+            const s = p.slug || slugify(p.title || '');
+            if (!s) continue;
+            const date = (p.updated_at || p.created_at || '2026-07-01').substring(0,10);
+            xml += '  <url>\n    <loc>https://papers.qnfo.org/papers/' + s + '/</loc>\n';
+            xml += '    <lastmod>' + date + '</lastmod>\n';
+            xml += '    <changefreq>monthly</changefreq>\n    <priority>0.8</priority>\n  </url>\n';
+          }
+          xml += '</urlset>';
+          return new Response(xml, {
+            headers: { ...CORS, 'Content-Type': 'application/xml; charset=utf-8', 'Cache-Control': 'public, max-age=3600' }
+          });
+        } catch (_) {}
+      }
+      // Proxy other SEO files from Pages
       const seoFiles = ['/robots.txt', '/sitemap.xml', '/llms.txt', '/llms-full.txt', '/ai.txt'];
       if (seoFiles.includes(path)) {
         try {
