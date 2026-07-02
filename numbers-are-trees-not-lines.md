@@ -12,6 +12,8 @@
 
 **A Layperson's Guide to the Silent Radix Research Program**
 
+**Author:** QNFO Research / QWAV  |  **Date:** 2026-07-02
+
 Based on: *The Silent Radix: Positional Notation as Ultrametric Tree and the Calculus of Indications as Remedy*  
 QNFO Research, 2026 · DOI: [10.5281/zenodo.21134188](https://doi.org/10.5281/zenodo.21134188)
 
