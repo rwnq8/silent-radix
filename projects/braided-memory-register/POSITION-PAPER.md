@@ -1,6 +1,6 @@
 # The Braided Memory Register: A Consilient Model of Memory Across Mathematics, Computation, and Social Propagation
 
-**Author:** QNFO Research Collective | **Date:** 2026-07-03
+**Author:** Rowan Brad Quni-Gudzinas | **Date:** 2026-07-03
 **Status:** Preprint Draft — v0.1 | **License:** QNFO-ULA
 **Project:** braided-memory-register
 **Target Venue:** Zenodo → deep.qwav.tech/papers/
@@ -132,9 +132,11 @@ A computational test suite (`fpga-ultrametric-cross-pollination` project, 2026-0
 
 C5 (edge-distance) was the most structurally natural metric, achieving $R^2 \approx 0.43$ — significantly better than other variants but still below the moderate-correlation threshold. Crucially, C5's performance degraded as corpus size increased, suggesting it does not scale to large corpora.
 
-### 7.2 QNFO Corpus Blocked
+### 7.2 QNFO Corpus: Single-Author Limitation
 
-The QNFO living-paper database (119 papers, queried via `graph-api.q08.workers.dev`) was evaluated for empirical validation. All 100 accessible entries share `"QNFO Research Collective"` as their sole author. With zero individual author attributions and predominantly empty category fields, the co-authorship graph is empty, producing no meaningful braid distances. Conjecture validation on the QNFO corpus is **BLOCKED** pending metadata enrichment — specifically, individual author attribution and domain/category tagging.
+The QNFO living-paper database (119 papers, queried via `graph-api.q08.workers.dev`) was evaluated for empirical validation. All 100 accessible entries originally listed `"QNFO Research Collective"` as their sole author. On 2026-07-03, individual author metadata was extracted from paper frontmatter and synced to the Knowledge Graph. The enrichment confirmed that all 100 papers are authored by a single individual (Rowan Brad Quni-Gudzinas) — this is a single-author research corpus.
+
+Since all papers share the same author, every co-authorship pair has the same braid distance (1 or ∞), producing no variation. The co-authorship-based conjecture therefore cannot be tested on the QNFO corpus — not due to missing data, but due to the single-author structure. Alternative proximity measures (ultrametric taxonomy classification, content similarity, citation edges) remain viable pathways for future testing as the corpus diversifies.
 
 ### 7.3 Interpretation
 
