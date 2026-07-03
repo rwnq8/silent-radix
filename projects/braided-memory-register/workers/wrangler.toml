@@ -1,7 +1,7 @@
 # wrangler.toml — Braid Matrix Worker
 # Deploy: npx wrangler deploy --config wrangler.toml
 name = "braid-matrix"
-main = "workers/braid-matrix-worker.js"
+main = "braid-matrix-worker.js"
 compatibility_date = "2026-07-03"
 compatibility_flags = ["nodejs_compat"]
 

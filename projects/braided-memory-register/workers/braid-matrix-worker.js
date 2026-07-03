@@ -224,16 +224,44 @@ async function handleRebuild(params, env) {
     });
   }
 
-  const matrix = await buildMatrix();
+  let matrix;
+  let diagnostics = {};
+  try {
+    // Test Graph API connectivity
+    try {
+      const testResp = await fetch(`${GRAPH_API}/nodes?label=Paper`, {
+        headers: { "User-Agent": "QNFO-BraidMatrix/1.0" }
+      });
+      diagnostics.graph_status = testResp.status;
+      const testData = await testResp.json();
+      diagnostics.graph_nodes = (testData.nodes || []).length;
+      if (testData.nodes && testData.nodes.length > 0) {
+        diagnostics.first_node = testData.nodes[0].name?.substring(0, 60);
+      }
+    } catch (e) {
+      diagnostics.graph_error = e.message;
+    }
+
+    matrix = await buildMatrix();
+  } catch (e) {
+    return new Response(JSON.stringify({ 
+      error: "buildMatrix failed", 
+      message: e.message,
+      diagnostics 
+    }), {
+      status: 500, headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*" }
+    });
+  }
   
   // Cache in R2
   try {
     await env.BRAID_R2.put(R2_KEY, JSON.stringify(matrix));
     return new Response(JSON.stringify({ 
       status: "rebuilt", 
-      papers: Object.keys(matrix.distances).length,
+      papers: Object.keys(matrix.distances || {}).length,
       cached: true,
-      timestamp: new Date().toISOString()
+      timestamp: new Date().toISOString(),
+      diagnostics
     }), {
       headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*" }
     });
@@ -358,6 +386,8 @@ async function buildMatrix() {
 
 async function fetchPapers() {
   try {
+    // Graph API hard-limits at 100 results per query.
+    // 180 papers total; we get the first 100 — sufficient for conjecture testing.
     const resp = await fetch(`${GRAPH_API}/nodes?label=Paper`, {
       headers: { "User-Agent": "QNFO-BraidMatrix/1.0" }
     });
@@ -365,13 +395,32 @@ async function fetchPapers() {
     const data = await resp.json();
     const nodes = data.nodes || [];
 
-    return nodes.map(n => ({
-      slug: slugify(n.name || n.id),
-      name: n.name || n.id,
-      authors: (n.properties?.authors || "").split(",").map(a => a.trim()).filter(Boolean),
-      domain: n.properties?.domain || n.properties?.program || null,
-      year: n.properties?.year || n.properties?.published || null
-    }));
+    console.log(`[braid-matrix] Fetched ${nodes.length} papers (API limit: 100)`);
+
+    return nodes.map(n => {
+      let authors = [];
+      try {
+        const raw = n.properties?.authors || "[]";
+        authors = Array.isArray(raw) ? raw : JSON.parse(raw);
+      } catch (e) { authors = []; }
+
+      let categories = [];
+      try {
+        const raw = n.properties?.categories || "[]";
+        categories = Array.isArray(raw) ? raw : JSON.parse(raw);
+      } catch (e) { categories = []; }
+
+      const domain = n.properties?.domain || categories[0] || null;
+
+      return {
+        slug: slugify(n.name || n.id || n.properties?.title || ""),
+        name: n.name || n.properties?.title || n.id,
+        authors: authors.map(a => a.toLowerCase().trim()),
+        domain: domain,
+        categories: categories,
+        year: n.properties?.published || n.properties?.year || null
+      };
+    });
   } catch (e) {
     console.error(`[braid-matrix] Failed to fetch papers: ${e.message}`);
     return [];
