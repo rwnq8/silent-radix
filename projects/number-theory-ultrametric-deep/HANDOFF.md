@@ -19,11 +19,12 @@ ALL objectives achieved across parallel subagent execution. The number-theory �
 | 3 | KG Seeding (1 node, edges verified) | Project + BELONGS_TO + DEPENDS_ON, foundation-thesis found |
 | 4 | Formal Definitions — LaTeX (40KB) + Markdown (15KB) | `definitions.tex`, `DEFINITIONS.md` |
 | 5 | Bridge: Number Theory → QEC (33KB, 26 conjectures) | `NUMBER-THEORY-QEC-BRIDGE.md` — all 7 pillars mapped |
-| 6 | Phase 2 Prototypes: mahler + hasse + dieudonne | `mahler_code_analyzer.py` (9KB), `hasse_code_tester.py` (37KB), `dieudonne_slope_classifier.py` (42KB) |
+| 6 | Phase 2 Prototypes: mahler + hasse + dieudonne + kodaira | `mahler_code_analyzer.py` (9KB), `hasse_code_tester.py` (37KB), `dieudonne_slope_classifier.py` (42KB), `kodaira_neron_classifier.py` (22KB) |
 | 7 | Formal Conjecture: Witt Cohomology (LaTeX + PDF) | `conjectures-formal.tex` (37KB) + compiled PDF (324KB) |
 | 8 | Bridge: Braided Memory (55KB, 5 axes, adelic memory) | `BRAIDED-MEMORY-ULTRAMETRIC-BRIDGE.md` |
 | 9 | Cross-Pillar Analysis (46KB) | `HIDDEN-ASSUMPTIONS-AND-CONSEQUENCES.md` |
 | 10 | Bibliography (123 BibTeX entries) | `bibliography.bib` |
+| 11 | Kodaira-Neron Classifier (Conj 5.1 SUPPORTED, 83%) | `kodaira_neron_classifier.py` — 4 critical points, 12 KN types |
 
 ## All Artifacts (Cumulative)
 
