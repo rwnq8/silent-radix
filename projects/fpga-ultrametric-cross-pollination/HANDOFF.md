@@ -24,11 +24,26 @@ Responded to user's three-domain query thread (FPGA-HFT, FPGA-quantum, ultrametr
 |:-----|:---------|
 | Thin-client cleanup (59 prior-session artifacts) | `[THIN-CLIENT-VIOLATION: 59 items]` → cleaned, `.wrangler/` locked OK |
 | Safety-net skills loaded | execution-guard, red-team-dod, test-enforcement all verified |
-| Repo exploration | Read all three active projects (braided-memory-register, number-theory-ultrametric-deep, radix-uw-bt-synthesis) |
+| Repo exploration | Read all three active projects |
 | Grep scan for FPGA/HFT/quantum keywords | Zero FPGA/HFT hits confirmed — analysis territory is novel |
 | Comprehensive analysis written | `ANALYSIS.md` (19,766 bytes, 6 sections, certainty-calibrated) |
-| Git commit | `6dd3ad1` — `ACTION:CREATE FILE: projects/fpga-ultrametric-cross-pollination/ANALYSIS.md` |
-| HANDOFF.md created | This file |
+| Architecture spec written | `ARCHITECTURE-SPEC.md` (15,286 bytes, 20-instruction ISA, 5-stage pipeline) |
+| Reference design written | `REFERENCE-DESIGN.md` (17,630 bytes, Verilog pseudocode for 3 modules) |
+| Braid validation spec written | `BRAID-VALIDATION.md` (10,885 bytes, mapping to conjecture validation) |
+| p-adic arithmetic tests | `_padic_arithmetic.py` — **20/20 PASS** (PADD identity, PMUL identity, PDIST symmetry, ultrametric triangle, isosceles property) |
+| Conjecture validation run | `_baseline_conjecture.py` — **CONJECTURE DISCONFIRMED** (R² < 0.09 across all 60 topologies, n=10/20/50) |
+| Falsification report | `FALSIFICATION-REPORT.md` — detailed analysis of why conjecture fails, alternative formulations |
+| Git commits | `6dd3ad1` (ANALYSIS.md) → `6ff99ed` (4 formalization files) |
+
+### Key Quantitative Results
+
+| Metric | Result |
+|:-------|:-------|
+| p-adic add (p=2, k=64) | 6.90 µs/op (Python), projected 0.32 µs/op (FPGA @ 200 MHz) |
+| p-adic dist (p=2, k=32) | 9.86 µs/op (Python), projected 0.16 µs/op (FPGA) |
+| Conjecture R² (n=10, 20 topologies) | 0.0114 ± 0.0165 (DISCONFIRMED) |
+| Conjecture R² (n=20, 20 topologies) | 0.0046 ± 0.0054 (DISCONFIRMED) |
+| Conjecture R² (n=50, 20 topologies) | 0.0033 ± 0.0047 (DISCONFIRMED) |
 
 ---
 
