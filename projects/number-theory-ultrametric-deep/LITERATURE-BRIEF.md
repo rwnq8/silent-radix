@@ -1,6 +1,6 @@
 # LITERATURE BRIEF: Number-Theoretic Foundations of Ultrametric Quantum Information
 **Generated:** 2026-07-03 | **Source:** Preprint API (9 query threads)
-**Papers Found:** 66 (after dedup from 66 raw)
+**Papers Found:** 116 (after dedup from 66 raw)
 
 ## Search Strategy
 - **Pillar I: p-adic Analysis (ultrametric):** `all:ultra` → 10 papers
@@ -112,6 +112,66 @@
 | 6 | Recent progress on Langlands reciprocity for $\mathrm{GL}_n$: Shimura  | Ana Caraiani, Sug Woo Shin | 2023 | 2311.13382v1 |
 | 7 | Shimura varieties and gerbes | Robert P. Langlands, Michael Rapoport | 2025 | 2504.18119v1 |
 | 8 | Lectures on the Langlands Program and Conformal Field Theory | Edward Frenkel | 2005 | hep-th/0512172v1 |
+
+### Pillar IV: Class Field Theory (20 papers)
+
+| # | Title | Authors | Year | ID |
+|:--|:------|:--------|:-----|:----|
+| 1 | Palindromes and orderings in Artin groups | Florian Deloup | 2004 | math/0410275v2 |
+| 2 | On the $Σ^1$ and $Σ^2$-invariants of Artin groups | Marcos Escartín Ferrer | 2025 | 2501.08692v3 |
+| 3 | The isomorphism problem for large-type Artin groups | Nicolas Vaskou | 2022 | 2201.08329v3 |
+| 4 | Generalized Artin Primitive Root Conjecture | N. A. Carella | 2015 | 1504.00843v9 |
+| 5 | Artin groups of euclidean type | Jon McCammond, Robert Sulway | 2013 | 1312.7770v3 |
+| 6 | Homomorphisms between XL-type Artin groups | Martín Blufstein, Alexandre Martin et al. | 2024 | 2410.19091v2 |
+| 7 | On the twisted conjugacy problem for large-type Artin groups | Martín Blufstein, Motiejus Valiunas | 2024 | 2411.05493v3 |
+| 8 | JSJ splittings for all Artin groups | Oli Jones, Giorgio Mangioni et al. | 2025 | 2506.17157v3 |
+| 9 | Artin algebraization and quotient stacks | Jarod Alper | 2015 | 1510.07804v1 |
+| 10 | Automorphism and outer automorphism groups of Right-angled Artin group | Junseok Kim, Sangrok Oh et al. | 2021 | 2104.14760v4 |
+| 1 | Unitary cyclotomic polynomials | Pieter Moree, László Tóth | 2019 | 1911.01743v1 |
+| 2 | Adjoint cyclotomic multiple zeta values and cyclotomic multiple harmon | David Jarossay | 2014 | 1412.5099v5 |
+| 3 | Cyclotomic ordering conjecture | S. P. Glasby | 2019 | 1903.02951v1 |
+| 4 | Fayers' conjecture and the socles of cyclotomic Weyl modules | Jun Hu, Andrew Mathas | 2016 | 1602.06631v3 |
+| 5 | Non-vanishing of certain cyclotomic multiple harmonic sums and applica | David Jarossay | 2017 | 1707.01924v4 |
+| 6 | Pro-unipotent harmonic actions and a computation of $p$-adic cyclotomi | David Jarossay | 2015 | 1501.04893v6 |
+| 7 | On the cocenter of the cyclotomic Hecke algebra of type $G(r,1,n)$ | Jun Hu, Lei Shi | 2022 | 2211.07069v8 |
+| 8 | Cellularity of cyclotomic Yokonuma-Hecke algebras | Weideng Cui | 2015 | 1506.07321v7 |
+| 9 | Pro-unipotent harmonic actions and dynamical properties of $p$-adic cy | David Jarossay | 2016 | 1610.09107v3 |
+| 10 | Value distribution of cyclotomic polynomial coefficients | Yves Gallot, Pieter Moree et al. | 2008 | 0803.2483v1 |
+
+### Pillar V: Arithmetic Geometry (30 papers)
+
+| # | Title | Authors | Year | ID |
+|:--|:------|:--------|:-----|:----|
+| 1 | A Survey of Compact Star Clusters in the S-W Field of the M31 Disk. St | I. Sableviciute, V. Vansevicius et al. | 2007 | 0712.3957v1 |
+| 2 | A Survey of Compact Star Clusters in the South-West Field of the M31 D | I. Sableviciute, V. Vansevicius et al. | 2007 | astro-ph/0701774v1 |
+| 3 | The Subaru Deep Field Project: Lyman$α$ Emitters at Redshift of 6.6 | Y. Taniguchi, M. Ajiki et al. | 2004 | astro-ph/0407542v3 |
+| 4 | The Kodaira Dimension of Lefschetz Fibrations | Josef G Dorfmeister, Weiyi Zhang | 2008 | 0809.4861v2 |
+| 5 | On subadditivity of the logarithmic Kodaira dimension | Osamu Fujino | 2014 | 1406.2759v8 |
+| 6 | Luttinger surgery and Kodaira dimension | Chung-I Ho, Tian-Jun Li | 2011 | 1108.0479v2 |
+| 7 | On the subadditivity of generalized Kodaira dimensions | Bojie He, Xiangyu Zhou | 2024 | 2405.08265v1 |
+| 8 | On Kodaira fibrations with invariant cohomology | Corey Bregman | 2018 | 1811.00584v1 |
+| 9 | Derived equivalences and Kodaira fibers | Ana Cristina López Martín, Carlos Tejero Prieto | 2017 | 1702.00229v1 |
+| 10 | Double Kodaira fibrations | Fabrizio Catanese, Soenke Rollenske | 2006 | math/0611428v1 |
+| 1 | Revisiting the Becker-Kistiakowsky-Wilson equation of state | Loann Neron, Richard Saurel | 2024 | 2408.14490v1 |
+| 2 | Neron models of 1-motives and duality | Takashi Suzuki | 2018 | 1806.07641v4 |
+| 3 | Around general neron desingularization | Dorin Popescu | 2015 | 1504.06938v3 |
+| 4 | A variant of Neron models over curves | Morihiko Saito, Christian Schnell | 2009 | 0909.4276v2 |
+| 5 | Construction of Neron Desingularization for Two Dimensional Rings | Gerhard Pfister, Dorin Popescu | 2016 | 1612.01827v1 |
+| 6 | Artin approximation property and the General Neron Desingularization | Dorin Popescu | 2015 | 1511.06967v1 |
+| 7 | Generalization of Neron models of Green, Griffiths and Kerr | Morihiko Saito | 2009 | 0911.3829v1 |
+| 8 | A monodromy criterion for existence of Neron models of abelian schemes | Giulio Orecchia | 2019 | 1904.03886v1 |
+| 9 | An uniform General Neron Desingularization in dimension one | Asma Khalid, Gerhard Pfister et al. | 2016 | 1612.03416v2 |
+| 10 | An easy proof of the general Neron desingularization in dimension $\le | Asma Khalid, Zunaira Kosar | 2016 | 1605.04677v1 |
+| 1 | Generalized Elliptic Integrals and Applications | Nikos Bagis | 2013 | 1304.2315v2 |
+| 2 | Algebraic Equations Solved with Jacobi Elliptic Functions | Nikos Bagis | 2013 | 1307.1031v2 |
+| 3 | Drifting Solutions with Elliptic Symmetry for the Compressible Navier- | Hongli An, Manwai Yuen | 2011 | 1105.0582v2 |
+| 4 | Ressonant elliptic problems under Cerami condition | Edcarlos D. da Silva | 2012 | 1205.2724v1 |
+| 5 | The Elliptic Sunrise | Luise Adams, Christian Bogner et al. | 2015 | 1510.03883v1 |
+| 6 | A Family of Elliptic Curves With Rank $\geq5$ | Farzali Izadi, Kamran Nabardi | 2015 | 1501.03809v2 |
+| 7 | Elliptic rook and file numbers | Michael J. Schlosser, Meesue Yoo | 2015 | 1512.01720v3 |
+| 8 | Derived equivalence of elliptic K3 surfaces and Jacobians | Reinder Meinsma, Evgeny Shinder | 2023 | 2303.16638v3 |
+| 9 | Elliptic classes via the periodic Hecke module and its Langlands dual | Cristian Lenart, Gufang Zhao et al. | 2023 | 2309.09140v2 |
+| 10 | Elliptic curve configurations on Fano surfaces | Xavier Roulleau | 2008 | 0804.1861v2 |
 
 ## Thematic Clusters
 1. **Ultrametric Physics:** Papers on ultrametricity in spin glasses, neural networks, and complex systems — foundational for Pillar I.
