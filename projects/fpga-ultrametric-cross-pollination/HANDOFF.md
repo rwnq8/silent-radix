@@ -6,15 +6,26 @@
 
 ---
 
-## Session Summary
+## Session Summary (Final — 2026-07-03)
 
-Responded to user's three-domain query thread (FPGA-HFT, FPGA-quantum, ultrametric-FPGA-quantum) with a comprehensive four-part analysis:
-1. Fact-check/critique of three prior AI-generated answers
-2. Expansion of cross-pollination sub-topics (p-adic QEC decoders, ultrametric correlation clustering, surface-code RG decoders)
-3. Strategic Fit Analysis (§0.1) mapping to QNFO's existing research architecture
-4. Synthesis connecting findings to three active QNFO projects
+**Agent:** deepseek-v4-pro | **Branch:** feature/braided-memory-register
+**Status:** RESEARCH ARC COMPLETE — 4 phases, 5 commits, 6 canonical documents
+**Project:** fpga-ultrametric-cross-pollination
 
-**Key finding:** Zero prior FPGA/HFT mentions in repo — novel territory for QNFO.
+### Research Arc
+
+Phase 1 → Fact-checked 3 AI answers on FPGA-HFT-ultrametric-quantum. Found carry-direction error, missing BT-building connection, and HFT-to-QEC architectural isomorphism.
+Phase 2 → Formalized Ultrametric FPGA: 20-instruction ISA, 5-stage pipeline, Verilog reference designs, conjecture validation spec.
+Phase 3 → Computationally validated: p-adic arithmetic (20/20 PASS), Braided Memory Register conjecture δ=c·w tested across 5 variants.
+Phase 4 → All 5 conjecture variants DISCONFIRMED or WEAK. Falsification documented. Synthesis paper written.
+
+### Key Outcomes
+
+- **HFT-to-QEC architectural isomorphism identified** — strongest cross-pollination insight
+- **p-adic arithmetic verified** — ultrametric triangle inequality holds
+- **Braided Memory Register conjecture falsified** — δ and w are not correlated under any natural definition
+- **FPGA architecture designs remain valid** for other QNFO applications
+- **Braided Memory Register project unaffected** — 4/5 pillars survive
 
 ---
 
