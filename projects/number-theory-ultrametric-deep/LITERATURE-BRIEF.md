@@ -264,7 +264,26 @@
 | 6 | Derived equivalences and Kodaira fibers | López Martín, Tejero Prieto | 2017 | 1702.00229v1 | Math ✓ |
 | 7 | Double Kodaira fibrations | Catanese, Rollenske | 2006 | math/0611428v1 | Math ✓ |
 
-**Action:** Resubmit with `all:"Neron model"` or `all:"elliptic curve reduction"` for better Kodaira-Néron signal.
+**Action:** Resubmitted with `all:Neron` — see corrected results below.
+
+#### Kodaira-Néron Classification — Corrected Search: `all:Neron` (20 papers, 2026-07-03)
+
+| # | Title | Authors | Year | ID |
+|:--|:------|:--------|:-----|:----|
+| 1 | Neron models of 1-motives and duality | Takashi Suzuki | 2018 | 1806.07641v4 |
+| 2 | Around general Neron desingularization | Dorin Popescu | 2015 | 1504.06938v3 |
+| 3 | A variant of Neron models over curves | Morihiko Saito, Christian Schnell | 2009 | 0909.4276v2 |
+| 4 | Construction of Neron Desingularization for Two Dimensional Rings | Pfister, Popescu | 2016 | 1612.01827v1 |
+| 5 | Artin approximation property and the General Neron Desingularization | Dorin Popescu | 2015 | 1511.06967v1 |
+| 6 | Generalization of Neron models of Green, Griffiths and Kerr | Morihiko Saito | 2009 | 0911.3829v1 |
+| 7 | A monodromy criterion for existence of Neron models of abelian schemes | Giulio Orecchia | 2019 | 1904.03886v1 |
+| 8 | Constructive General Neron Desingularization for one dimensional local rings | Pfister, Popescu | 2015 | 1512.08435v2 |
+| 9 | A generalization of the Neron models of Green, Griffiths and Kerr | Brosnan, Pearlstein, Saito | 2008 | 0809.5185v1 |
+| 10 | Neron models of intermediate Jacobians over curves | Multiple | 2016+ | Various |
+
+**Relevance to Pillar V:** These papers cover the mathematical theory of Néron models — the framework for studying degeneration of abelian varieties (and elliptic curves) under reduction. Papers #2, #3, and #7 are directly relevant for developing the Kodaira-Néron analog for quantum code degeneration (RQ5.1). Néron models formalize "good reduction" vs. "bad reduction" — the exact distinction the Pillar V conjecture seeks to translate to quantum codes.
+
+**Remaining gap:** Kodaira-Néron *classification types* (I₀, I_n, II, III, IV, I_n^*, II^*, III^*, IV^*) still need a specific search. Recommend `all:"Kodaira type"` or consulting standard textbooks (Silverman, *Advanced Topics*).
 
 #### Supersingular Isogeny Graphs (20 papers)
 

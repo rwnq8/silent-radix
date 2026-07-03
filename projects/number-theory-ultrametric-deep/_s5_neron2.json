@@ -1,0 +1,294 @@
+[
+  {
+    "title": "Revisiting the Becker-Kistiakowsky-Wilson equation of state",
+    "authors": [
+      "Loann Neron",
+      "Richard Saurel"
+    ],
+    "year": 2024,
+    "abstract": "The Jones-Wilkins-Lee (JWL) equation of state (EOS) is the most popular equation of state used in hydrocodes to model detonation products thermodynamics resulting from high explosives. However, the JWL EOS presents several major difficulties. Namely, its range of validity and convexity is limited as its parameters are adjusted on a given reference curve. When used in conditions where the thermodynamic state varies significantly, computational failure may happen. It occurs frequently in multiphase flow computations when heat and mass transfers with other phases are present, as the resulting thermodynamic state is far from the reference curve used for adjustment. Moreover, the detonation products composition is absent in the JWL formulation. This is another important limitation when additional physics are involved, such as post-combustion, phase transition, or when dealing with non-ideal explosives. In this work, the Becker-Kistiakowsky-Wilson (BKW) EOS is considered instead. The BKW EOS is widely used in thermochemical codes, as parent EOS to provide the reference data used to fit JWL EOS parameters. The BKW EOS present several advantages. Its formulation considers variable gas species in the detonation products. No specific adjustment is needed for a given explosive, and only the detonation products composition requires computational efforts. Its range of validity is large, as the various parameters have been adjusted for each gas species separately. However, the BKW EOS also present difficulties which limit its application in hydrocodes. These difficulties are the aim of the present work. The BKW EOS is currently restricted to thermochemical codes as its mathematical formulation is computationally expensive. It also requires the gas chemical composition to be computed via an appropriate chemical equilibrium solver. In the present work, the computational cost of the BKW EOS is reduced thanks to the thermodynamic relaxation method of Neron et al. (2023). The variable composition of the detonation products is accounted for through specific relaxation terms computed once, with the help of conventional thermochemical codes. The condensed species, such as solid carbon, are modelled with the Cochran-Chan (CC) EOS, having a simpler thermodynamic formulation and being thermodynamically consistent compared to usual EOSs used for condensed species. This multiphase formulation made of BKW gas mixture with variable composition and condensed phases is considered in temperature and pressure equilibrium. It is embedded in a multiphase flow formulation, with the help of the thermodynamic relaxation method mentioned above. It shows comparable computational cost as the JWL formulation, with significantly enhanced physics capabilities and improved robustness.",
+    "preprint_id": "2408.14490v1",
+    "doi": "https://doi.org/10.1016/j.jcp.2024.113165",
+    "url": "http://arxiv.org/abs/2408.14490v1",
+    "source": "preprints",
+    "published": "2024-08-22T08:20:33Z",
+    "tier": "background"
+  },
+  {
+    "title": "Neron models of 1-motives and duality",
+    "authors": [
+      "Takashi Suzuki"
+    ],
+    "year": 2018,
+    "abstract": "In this paper, we propose a definition of Neron models of arbitrary Deligne 1-motives over Dedekind schemes, extending Neron models of semi-abelian varieties. The key property of our Neron models is that they satisfy a generalization of Grothendieck's duality conjecture in SGA 7 when the residue fields of the base scheme at closed points are perfect. The assumption on the residue fields is unnecessary for the class of 1-motives with semistable reduction everywhere. In general, this duality holds after inverting the residual characteristics. The definition of Neron models involves careful treatment of ramification of lattice parts and its interaction with semi-abelian parts. This work is a complement to Grothendieck's philosophy on Neron models of motives of arbitrary weights.",
+    "preprint_id": "1806.07641v4",
+    "doi": "https://doi.org/10.2996/kmj/1572487228",
+    "url": "http://arxiv.org/abs/1806.07641v4",
+    "source": "preprints",
+    "published": "2018-06-20T09:50:26Z",
+    "tier": "background"
+  },
+  {
+    "title": "Around general neron desingularization",
+    "authors": [
+      "Dorin Popescu"
+    ],
+    "year": 2015,
+    "abstract": "It gives some new forms of General Neron Desingularization and new applications.",
+    "preprint_id": "1504.06938v3",
+    "doi": "",
+    "url": "http://arxiv.org/abs/1504.06938v3",
+    "source": "preprints",
+    "published": "2015-04-27T06:04:33Z",
+    "tier": "background"
+  },
+  {
+    "title": "A variant of Neron models over curves",
+    "authors": [
+      "Morihiko Saito",
+      "Christian Schnell"
+    ],
+    "year": 2009,
+    "abstract": "We study a variant of the Neron models over curves which is recently found by the second named author in a more general situation using the theory of Hodge modules. We show that its identity component is a certain open subset of an iterated blow-up along smooth centers of the Zucker extension of the family of intermediate Jacobians and that the total space is a complex Lie group over the base curve and is Hausdorff as a topological space. In the unipotent monodromy case, the image of the map to the Clemens extension coincides with the Neron model defined by Green, Griffiths and Kerr. In the case of families of Abelian varieties over curves, it coincides with the Clemens extension, and hence with the classical Néron model in the algebraic case (even in the non-unipotent monodromy case).",
+    "preprint_id": "0909.4276v2",
+    "doi": "",
+    "url": "http://arxiv.org/abs/0909.4276v2",
+    "source": "preprints",
+    "published": "2009-09-23T18:22:44Z",
+    "tier": "background"
+  },
+  {
+    "title": "Construction of Neron Desingularization for Two Dimensional Rings",
+    "authors": [
+      "Gerhard Pfister",
+      "Dorin Popescu"
+    ],
+    "year": 2016,
+    "abstract": "An algorithmic proof of the General Neron Desingularization theorem is given for $2$-dimensional local rings and morphisms with small singular locus.",
+    "preprint_id": "1612.01827v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/1612.01827v1",
+    "source": "preprints",
+    "published": "2016-12-06T14:40:25Z",
+    "tier": "background"
+  },
+  {
+    "title": "Artin approximation property and the General Neron Desingularization",
+    "authors": [
+      "Dorin Popescu"
+    ],
+    "year": 2015,
+    "abstract": "This is an exposition on the General Neron Desingularization and its applications. We end with a recent constructive form of this desingularization in dimension one",
+    "preprint_id": "1511.06967v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/1511.06967v1",
+    "source": "preprints",
+    "published": "2015-11-22T05:40:11Z",
+    "tier": "background"
+  },
+  {
+    "title": "Generalization of Neron models of Green, Griffiths and Kerr",
+    "authors": [
+      "Morihiko Saito"
+    ],
+    "year": 2009,
+    "abstract": "We explain some recent developments in the theory of Neron models for families of Jacobians associated to variations of Hodge structures of weight -1.",
+    "preprint_id": "0911.3829v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/0911.3829v1",
+    "source": "preprints",
+    "published": "2009-11-19T15:38:04Z",
+    "tier": "background"
+  },
+  {
+    "title": "A monodromy criterion for existence of Neron models of abelian schemes in characteristic zero",
+    "authors": [
+      "Giulio Orecchia"
+    ],
+    "year": 2019,
+    "abstract": "We consider the problem of existence of Neron models for a family of abelian varieties over a base of dimension greater than 1. We show that when S is of equicharacteristic zero, the condition of toric additivity introduced in [Ore18] is sufficient for the existence of a Neron model, and also necessary under some extra assumptions. Furthermore, we give an equivalent formulation of toric additivity in terms of monodromy action on the l-adic Tate module.",
+    "preprint_id": "1904.03886v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/1904.03886v1",
+    "source": "preprints",
+    "published": "2019-04-08T08:34:22Z",
+    "tier": "background"
+  },
+  {
+    "title": "An uniform General Neron Desingularization in dimension one",
+    "authors": [
+      "Asma Khalid",
+      "Gerhard Pfister",
+      "Dorin Popescu"
+    ],
+    "year": 2016,
+    "abstract": "We give an uniform General Neron Desingularization for one dimensional local rings with respect to morphisms which coincide modulo a high power of the maximal ideal. The result has interesting applications in the case of Cohen-Macaulay rings.",
+    "preprint_id": "1612.03416v2",
+    "doi": "",
+    "url": "http://arxiv.org/abs/1612.03416v2",
+    "source": "preprints",
+    "published": "2016-12-11T14:38:04Z",
+    "tier": "background"
+  },
+  {
+    "title": "An easy proof of the general Neron desingularization in dimension $\\leq 1$",
+    "authors": [
+      "Asma Khalid",
+      "Zunaira Kosar"
+    ],
+    "year": 2016,
+    "abstract": "In this paper we give an easy proof of the general Neron desingularization in the frame of regular morphism between Artinian local rings and Noetherian local rings of dimension one.",
+    "preprint_id": "1605.04677v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/1605.04677v1",
+    "source": "preprints",
+    "published": "2016-05-16T08:34:15Z",
+    "tier": "background"
+  },
+  {
+    "title": "Constructive General Neron Desingularization for one dimensional local rings",
+    "authors": [
+      "Gerhard Pfister",
+      "Dorin Popescu"
+    ],
+    "year": 2015,
+    "abstract": "An algorithmic proof of General Neron Desingularization is given here for one dimensional local rings and it is implemented in Singular. Also a theorem recalling Greenberg' strong approximation theorem is presented for one dimensional local rings.",
+    "preprint_id": "1512.08435v2",
+    "doi": "",
+    "url": "http://arxiv.org/abs/1512.08435v2",
+    "source": "preprints",
+    "published": "2015-12-28T15:38:59Z",
+    "tier": "background"
+  },
+  {
+    "title": "A generalization of the Neron models of Green, Griffiths and Kerr",
+    "authors": [
+      "Patrick Brosnan",
+      "Gregory Pearlstein",
+      "Morihiko Saito"
+    ],
+    "year": 2008,
+    "abstract": "We generalize a construction of the Neron model for a family of intermediate Jacobians due to Green, Griffiths and Kerr by using the theory of mixed Hodge modules. It is a topological group defined over any partial compactification of the base space, and it `graphs' admissible normal functions. Moreover, there is a stratification of the partial compactification such that the restriction over each stratum is a complex Lie group over the stratum.",
+    "preprint_id": "0809.5185v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/0809.5185v1",
+    "source": "preprints",
+    "published": "2008-09-30T12:38:06Z",
+    "tier": "background"
+  },
+  {
+    "title": "Hausdorff property of the Neron models of Green, Griffiths and Kerr",
+    "authors": [
+      "Morihiko Saito"
+    ],
+    "year": 2008,
+    "abstract": "We prove the Hausdorff property of the Neron modle of the family of intermediate Jacobians which is recently defined by Green, Griffiths and Kerr assuming that the divisor at infinity is smooth. Using their result, this implies in this case the analyticity of the closure of the zero locus of an admissible normal function. The last assertion is also obtained by Brosnan and Pearlstein generalizing their method in the curve case.",
+    "preprint_id": "0803.2771v4",
+    "doi": "",
+    "url": "http://arxiv.org/abs/0803.2771v4",
+    "source": "preprints",
+    "published": "2008-03-19T10:17:59Z",
+    "tier": "background"
+  },
+  {
+    "title": "Rational points of the group of components of a Neron model",
+    "authors": [
+      "Siegfried Bosch",
+      "Qing Liu"
+    ],
+    "year": 1998,
+    "abstract": "Let A_K be an abelian variety over a discrete valuation field K. Let A be the Neron model of A_K over the ring of integers O_K of K and A_k its special fibre. We study the set of rational points of the group of components φ_A of A_k. In particular, we look at the cases where A_K is a Jacobian or where A_K is an abelian variety having semi-stable reduction. We also consider algebraic tori over K instead of abelian varieties.",
+    "preprint_id": "math/9804069v1",
+    "doi": "https://doi.org/10.1007/s002290050140",
+    "url": "http://arxiv.org/abs/math/9804069v1",
+    "source": "preprints",
+    "published": "1998-04-14T09:56:25Z",
+    "tier": "background"
+  },
+  {
+    "title": "A method to compute the General Neron Desingularization in the frame of one dimensional local domains",
+    "authors": [
+      "Adrian Popescu",
+      "Dorin Popescu"
+    ],
+    "year": 2015,
+    "abstract": "An algorithmic proof of General Neron Desingularization is given here for one dimensional local domains and it is implemented in \\textsc{Singular}. Also a theorem recalling Greenberg' strong approximation theorem is presented for one dimensional Cohen-Macaulay local rings.",
+    "preprint_id": "1508.05511v2",
+    "doi": "",
+    "url": "http://arxiv.org/abs/1508.05511v2",
+    "source": "preprints",
+    "published": "2015-08-22T13:23:21Z",
+    "tier": "background"
+  },
+  {
+    "title": "On Neron class groups of abelian varieties",
+    "authors": [
+      "Cristian D. Gonzalez-Aviles"
+    ],
+    "year": 2009,
+    "abstract": "Let F be a global field and let S denote a nonempty finite set of primes of F containing the set S' of archimedean primes of F. In this paper we study the Neron S-class group C_{A,F,S} of an abelian variety A defined over F. In the well-known analogy that exists between the Birch and Swinnerton-Dyer conjecture for A over F and Dirichlet's analytic class number formula for the field F (in the number field case), the finite group C_{A,F,S'} (not the Tate-Shafarevich group of A) is a natural analog of the ideal class group of F.",
+    "preprint_id": "0909.4803v4",
+    "doi": "",
+    "url": "http://arxiv.org/abs/0909.4803v4",
+    "source": "preprints",
+    "published": "2009-09-25T21:08:54Z",
+    "tier": "background"
+  },
+  {
+    "title": "Brauer groups and Neron class groups",
+    "authors": [
+      "Cristian D. Gonzalez-Aviles"
+    ],
+    "year": 2019,
+    "abstract": "Let K be a global field, let S be a finite set of primes of K containing the archimedean primes and let A be an abelian variety over K. We generalize the duality theorem established in our paper \"On Neron class groups of abelian varieties\" by removing the hypothesis in [op.cit.] that the Tate-Shafarevich group of A is finite. We also derive an exact sequence that relates the indicated group associated to the Jacobian variety of a proper, smooth and geometrically connected curve X over K to a certain finite subquotient of the Brauer group of X. The sequence alluded to above may be regarded as a global analog of an exact sequence of S.Biswas.",
+    "preprint_id": "1909.03125v2",
+    "doi": "",
+    "url": "http://arxiv.org/abs/1909.03125v2",
+    "source": "preprints",
+    "published": "2019-09-06T21:02:11Z",
+    "tier": "background"
+  },
+  {
+    "title": "Grothendieck's pairing on Neron component groups: Galois descent from the semistable case",
+    "authors": [
+      "Takashi Suzuki"
+    ],
+    "year": 2014,
+    "abstract": "In our previous study of duality for complete discrete valuation fields with perfect residue field, we treated coefficients in finite flat group schemes. In this paper, we treat abelian varieties. This in particular implies Grothendieck's conjecture on the perfectness of his pairing between the Neron component groups of an abelian variety and its dual. The point is that our formulation is well-suited with Galois descent. From the known case of semistable abelian varieties, we deduce the perfectness in full generality. We also treat coefficients in tori and, more generally, 1-motives.",
+    "preprint_id": "1410.3046v4",
+    "doi": "https://doi.org/10.1215/21562261-2019-0045",
+    "url": "http://arxiv.org/abs/1410.3046v4",
+    "source": "preprints",
+    "published": "2014-10-12T03:43:47Z",
+    "tier": "background"
+  },
+  {
+    "title": "On Neron-Raynaud class groups of tori and the Capitulation Problem",
+    "authors": [
+      "Cristian D. Gonzalez-Aviles"
+    ],
+    "year": 2009,
+    "abstract": "We discuss the Capitulation Problem for Neron-Raynaud class groups of tori over global fields F and obtain generalizations of the main results of [10]. We also show that short exact sequences of F-tori induce long exact sequences involving the corresponding Neron-Raynaud class groups. For example, we show that the Neron-Raynaud class group of any F-torus which is split by a metacyclic extension of F can be \"resolved\" in terms of classical ideal class groups of global fields.",
+    "preprint_id": "0903.3221v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/0903.3221v1",
+    "source": "preprints",
+    "published": "2009-03-18T18:44:56Z",
+    "tier": "background"
+  },
+  {
+    "title": "On the Neron-Severi group of surfaces with many lines",
+    "authors": [
+      "Samuel Boissiere",
+      "Alessandra Sarti"
+    ],
+    "year": 2008,
+    "abstract": "For a binary quartic form $φ$ without multiple factors, we classify the quartic K3 surfaces $φ(x,y)=φ(z,t)$ whose Neron-Severi group is (rationally) generated by lines. For generic binary forms $φ$, $ψ$ of prime degree without multiple factors, we prove that the Neron-Severi group of the surface $φ(x,y)=ψ(z,t)$ is rationally generated by lines.",
+    "preprint_id": "0801.0526v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/0801.0526v1",
+    "source": "preprints",
+    "published": "2008-01-03T14:09:37Z",
+    "tier": "background"
+  }
+]
