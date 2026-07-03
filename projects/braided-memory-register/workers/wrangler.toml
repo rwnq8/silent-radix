@@ -1,0 +1,18 @@
+# wrangler.toml — Braid Matrix Worker
+# Deploy: npx wrangler deploy --config wrangler.toml
+name = "braid-matrix"
+main = "workers/braid-matrix-worker.js"
+compatibility_date = "2026-07-03"
+compatibility_flags = ["nodejs_compat"]
+
+# R2 binding — for matrix caching and serving JSON
+[[r2_buckets]]
+binding = "BRAID_R2"
+bucket_name = "qnfo"
+
+# Cron trigger — rebuild matrix daily at 06:00 UTC
+[triggers]
+crons = ["0 6 * * *"]
+
+# Routes (deploy and then register in Cloudflare dashboard)
+# Suggested domain: braid-matrix.q08.workers.dev
