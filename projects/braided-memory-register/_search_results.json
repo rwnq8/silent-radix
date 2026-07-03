@@ -1,0 +1,3164 @@
+[
+  {
+    "title": "A toy model of a protein prototype reveals nontrivial ultrametricity of the energy landscape",
+    "authors": [
+      "A. Kh. Bikulov",
+      "A. P. Zubarev"
+    ],
+    "year": 2026,
+    "abstract": "A model for studying the ultrametricity of the energy landscape in a disordered heteropolymer is presented. It is treated as a simplified model of a protein molecule in which amino acid residues are modeled as point masses. Pairwise interactions include universal repulsion, the Lennard-Jones potential, the Coulomb potential with screening, and the elastic potential for bonds between adjacent residues. An analogy with spin glass models is used, allowing the application of replica theory methods. ",
+    "preprint_id": "2603.13012v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2603.13012v1",
+    "source": "preprints",
+    "category": "cond-mat.dis-nn",
+    "thread": "ultrametric_memory",
+    "tier": "supporting"
+  },
+  {
+    "title": "Ultrametricity of Energy Minimum Configurations of RNA Secondary Structures in the Nussinov Model",
+    "authors": [
+      "A. P. Zubarev"
+    ],
+    "year": 2026,
+    "abstract": "We present a numerical study of the ultrametric properties of the set of RNA secondary structures with the maximum number of base pairs (energetically degenerate minima) within the maximum matching model (Nussinov algorithm). Using 18 natural small nuclear RNAs as examples, we show that the degree of nontrivial ultrametricity varies widely. We consider the optimization problem for the degree of nontrivial ultrametricity of RNA secondary structures with the maximum number of base pairs under a fi",
+    "preprint_id": "2605.26570v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2605.26570v1",
+    "source": "preprints",
+    "category": "cond-mat.dis-nn",
+    "thread": "ultrametric_memory",
+    "tier": "reject"
+  },
+  {
+    "title": "Kinetic metric for basins of attraction of RNA secondary structures and analysis of the ultrametricity of the energy landscape",
+    "authors": [
+      "A. P. Zubarev"
+    ],
+    "year": 2026,
+    "abstract": "A method is proposed for testing the hypothesis of ultrametric organization of the energy landscape of RNA secondary structures, based on the analysis of transition kinetics between basins of attraction. The method relies on a kinetic metric constructed from the spectral decomposition of the symmetrized Kramers transition rate matrix and the Mahalanobis distance, which is not an ultrametric by construction. A complete computational framework is developed, including automatic filtering of noisy e",
+    "preprint_id": "2606.25824v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2606.25824v1",
+    "source": "preprints",
+    "category": "cond-mat.dis-nn",
+    "thread": "ultrametric_memory",
+    "tier": "reject"
+  },
+  {
+    "title": "Distributed Hierarchical Temporal Memory with Shared Associative Memory for Cross-Entity Preemptive Warning",
+    "authors": [
+      "Pavia Bera",
+      "Jennifer Adorno",
+      "Sanjukta Bhanja"
+    ],
+    "year": 2026,
+    "abstract": "Anomaly detection in multivariate time series remains a critical challenge in large-scale distributed systems, where related entities may exhibit transferable precursor behavior prior to anomaly onset. Existing methods typically operate independently on each data stream and therefore remain fundamentally reactive. To address this limitation, we introduce Distributed Hierarchical Temporal Memory (D-HTM), a neuromorphic framework that enables cross-entity preemptive warning through a Shared Associ",
+    "preprint_id": "2606.31789v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2606.31789v1",
+    "source": "preprints",
+    "category": "cs.NE",
+    "thread": "associative_hierarchical",
+    "tier": "supporting"
+  },
+  {
+    "title": "From Verbatim to Gist: Distilling Pyramidal Multimodal Memory via Semantic Information Bottleneck for Long-Horizon Video Agents",
+    "authors": [
+      "Niu Lian",
+      "Yuting Wang",
+      "Hanshu Yao",
+      "Jinpeng Wang",
+      "Bin Chen",
+      "Yaowei Wang",
+      "Min Zhang",
+      "Shu-Tao Xia"
+    ],
+    "year": 2026,
+    "abstract": "While multimodal large language models have demonstrated impressive short-term reasoning, they struggle with long-horizon video understanding due to limited context windows and static memory mechanisms that fail to mirror human cognitive efficiency. Existing paradigms typically fall into two extremes: vision-centric methods that incur high latency and redundancy through dense visual accumulation, or text-centric approaches that suffer from detail loss and hallucination via aggressive captioning.",
+    "preprint_id": "2603.01455v3",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2603.01455v3",
+    "source": "preprints",
+    "category": "cs.CV",
+    "thread": "associative_hierarchical",
+    "tier": "background"
+  },
+  {
+    "title": "Bi-Mem: Bidirectional Construction of Hierarchical Memory for Personalized LLMs via Inductive-Reflective Agents",
+    "authors": [
+      "Wenyu Mao",
+      "Haosong Tan",
+      "Shuchang Liu",
+      "Haoyang Liu",
+      "Yifan Xu",
+      "Huaxiang Ji",
+      "Xiang Wang"
+    ],
+    "year": 2026,
+    "abstract": "Constructing memory from users' long-term conversations overcomes LLMs' contextual limitations and enables personalized interactions. Recent studies focus on hierarchical memory to model users' multi-granular behavioral patterns via clustering and aggregating historical conversations. However, conversational noise and memory hallucinations can be amplified during clustering, causing locally aggregated memories to misalign with the user's global persona. To mitigate this issue, we propose Bi-Mem,",
+    "preprint_id": "2601.06490v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2601.06490v1",
+    "source": "preprints",
+    "category": "cs.MA",
+    "thread": "associative_hierarchical",
+    "tier": "background"
+  },
+  {
+    "title": "GAM: Hierarchical Graph-based Agentic Memory for LLM Agents",
+    "authors": [
+      "Zhaofen Wu",
+      "Hanrong Zhang",
+      "Fulin Lin",
+      "Wujiang Xu",
+      "Xinran Xu",
+      "Yankai Chen",
+      "Henry Peng Zou",
+      "Shaowen Chen",
+      "Weizhi Zhang",
+      "Xue Liu",
+      "Philip S. Yu",
+      "Hongwei Wang"
+    ],
+    "year": 2026,
+    "abstract": "To sustain coherent long-term interactions, Large Language Model (LLM) agents must navigate the tension between acquiring new information and retaining prior knowledge. Current unified stream-based memory systems facilitate context updates but remain vulnerable to interference from transient noise. Conversely, discrete structured memory architectures provide robust knowledge retention but often struggle to adapt to evolving narratives. To address this, we propose GAM, a hierarchical Graph-based ",
+    "preprint_id": "2604.12285v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2604.12285v1",
+    "source": "preprints",
+    "category": "cs.AI",
+    "thread": "associative_hierarchical",
+    "tier": "background"
+  },
+  {
+    "title": "Constraining Gravitational Wave Memory with Hierarchical Inference",
+    "authors": [
+      "Keefe Mitman",
+      "Maximiliano Isi",
+      "Will M. Farr"
+    ],
+    "year": 2026,
+    "abstract": "With the multitude of gravitational wave observations that have been made in the past ten years, probing the dynamical and nonlinear nature of strong gravity is becoming more and more feasible. One promising way to test the nonlinear nature of Einstein's theory of general relativity (GR) is through the gravitational wave null memory effect: a nonlinear prediction of GR which corresponds to initially comoving observers being permanently displaced due to a burst of gravitational radiation. Previou",
+    "preprint_id": "2605.27500v2",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2605.27500v2",
+    "source": "preprints",
+    "category": "gr-qc",
+    "thread": "associative_hierarchical",
+    "tier": "background"
+  },
+  {
+    "title": "Mela: Test-Time Memory Consolidation based on Transformation Hypothesis",
+    "authors": [
+      "Lungchuan Chen"
+    ],
+    "year": 2026,
+    "abstract": "Memory consolidation, the process by which transient experiences are transformed into stable, structured representations, is a foundational organizing principle in the human brain, yet it remains largely unexplored as a design principle for modern sequence models. In this work, we leverage established neuroscientific theories of memory consolidation and cross-frequency coupling to propose the Hierarchical Memory Module (HMM), a neural memory architecture composed of two functionally distinct sub",
+    "preprint_id": "2605.10537v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2605.10537v1",
+    "source": "preprints",
+    "category": "cs.CL",
+    "thread": "reconsolidation",
+    "tier": "supporting"
+  },
+  {
+    "title": "TRUSTMEM: Learning Trustworthy Memory Consolidation for LLM Agents with Long-Term Memory",
+    "authors": [
+      "Tianyu Yang",
+      "Sudipta Paul",
+      "Vijay Srinivasan",
+      "Vivek Kulkarni",
+      "Srinivas Chappidi"
+    ],
+    "year": 2026,
+    "abstract": "Large language model (LLM) agents rely on long-term memory to support extended interactions and personalized assistance beyond finite context windows. Existing memory agents actively update external memory through generated write, revise, and delete operations, but these updates may omit important information, corrupt existing memory, or introduce unsupported hallucinated content. Once stored, such errors become persistent system-state failures that can affect future reasoning and generation. In",
+    "preprint_id": "2606.25161v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2606.25161v1",
+    "source": "preprints",
+    "category": "cs.AI",
+    "thread": "reconsolidation",
+    "tier": "supporting"
+  },
+  {
+    "title": "Are We Ready For An Agent-Native Memory System?",
+    "authors": [
+      "Wei Zhou",
+      "Xuanhe Zhou",
+      "Shaokun Han",
+      "Hongming Xu",
+      "Guoliang Li",
+      "Zhiyu Li",
+      "Feiyu Xiong",
+      "Fan Wu"
+    ],
+    "year": 2026,
+    "abstract": "Memory for large language model (LLM) agents has rapidly evolved from simple retrieval-augmented mechanisms into a data management system that supports persistent information storage, retrieval, update, consolidation, and dynamic lifecycle governance throughout agent execution. Despite this evolution, existing evaluations still benchmark agent memory mainly through end-to-end task success metrics (e.g., F1, BLEU), while treating the underlying system as a monolithic black box. As a result, criti",
+    "preprint_id": "2606.24775v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2606.24775v1",
+    "source": "preprints",
+    "category": "cs.CL",
+    "thread": "reconsolidation",
+    "tier": "background"
+  },
+  {
+    "title": "Useful Memories Become Faulty When Continuously Updated by LLMs",
+    "authors": [
+      "Dylan Zhang",
+      "Yanshan Lin",
+      "Zhengkun Wu",
+      "Yihang Sun",
+      "Bingxuan Li",
+      "Dianqi Li",
+      "Hao Peng"
+    ],
+    "year": 2026,
+    "abstract": "Learning from past experience benefits from two complementary forms of memory: episodic traces -- raw trajectories of what happened -- and consolidated abstractions distilled across many episodes into reusable, schema-like lessons. Recent agentic-memory systems pursue the consolidated form: an LLM rewrites past trajectories into a textual memory bank that it continuously updates with new interactions, promising self-improving agents without parameter updates. Yet we find that such consolidated m",
+    "preprint_id": "2605.12978v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2605.12978v1",
+    "source": "preprints",
+    "category": "cs.AI",
+    "thread": "reconsolidation",
+    "tier": "supporting"
+  },
+  {
+    "title": "EVAF: A Test-Retest Protocol for Selective Parametric Consolidation",
+    "authors": [
+      "Haoliang Han"
+    ],
+    "year": 2026,
+    "abstract": "Long-running language agents need mechanisms for deciding which experiences should persist after the working context is gone. Retrieval systems can reinsert past text, but they do not by themselves show that an experience has been selectively consolidated into the model's own behavior. We introduce EVAF, an Echo-Valence Attractor Field mechanism for gated LoRA consolidation, and a test-retest protocol for measuring selective parametric consolidation under controlled interference. Across GPT-2 an",
+    "preprint_id": "2606.29916v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2606.29916v1",
+    "source": "preprints",
+    "category": "cs.LG",
+    "thread": "reconsolidation",
+    "tier": "background"
+  },
+  {
+    "title": "Episodic-to-Semantic Consolidation Without Identity Drift",
+    "authors": [
+      "Xue Qin",
+      "Simin Luan",
+      "Cong Yang",
+      "Zhijun Li"
+    ],
+    "year": 2026,
+    "abstract": "Long-running adaptive intelligent agents face a structural tension between knowledge consolidation and information integrity. Memory consolidation is conventionally treated as an agent-changing operation: a model is fine-tuned, a prompt rewritten, a policy distilled, or a reflection appended to the context that governs future behaviour. In regulated autonomic deployment this is a liability because the agent operates under commitments and audit contracts that bind to a specific, cryptographically",
+    "preprint_id": "2607.01988v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2607.01988v1",
+    "source": "preprints",
+    "category": "cs.AI",
+    "thread": "reconsolidation",
+    "tier": "supporting"
+  },
+  {
+    "title": "Local Pheromone Network: Sparse Local Learning with Multi-Scale Synaptic Trails, Consolidation, and Replay",
+    "authors": [
+      "Xingcheng Fu",
+      "Xianjun Chen",
+      "Zhihao Li"
+    ],
+    "year": 2026,
+    "abstract": "Backpropagation-trained dense neural networks are powerful function approximators, but they couple learning across many parameters and can overwrite previous associations when tasks conflict. This paper describes Local Pheromone Network, a small research prototype for sparse, local, manually updated neural networks. In Local Pheromone Network, each output unit reads only a fixed local neighborhood of input units subject to geometric distance and molecular-tag compatibility. Each synapse stores a",
+    "preprint_id": "2606.30669v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2606.30669v1",
+    "source": "preprints",
+    "category": "cs.NE",
+    "thread": "reconsolidation",
+    "tier": "supporting"
+  },
+  {
+    "title": "Panini: Continual Learning in Token Space via Structured Memory",
+    "authors": [
+      "Shreyas Rajesh",
+      "Pavan Holur",
+      "Mehmet Yigit Turali",
+      "Chenda Duan",
+      "Vwani Roychowdhury"
+    ],
+    "year": 2026,
+    "abstract": "Language models are increasingly used to reason over content they were not trained on, such as new documents, evolving knowledge, and user-specific data. A common approach is retrieval-augmented generation (RAG), which stores verbatim documents externally (as chunks) and retrieves only a relevant subset at inference time for an LLM to reason over. However, this results in inefficient usage of test-time compute (LLM repeatedly reasons over the same documents); moreover, chunk retrieval can inject",
+    "preprint_id": "2602.15156v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2602.15156v1",
+    "source": "preprints",
+    "category": "cs.AI",
+    "thread": "reconsolidation",
+    "tier": "background"
+  },
+  {
+    "title": "Beyond Inference-Only Deployment: Comparing Weight-Based Consolidation Against Cascading Compaction",
+    "authors": [
+      "Simon Dennis",
+      "Kevin Shabahang",
+      "Hao Guo",
+      "Rivaan Patil"
+    ],
+    "year": 2026,
+    "abstract": "Major LLM platforms deploy models in an inference-only configuration: the model serves requests but never updates per-user weights. Users must repeatedly re-teach preferences, corrections, and project context, and context-based workarounds consume context-window space and degrade under cascading compaction. We evaluate an alternative: nightly consolidation of interaction knowledge into model weights via reflection, synthesis, and Low-Rank Adaptation (LoRA) fine-tuning on a single consumer GPU. A",
+    "preprint_id": "2605.24657v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2605.24657v1",
+    "source": "preprints",
+    "category": "cs.AI",
+    "thread": "reconsolidation",
+    "tier": "reject"
+  },
+  {
+    "title": "Elastic Weight Consolidation Done Right for Continual Learning",
+    "authors": [
+      "Xuan Liu",
+      "Xiaobin Chang"
+    ],
+    "year": 2026,
+    "abstract": "Weight regularization methods in continual learning (CL) alleviate catastrophic forgetting by assessing and penalizing changes to important model weights. Elastic Weight Consolidation (EWC) is a foundational and widely used approach within this framework that estimates weight importance based on gradients. However, it has consistently shown suboptimal performance. In this paper, we conduct a systematic analysis of importance estimation in EWC from a gradient-based perspective. For the first time",
+    "preprint_id": "2603.18596v3",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2603.18596v3",
+    "source": "preprints",
+    "category": "cs.LG",
+    "thread": "reconsolidation",
+    "tier": "background"
+  },
+  {
+    "title": "HiMem: Hierarchical Long-Term Memory for LLM Long-Horizon Agents",
+    "authors": [
+      "Ningning Zhang",
+      "Xingxing Yang",
+      "Zhizhong Tan",
+      "Weiping Deng",
+      "Wenyong Wang"
+    ],
+    "year": 2026,
+    "abstract": "Although long-term memory systems have made substantial progress in recent years, they still exhibit clear limitations in adaptability, scalability, and self-evolution under continuous interaction settings. Inspired by cognitive theories, we propose HiMem, a hierarchical long-term memory framework for long-horizon dialogues, designed to support memory construction, retrieval, and dynamic updating during sustained interactions. HiMem constructs cognitively consistent Episode Memory via a Topic-Aw",
+    "preprint_id": "2601.06377v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2601.06377v1",
+    "source": "preprints",
+    "category": "cs.AI",
+    "thread": "reconsolidation",
+    "tier": "background"
+  },
+  {
+    "title": "Continual Knowledge Updating in LLM Systems: Learning Through Multi-Timescale Memory Dynamics",
+    "authors": [
+      "Andreas Pattichis",
+      "Constantine Dovrolis"
+    ],
+    "year": 2026,
+    "abstract": "LLMs are trained once, then deployed into a world that never stops changing. External memory compensates for this, but most systems manage it explicitly rather than letting it adapt on its own. Biological memory works differently: coupled multi-timescale dynamics make new associations immediately usable, strengthen what repetition confirms, and let the rest fade. We argue that external memory should follow a similar principle. In Memini, this view takes the form of an associative memory that org",
+    "preprint_id": "2605.05097v3",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2605.05097v3",
+    "source": "preprints",
+    "category": "cs.LG",
+    "thread": "reconsolidation",
+    "tier": "supporting"
+  },
+  {
+    "title": "Structural Pattern Mining in Inka Khipus: Unsupervised Clustering, Provenance Classification, and a Computational Validation of the Santa Valley Match",
+    "authors": [
+      "Maria Contreras"
+    ],
+    "year": 2026,
+    "abstract": "Khipus -- knotted cord devices -- were the primary recording medium of the Inka Empire (c. 1400-1532 CE), yet their system remains undeciphered. We present a reproducible machine-learning pipeline applied to the Open Khipu Repository (OKR), a public database of 619 khipus comprising 54,403 cords and 110,677 knots. We engineer 27 structural features per khipu and apply (i) unsupervised clustering via UMAP and HDBSCAN, recovering three structurally distinct groups (silhouette = 0.769); (ii) superv",
+    "preprint_id": "2607.00185v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2607.00185v1",
+    "source": "preprints",
+    "category": "cs.CL",
+    "thread": "quipu_encoding",
+    "tier": "supporting"
+  },
+  {
+    "title": "The Khipu Problem: Institutional Legibility Under Distributed Cognition",
+    "authors": [
+      "Krti Tallam"
+    ],
+    "year": 2026,
+    "abstract": "AI governance still tends to assume that the relevant object is a bounded model or a bounded agent. That assumption is getting weaker. Real systems increasingly distribute cognition across models, tools, humans, context stores, retrieval layers, runtime policies, authorization boundaries, and delegated institutional roles. In such systems, the central governance problem is no longer only what the system did, but whether later institutions can still read what the system was. This paper introduces",
+    "preprint_id": "2606.12414v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2606.12414v1",
+    "source": "preprints",
+    "category": "cs.CY",
+    "thread": "quipu_encoding",
+    "tier": "reject"
+  },
+  {
+    "title": "Kara-Kichwa Data Sovereignty Framework: Reference Point for Indigenous Data Authority Renaissances in LAC",
+    "authors": [
+      "WariNkwi K. Flores",
+      "KunTikzi Flores",
+      "Rosa M. Panama",
+      "KayaKanti Alta"
+    ],
+    "year": 2026,
+    "abstract": "For Indigenous Peoples of the Apya Yala (or Abya Yala), particularly in the Kara and Kichwa citizens of the Pan-Andean-Amazonian biocultural region, data is not merely a knowledge or information resource, it is the extension of Khipu Panaka (Indigenous data authority), treading the data lifecycle, genealogical and relational memory held within customary law and collective responsibility. This perspective paper presents the Kara-Kichwa Data Sovereignty Framework, a living legal-ethical instrument",
+    "preprint_id": "2601.06634v2",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2601.06634v2",
+    "source": "preprints",
+    "category": "cs.CY",
+    "thread": "quipu_encoding",
+    "tier": "background"
+  },
+  {
+    "title": "MerkleSpeech: Public-Key Verifiable, Chunk-Localised Speech Provenance via Perceptual Fingerprints and Merkle Commitments",
+    "authors": [
+      "Tatsunori Ono"
+    ],
+    "year": 2026,
+    "abstract": "Speech provenance goes beyond detecting whether a watermark is present. Real workflows involve splicing, quoting, trimming, and platform-level transforms that may preserve some regions while altering others. Neural watermarking systems have made strides in robustness and localised detection, but most deployments produce outputs with no third-party verifiable cryptographic proof tying a time segment to an issuer-signed original. Provenance standards like C2PA adopt signed manifests and Merkle-bas",
+    "preprint_id": "2602.10166v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2602.10166v1",
+    "source": "preprints",
+    "category": "cs.CR",
+    "thread": "merkle_version",
+    "tier": "supporting"
+  },
+  {
+    "title": "Authenticated Contradictions from Desynchronized Provenance and Watermarking",
+    "authors": [
+      "Alexander Nemecek",
+      "Hengzhi He",
+      "Guang Cheng",
+      "Erman Ayday"
+    ],
+    "year": 2026,
+    "abstract": "Cryptographic provenance standards such as C2PA and invisible watermarking are positioned as complementary defenses for content authentication, yet the two verification layers are technically independent: neither conditions on the output of the other. This work formalizes and empirically demonstrates the $\\textit{Integrity Clash}$, a condition in which a digital asset carries a cryptographically valid C2PA manifest asserting human authorship while its pixels simultaneously carry a watermark iden",
+    "preprint_id": "2603.02378v2",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2603.02378v2",
+    "source": "preprints",
+    "category": "cs.CR",
+    "thread": "merkle_version",
+    "tier": "reject"
+  },
+  {
+    "title": "Implicit Identity Technologies for LLMs: Fingerprinting and Watermarking across Datasets, Models, and Generated Content",
+    "authors": [
+      "Bing Liu",
+      "Shunping Wang",
+      "Yufan Zhu",
+      "Xinyi Yu",
+      "Jing Huang",
+      "Linkang Du",
+      "Hongbin Pei",
+      "Wei Luo"
+    ],
+    "year": 2026,
+    "abstract": "This paper presents a survey and taxonomy of LLM fingerprinting and watermarking for identity, ownership verification, provenance, and generated-content attribution. Large language models (LLMs) require substantial investments in data, computation, and expertise, and are increasingly deployed in high-stakes settings, making it critical to protect LLM-related assets and trace their origins. Existing work has rapidly expanded across dataset provenance, model ownership, and generated-content detect",
+    "preprint_id": "2605.29245v2",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2605.29245v2",
+    "source": "preprints",
+    "category": "cs.CR",
+    "thread": "merkle_version",
+    "tier": "reject"
+  },
+  {
+    "title": "The Inclusion Depth of Pattern Languages: An Open Problem in Algorithmic Learning Theory",
+    "authors": [
+      "Wei Luo"
+    ],
+    "year": 2026,
+    "abstract": "Pattern languages are a classical model in formal language theory and algorithmic learning theory. This note formulates the problem of computing the inclusion depth of a pattern language: the length of the longest strict inclusion chain from the universal pattern language to the language generated by a given pattern. Inclusion depth captures the mind-change complexity of pattern identification from positive data. The central open question is whether the inclusion depth ID_Sigma(p) is computable ",
+    "preprint_id": "2605.30389v1",
+    "doi": "https://doi.org/10.1007/11503415_48",
+    "url": "http://arxiv.org/abs/2605.30389v1",
+    "source": "preprints",
+    "category": "cs.FL",
+    "thread": "category_memory",
+    "tier": "reject"
+  },
+  {
+    "title": "Composable Uncertainty in Symmetric Monoidal Categories for Design Problems",
+    "authors": [
+      "Marius Furter",
+      "Yujun Huang",
+      "Gioele Zardini"
+    ],
+    "year": 2026,
+    "abstract": "Applied category theory often studies symmetric monoidal categories (SMCs) whose morphisms represent open systems. These structures naturally accommodate complex wiring patterns, leveraging (co)monoidal structures for splitting and merging wires, or compact closed structures for feedback. A key example is the compact closed SMC of design problems (DP), which enables a compositional approach to co-design in engineering. However, in practice, the systems of interest may not be fully known. Recentl",
+    "preprint_id": "2603.09430v1",
+    "doi": "https://doi.org/10.4204/EPTCS.442.3",
+    "url": "http://arxiv.org/abs/2603.09430v1",
+    "source": "preprints",
+    "category": "math.CT",
+    "thread": "category_memory",
+    "tier": "reject"
+  },
+  {
+    "title": "Rogue Variable Theory: A Quantum-Compatible Cognition Framework with a Rosetta Stone Alignment Algorithm",
+    "authors": [
+      "Jacek Małecki",
+      "Alexander Mathiesen-Ohman"
+    ],
+    "year": 2026,
+    "abstract": "Many of the most consequential dynamics in human cognition occur \\emph{before} events become explicit: before decisions are finalized, emotions are labeled, or meanings stabilize into narrative form. These pre-event states are characterized by ambiguity, contextual tension, and competing latent interpretations. Rogue Variable Theory (RVT) formalizes such states as \\emph{Rogue Variables}: structured, pre-event cognitive configurations that influence outcomes while remaining unresolved or incompat",
+    "preprint_id": "2601.00466v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2601.00466v1",
+    "source": "preprints",
+    "category": "q-bio.NC",
+    "thread": "category_memory",
+    "tier": "reject"
+  },
+  {
+    "title": "Cognitive Field Theory of Learning, Inference, and Emergence",
+    "authors": [
+      "Byung Gyu Chae"
+    ],
+    "year": 2026,
+    "abstract": "Learning, inference, memory, and emergence in biological and artificial systems are often described using disparate theoretical frameworks. Here we develop a cognitive field theory in which cognition is described as a collective nonequilibrium phenomenon governed by the geometry and collective spectrum of a learned cognitive manifold. Starting from a stochastic cognitive-field equation on an adaptive Riemannian manifold, we derive an effective cognitive field theory incorporating nonlocal memory",
+    "preprint_id": "2601.10221v6",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2601.10221v6",
+    "source": "preprints",
+    "category": "q-bio.NC",
+    "thread": "category_memory",
+    "tier": "background"
+  },
+  {
+    "title": "v-PuNNs: van der Put Neural Networks for Transparent Ultrametric Representation Learning",
+    "authors": [
+      "Gnankan Landry Regis N'guessan"
+    ],
+    "year": 2025,
+    "abstract": "Conventional deep learning models embed data in Euclidean space $\\mathbb{R}^d$, a poor fit for strictly hierarchical objects such as taxa, word senses, or file systems. We introduce van der Put Neural Networks (v-PuNNs), the first architecture whose neurons are characteristic functions of p-adic balls in $\\mathbb{Z}_p$. Under our Transparent Ultrametric Representation Learning (TURL) principle every weight is itself a p-adic number, giving exact subtree semantics. A new Finite Hierarchical Appro",
+    "preprint_id": "2508.01010v2",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2508.01010v2",
+    "source": "preprints",
+    "category": "cs.LG",
+    "thread": "ultrametric_memory",
+    "tier": "core"
+  },
+  {
+    "title": "Distributed Dynamic Associative Memory via Online Convex Optimization",
+    "authors": [
+      "Bowen Wang",
+      "Matteo Zecchin",
+      "Osvaldo Simeone"
+    ],
+    "year": 2025,
+    "abstract": "An associative memory (AM) enables cue-response recall, and it has recently been recognized as a key mechanism underlying modern neural architectures such as Transformers. In this work, we introduce the concept of distributed dynamic associative memory (DDAM), which extends classical AM to settings with multiple agents and time-varying data streams. In DDAM, each agent maintains a local AM that must not only store its own associations but also selectively memorize information from other agents b",
+    "preprint_id": "2511.23347v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2511.23347v1",
+    "source": "preprints",
+    "category": "cs.LG",
+    "thread": "associative_hierarchical",
+    "tier": "supporting"
+  },
+  {
+    "title": "Distributed Associative Memory via Online Convex Optimization",
+    "authors": [
+      "Bowen Wang",
+      "Matteo Zecchin",
+      "Osvaldo Simeone"
+    ],
+    "year": 2025,
+    "abstract": "An associative memory (AM) enables cue-response recall, and associative memorization has recently been noted to underlie the operation of modern neural architectures such as Transformers. This work addresses a distributed setting where agents maintain a local AM to recall their own associations as well as selective information from others. Specifically, we introduce a distributed online gradient descent method that optimizes local AMs at different agents through communication over routing trees.",
+    "preprint_id": "2509.22321v2",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2509.22321v2",
+    "source": "preprints",
+    "category": "cs.LG",
+    "thread": "associative_hierarchical",
+    "tier": "supporting"
+  },
+  {
+    "title": "CAMformer: Associative Memory is All You Need",
+    "authors": [
+      "Tergel Molom-Ochir",
+      "Benjamin F. Morris",
+      "Mark Horton",
+      "Chiyue Wei",
+      "Cong Guo",
+      "Brady Taylor",
+      "Peter Liu",
+      "Shan X. Wang",
+      "Deliang Fan",
+      "Hai Helen Li",
+      "Yiran Chen"
+    ],
+    "year": 2025,
+    "abstract": "Transformers face scalability challenges due to the quadratic cost of attention, which involves dense similarity computations between queries and keys. We propose CAMformer, a novel accelerator that reinterprets attention as an associative memory operation and computes attention scores using a voltage-domain Binary Attention Content Addressable Memory (BA-CAM). This enables constant-time similarity search through analog charge sharing, replacing digital arithmetic with physical similarity sensin",
+    "preprint_id": "2511.19740v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2511.19740v1",
+    "source": "preprints",
+    "category": "cs.AR",
+    "thread": "associative_hierarchical",
+    "tier": "supporting"
+  },
+  {
+    "title": "High-capacity associative memory in a quantum-optical spin glass",
+    "authors": [
+      "Brendan P. Marsh",
+      "David Atri Schuller",
+      "Yunpeng Ji",
+      "Henry S. Hunt",
+      "Surya Ganguli",
+      "Sarang Gopalakrishnan",
+      "Jonathan Keeling",
+      "Benjamin L. Lev"
+    ],
+    "year": 2025,
+    "abstract": "The Hopfield model describes a neural network that stores memories using all-to-all-coupled spins. Memory patterns are recalled under equilibrium dynamics. Storing too many patterns breaks the associative recall process because frustration causes an exponential number of spurious patterns to arise as the network becomes a spin glass. Despite this, memory recall in a spin glass can be restored, and even enhanced, under quantum-optical nonequilibrium dynamics because spurious patterns can now serv",
+    "preprint_id": "2509.12202v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2509.12202v1",
+    "source": "preprints",
+    "category": "quant-ph",
+    "thread": "hopfield_spin_glass",
+    "tier": "core"
+  },
+  {
+    "title": "Controlling Knot Topology in Magnetic Hopfions via Spin-orbit Torque",
+    "authors": [
+      "Shoya Kasai",
+      "Shun Okumura",
+      "Yukitoshi Motome"
+    ],
+    "year": 2025,
+    "abstract": "Knots, characterized by topological invariants called the Hopf number $H$, arise from the intertwining of strings and exhibit diverse configurations. The knot structures have recently been observed in condensed matters, as examplified by a magnetic hopfion, sparking interest in controlling their topology. Here, we show that spin-orbit torque (SOT) enables dynamic manipulation of the Hopf number of magnetic hopfions. We investigate the SOT-driven evolution of hopfions, revealing the splitting of ",
+    "preprint_id": "2511.23027v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2511.23027v1",
+    "source": "preprints",
+    "category": "cond-mat.mes-hall",
+    "thread": "braided_memory",
+    "tier": "background"
+  },
+  {
+    "title": "Content Addressable Memory Design with Reference Resistor for Improved Search Resolution",
+    "authors": [
+      "Siri Narla",
+      "Steven J. Koester",
+      "Rebecca A. Dawley",
+      "Ageeth A. Bol",
+      "Piyush Kumar",
+      "Azad Naeemi"
+    ],
+    "year": 2025,
+    "abstract": "Despite the parallel in-memory search capabilities of content addressable memories (CAMs), their use in applications is constrained by their limited resolution that worsens as they are scaled to larger arrays or advanced nodes. In this work we present experimental results for a novel back-end-of-line compatible reference resistive device that can significantly improve the search resolution of CAMs implemented with CMOS and beyond-CMOS technologies to less than or equal to 5-bits.",
+    "preprint_id": "2505.02285v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2505.02285v1",
+    "source": "preprints",
+    "category": "cs.ET",
+    "thread": "content_addressable",
+    "tier": "background"
+  },
+  {
+    "title": "Content-Addressable Memory with a Content-Free Energy Function",
+    "authors": [
+      "Félix Benoist",
+      "Luca Peliti",
+      "Pablo Sartori"
+    ],
+    "year": 2025,
+    "abstract": "Content-addressable memory, i.e. stored information that can be retrieved from content-based cues, is key to computation. Besides natural and artificial neural networks, physical learning systems have recently been shown to have remarkable ability in this domain. While classical neural network models encode memories as energy minima, biochemical systems have been shown to be able to process information based on purely kinetic principles. This opens the question of whether neural networks can als",
+    "preprint_id": "2503.18822v3",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2503.18822v3",
+    "source": "preprints",
+    "category": "cond-mat.stat-mech",
+    "thread": "content_addressable",
+    "tier": "supporting"
+  },
+  {
+    "title": "Memory Retrieval and Consolidation in Large Language Models through Function Tokens",
+    "authors": [
+      "Shaohua Zhang",
+      "Yuan Lin",
+      "Hang Li"
+    ],
+    "year": 2025,
+    "abstract": "The remarkable success of large language models (LLMs) stems from their ability to consolidate vast amounts of knowledge into the memory during pre-training and to retrieve it from the memory during inference, enabling advanced capabilities such as knowledge memorization, instruction-following and reasoning. However, the mechanisms of memory retrieval and consolidation in LLMs remain poorly understood. In this paper, we propose the function token hypothesis to explain the workings of LLMs: Durin",
+    "preprint_id": "2510.08203v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2510.08203v1",
+    "source": "preprints",
+    "category": "cs.CL",
+    "thread": "reconsolidation",
+    "tier": "background"
+  },
+  {
+    "title": "Task-Core Memory Management and Consolidation for Long-term Continual Learning",
+    "authors": [
+      "Tianyu Huai",
+      "Jie Zhou",
+      "Yuxuan Cai",
+      "Qin Chen",
+      "Wen Wu",
+      "Xingjiao Wu",
+      "Xipeng Qiu",
+      "Liang He"
+    ],
+    "year": 2025,
+    "abstract": "In this paper, we focus on a long-term continual learning (CL) task, where a model learns sequentially from a stream of vast tasks over time, acquiring new knowledge while retaining previously learned information in a manner akin to human learning. Unlike traditional CL settings, long-term CL involves handling a significantly larger number of tasks, which exacerbates the issue of catastrophic forgetting. Our work seeks to address two critical questions: 1) How do existing CL methods perform in t",
+    "preprint_id": "2505.09952v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2505.09952v1",
+    "source": "preprints",
+    "category": "cs.LG",
+    "thread": "reconsolidation",
+    "tier": "supporting"
+  },
+  {
+    "title": "Rethinking Memory in LLM based Agents: Representations, Operations, and Emerging Topics",
+    "authors": [
+      "Yiming Du",
+      "Wenyu Huang",
+      "Danna Zheng",
+      "Zhaowei Wang",
+      "Sebastien Montella",
+      "Mirella Lapata",
+      "Kam-Fai Wong",
+      "Jeff Z. Pan"
+    ],
+    "year": 2025,
+    "abstract": "Memory is fundamental to large language model (LLM)-based agents, but existing surveys emphasize application-level use (e.g., personalized dialogue), while overlooking the atomic operations governing memory dynamics. This work categorizes memory into parametric (implicit in model weights) and contextual (explicit external data, structured/unstructured) forms, and defines six core operations: Consolidation, Updating, Indexing, Forgetting, Retrieval, and Condensation. Mapping these dimensions reve",
+    "preprint_id": "2505.00675v3",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2505.00675v3",
+    "source": "preprints",
+    "category": "cs.CL",
+    "thread": "reconsolidation",
+    "tier": "background"
+  },
+  {
+    "title": "ViEEG: Hierarchical Visual Neural Representation for EEG Brain Decoding",
+    "authors": [
+      "Minxu Liu",
+      "Donghai Guan",
+      "Chuhang Zheng",
+      "Chunwei Tian",
+      "Jie Wen",
+      "Qi Zhu"
+    ],
+    "year": 2025,
+    "abstract": "Understanding and decoding brain activity into visual representations is a fundamental challenge at the intersection of neuroscience and artificial intelligence. While EEG visual decoding has shown promise due to its non-invasive, and low-cost nature, existing methods suffer from Hierarchical Neural Encoding Neglect (HNEN)-a critical limitation where flat neural representations fail to model the brain's hierarchical visual processing hierarchy. Inspired by the hierarchical organization of visual",
+    "preprint_id": "2505.12408v3",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2505.12408v3",
+    "source": "preprints",
+    "category": "cs.CV",
+    "thread": "dendrogram_neural",
+    "tier": "supporting"
+  },
+  {
+    "title": "Hierarchical Self-Attention: Generalizing Neural Attention Mechanics to Multi-Scale Problems",
+    "authors": [
+      "Saeed Amizadeh",
+      "Sara Abdali",
+      "Yinheng Li",
+      "Kazuhito Koishida"
+    ],
+    "year": 2025,
+    "abstract": "Transformers and their attention mechanism have been revolutionary in the field of Machine Learning. While originally proposed for the language data, they quickly found their way to the image, video, graph, etc. data modalities with various signal geometries. Despite this versatility, generalizing the attention mechanism to scenarios where data is presented at different scales from potentially different modalities is not straightforward. The attempts to incorporate hierarchy and multi-modality w",
+    "preprint_id": "2509.15448v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2509.15448v1",
+    "source": "preprints",
+    "category": "cs.LG",
+    "thread": "dendrogram_neural",
+    "tier": "supporting"
+  },
+  {
+    "title": "A Multi-Memory Segment System for Generating High-Quality Long-Term Memory Content in Agents",
+    "authors": [
+      "Gaoke Zhang",
+      "Bo Wang",
+      "Yunlong Ma",
+      "Dongming Zhao",
+      "Zifei Yu"
+    ],
+    "year": 2025,
+    "abstract": "In the current field of agent memory, extensive explorations have been conducted in the area of memory retrieval, yet few studies have focused on exploring the memory content. Most research simply stores summarized versions of historical dialogues, as exemplified by methods like A-MEM and MemoryBank. However, when humans form long-term memories, the process involves multi-dimensional and multi-component generation, rather than merely creating simple summaries. The low-quality memory content gene",
+    "preprint_id": "2508.15294v4",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2508.15294v4",
+    "source": "preprints",
+    "category": "cs.AI",
+    "thread": "merkle_version",
+    "tier": "background"
+  },
+  {
+    "title": "Composable Uncertainty in Symmetric Monoidal Categories for Design Problems (Extended Version)",
+    "authors": [
+      "Marius Furter",
+      "Yujun Huang",
+      "Gioele Zardini"
+    ],
+    "year": 2025,
+    "abstract": "Applied category theory often studies symmetric monoidal categories (SMCs) whose morphisms represent open systems. These structures naturally accommodate complex wiring patterns, leveraging (co)monoidal structures for splitting and merging wires, or compact closed structures for feedback. A key example is the compact closed SMC of design problems (DP), which enables a compositional approach to co-design in engineering. However, in practice, the systems of interest may not be fully known. Recentl",
+    "preprint_id": "2503.17274v3",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2503.17274v3",
+    "source": "preprints",
+    "category": "math.CT",
+    "thread": "category_memory",
+    "tier": "background"
+  },
+  {
+    "title": "Hierarchical Associative Memory, Parallelized MLP-Mixer, and Symmetry Breaking",
+    "authors": [
+      "Ryo Karakida",
+      "Toshihiro Ota",
+      "Masato Taki"
+    ],
+    "year": 2024,
+    "abstract": "Transformers have established themselves as the leading neural network model in natural language processing and are increasingly foundational in various domains. In vision, the MLP-Mixer model has demonstrated competitive performance, suggesting that attention mechanisms might not be indispensable. Inspired by this, recent research has explored replacing attention modules with other mechanisms, including those described by MetaFormers. However, the theoretical framework for these models remains ",
+    "preprint_id": "2406.12220v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2406.12220v1",
+    "source": "preprints",
+    "category": "cs.LG",
+    "thread": "associative_hierarchical",
+    "tier": "supporting"
+  },
+  {
+    "title": "STT-RAM-based Hierarchical In-Memory Computing",
+    "authors": [
+      "Dhruv Gajaria",
+      "Kevin Antony Gomez",
+      "Tosiron Adegbija"
+    ],
+    "year": 2024,
+    "abstract": "In-memory computing promises to overcome the von Neumann bottleneck in computer systems by performing computations directly within the memory. Previous research has suggested using Spin-Transfer Torque RAM (STT-RAM) for in-memory computing due to its non-volatility, low leakage power, high density, endurance, and commercial viability. This paper explores hierarchical in-memory computing, where different levels of the memory hierarchy are augmented with processing elements to optimize workload ex",
+    "preprint_id": "2407.19637v1",
+    "doi": "https://doi.org/10.1109/TPDS.2024.3430853",
+    "url": "http://arxiv.org/abs/2407.19637v1",
+    "source": "preprints",
+    "category": "cs.CY",
+    "thread": "associative_hierarchical",
+    "tier": "background"
+  },
+  {
+    "title": "RTracker: Recoverable Tracking via PN Tree Structured Memory",
+    "authors": [
+      "Yuqing Huang",
+      "Xin Li",
+      "Zikun Zhou",
+      "Yaowei Wang",
+      "Zhenyu He",
+      "Ming-Hsuan Yang"
+    ],
+    "year": 2024,
+    "abstract": "Existing tracking methods mainly focus on learning better target representation or developing more robust prediction models to improve tracking performance. While tracking performance has significantly improved, the target loss issue occurs frequently due to tracking failures, complete occlusion, or out-of-view situations. However, considerably less attention is paid to the self-recovery issue of tracking methods, which is crucial for practical applications. To this end, we propose a recoverable",
+    "preprint_id": "2403.19242v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2403.19242v1",
+    "source": "preprints",
+    "category": "cs.CV",
+    "thread": "associative_hierarchical",
+    "tier": "supporting"
+  },
+  {
+    "title": "Time-domain braiding of anyons",
+    "authors": [
+      "Mélanie Ruelle",
+      "Elric Frigerio",
+      "Emmanuel Baudin",
+      "Jean-Marc Berroir",
+      "Bernard Plaçais",
+      "Benoit Grémaud",
+      "Thibaut Jonckheere",
+      "Thierry Martin",
+      "Jérôme Rech",
+      "Antonella Cavanna",
+      "Ulf Gennser",
+      "Yong Jin",
+      "Gerbold Ménard",
+      "Gwendal Fève"
+    ],
+    "year": 2024,
+    "abstract": "Contrary to fermions and bosons, anyons are quasiparticles that keep a robust memory of particle exchanges via a braiding phase factor. This provides them with unique dynamical properties so far unexplored. When an anyon excitation is emitted toward a quantum point contact (QPC) in a fractional quantum Hall (FQH) fluid, this memory translates into tunneling events that may occur long after the anyon excitation has exited the QPC. Here, we use triggered anyon pulses incident on a QPC in a $ν= 1/3",
+    "preprint_id": "2409.08685v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2409.08685v1",
+    "source": "preprints",
+    "category": "cond-mat.mes-hall",
+    "thread": "braided_memory",
+    "tier": "background"
+  },
+  {
+    "title": "Untangle the KNOT: Interweaving Conflicting Knowledge and Reasoning Skills in Large Language Models",
+    "authors": [
+      "Yantao Liu",
+      "Zijun Yao",
+      "Xin Lv",
+      "Yuchen Fan",
+      "Shulin Cao",
+      "Jifan Yu",
+      "Lei Hou",
+      "Juanzi Li"
+    ],
+    "year": 2024,
+    "abstract": "Providing knowledge documents for large language models (LLMs) has emerged as a promising solution to update the static knowledge inherent in their parameters. However, knowledge in the document may conflict with the memory of LLMs due to outdated or incorrect knowledge in the LLMs' parameters. This leads to the necessity of examining the capability of LLMs to assimilate supplemental external knowledge that conflicts with their memory. While previous studies have explained to what extent LLMs ex",
+    "preprint_id": "2404.03577v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2404.03577v1",
+    "source": "preprints",
+    "category": "cs.CL",
+    "thread": "braided_memory",
+    "tier": "background"
+  },
+  {
+    "title": "Non-Abelian Self-Correcting Quantum Memory and Transversal Non-Clifford Gate beyond the $n^{1/3}$ Distance Barrier",
+    "authors": [
+      "Po-Shen Hsin",
+      "Ryohei Kobayashi",
+      "Guanyu Zhu"
+    ],
+    "year": 2024,
+    "abstract": "We construct a family of infinitely many new candidate non-Abelian self-correcting topological quantum memories in $D\\geq 5+1$ spacetime dimensions without particle excitations using local commuting non-Pauli stabilizer lattice models and field theories of $\\mathbb{Z}_2^3$ higher-form gauge fields with nontrivial topological action. We call such non-Pauli stabilizer models magic stabilizer codes. The family of topological orders have Abelian electric excitations and non-Abelian magnetic excitati",
+    "preprint_id": "2405.11719v5",
+    "doi": "https://doi.org/10.1103/hkgn-hhqx",
+    "url": "http://arxiv.org/abs/2405.11719v5",
+    "source": "preprints",
+    "category": "quant-ph",
+    "thread": "braided_memory",
+    "tier": "background"
+  },
+  {
+    "title": "An Energy-efficient Capacitive-RRAM Content Addressable Memory",
+    "authors": [
+      "Yihan Pan",
+      "Adrian Wheeldon",
+      "Mohammed Mughal",
+      "Shady Agwa",
+      "Themis Prodromakis",
+      "Alexantrou Serb"
+    ],
+    "year": 2024,
+    "abstract": "Content addressable memory is popular in intelligent computing systems as it allows parallel content-searching in memory. Emerging CAMs show a promising increase in bitcell density and a decrease in power consumption than pure CMOS solutions. This article introduced an energy-efficient 3T1R1C TCAM cooperating with capacitor dividers and RRAM devices. The RRAM as a storage element also acts as a switch to the capacitor divider while searching for content. CAM cells benefit from working parallel i",
+    "preprint_id": "2401.09207v2",
+    "doi": "https://doi.org/10.1109/TCSI.2024.3451707",
+    "url": "http://arxiv.org/abs/2401.09207v2",
+    "source": "preprints",
+    "category": "eess.SY",
+    "thread": "content_addressable",
+    "tier": "background"
+  },
+  {
+    "title": "Energy-Efficient Cryogenic Ternary Content Addressable Memory using Ferroelectric SQUID",
+    "authors": [
+      "Shamiul Alam",
+      "Simon Thomann",
+      "Shivendra Singh Parihar",
+      "Yogesh Singh Chauhan",
+      "Kai Ni",
+      "Hussam Amrouch",
+      "Ahmedullah Aziz"
+    ],
+    "year": 2024,
+    "abstract": "Ternary content addressable memories (TCAMs) are useful for certain computing tasks since they allow us to compare a search query with a whole dataset stored in the memory array. They can also unlock unique advantages for cryogenic applications like quantum computing, high-performance computing, and space exploration by improving speed and energy efficiency through parallel searching. This paper explores the design and implementation of a cryogenic ternary content addressable memory based on fer",
+    "preprint_id": "2410.11091v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2410.11091v1",
+    "source": "preprints",
+    "category": "cs.ET",
+    "thread": "content_addressable",
+    "tier": "background"
+  },
+  {
+    "title": "Gain Cell-Based Analog Content Addressable Memory for Dynamic Associative tasks in AI",
+    "authors": [
+      "Paul-Philipp Manea",
+      "Nathan Leroux",
+      "Emre Neftci",
+      "John Paul Strachan"
+    ],
+    "year": 2024,
+    "abstract": "Analog Content Addressable Memories (aCAMs) have proven useful for associative in-memory computing applications like Decision Trees, Finite State Machines, and Hyper-dimensional Computing. While non-volatile implementations using FeFETs and ReRAM devices offer speed, power, and area advantages, they suffer from slow write speeds and limited write cycles, making them less suitable for computations involving fully dynamic data patterns. To address these limitations, in this work, we propose a capa",
+    "preprint_id": "2410.09755v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2410.09755v1",
+    "source": "preprints",
+    "category": "cs.ET",
+    "thread": "content_addressable",
+    "tier": "supporting"
+  },
+  {
+    "title": "CAMASim: A Comprehensive Simulation Framework for Content-Addressable Memory based Accelerators",
+    "authors": [
+      "Mengyuan Li",
+      "Shiyi Liu",
+      "Mohammad Mehdi Sharifi",
+      "X. Sharon Hu"
+    ],
+    "year": 2024,
+    "abstract": "Content addressable memory (CAM) stands out as an efficient hardware solution for memory-intensive search operations by supporting parallel computation in memory. However, developing a CAM-based accelerator architecture that achieves acceptable accuracy, while minimizing hardware cost and catering to both exact and approximate search, still presents a significant challenge especially when considering a broader spectrum of applications. This complexity stems from CAM's rapid evolution across mult",
+    "preprint_id": "2403.03442v2",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2403.03442v2",
+    "source": "preprints",
+    "category": "cs.AR",
+    "thread": "content_addressable",
+    "tier": "background"
+  },
+  {
+    "title": "TaSL: Continual Dialog State Tracking via Task Skill Localization and Consolidation",
+    "authors": [
+      "Yujie Feng",
+      "Xu Chu",
+      "Yongxin Xu",
+      "Guangyuan Shi",
+      "Bo Liu",
+      "Xiao-Ming Wu"
+    ],
+    "year": 2024,
+    "abstract": "A practical dialogue system requires the capacity for ongoing skill acquisition and adaptability to new tasks while preserving prior knowledge. However, current methods for Continual Dialogue State Tracking (DST), a crucial function of dialogue systems, struggle with the catastrophic forgetting issue and knowledge transfer between tasks. We present TaSL, a novel framework for task skill localization and consolidation that enables effective knowledge transfer without relying on memory replay. TaS",
+    "preprint_id": "2408.09857v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2408.09857v1",
+    "source": "preprints",
+    "category": "cs.CL",
+    "thread": "reconsolidation",
+    "tier": "background"
+  },
+  {
+    "title": "Estimation of Energy-dissipation Lower-bounds for Neuromorphic Learning-in-memory",
+    "authors": [
+      "Zihao Chen",
+      "Faiek Ahsan",
+      "Johannes Leugering",
+      "Gert Cauwenberghs",
+      "Shantanu Chakrabartty"
+    ],
+    "year": 2024,
+    "abstract": "Neuromorphic or neurally-inspired optimizers rely on local but parallel parameter updates to solve problems that range from quadratic programming to Ising machines. An ideal realization of such an optimizer not only uses a compute-in-memory (CIM) paradigm to address the so-called memory-wall (i.e. energy dissipated due to repeated memory read access), but also uses a learning-in-memory (LIM) paradigm to address the energy bottlenecks due to repeated memory writes at the precision required for op",
+    "preprint_id": "2402.14878v4",
+    "doi": "https://doi.org/10.1103/497f-nt8h",
+    "url": "http://arxiv.org/abs/2402.14878v4",
+    "source": "preprints",
+    "category": "cs.LG",
+    "thread": "reconsolidation",
+    "tier": "supporting"
+  },
+  {
+    "title": "A total Solovay reducibility and totalizing of the notion of speedability",
+    "authors": [
+      "Wolfgang Merkle",
+      "Ivan Titov"
+    ],
+    "year": 2024,
+    "abstract": "While the set of Martin-Löf random left-c.e. reals is equal to the maximum degree of Solovay reducibility, Miyabe, Nies and Stephan(DOI:10.4115/jla.2018.10.3) have shown that the left-c.e. Schnorr random reals are not closed upwards under Solovay reducibility. Recall that for two left-c.e. reals~$α$ and~$β$, the former is Solovay reducible to the latter in case there is a partially computable function $\\varphi$ and constant~$c$ such that for all rational numbers $q &lt; β$ we have \\[α- \\varphi(q",
+    "preprint_id": "2407.14869v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2407.14869v1",
+    "source": "preprints",
+    "category": "math.LO",
+    "thread": "merkle_version",
+    "tier": "reject"
+  },
+  {
+    "title": "Ultrametric identities in glassy models of Natural Evolution",
+    "authors": [
+      "Elena Agliari",
+      "Francesco Alemanno",
+      "Miriam Aquaro",
+      "Adriano Barra"
+    ],
+    "year": 2023,
+    "abstract": "Spin-glasses constitute a well-grounded framework for evolutionary models. Of particular interest for (some of) these models is the lack of self-averaging of their order parameters (e.g. the Hamming distance between the genomes of two individuals), even in asymptotic limits, much as like the behavior of the overlap between the configurations of two replica in mean-field spin-glasses. In the latter, this lack of self-averaging is related to peculiar fluctuations of the overlap, known as Ghirlanda",
+    "preprint_id": "2306.13430v1",
+    "doi": "https://doi.org/10.1088/1751-8121/acf101",
+    "url": "http://arxiv.org/abs/2306.13430v1",
+    "source": "preprints",
+    "category": "cond-mat.dis-nn",
+    "thread": "ultrametric_memory",
+    "tier": "background"
+  },
+  {
+    "title": "Minimum Description Length Hopfield Networks",
+    "authors": [
+      "Matan Abudy",
+      "Nur Lan",
+      "Emmanuel Chemla",
+      "Roni Katzir"
+    ],
+    "year": 2023,
+    "abstract": "Associative memory architectures are designed for memorization but also offer, through their retrieval method, a form of generalization to unseen inputs: stored memories can be seen as prototypes from this point of view. Focusing on Modern Hopfield Networks (MHN), we show that a large memorization capacity undermines the generalization opportunity. We offer a solution to better optimize this tradeoff. It relies on Minimum Description Length (MDL) to determine during training which memories to st",
+    "preprint_id": "2311.06518v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2311.06518v1",
+    "source": "preprints",
+    "category": "cs.LG",
+    "thread": "hopfield_spin_glass",
+    "tier": "supporting"
+  },
+  {
+    "title": "Training a Hopfield Variational Autoencoder with Equilibrium Propagation",
+    "authors": [
+      "Tom Van Der Meersch",
+      "Johannes Deleu",
+      "Thomas Demeester"
+    ],
+    "year": 2023,
+    "abstract": "On dedicated analog hardware, equilibrium propagation is an energy-efficient alternative to backpropagation. In spite of its theoretical guarantees, its application in the AI domain remains limited to the discriminative setting. Meanwhile, despite its high computational demands, generative AI is on the rise. In this paper, we demonstrate the application of Equilibrium Propagation in training a variational autoencoder (VAE) for generative modeling. Leveraging the symmetric nature of Hopfield netw",
+    "preprint_id": "2311.15047v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2311.15047v1",
+    "source": "preprints",
+    "category": "cs.LG",
+    "thread": "hopfield_spin_glass",
+    "tier": "reject"
+  },
+  {
+    "title": "Exploring the Temperature-Dependent Phase Transition in Modern Hopfield Networks",
+    "authors": [
+      "Felix Koulischer",
+      "Cédric Goemaere",
+      "Tom van der Meersch",
+      "Johannes Deleu",
+      "Thomas Demeester"
+    ],
+    "year": 2023,
+    "abstract": "The recent discovery of a connection between Transformers and Modern Hopfield Networks (MHNs) has reignited the study of neural networks from a physical energy-based perspective. This paper focuses on the pivotal effect of the inverse temperature hyperparameter $β$ on the distribution of energy minima of the MHN. To achieve this, the distribution of energy minima is tracked in a simplified MHN in which equidistant normalised patterns are stored. This network demonstrates a phase transition at a ",
+    "preprint_id": "2311.18434v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2311.18434v1",
+    "source": "preprints",
+    "category": "cs.LG",
+    "thread": "hopfield_spin_glass",
+    "tier": "background"
+  },
+  {
+    "title": "In-Context Exemplars as Clues to Retrieving from Large Associative Memory",
+    "authors": [
+      "Jiachen Zhao"
+    ],
+    "year": 2023,
+    "abstract": "Recently, large language models (LLMs) have made remarkable progress in natural language processing. The most representative ability of LLMs is in-context learning (ICL), which enables LLMs to learn patterns from in-context exemplars without training. The performance of ICL greatly depends on the exemplars used. However, how to choose exemplars remains unclear due to the lack of understanding of how in-context learning works. In this paper, we present a novel perspective on ICL by conceptualizin",
+    "preprint_id": "2311.03498v2",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2311.03498v2",
+    "source": "preprints",
+    "category": "cs.CL",
+    "thread": "hopfield_spin_glass",
+    "tier": "supporting"
+  },
+  {
+    "title": "DRAMA: Commodity DRAM based Content Addressable Memory",
+    "authors": [
+      "Leonid Yavits"
+    ],
+    "year": 2023,
+    "abstract": "Fast parallel search capabilities on large datasets provided by content addressable memories (CAM) are required across multiple application domains. However compared to RAM, CAMs feature high area overhead and power consumption, and as a result, they scale poorly. The proposed solution, DRAMA, enables CAM, ternary CAM (TCAM) and approximate (similarity) search CAM functionalities in unmodified commodity DRAM. DRAMA performs compare operation in a bit-serial fashion, where the search pattern (que",
+    "preprint_id": "2312.15527v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2312.15527v1",
+    "source": "preprints",
+    "category": "cs.AR",
+    "thread": "content_addressable",
+    "tier": "background"
+  },
+  {
+    "title": "Transformer-Based Hierarchical Clustering for Brain Network Analysis",
+    "authors": [
+      "Wei Dai",
+      "Hejie Cui",
+      "Xuan Kan",
+      "Ying Guo",
+      "Sanne van Rooij",
+      "Carl Yang"
+    ],
+    "year": 2023,
+    "abstract": "Brain networks, graphical models such as those constructed from MRI, have been widely used in pathological prediction and analysis of brain functions. Within the complex brain system, differences in neuronal connection strengths parcellate the brain into various functional modules (network communities), which are critical for brain analysis. However, identifying such communities within the brain has been a nontrivial issue due to the complexity of neuronal interactions. In this work, we propose ",
+    "preprint_id": "2305.04142v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2305.04142v1",
+    "source": "preprints",
+    "category": "cs.LG",
+    "thread": "dendrogram_neural",
+    "tier": "reject"
+  },
+  {
+    "title": "Brain Decodes Deep Nets",
+    "authors": [
+      "Huzheng Yang",
+      "James Gee",
+      "Jianbo Shi"
+    ],
+    "year": 2023,
+    "abstract": "We developed a tool for visualizing and analyzing large pre-trained vision models by mapping them onto the brain, thus exposing their hidden inside. Our innovation arises from a surprising usage of brain encoding: predicting brain fMRI measurements in response to images. We report two findings. First, explicit mapping between the brain and deep-network features across dimensions of space, layers, scales, and channels is crucial. This mapping method, FactorTopy, is plug-and-play for any deep-netw",
+    "preprint_id": "2312.01280v2",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2312.01280v2",
+    "source": "preprints",
+    "category": "cs.CV",
+    "thread": "dendrogram_neural",
+    "tier": "reject"
+  },
+  {
+    "title": "A Prototype-Based Neural Network for Image Anomaly Detection and Localization",
+    "authors": [
+      "Chao Huang",
+      "Zhao Kang",
+      "Hong Wu"
+    ],
+    "year": 2023,
+    "abstract": "Image anomaly detection and localization perform not only image-level anomaly classification but also locate pixel-level anomaly regions. Recently, it has received much research attention due to its wide application in various fields. This paper proposes ProtoAD, a prototype-based neural network for image anomaly detection and localization. First, the patch features of normal images are extracted by a deep network pre-trained on nature images. Then, the prototypes of the normal patch features ar",
+    "preprint_id": "2310.02576v2",
+    "doi": "https://doi.org/10.1007/s11063-024-11466-7",
+    "url": "http://arxiv.org/abs/2310.02576v2",
+    "source": "preprints",
+    "category": "cs.CV",
+    "thread": "dendrogram_neural",
+    "tier": "reject"
+  },
+  {
+    "title": "Brain-inspired Evolutionary Architectures for Spiking Neural Networks",
+    "authors": [
+      "Wenxuan Pan",
+      "Feifei Zhao",
+      "Zhuoya Zhao",
+      "Yi Zeng"
+    ],
+    "year": 2023,
+    "abstract": "The complex and unique neural network topology of the human brain formed through natural evolution enables it to perform multiple cognitive functions simultaneously. Automated evolutionary mechanisms of biological network structure inspire us to explore efficient architectural optimization for Spiking Neural Networks (SNNs). Instead of manually designed fixed architectures or hierarchical Network Architecture Search (NAS), this paper evolves SNNs architecture by incorporating brain-inspired loca",
+    "preprint_id": "2309.05263v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2309.05263v1",
+    "source": "preprints",
+    "category": "cs.NE",
+    "thread": "dendrogram_neural",
+    "tier": "background"
+  },
+  {
+    "title": "ZIRCON: Zero-watermarking-based approach for data integrity and secure provenance in IoT networks",
+    "authors": [
+      "Omair Faraj",
+      "David Megías",
+      "Joaquin Garcia-Alfaro"
+    ],
+    "year": 2023,
+    "abstract": "The Internet of Things (IoT) is integrating the Internet and smart devices in almost every domain such as home automation, e-healthcare systems, vehicular networks, industrial control and military applications. In these sectors, sensory data, which is collected from multiple sources and managed through intermediate processing by multiple nodes, is used for decision-making processes. Ensuring data integrity and keeping track of data provenance is a core requirement in such a highly dynamic contex",
+    "preprint_id": "2305.00266v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2305.00266v1",
+    "source": "preprints",
+    "category": "cs.CR",
+    "thread": "merkle_version",
+    "tier": "reject"
+  },
+  {
+    "title": "Active learning for data streams: a survey",
+    "authors": [
+      "Davide Cacciarelli",
+      "Murat Kulahci"
+    ],
+    "year": 2023,
+    "abstract": "Online active learning is a paradigm in machine learning that aims to select the most informative data points to label from a data stream. The problem of minimizing the cost associated with collecting labeled observations has gained a lot of attention in recent years, particularly in real-world applications where data is only available in an unlabeled form. Annotating each observation can be time-consuming and costly, making it difficult to obtain large amounts of labeled data. To overcome this ",
+    "preprint_id": "2302.08893v4",
+    "doi": "https://doi.org/10.1007/s10994-023-06454-2",
+    "url": "http://arxiv.org/abs/2302.08893v4",
+    "source": "preprints",
+    "category": "stat.ML",
+    "thread": "category_memory",
+    "tier": "reject"
+  },
+  {
+    "title": "Computing with Categories in Machine Learning",
+    "authors": [
+      "Eli Sennesh",
+      "Tom Xu",
+      "Yoshihiro Maruyama"
+    ],
+    "year": 2023,
+    "abstract": "Category theory has been successfully applied in various domains of science, shedding light on universal principles unifying diverse phenomena and thereby enabling knowledge transfer between them. Applications to machine learning have been pursued recently, and yet there is still a gap between abstract mathematical foundations and concrete applications to machine learning tasks. In this paper we introduce DisCoPyro as a categorical structure learning framework, which combines categorical structu",
+    "preprint_id": "2303.04156v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2303.04156v1",
+    "source": "preprints",
+    "category": "cs.LG",
+    "thread": "category_memory",
+    "tier": "background"
+  },
+  {
+    "title": "Diagrammatic category theory",
+    "authors": [
+      "Kenji Nakahira"
+    ],
+    "year": 2023,
+    "abstract": "In category theory, the use of string diagrams is well known to aid in the intuitive understanding of certain concepts, particularly when dealing with adjunctions and monoidal categories. We show that string diagrams are also useful in exploring fundamental properties of basic concepts in category theory, such as universal properties, (co)limits, Kan extensions, and (co)ends. For instance, string diagrams are utilized to represent visually intuitive proofs of the Yoneda lemma, necessary and suff",
+    "preprint_id": "2307.08891v4",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2307.08891v4",
+    "source": "preprints",
+    "category": "math.CT",
+    "thread": "category_memory",
+    "tier": "reject"
+  },
+  {
+    "title": "BayesPCN: A Continually Learnable Predictive Coding Associative Memory",
+    "authors": [
+      "Jason Yoo",
+      "Frank Wood"
+    ],
+    "year": 2022,
+    "abstract": "Associative memory plays an important role in human intelligence and its mechanisms have been linked to attention in machine learning. While the machine learning community's interest in associative memories has recently been rekindled, most work has focused on memory recall ($read$) over memory learning ($write$). In this paper, we present BayesPCN, a hierarchical associative memory capable of performing continual one-shot memory writes without meta-learning. Moreover, BayesPCN is able to gradua",
+    "preprint_id": "2205.09930v3",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2205.09930v3",
+    "source": "preprints",
+    "category": "cs.LG",
+    "thread": "associative_hierarchical",
+    "tier": "supporting"
+  },
+  {
+    "title": "Associative Memory Based Experience Replay for Deep Reinforcement Learning",
+    "authors": [
+      "Mengyuan Li",
+      "Arman Kazemi",
+      "Ann Franchesca Laguna",
+      "X. Sharon Hu"
+    ],
+    "year": 2022,
+    "abstract": "Experience replay is an essential component in deep reinforcement learning (DRL), which stores the experiences and generates experiences for the agent to learn in real time. Recently, prioritized experience replay (PER) has been proven to be powerful and widely deployed in DRL agents. However, implementing PER on traditional CPU or GPU architectures incurs significant latency overhead due to its frequent and irregular memory accesses. This paper proposes a hardware-software co-design approach to",
+    "preprint_id": "2207.07791v1",
+    "doi": "https://doi.org/10.1145/3508352.3549387",
+    "url": "http://arxiv.org/abs/2207.07791v1",
+    "source": "preprints",
+    "category": "cs.AR",
+    "thread": "associative_hierarchical",
+    "tier": "supporting"
+  },
+  {
+    "title": "Machine learning understands knotted polymers",
+    "authors": [
+      "Anna Braghetto",
+      "Sumanta Kundu",
+      "Marco Baiesi",
+      "Enzo Orlandini"
+    ],
+    "year": 2022,
+    "abstract": "Simulated configurations of flexible knotted rings confined inside a spherical cavity are fed into long-short term memory neural networks (LSTM NNs) designed to distinguish knot types. The results show that they perform well in knot recognition even if tested against flexible, strongly confined and therefore highly geometrically entangled rings. In agreement with the expectation that knots are delocalized in dense polymers, a suitable coarse-graining procedure on configurations boosts the perfor",
+    "preprint_id": "2212.11822v1",
+    "doi": "https://doi.org/10.1021/acs.macromol.2c02555",
+    "url": "http://arxiv.org/abs/2212.11822v1",
+    "source": "preprints",
+    "category": "cond-mat.soft",
+    "thread": "braided_memory",
+    "tier": "supporting"
+  },
+  {
+    "title": "Combinatorial Knot Theory and the Jones Polynomial",
+    "authors": [
+      "Louis H Kauffman"
+    ],
+    "year": 2022,
+    "abstract": "This paper is a memory of the work and influence of Vaughan Jones. It is an exposition of the remarkable breakthroughs in knot theory and low dimensional topology that were catalyzed by his work. The paper recalls the inception of the Jones polynomial and the author's discovery of the bracket polynomial model for the Jones polynomial. We then describe some of the developments in knot theory that were inspired by the Jones polynomial and involve variations and generalizations of this invariant. T",
+    "preprint_id": "2204.12104v2",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2204.12104v2",
+    "source": "preprints",
+    "category": "math.GT",
+    "thread": "braided_memory",
+    "tier": "background"
+  },
+  {
+    "title": "Quantum Hall valley Ferromagnets as a platform for topologically protected quantum memory",
+    "authors": [
+      "Kartiek Agarwal"
+    ],
+    "year": 2022,
+    "abstract": "Materials hosting topologically protected non-Abelian zero modes offer the exciting possibility of storing and manipulating quantum information in a manner that is protected from decoherence at the hardware level. In this work, we study the possibility of realizing such excitations along line defects in certain fractional quantum Hall states in multi-valley systems. Such line defects have been recently observed experimentally between valley polarized Hall states on the surface of Bi(111), and ex",
+    "preprint_id": "2207.07127v1",
+    "doi": "https://doi.org/10.1103/PhysRevB.107.125163",
+    "url": "http://arxiv.org/abs/2207.07127v1",
+    "source": "preprints",
+    "category": "cond-mat.str-el",
+    "thread": "braided_memory",
+    "tier": "background"
+  },
+  {
+    "title": "PECAN: A Product-Quantized Content Addressable Memory Network",
+    "authors": [
+      "Jie Ran",
+      "Rui Lin",
+      "Jason Chun Lok Li",
+      "Jiajun Zhou",
+      "Ngai Wong"
+    ],
+    "year": 2022,
+    "abstract": "A novel deep neural network (DNN) architecture is proposed wherein the filtering and linear transform are realized solely with product quantization (PQ). This results in a natural implementation via content addressable memory (CAM), which transcends regular DNN layer operations and requires only simple table lookup. Two schemes are developed for the end-to-end PQ prototype training, namely, through angle- and distance-based similarities, which differ in their multiplicative and additive natures ",
+    "preprint_id": "2208.13571v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2208.13571v1",
+    "source": "preprints",
+    "category": "cs.LG",
+    "thread": "content_addressable",
+    "tier": "supporting"
+  },
+  {
+    "title": "DT2CAM: A Decision Tree to Content Addressable Memory Framework",
+    "authors": [
+      "Mariam Rakka",
+      "Mohammed E. Fouda",
+      "Rouwaida Kanj",
+      "Fadi Kurdahi"
+    ],
+    "year": 2022,
+    "abstract": "Decision trees are considered one of the most powerful tools for data classification. Accelerating the decision tree search is crucial for on-the-edge applications that have limited power and latency budget. In this paper, we propose a Content Addressable Memory (CAM) Compiler for Decision Tree (DT) inference acceleration. We propose a novel \"adaptive-precision\" scheme that results in a compact implementation and enables an efficient bijective mapping to Ternary Content Addressable Memories whil",
+    "preprint_id": "2204.06114v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2204.06114v1",
+    "source": "preprints",
+    "category": "cs.AR",
+    "thread": "content_addressable",
+    "tier": "supporting"
+  },
+  {
+    "title": "Content Addressable Memory Without Catastrophic Forgetting by Heteroassociation with a Fixed Scaffold",
+    "authors": [
+      "Sugandha Sharma",
+      "Sarthak Chandra",
+      "Ila R. Fiete"
+    ],
+    "year": 2022,
+    "abstract": "Content-addressable memory (CAM) networks, so-called because stored items can be recalled by partial or corrupted versions of the items, exhibit near-perfect recall of a small number of information-dense patterns below capacity and a 'memory cliff' beyond, such that inserting a single additional pattern results in catastrophic loss of all stored patterns. We propose a novel CAM architecture, Memory Scaffold with Heteroassociation (MESH), that factorizes the problems of internal attractor dynamic",
+    "preprint_id": "2202.00159v3",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2202.00159v3",
+    "source": "preprints",
+    "category": "cs.AI",
+    "thread": "content_addressable",
+    "tier": "supporting"
+  },
+  {
+    "title": "On-device Synaptic Memory Consolidation using Fowler-Nordheim Quantum-tunneling",
+    "authors": [
+      "Mustafizur Rahman",
+      "Subhankar Bose",
+      "Shantanu Chakrabartty"
+    ],
+    "year": 2022,
+    "abstract": "Synaptic memory consolidation has been heralded as one of the key mechanisms for supporting continual learning in neuromorphic Artificial Intelligence (AI) systems. Here we report that a Fowler-Nordheim (FN) quantum-tunneling device can implement synaptic memory consolidation similar to what can be achieved by algorithmic consolidation models like the cascade and the elastic weight consolidation (EWC) models. The proposed FN-synapse not only stores the synaptic weight but also stores the synapse",
+    "preprint_id": "2206.14581v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2206.14581v1",
+    "source": "preprints",
+    "category": "cs.ET",
+    "thread": "reconsolidation",
+    "tier": "supporting"
+  },
+  {
+    "title": "A Probabilistic Generative Model of Free Categories",
+    "authors": [
+      "Eli Sennesh",
+      "Tom Xu",
+      "Yoshihiro Maruyama"
+    ],
+    "year": 2022,
+    "abstract": "Applied category theory has recently developed libraries for computing with morphisms in interesting categories, while machine learning has developed ways of learning programs in interesting languages. Taking the analogy between categories and languages seriously, this paper defines a probabilistic generative model of morphisms in free monoidal categories over domain-specific generating objects and morphisms. The paper shows how acyclic directed wiring diagrams can model specifications for morph",
+    "preprint_id": "2205.04545v2",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2205.04545v2",
+    "source": "preprints",
+    "category": "cs.AI",
+    "thread": "category_memory",
+    "tier": "background"
+  },
+  {
+    "title": "Monoidal Reverse Differential Categories",
+    "authors": [
+      "Geoffrey Cruttwell",
+      "Jonathan Gallagher",
+      "Jean-Simon Pacaud Lemay",
+      "Dorette Pronk"
+    ],
+    "year": 2022,
+    "abstract": "Cartesian reverse differential categories (CRDCs) are a recently defined structure which categorically model the reverse differentiation operations used in supervised learning. Here we define a related structure called a monoidal reverse differential category, prove important results about its relationship to CRDCs, and provide examples of both structures, including examples coming from models of quantum computation.",
+    "preprint_id": "2203.12478v2",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2203.12478v2",
+    "source": "preprints",
+    "category": "math.CT",
+    "thread": "category_memory",
+    "tier": "background"
+  },
+  {
+    "title": "Models of Music Cognition and Composition",
+    "authors": [
+      "Abhimanyu Sethia",
+      " Aayush"
+    ],
+    "year": 2022,
+    "abstract": "Much like most of cognition research, music cognition is an interdisciplinary field, which attempts to apply methods of cognitive science (neurological, computational and experimental) to understand the perception and process of composition of music. In this paper, we first motivate why music is relevant to cognitive scientists and give an overview of the approaches to computational modelling of music cognition. We then review literature on the various models of music perception, including non-c",
+    "preprint_id": "2208.06878v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2208.06878v1",
+    "source": "preprints",
+    "category": "cs.SD",
+    "thread": "category_memory",
+    "tier": "reject"
+  },
+  {
+    "title": "Rewriting for Symmetric Monoidal Categories with Commutative (Co)Monoid Structure",
+    "authors": [
+      "Aleksandar Milosavljevic",
+      "Robin Piedeleu",
+      "Fabio Zanasi"
+    ],
+    "year": 2022,
+    "abstract": "String diagrams are pictorial representations for morphisms of symmetric monoidal categories. They constitute an intuitive and expressive graphical syntax, which has found application in a very diverse range of fields including concurrency theory, quantum computing, control theory, machine learning, linguistics, and digital circuits. Rewriting theory for string diagrams relies on a combinatorial interpretation as double-pushout rewriting of certain hypergraphs. As previously studied, there is a ",
+    "preprint_id": "2204.04274v4",
+    "doi": "https://doi.org/10.46298/lmcs-21(1:12)2025",
+    "url": "http://arxiv.org/abs/2204.04274v4",
+    "source": "preprints",
+    "category": "cs.LO",
+    "thread": "category_memory",
+    "tier": "reject"
+  },
+  {
+    "title": "Dynamic Operads, Dynamic Categories: From Deep Learning to Prediction Markets",
+    "authors": [
+      "Brandon T. Shapiro",
+      "David I. Spivak"
+    ],
+    "year": 2022,
+    "abstract": "Natural organized systems adapt to internal and external pressures and this happens at all levels of the abstraction hierarchy. Wanting to think clearly about this idea motivates our paper, and so the idea is elaborated extensively in the introduction, which should be broadly accessible to a philosophically-interested audience. In the remaining sections, we turn to more compressed category theory. We define the monoidal double category Org of dynamic organizations, we provide definitions of Org-",
+    "preprint_id": "2205.03906v4",
+    "doi": "https://doi.org/10.4204/EPTCS.380.11",
+    "url": "http://arxiv.org/abs/2205.03906v4",
+    "source": "preprints",
+    "category": "math.CT",
+    "thread": "category_memory",
+    "tier": "supporting"
+  },
+  {
+    "title": "Identifying brain hierarchical structures associated with Alzheimer's disease using a regularized regression method with tree predictors",
+    "authors": [
+      "Yi Zhao",
+      "Bingkai Wang",
+      "Chin-Fu Liu",
+      "Andreia V. Faria",
+      "Michael I. Miller",
+      "Brian S. Caffo",
+      "Xi Luo"
+    ],
+    "year": 2021,
+    "abstract": "Brain segmentation at different levels is generally represented as hierarchical trees. Brain regional atrophy at specific levels was found to be marginally associated with Alzheimer's disease outcomes. In this study, we propose an L1-type regularization for predictors that follow a hierarchical tree structure. Considering a tree as a directed acyclic graph, we interpret the model parameters from a path analysis perspective. Under this concept, the proposed penalty regulates the total effect of e",
+    "preprint_id": "2104.00454v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2104.00454v1",
+    "source": "preprints",
+    "category": "stat.AP",
+    "thread": "associative_hierarchical",
+    "tier": "background"
+  },
+  {
+    "title": "Hierarchical Associative Memory",
+    "authors": [
+      "Dmitry Krotov"
+    ],
+    "year": 2021,
+    "abstract": "Dense Associative Memories or Modern Hopfield Networks have many appealing properties of associative memory. They can do pattern completion, store a large number of memories, and can be described using a recurrent neural network with a degree of biological plausibility and rich feedback between the neurons. At the same time, up until now all the models of this class have had only one hidden layer, and have only been formulated with densely connected network architectures, two aspects that hinder",
+    "preprint_id": "2107.06446v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2107.06446v1",
+    "source": "preprints",
+    "category": "cs.NE",
+    "thread": "associative_hierarchical",
+    "tier": "core"
+  },
+  {
+    "title": "Hierarchical Variational Memory for Few-shot Learning Across Domains",
+    "authors": [
+      "Yingjun Du",
+      "Xiantong Zhen",
+      "Ling Shao",
+      "Cees G. M. Snoek"
+    ],
+    "year": 2021,
+    "abstract": "Neural memory enables fast adaptation to new tasks with just a few training samples. Existing memory models store features only from the single last layer, which does not generalize well in presence of a domain shift between training and test distributions. Rather than relying on a flat memory, we propose a hierarchical alternative that stores features at different semantic levels. We introduce a hierarchical prototype model, where each level of the prototype fetches corresponding information fr",
+    "preprint_id": "2112.08181v2",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2112.08181v2",
+    "source": "preprints",
+    "category": "cs.LG",
+    "thread": "associative_hierarchical",
+    "tier": "core"
+  },
+  {
+    "title": "Associative Memories via Predictive Coding",
+    "authors": [
+      "Tommaso Salvatori",
+      "Yuhang Song",
+      "Yujian Hong",
+      "Simon Frieder",
+      "Lei Sha",
+      "Zhenghua Xu",
+      "Rafal Bogacz",
+      "Thomas Lukasiewicz"
+    ],
+    "year": 2021,
+    "abstract": "Associative memories in the brain receive and store patterns of activity registered by the sensory neurons, and are able to retrieve them when necessary. Due to their importance in human intelligence, computational models of associative memories have been developed for several decades now. They include autoassociative memories, which allow for storing data points and retrieving a stored data point $s$ when provided with a noisy or partial variant of $s$, and heteroassociative memories, able to s",
+    "preprint_id": "2109.08063v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2109.08063v1",
+    "source": "preprints",
+    "category": "cs.LG",
+    "thread": "associative_hierarchical",
+    "tier": "reject"
+  },
+  {
+    "title": "Deep Random Forest with Ferroelectric Analog Content Addressable Memory",
+    "authors": [
+      "Xunzhao Yin",
+      "Franz Müller",
+      "Ann Franchesca Laguna",
+      "Chao Li",
+      "Wenwen Ye",
+      "Qingrong Huang",
+      "Qinming Zhang",
+      "Zhiguo Shi",
+      "Maximilian Lederer",
+      "Nellie Laleni",
+      "Shan Deng",
+      "Zijian Zhao",
+      "Michael Niemier",
+      "Xiaobo Sharon Hu",
+      "Cheng Zhuo",
+      "Thomas Kämpfe",
+      "Kai Ni"
+    ],
+    "year": 2021,
+    "abstract": "Deep random forest (DRF), which incorporates the core features of deep learning and random forest (RF), exhibits comparable classification accuracy, interpretability, and low memory and computational overhead when compared with deep neural networks (DNNs) in various information processing tasks for edge intelligence. However, the development of efficient hardware to accelerate DRF is lagging behind its DNN counterparts. The key for hardware acceleration of DRF lies in efficiently realizing the b",
+    "preprint_id": "2110.02495v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2110.02495v1",
+    "source": "preprints",
+    "category": "cs.ET",
+    "thread": "content_addressable",
+    "tier": "supporting"
+  },
+  {
+    "title": "Knowledge Consolidation based Class Incremental Online Learning with Limited Data",
+    "authors": [
+      "Mohammed Asad Karim",
+      "Vinay Kumar Verma",
+      "Pravendra Singh",
+      "Vinay Namboodiri",
+      "Piyush Rai"
+    ],
+    "year": 2021,
+    "abstract": "We propose a novel approach for class incremental online learning in a limited data setting. This problem setting is challenging because of the following constraints: (1) Classes are given incrementally, which necessitates a class incremental learning approach; (2) Data for each class is given in an online fashion, i.e., each training example is seen only once during training; (3) Each class has very few training examples; and (4) We do not use or assume access to any replay/memory to store data",
+    "preprint_id": "2106.06795v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2106.06795v1",
+    "source": "preprints",
+    "category": "cs.LG",
+    "thread": "reconsolidation",
+    "tier": "supporting"
+  },
+  {
+    "title": "Probabilistic Hierarchical Forecasting with Deep Poisson Mixtures",
+    "authors": [
+      "Kin G. Olivares",
+      "O. Nganba Meetei",
+      "Ruijun Ma",
+      "Rohan Reddy",
+      "Mengfei Cao",
+      "Lee Dicker"
+    ],
+    "year": 2021,
+    "abstract": "Hierarchical forecasting problems arise when time series have a natural group structure, and predictions at multiple levels of aggregation and disaggregation across the groups are needed. In such problems, it is often desired to satisfy the aggregation constraints in a given hierarchy, referred to as hierarchical coherence in the literature. Maintaining coherence while producing accurate forecasts can be a challenging problem, especially in the case of probabilistic forecasting. We present a nov",
+    "preprint_id": "2110.13179v8",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2110.13179v8",
+    "source": "preprints",
+    "category": "cs.LG",
+    "thread": "dendrogram_neural",
+    "tier": "reject"
+  },
+  {
+    "title": "Understanding of a brain spatial map based on threshold-free function dendrogramization",
+    "authors": [
+      "Hyekyoung Lee",
+      "Hyejin Kang",
+      "Youngmin Huh",
+      "Hongyoon Choi",
+      "Dong Soo Lee"
+    ],
+    "year": 2021,
+    "abstract": "Linear matrix factorizations (LMFs) such as independent component analysis (ICA), principal component analysis (PCA), and their extensions, have been widely used for finding relevant spatial maps in brain imaging data. The last step of an LMF before interpretation is usually to extract the activated brain regions from the map by thresholding. However, it is difficult to determine an appropriate threshold level. Thresholding can remove the underlying properties of spatial maps and their features ",
+    "preprint_id": "2110.06492v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2110.06492v1",
+    "source": "preprints",
+    "category": "q-bio.QM",
+    "thread": "dendrogram_neural",
+    "tier": "reject"
+  },
+  {
+    "title": "HINT: A Hierarchical Index for Intervals in Main Memory",
+    "authors": [
+      "George Christodoulou",
+      "Panagiotis Bouros",
+      "Nikos Mamoulis"
+    ],
+    "year": 2021,
+    "abstract": "Indexing intervals is a fundamental problem, finding a wide range of applications. Recent work on managing large collections of intervals in main memory focused on overlap joins and temporal aggregation problems. In this paper, we propose novel and efficient in-memory indexing techniques for intervals, with a focus on interval range queries, which are a basic component of many search and analysis tasks. First, we propose an optimized version of a single-level (flat) domain-partitioning approach,",
+    "preprint_id": "2104.10939v3",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2104.10939v3",
+    "source": "preprints",
+    "category": "cs.DB",
+    "thread": "dendrogram_neural",
+    "tier": "supporting"
+  },
+  {
+    "title": "Hierarchical Neural Dynamic Policies",
+    "authors": [
+      "Shikhar Bahl",
+      "Abhinav Gupta",
+      "Deepak Pathak"
+    ],
+    "year": 2021,
+    "abstract": "We tackle the problem of generalization to unseen configurations for dynamic tasks in the real world while learning from high-dimensional image input. The family of nonlinear dynamical system-based methods have successfully demonstrated dynamic robot behaviors but have difficulty in generalizing to unseen configurations as well as learning from image inputs. Recent works approach this issue by using deep network policies and reparameterize actions to embed the structure of dynamical systems but ",
+    "preprint_id": "2107.05627v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2107.05627v1",
+    "source": "preprints",
+    "category": "cs.LG",
+    "thread": "dendrogram_neural",
+    "tier": "supporting"
+  },
+  {
+    "title": "Cloud Failure Prediction with Hierarchical Temporal Memory: An Empirical Assessment",
+    "authors": [
+      "Oliviero Riganelli",
+      "Paolo Saltarel",
+      "Alessandro Tundo",
+      "Marco Mobilio",
+      "Leonardo Mariani"
+    ],
+    "year": 2021,
+    "abstract": "Hierarchical Temporal Memory (HTM) is an unsupervised learning algorithm inspired by the features of the neocortex that can be used to continuously process stream data and detect anomalies, without requiring a large amount of data for training nor requiring labeled data. HTM is also able to continuously learn from samples, providing a model that is always up-to-date with respect to observations. These characteristics make HTM particularly suitable for supporting online failure prediction in clou",
+    "preprint_id": "2110.03431v2",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2110.03431v2",
+    "source": "preprints",
+    "category": "cs.NE",
+    "thread": "dendrogram_neural",
+    "tier": "supporting"
+  },
+  {
+    "title": "Carousel Memory: Rethinking the Design of Episodic Memory for Continual Learning",
+    "authors": [
+      "Soobee Lee",
+      "Minindu Weerakoon",
+      "Jonghyun Choi",
+      "Minjia Zhang",
+      "Di Wang",
+      "Myeongjae Jeon"
+    ],
+    "year": 2021,
+    "abstract": "Continual Learning (CL) is an emerging machine learning paradigm that aims to learn from a continuous stream of tasks without forgetting knowledge learned from the previous tasks. To avoid performance decrease caused by forgetting, prior studies exploit episodic memory (EM), which stores a subset of the past observed samples while learning from new non-i.i.d. data. Despite the promising results, since CL is often assumed to execute on mobile or IoT devices, the EM size is bounded by the small ha",
+    "preprint_id": "2110.07276v3",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2110.07276v3",
+    "source": "preprints",
+    "category": "cs.LG",
+    "thread": "dendrogram_neural",
+    "tier": "supporting"
+  },
+  {
+    "title": "Hierarchical Clustering using Auto-encoded Compact Representation for Time-series Analysis",
+    "authors": [
+      "Soma Bandyopadhyay",
+      "Anish Datta",
+      "Arpan Pal"
+    ],
+    "year": 2021,
+    "abstract": "Getting a robust time-series clustering with best choice of distance measure and appropriate representation is always a challenge. We propose a novel mechanism to identify the clusters combining learned compact representation of time-series, Auto Encoded Compact Sequence (AECS) and hierarchical clustering approach. Proposed algorithm aims to address the large computing time issue of hierarchical clustering as learned latent representation AECS has a length much less than the original length of t",
+    "preprint_id": "2101.03742v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2101.03742v1",
+    "source": "preprints",
+    "category": "cs.LG",
+    "thread": "dendrogram_neural",
+    "tier": "reject"
+  },
+  {
+    "title": "Content-defined Merkle Trees for Efficient Container Delivery",
+    "authors": [
+      "Yuta Nakamura",
+      "Raza Ahmad",
+      "Tanu Malik"
+    ],
+    "year": 2021,
+    "abstract": "Containerization simplifies the sharing and deployment of applications when environments change in the software delivery chain. To deploy an application, container delivery methods push and pull container images. These methods operate on file and layer (set of files) granularity, and introduce redundant data within a container. Several container operations such as upgrading, installing, and maintaining become inefficient, because of copying and provisioning of redundant data. In this paper, we r",
+    "preprint_id": "2104.02158v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2104.02158v1",
+    "source": "preprints",
+    "category": "cs.DB",
+    "thread": "merkle_version",
+    "tier": "background"
+  },
+  {
+    "title": "The Modern Mathematics of Deep Learning",
+    "authors": [
+      "Julius Berner",
+      "Philipp Grohs",
+      "Gitta Kutyniok",
+      "Philipp Petersen"
+    ],
+    "year": 2021,
+    "abstract": "We describe the new field of mathematical analysis of deep learning. This field emerged around a list of research questions that were not answered within the classical framework of learning theory. These questions concern: the outstanding generalization power of overparametrized neural networks, the role of depth in deep architectures, the apparent absence of the curse of dimensionality, the surprisingly successful optimization performance despite the non-convexity of the problem, understanding ",
+    "preprint_id": "2105.04026v2",
+    "doi": "https://doi.org/10.1017/9781009025096.002",
+    "url": "http://arxiv.org/abs/2105.04026v2",
+    "source": "preprints",
+    "category": "cs.LG",
+    "thread": "category_memory",
+    "tier": "background"
+  },
+  {
+    "title": "Large Associative Memory Problem in Neurobiology and Machine Learning",
+    "authors": [
+      "Dmitry Krotov",
+      "John Hopfield"
+    ],
+    "year": 2020,
+    "abstract": "Dense Associative Memories or modern Hopfield networks permit storage and reliable retrieval of an exponentially large (in the dimension of feature space) number of memories. At the same time, their naive implementation is non-biological, since it seemingly requires the existence of many-body synaptic junctions between the neurons. We show that these models are effective descriptions of a more microscopic (written in terms of biological degrees of freedom) theory that has additional (hidden) neu",
+    "preprint_id": "2008.06996v3",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2008.06996v3",
+    "source": "preprints",
+    "category": "q-bio.NC",
+    "thread": "hopfield_spin_glass",
+    "tier": "supporting"
+  },
+  {
+    "title": "Hopfield Networks is All You Need",
+    "authors": [
+      "Hubert Ramsauer",
+      "Bernhard Schäfl",
+      "Johannes Lehner",
+      "Philipp Seidl",
+      "Michael Widrich",
+      "Thomas Adler",
+      "Lukas Gruber",
+      "Markus Holzleitner",
+      "Milena Pavlović",
+      "Geir Kjetil Sandve",
+      "Victor Greiff",
+      "David Kreil",
+      "Michael Kopp",
+      "Günter Klambauer",
+      "Johannes Brandstetter",
+      "Sepp Hochreiter"
+    ],
+    "year": 2020,
+    "abstract": "We introduce a modern Hopfield network with continuous states and a corresponding update rule. The new Hopfield network can store exponentially (with the dimension of the associative space) many patterns, retrieves the pattern with one update, and has exponentially small retrieval errors. It has three types of energy minima (fixed points of the update): (1) global fixed point averaging over all patterns, (2) metastable states averaging over a subset of patterns, and (3) fixed points which store ",
+    "preprint_id": "2008.02217v3",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2008.02217v3",
+    "source": "preprints",
+    "category": "cs.NE",
+    "thread": "hopfield_spin_glass",
+    "tier": "background"
+  },
+  {
+    "title": "Minimal Grid Diagrams of the Prime Alternating Knots with 12 Crossings",
+    "authors": [
+      "Gyo Taek Jin",
+      "Hwa Jeong Lee"
+    ],
+    "year": 2020,
+    "abstract": "In this article, we give a list of minimal grid diagrams of the 12 crossing prime alternating knots. This is a continuation of the work in https://doi.org/10.1142/S0218216520500765",
+    "preprint_id": "2012.14269v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2012.14269v1",
+    "source": "preprints",
+    "category": "math.GT",
+    "thread": "braided_memory",
+    "tier": "reject"
+  },
+  {
+    "title": "Tabletop Roleplaying Games as Procedural Content Generators",
+    "authors": [
+      "Matthew Guzdial",
+      "Devi Acharya",
+      "Max Kreminski",
+      "Michael Cook",
+      "Mirjam Eladhari",
+      "Antonios Liapis",
+      "Anne Sullivan"
+    ],
+    "year": 2020,
+    "abstract": "Tabletop roleplaying games (TTRPGs) and procedural content generators can both be understood as systems of rules for producing content. In this paper, we argue that TTRPG design can usefully be viewed as procedural content generator design. We present several case studies linking key concepts from PCG research -- including possibility spaces, expressive range analysis, and generative pipelines -- to key concepts in TTRPG design. We then discuss the implications of these relationships and suggest",
+    "preprint_id": "2007.06108v2",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2007.06108v2",
+    "source": "preprints",
+    "category": "cs.AI",
+    "thread": "content_addressable",
+    "tier": "reject"
+  },
+  {
+    "title": "Improving Phase Change Memory Performance with Data Content Aware Access",
+    "authors": [
+      "Shihao Song",
+      "Anup Das",
+      "Onur Mutlu",
+      "Nagarajan Kandasamy"
+    ],
+    "year": 2020,
+    "abstract": "A prominent characteristic of write operation in Phase-Change Memory (PCM) is that its latency and energy are sensitive to the data to be written as well as the content that is overwritten. We observe that overwriting unknown memory content can incur significantly higher latency and energy compared to overwriting known all-zeros or all-ones content. This is because all-zeros or all-ones content is overwritten by programming the PCM cells only in one direction, i.e., using either SET or RESET ope",
+    "preprint_id": "2005.04753v1",
+    "doi": "https://doi.org/10.1145/3381898.3397210",
+    "url": "http://arxiv.org/abs/2005.04753v1",
+    "source": "preprints",
+    "category": "cs.AR",
+    "thread": "content_addressable",
+    "tier": "reject"
+  },
+  {
+    "title": "FeCAM: A Universal Compact Digital and Analog Content Addressable Memory Using Ferroelectric",
+    "authors": [
+      "Xunzhao Yin",
+      "Chao Li",
+      "Qingrong Huang",
+      "Li Zhang",
+      "Michael Niemier",
+      "Xiaobo Sharon Hu",
+      "Cheng Zhuo",
+      "Kai Ni"
+    ],
+    "year": 2020,
+    "abstract": "Ferroelectric field effect transistors (FeFETs) are being actively investigated with the potential for in-memory computing (IMC) over other non-volatile memories (NVMs). Content Addressable Memories (CAMs) are a form of IMC that performs parallel searches for matched entries over a memory array for a given input query. CAMs are widely used for data-centric applications that involve pattern matching and search functionality. To accommodate the ever expanding data, it is attractive to resort to an",
+    "preprint_id": "2004.01866v2",
+    "doi": "https://doi.org/10.1109/TED.2020.2994896",
+    "url": "http://arxiv.org/abs/2004.01866v2",
+    "source": "preprints",
+    "category": "cs.ET",
+    "thread": "content_addressable",
+    "tier": "background"
+  },
+  {
+    "title": "Randomized Multiresolution Scanning in Focal and Fast E/MEG Sensing of Brain Activity with a Variable Depth",
+    "authors": [
+      "Atena Rezaei",
+      "Alexandra Koulouri",
+      "Sampsa Pursiainen"
+    ],
+    "year": 2020,
+    "abstract": "We focus on electromagnetoencephalography imaging of the neural activity and, in particular, finding a robust estimate for the primary current distribution via the hierarchical Bayesian model (HBM). Our aim is to develop a reasonably fast maximum a posteriori (MAP) estimation technique which would be applicable for both superficial and deep areas without specific a priori knowledge of the number or location of the activity. To enable source distinguishability for any depth, we introduce a random",
+    "preprint_id": "2002.04272v2",
+    "doi": "https://doi.org/10.1007/s10548-020-00755-8",
+    "url": "http://arxiv.org/abs/2002.04272v2",
+    "source": "preprints",
+    "category": "math.NA",
+    "thread": "dendrogram_neural",
+    "tier": "background"
+  },
+  {
+    "title": "AMP: Authentication of Media via Provenance",
+    "authors": [
+      "Paul England",
+      "Henrique S. Malvar",
+      "Eric Horvitz",
+      "Jack W. Stokes",
+      "Cédric Fournet",
+      "Rebecca Burke-Aguero",
+      "Amaury Chamayou",
+      "Sylvan Clebsch",
+      "Manuel Costa",
+      "John Deutscher",
+      "Shabnam Erfani",
+      "Matt Gaylor",
+      "Andrew Jenks",
+      "Kevin Kane",
+      "Elissa Redmiles",
+      "Alex Shamis",
+      "Isha Sharma",
+      "Sam Wenker",
+      "Anika Zaman"
+    ],
+    "year": 2020,
+    "abstract": "Advances in graphics and machine learning have led to the general availability of easy-to-use tools for modifying and synthesizing media. The proliferation of these tools threatens to cast doubt on the veracity of all media. One approach to thwarting the flow of fake media is to detect modified or synthesized media through machine learning methods. While detection may help in the short term, we believe that it is destined to fail as the quality of fake media generation continues to improve. Soon",
+    "preprint_id": "2001.07886v3",
+    "doi": "",
+    "url": "http://arxiv.org/abs/2001.07886v3",
+    "source": "preprints",
+    "category": "cs.MM",
+    "thread": "merkle_version",
+    "tier": "background"
+  },
+  {
+    "title": "Jamming Energy Landscape is Hierarchical and Ultrametric",
+    "authors": [
+      "R. C. Dennis",
+      "E. I. Corwin"
+    ],
+    "year": 2019,
+    "abstract": "The free energy landscape of mean field marginal glasses is ultrametric. We demonstrate that this feature remains in finite three dimensional systems by finding sets of minima which are nearby in configuration space. By calculating the distance between these nearby minima, we produce a small region of the distance metric. This metric exhibits a clear hierarchical structure and shows the signature of an ultrametric space. That such a hierarchy exists for the jamming energy landscape provides dire",
+    "preprint_id": "1908.08159v3",
+    "doi": "https://doi.org/10.1103/PhysRevLett.124.078002",
+    "url": "http://arxiv.org/abs/1908.08159v3",
+    "source": "preprints",
+    "category": "cond-mat.soft",
+    "thread": "ultrametric_memory",
+    "tier": "background"
+  },
+  {
+    "title": "A Billion Updates per Second Using 30,000 Hierarchical In-Memory D4M Databases",
+    "authors": [
+      "Jeremy Kepner",
+      "Vijay Gadepally",
+      "Lauren Milechin",
+      "Siddharth Samsi",
+      "William Arcand",
+      "David Bestor",
+      "William Bergeron",
+      "Chansup Byun",
+      "Matthew Hubbell",
+      "Micheal Houle",
+      "Micheal Jones",
+      "Anne Klein",
+      "Peter Michaleas",
+      "Julie Mullen",
+      "Andrew Prout",
+      "Antonio Rosa",
+      "Charles Yee",
+      "Albert Reuther"
+    ],
+    "year": 2019,
+    "abstract": "Analyzing large scale networks requires high performance streaming updates of graph representations of these data. Associative arrays are mathematical objects combining properties of spreadsheets, databases, matrices, and graphs, and are well-suited for representing and analyzing streaming network data. The Dynamic Distributed Dimensional Data Model (D4M) library implements associative arrays in a variety of languages (Python, Julia, and Matlab/Octave) and provides a lightweight in-memory databa",
+    "preprint_id": "1902.00846v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/1902.00846v1",
+    "source": "preprints",
+    "category": "cs.DB",
+    "thread": "associative_hierarchical",
+    "tier": "supporting"
+  },
+  {
+    "title": "Search for non-Abelian Majorana braiding statistics in superconductors",
+    "authors": [
+      "C. W. J. Beenakker"
+    ],
+    "year": 2019,
+    "abstract": "This is a tutorial review of methods to braid the world lines of non-Abelian anyons (Majorana zero-modes) in topological superconductors. That \"Holy Grail\" of topological quantum information processing has not yet been reached in the laboratory, but there now exists a variety of platforms in which one can search for the Majorana braiding statistics. After an introduction to the basic concepts of braiding we discuss how one might be able to braid immobile Majorana zero-modes, bound to the end poi",
+    "preprint_id": "1907.06497v2",
+    "doi": "https://doi.org/10.21468/SciPostPhysLectNotes.15",
+    "url": "http://arxiv.org/abs/1907.06497v2",
+    "source": "preprints",
+    "category": "cond-mat.mes-hall",
+    "thread": "braided_memory",
+    "tier": "background"
+  },
+  {
+    "title": "Analog content addressable memories with memristors",
+    "authors": [
+      "Can Li",
+      "Catherine E. Graves",
+      "Xia Sheng",
+      "Darrin Miller",
+      "Martin Foltin",
+      "Giacomo Pedretti",
+      "John Paul Strachan"
+    ],
+    "year": 2019,
+    "abstract": "A content-addressable-memory compares an input search word against all rows of stored words in an array in a highly parallel manner. While supplying a very powerful functionality for many applications in pattern matching and search, it suffers from large area, cost and power consumption, limiting its use. Past improvements have been realized by using memristors to replace the static-random-access-memory cell in conventional designs, but employ similar schemes based only on binary or ternary stat",
+    "preprint_id": "1907.08177v2",
+    "doi": "https://doi.org/10.1038/s41467-020-15254-4",
+    "url": "http://arxiv.org/abs/1907.08177v2",
+    "source": "preprints",
+    "category": "cs.ET",
+    "thread": "content_addressable",
+    "tier": "background"
+  },
+  {
+    "title": "OE-CAM: A Hybrid Opto-Electronic Content Addressable Memory",
+    "authors": [
+      "Yousra Alkabani",
+      "Mario Miscuglio",
+      "Volker J. Sorger",
+      "Tarek El-Ghazawi"
+    ],
+    "year": 2019,
+    "abstract": "A content addressable memory (CAM) is a type of memory that implements a parallel search engine at its core. A CAM takes as an input a value and outputs the address where this value is stored in case of a match. CAMs are used in a wide range of applications including networking, cashing, neuromorphic associative memories, multimedia, and data analytics. Here, we introduce a novel opto-electronic CAM (OE-CAM) utilizing the integrated silicon photonic platform. In our approach, we explore the perf",
+    "preprint_id": "1912.02220v3",
+    "doi": "",
+    "url": "http://arxiv.org/abs/1912.02220v3",
+    "source": "preprints",
+    "category": "physics.app-ph",
+    "thread": "content_addressable",
+    "tier": "supporting"
+  },
+  {
+    "title": "Overcoming Long-term Catastrophic Forgetting through Adversarial Neural Pruning and Synaptic Consolidation",
+    "authors": [
+      "Jian Peng",
+      "Bo Tang",
+      "Hao Jiang",
+      "Zhuo Li",
+      "Yinjie Lei",
+      "Tao Lin",
+      "Haifeng Li"
+    ],
+    "year": 2019,
+    "abstract": "Artificial neural networks face the well-known problem of catastrophic forgetting. What's worse, the degradation of previously learned skills becomes more severe as the task sequence increases, known as the long-term catastrophic forgetting. It is due to two facts: first, as the model learns more tasks, the intersection of the low-error parameter subspace satisfying for these tasks becomes smaller or even does not exist; second, when the model learns a new task, the cumulative error keeps increa",
+    "preprint_id": "1912.09091v3",
+    "doi": "https://doi.org/10.1109/TNNLS.2021.3056201",
+    "url": "http://arxiv.org/abs/1912.09091v3",
+    "source": "preprints",
+    "category": "cs.LG",
+    "thread": "reconsolidation",
+    "tier": "background"
+  },
+  {
+    "title": "Hierarchical Attentional Hybrid Neural Networks for Document Classification",
+    "authors": [
+      "Jader Abreu",
+      "Luis Fred",
+      "David Macêdo",
+      "Cleber Zanchettin"
+    ],
+    "year": 2019,
+    "abstract": "Document classification is a challenging task with important applications. The deep learning approaches to the problem have gained much attention recently. Despite the progress, the proposed models do not incorporate the knowledge of the document structure in the architecture efficiently and not take into account the contexting importance of words and sentences. In this paper, we propose a new approach based on a combination of convolutional neural networks, gated recurrent units, and attention ",
+    "preprint_id": "1901.06610v2",
+    "doi": "https://doi.org/10.1007/978-3-030-30493-5_39",
+    "url": "http://arxiv.org/abs/1901.06610v2",
+    "source": "preprints",
+    "category": "cs.CL",
+    "thread": "dendrogram_neural",
+    "tier": "supporting"
+  },
+  {
+    "title": "Notes on Category Theory with examples from basic mathematics",
+    "authors": [
+      "Paolo Perrone"
+    ],
+    "year": 2019,
+    "abstract": "These notes were originally developed as lecture notes for a category theory course. They should be well-suited to anyone that wants to learn category theory from scratch and has a scientific mind. There is no need to know advanced mathematics, nor any of the disciplines where category theory is traditionally applied, such as algebraic geometry or theoretical computer science. The only knowledge that is assumed from the reader is linear algebra. All concepts are explained by giving concrete exam",
+    "preprint_id": "1912.10642v7",
+    "doi": "https://doi.org/10.1142/13670",
+    "url": "http://arxiv.org/abs/1912.10642v7",
+    "source": "preprints",
+    "category": "math.CT",
+    "thread": "category_memory",
+    "tier": "reject"
+  },
+  {
+    "title": "Characterizing the invariances of learning algorithms using category theory",
+    "authors": [
+      "Kenneth D. Harris"
+    ],
+    "year": 2019,
+    "abstract": "Many learning algorithms have invariances: when their training data is transformed in certain ways, the function they learn transforms in a predictable manner. Here we formalize this notion using concepts from the mathematical field of category theory. The invariances that a supervised learning algorithm possesses are formalized by categories of predictor and target spaces, whose morphisms represent the algorithm's invariances, and an index category whose morphisms represent permutations of the ",
+    "preprint_id": "1905.02072v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/1905.02072v1",
+    "source": "preprints",
+    "category": "cs.LG",
+    "thread": "category_memory",
+    "tier": "background"
+  },
+  {
+    "title": "Delocalization and continuous spectrum for ultrametric random operators",
+    "authors": [
+      "Per von Soosten",
+      "Simone Warzel"
+    ],
+    "year": 2018,
+    "abstract": "This paper studies the delocalized regime of an ultrametric random operator whose independent entries have variances decaying in a suitable hierarchical metric on $\\mathbb{N}$. When the decay-rate of the off-diagonal variances is sufficiently slow, we prove that the spectral measures are uniformly $θ$-Hölder continuous for all $θ\\in (0,1)$. In finite volumes, we prove that the corresponding ultrametric random matrices have completely extended eigenfunctions and that the local eigenvalue statisti",
+    "preprint_id": "1811.10517v2",
+    "doi": "https://doi.org/10.1007/s00023-019-00809-z",
+    "url": "http://arxiv.org/abs/1811.10517v2",
+    "source": "preprints",
+    "category": "math-ph",
+    "thread": "ultrametric_memory",
+    "tier": "background"
+  },
+  {
+    "title": "Thresholds of Braided Convolutional Codes on the AWGN Channel",
+    "authors": [
+      "Muhammad Umar Farooq",
+      "Saeedeh Moloudi",
+      "Michael Lentmaier"
+    ],
+    "year": 2018,
+    "abstract": "In this paper, we perform a threshold analysis of braided convolutional codes (BCCs) on the additive white Gaussian noise (AWGN) channel. The decoding thresholds are estimated by Monte-Carlo density evolution (MC-DE) techniques and compared with approximate thresholds from an erasure channel prediction. The results show that, with spatial coupling, the predicted thresholds are very accurate and quickly approach capacity if the coupling memory is increased. For uncoupled ensembles with random pun",
+    "preprint_id": "1802.10540v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/1802.10540v1",
+    "source": "preprints",
+    "category": "cs.IT",
+    "thread": "braided_memory",
+    "tier": "background"
+  },
+  {
+    "title": "A computational perspective of the role of Thalamus in cognition",
+    "authors": [
+      "Nima Dehghani",
+      "Ralf D. Wimmer"
+    ],
+    "year": 2018,
+    "abstract": "Thalamus has traditionally been considered as only a relay source of cortical inputs, with hierarchically organized cortical circuits serially transforming thalamic signals to cognitively-relevant representations. Given the absence of local excitatory connections within the thalamus, the notion of thalamic `relay' seemed like a reasonable description over the last several decades. Recent advances in experimental approaches and theory provide a broader perspective on the role of the thalamus in c",
+    "preprint_id": "1803.00997v3",
+    "doi": "",
+    "url": "http://arxiv.org/abs/1803.00997v3",
+    "source": "preprints",
+    "category": "q-bio.NC",
+    "thread": "category_memory",
+    "tier": "reject"
+  },
+  {
+    "title": "Gibbs Measures with memory of length 2 on an arbitrary order Cayley tree",
+    "authors": [
+      "Hasan Akin"
+    ],
+    "year": 2017,
+    "abstract": "In this paper, we consider the Ising-Vanniminus model on an arbitrary order Cayley tree. We generalize the results conjectured in [Chinese Journal of Physics, 54 (4), 635-649 (2016)] and [International Journal of Modern Physics, arXiv:1608.06178] for an arbitrary order Cayley tree. We establish existence and a full classification of translation invariant Gibbs measures with memory of length 2 associated with the model on arbitrary order Cayley tree. We construct the recurrence equations correspo",
+    "preprint_id": "1701.00715v1",
+    "doi": "https://doi.org/10.1142/S012918311850016X",
+    "url": "http://arxiv.org/abs/1701.00715v1",
+    "source": "preprints",
+    "category": "math.CO",
+    "thread": "associative_hierarchical",
+    "tier": "background"
+  },
+  {
+    "title": "Connected sums of $Z$-knotted triangulations",
+    "authors": [
+      "Mark Pankov",
+      "Adam Tyc"
+    ],
+    "year": 2017,
+    "abstract": "An embedded graph is called $z$-knotted if it contains the unique zigzag (up to reversing). We consider $z$-knotted triangulations, i.e. $z$-knotted embedded graphs whose faces are triangles, and describe all cases when the connected sum of two $z$-knotted triangulations is $z$-knotted.",
+    "preprint_id": "1703.07097v2",
+    "doi": "",
+    "url": "http://arxiv.org/abs/1703.07097v2",
+    "source": "preprints",
+    "category": "math.CO",
+    "thread": "braided_memory",
+    "tier": "reject"
+  },
+  {
+    "title": "Balanced Dynamic Content Addressing in Trees",
+    "authors": [
+      "Stefanie Roos",
+      "Martin Byrenheid",
+      "Clemens Deusser",
+      "Thorsten Strufe"
+    ],
+    "year": 2017,
+    "abstract": "Balancing the load in content addressing schemes for route-restricted networks represents a challenge with a wide range of applications. Solutions based on greedy embeddings maintain minimal state information and enable efficient routing, but any such solutions currently result in either imbalanced content addressing, overloading individual nodes, or are unable to efficiently account for network dynamics. In this work, we propose a greedy embedding in combination with a content addressing scheme",
+    "preprint_id": "1701.03522v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/1701.03522v1",
+    "source": "preprints",
+    "category": "cs.NI",
+    "thread": "merkle_version",
+    "tier": "reject"
+  },
+  {
+    "title": "Constrained Bayesian Active Learning of Interference Channels in Cognitive Radio Networks",
+    "authors": [
+      "Anestis Tsakmalis",
+      "Symeon Chatzinotas",
+      "Björn Ottersten"
+    ],
+    "year": 2017,
+    "abstract": "In this paper, a sequential probing method for interference constraint learning is proposed to allow a centralized Cognitive Radio Network (CRN) accessing the frequency band of a Primary User (PU) in an underlay cognitive scenario with a designed PU protection specification. The main idea is that the CRN probes the PU and subsequently eavesdrops the reverse PU link to acquire the binary ACK/NACK packet. This feedback indicates whether the probing-induced interference is harmful or not and can be",
+    "preprint_id": "1710.08335v1",
+    "doi": "https://doi.org/10.1109/JSTSP.2017.2785826",
+    "url": "http://arxiv.org/abs/1710.08335v1",
+    "source": "preprints",
+    "category": "cs.IT",
+    "thread": "category_memory",
+    "tier": "reject"
+  },
+  {
+    "title": "Emotion in Reinforcement Learning Agents and Robots: A Survey",
+    "authors": [
+      "Thomas M. Moerland",
+      "Joost Broekens",
+      "Catholijn M. Jonker"
+    ],
+    "year": 2017,
+    "abstract": "This article provides the first survey of computational models of emotion in reinforcement learning (RL) agents. The survey focuses on agent/robot emotions, and mostly ignores human user emotions. Emotions are recognized as functional in decision-making by influencing motivation and action selection. Therefore, computational emotion models are usually grounded in the agent's decision making architecture, of which RL is an important subclass. Studying emotions in RL-based agents is useful for thr",
+    "preprint_id": "1705.05172v1",
+    "doi": "https://doi.org/10.1007/s10994-017-5666-0",
+    "url": "http://arxiv.org/abs/1705.05172v1",
+    "source": "preprints",
+    "category": "cs.LG",
+    "thread": "category_memory",
+    "tier": "reject"
+  },
+  {
+    "title": "Straintronic magneto-tunneling-junction based ternary content addressable memory",
+    "authors": [
+      "S. Dey Manasi",
+      "M. M. Al Rashid",
+      "J. Atulasimha",
+      "S. Bandyopadhyay",
+      "A. R. Trivedi"
+    ],
+    "year": 2016,
+    "abstract": "Straintronic magneto-tunneling junction (s-MTJ) switches, whose resistances are controlled with voltage-generated strain in the magnetostrictive free layer of the MTJ, are extremely energy-efficient switches that would dissipate a few aJ of energy during switching. Unfortunately, they are also relatively error-prone and have low resistance on/off ratio. This suggests that as computing elements, they are best suited for non-Boolean architectures. Here, we propose and analyze a ternary content add",
+    "preprint_id": "1610.03902v2",
+    "doi": "",
+    "url": "http://arxiv.org/abs/1610.03902v2",
+    "source": "preprints",
+    "category": "cs.ET",
+    "thread": "content_addressable",
+    "tier": "background"
+  },
+  {
+    "title": "Disentangling Brain Graphs: A Note on the Conflation of Network and Connectivity Analyses",
+    "authors": [
+      "Sean L. Simpson",
+      "Paul J. Laurienti"
+    ],
+    "year": 2016,
+    "abstract": "Understanding the human brain remains the Holy Grail in biomedical science, and arguably in all of the sciences. Our brains represent the most complex systems in the world (and some contend the universe) comprising nearly one hundred billion neurons with septillions of possible connections between them. The structure of these connections engenders an efficient hierarchical system capable of consciousness, as well as complex thoughts, feelings, and behaviors. Brain connectivity and network analys",
+    "preprint_id": "1602.00933v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/1602.00933v1",
+    "source": "preprints",
+    "category": "q-bio.QM",
+    "thread": "dendrogram_neural",
+    "tier": "reject"
+  },
+  {
+    "title": "Hierarchical Neural Representation of Dreamed Objects Revealed by Brain Decoding with Deep Neural Network Features",
+    "authors": [
+      "Tomoyasu Horikawa",
+      "Yukiyasu Kamitani"
+    ],
+    "year": 2016,
+    "abstract": "Dreaming is generally thought to be generated by spontaneous brain activity during sleep with patterns common to waking experience. This view is supported by a recent study demonstrating that dreamed objects can be predicted from brain activity during sleep using statistical decoders trained with stimulus-induced brain activity. However, it remains unclear whether and how visual image features associated with dreamed objects are represented in the brain. In this study, we used a deep neural netw",
+    "preprint_id": "1611.09520v2",
+    "doi": "",
+    "url": "http://arxiv.org/abs/1611.09520v2",
+    "source": "preprints",
+    "category": "q-bio.NC",
+    "thread": "dendrogram_neural",
+    "tier": "background"
+  },
+  {
+    "title": "Language discrimination and clustering via a neural network approach",
+    "authors": [
+      "Angelo Mariano",
+      "Giorgio Parisi",
+      "Saverio Pascazio"
+    ],
+    "year": 2015,
+    "abstract": "We classify twenty-one Indo-European languages starting from written text. We use neural networks in order to define a distance among different languages, construct a dendrogram and analyze the ultrametric structure that emerges. Four or five subgroups of languages are identified, according to the \"cut\" of the dendrogram, drawn with an entropic criterion. The results and the method are discussed.",
+    "preprint_id": "1507.04116v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/1507.04116v1",
+    "source": "preprints",
+    "category": "cond-mat.dis-nn",
+    "thread": "ultrametric_memory",
+    "tier": "supporting"
+  },
+  {
+    "title": "Native ultrametricity of sparse random ensembles",
+    "authors": [
+      "V. Avetisov",
+      "P. L. Krapivsky",
+      "S. Nechaev"
+    ],
+    "year": 2015,
+    "abstract": "We investigate the eigenvalue density in ensembles of large sparse Bernoulli random matrices. We demonstrate that the fraction of linear subgraphs just below the percolation threshold is about 95\\% of all finite subgraphs, and the distribution of linear chains is purely exponential. We analyze in detail the spectral density of ensembles of linear subgraphs, discuss its ultrametric nature and show that near the spectrum boundary, the tail of the spectral density exhibits a Lifshitz singularity ty",
+    "preprint_id": "1506.05037v1",
+    "doi": "https://doi.org/10.1088/1751-8113/49/3/035101",
+    "url": "http://arxiv.org/abs/1506.05037v1",
+    "source": "preprints",
+    "category": "cond-mat.dis-nn",
+    "thread": "ultrametric_memory",
+    "tier": "reject"
+  },
+  {
+    "title": "A method that reveals the multi-level ultrametric tree hidden in p-spin glass like systems",
+    "authors": [
+      "R. Baviera",
+      "M. A. Virasoro"
+    ],
+    "year": 2015,
+    "abstract": "In the study of disordered models like spin glasses the key object of interest is the rugged energy hypersurface defined in configuration space. The statistical mechanics calculation of the Gibbs-Boltzmann Partition Function gives the information necessary to understand the equilibrium behavior of the system as a function of the temperature but is not enough if we are interested in more general aspects of the hypersurface: it does not give us, for instance, the different degrees of ruggedness at",
+    "preprint_id": "1508.01232v1",
+    "doi": "https://doi.org/10.1088/1742-5468/2015/12/P12007",
+    "url": "http://arxiv.org/abs/1508.01232v1",
+    "source": "preprints",
+    "category": "cond-mat.stat-mech",
+    "thread": "hopfield_spin_glass",
+    "tier": "supporting"
+  },
+  {
+    "title": "Majorana braiding with thermal noise",
+    "authors": [
+      "Fabio L. Pedrocchi",
+      "David P. DiVincenzo"
+    ],
+    "year": 2015,
+    "abstract": "We investigate the self-correcting properties of a network of Majorana wires, in the form of a trijunction, in contact with a parity-preserving thermal environment. As opposed to the case where Majorana bound states (MBSs) are immobile, braiding MBSs within a trijunction introduces dangerous error processes that we identify. Such errors prevent the lifetime of the memory from increasing with the size of the system. We confirm our predictions with Monte Carlo simulations. Our findings put a restr",
+    "preprint_id": "1505.03712v2",
+    "doi": "https://doi.org/10.1103/PhysRevLett.115.120402",
+    "url": "http://arxiv.org/abs/1505.03712v2",
+    "source": "preprints",
+    "category": "cond-mat.mes-hall",
+    "thread": "braided_memory",
+    "tier": "background"
+  },
+  {
+    "title": "A Bayesian alternative to mutual information for the hierarchical clustering of dependent random variables",
+    "authors": [
+      "Guillaume Marrelec",
+      "Arnaud Messé",
+      "Pierre Bellec"
+    ],
+    "year": 2015,
+    "abstract": "The use of mutual information as a similarity measure in agglomerative hierarchical clustering (AHC) raises an important issue: some correction needs to be applied for the dimensionality of variables. In this work, we formulate the decision of merging dependent multivariate normal variables in an AHC procedure as a Bayesian model comparison. We found that the Bayesian formulation naturally shrinks the empirical covariance matrix towards a matrix set a priori (e.g., the identity), provides an aut",
+    "preprint_id": "1501.05194v2",
+    "doi": "https://doi.org/10.1371/journal.pone.0137278",
+    "url": "http://arxiv.org/abs/1501.05194v2",
+    "source": "preprints",
+    "category": "stat.ML",
+    "thread": "dendrogram_neural",
+    "tier": "reject"
+  },
+  {
+    "title": "Operator-valued Kernels for Learning from Functional Response Data",
+    "authors": [
+      "Hachem Kadri",
+      "Emmanuel Duflos",
+      "Philippe Preux",
+      "Stéphane Canu",
+      "Alain Rakotomamonjy",
+      "Julien Audiffren"
+    ],
+    "year": 2015,
+    "abstract": "In this paper we consider the problems of supervised classification and regression in the case where attributes and labels are functions: a data is represented by a set of functions, and the label is also a function. We focus on the use of reproducing kernel Hilbert space theory to learn from such functional data. Basic concepts and properties of kernel-based learning are extended to include the estimation of function-valued functions. In this setting, the representer theorem is restated, a set ",
+    "preprint_id": "1510.08231v3",
+    "doi": "",
+    "url": "http://arxiv.org/abs/1510.08231v3",
+    "source": "preprints",
+    "category": "cs.LG",
+    "thread": "category_memory",
+    "tier": "reject"
+  },
+  {
+    "title": "Approximate Ultrametricity for Random Measures and Applications to Spin Glasses",
+    "authors": [
+      "Aukosh Jagannath"
+    ],
+    "year": 2014,
+    "abstract": "In this paper, we introduce a notion called \"Approximate Ultrametricity\" which encapsulates the phenomenology of a sequence of random probability measures having supports that behave like ultrametric spaces insofar as they decompose into nested balls. We provide a sufficient condition for a sequence of random probability measures on the unit ball of an infinite dimensional separable Hilbert space to admit such a decomposition, whose elements we call clusters. We also characterize the laws of the",
+    "preprint_id": "1412.7076v1",
+    "doi": "https://doi.org/10.1002/cpa.21685",
+    "url": "http://arxiv.org/abs/1412.7076v1",
+    "source": "preprints",
+    "category": "math.PR",
+    "thread": "hopfield_spin_glass",
+    "tier": "background"
+  },
+  {
+    "title": "Selective Match-Line Energizer Content Addressable Memory(SMLE -CAM)",
+    "authors": [
+      "Mohammed Zackriya.",
+      "Harish M Kittur"
+    ],
+    "year": 2014,
+    "abstract": "A Content Addressable Memory (CAM) is a memory primarily designed for high speed search operation. Parallel search scheme forms the basis of CAM, thus power reduction is the challenge associated with a large amount of parallel active circuits. We are presenting a novel algorithm and architecture described as Selective Match-Line Energizer Content Addressable Memory (SMLE-CAM) which energizes only those MLs (Match-Line) whose first three bits are conditionally matched with corresponding first thr",
+    "preprint_id": "1406.7662v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/1406.7662v1",
+    "source": "preprints",
+    "category": "cs.AR",
+    "thread": "content_addressable",
+    "tier": "background"
+  },
+  {
+    "title": "The Khipu-Based Numeration System",
+    "authors": [
+      "Sneha Pilgaonkar"
+    ],
+    "year": 2014,
+    "abstract": "This paper presents a survey of the khipu-based enumeration system of the Incas. In this system, different knots are tied together and they are attached to a primary cord. The numerical basis of the khipu system is well understood but more recent theories suggest that the khipu also encoded narrative information and this may have been facilitated by binary mapping.",
+    "preprint_id": "1405.6093v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/1405.6093v1",
+    "source": "preprints",
+    "category": "math.HO",
+    "thread": "quipu_encoding",
+    "tier": "background"
+  },
+  {
+    "title": "Introducing Memory and Association Mechanism into a Biologically Inspired Visual Model",
+    "authors": [
+      "Qiao Hong",
+      "Li Yinlin",
+      "Tang Tang",
+      "Wang Peng"
+    ],
+    "year": 2013,
+    "abstract": "A famous biologically inspired hierarchical model firstly proposed by Riesenhuber and Poggio has been successfully applied to multiple visual recognition tasks. The model is able to achieve a set of position- and scale-tolerant recognition, which is a central problem in pattern recognition. In this paper, based on some other biological experimental results, we introduce the Memory and Association Mechanisms into the above biologically inspired model. The main motivations of the work are (a) to m",
+    "preprint_id": "1307.1388v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/1307.1388v1",
+    "source": "preprints",
+    "category": "cs.AI",
+    "thread": "associative_hierarchical",
+    "tier": "background"
+  },
+  {
+    "title": "Ultrametricity and long-range correlations in the Edwards-Anderson spin glass",
+    "authors": [
+      "A. Maiorano",
+      "G. Parisi",
+      "D. Yllanes"
+    ],
+    "year": 2013,
+    "abstract": "In recent times, the theoretical study of the three-dimensional Edwards-Anderson model has produced several rigorous results on the nature of the spin-glass phase. In particular, it has been shown that, as soon as the overlap distribution is non-trivial, ultrametricity holds. However, these theorems are valid only in the thermodynamical limit and are therefore of uncertain applicability for (perennially off-equilibrium) experimental spin glasses. In addition, their basic assumption of non-trivia",
+    "preprint_id": "1312.2790v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/1312.2790v1",
+    "source": "preprints",
+    "category": "cond-mat.dis-nn",
+    "thread": "hopfield_spin_glass",
+    "tier": "background"
+  },
+  {
+    "title": "Racks and blocked braids",
+    "authors": [
+      "N. Sabadini",
+      "R. F. C. Walters"
+    ],
+    "year": 2013,
+    "abstract": "In the paper Blocked-braid Groups, submitted to Applied Categorical Structures, the present authors together with Davide Maglia introduced the blocked-braid groups BB_n on n strands, and proved that a blocked torsion has order either 2 or 4. We conjectured that the order was actually 4 but our methods in that paper, which involved introducing for any group G a braided monoidal category of tangled relations, were inadequate to demonstrate this fact. Subsequently Davide Maglia in unpublished work ",
+    "preprint_id": "1307.5404v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/1307.5404v1",
+    "source": "preprints",
+    "category": "math.CT",
+    "thread": "braided_memory",
+    "tier": "background"
+  },
+  {
+    "title": "PAV ontology: Provenance, Authoring and Versioning",
+    "authors": [
+      "Paolo Ciccarese",
+      "Stian Soiland-Reyes",
+      "Khalid Belhajjame",
+      "Alasdair J G Gray",
+      "Carole Goble",
+      "Tim Clark"
+    ],
+    "year": 2013,
+    "abstract": "Provenance is a critical ingredient for establishing trust of published scientific content. This is true whether we are considering a data set, a computational workflow, a peer-reviewed publication or a simple scientific claim with supportive evidence. Existing vocabularies such as DC Terms and the W3C PROV-O are domain-independent and general-purpose and they allow and encourage for extensions to cover more specific needs. We identify the specific need for identifying or distinguishing between ",
+    "preprint_id": "1304.7224v6",
+    "doi": "https://doi.org/10.1186/2041-1480-4-37",
+    "url": "http://arxiv.org/abs/1304.7224v6",
+    "source": "preprints",
+    "category": "cs.DL",
+    "thread": "merkle_version",
+    "tier": "background"
+  },
+  {
+    "title": "Ultrametric probe of the spin-glass state in a field",
+    "authors": [
+      "Helmut G. Katzgraber",
+      "Thomas Jorg",
+      "Florent Krzakala",
+      "Alexander K. Hartmann"
+    ],
+    "year": 2012,
+    "abstract": "We study the ultrametric structure of phase space of one-dimensional Ising spin glasses with random power-law interaction in an external random field. Although in zero field the model in both the mean-field and non-mean-field universality classes shows an ultrametric signature [Phys. Rev. Lett. 102, 037207 (2009)], when a field is applied ultrametricity seems only present in the mean-field regime. The results for the non-mean field case in an external field agree with data for spin glasses studi",
+    "preprint_id": "1205.4200v4",
+    "doi": "https://doi.org/10.1103/PhysRevB.86.184405",
+    "url": "http://arxiv.org/abs/1205.4200v4",
+    "source": "preprints",
+    "category": "cond-mat.dis-nn",
+    "thread": "ultrametric_memory",
+    "tier": "background"
+  },
+  {
+    "title": "Non-volatile Complementary Resistive Switch-based Content Addressable Memory",
+    "authors": [
+      "Omid Kavehei",
+      "Said Al-Sarawi",
+      "Sharath Sriram",
+      "Madhu Bhaskaran",
+      "Kyoung-Rok Cho",
+      "Kamran Eshraghian",
+      "Derek Abbott"
+    ],
+    "year": 2011,
+    "abstract": "This paper presents a novel resistive-only Binary and Ternary Content Addressable Memory (B/TCAM) cell that consists of two Complementary Resistive Switches (CRSs). The operation of such a cell relies on a logic$\\rightarrow$ON state transition that enables this novel CRS application.",
+    "preprint_id": "1108.3716v2",
+    "doi": "",
+    "url": "http://arxiv.org/abs/1108.3716v2",
+    "source": "preprints",
+    "category": "cond-mat.mtrl-sci",
+    "thread": "content_addressable",
+    "tier": "background"
+  },
+  {
+    "title": "Key establishment à la Merkle in a quantum world",
+    "authors": [
+      "Gilles Brassard",
+      "Peter Hoyer",
+      "Kassem Kalach",
+      "Marc Kaplan",
+      "Sophie Laplante",
+      "Louis Salvail"
+    ],
+    "year": 2011,
+    "abstract": "In 1974, Ralph Merkle proposed the first unclassified scheme for secure communications over insecure channels. When legitimate communicating parties are willing to spend an amount of computational effort proportional to some parameter N, an eavesdropper cannot break into their communication without spending a time proportional to N^2, which is quadratically more than the legitimate effort. Two of us showed in 2008 that Merkle's schemes are completely insecure against a quantum adversary, but tha",
+    "preprint_id": "1108.2316v2",
+    "doi": "",
+    "url": "http://arxiv.org/abs/1108.2316v2",
+    "source": "preprints",
+    "category": "quant-ph",
+    "thread": "merkle_version",
+    "tier": "reject"
+  },
+  {
+    "title": "Memristor MOS Content Addressable Memory (MCAM): Hybrid Architecture for Future High Performance Search Engines",
+    "authors": [
+      "Kamran Eshraghian",
+      "Kyoung Rok Cho",
+      "Omid Kavehei",
+      "Soon-Ku Kang",
+      "Derek Abbott",
+      "Sung-Mo Steve Kang"
+    ],
+    "year": 2010,
+    "abstract": "Large-capacity Content Addressable Memory (CAM) is a key element in a wide variety of applications. The inevitable complexities of scaling MOS transistors introduce a major challenge in the realization of such systems. Convergence of disparate technologies, which are compatible with CMOS processing, may allow extension of Moore's Law for a few more years. This paper provides a new approach towards the design and modeling of Memristor (Memory resistor) based Content Addressable Memory (MCAM) usin",
+    "preprint_id": "1005.3687v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/1005.3687v1",
+    "source": "preprints",
+    "category": "cond-mat.mes-hall",
+    "thread": "content_addressable",
+    "tier": "background"
+  },
+  {
+    "title": "Optimal hierarchical modular topologies for producing limited sustained activation of neural networks",
+    "authors": [
+      "Marcus Kaiser",
+      "Claus C. Hilgetag"
+    ],
+    "year": 2010,
+    "abstract": "An essential requirement for the representation of functional patterns in complex neural networks, such as the mammalian cerebral cortex, is the existence of stable regimes of network activation, typically arising from a limited parameter range. In this range of limited sustained activity (LSA), the activity of neural populations in the network persists between the extremes of either quickly dying out or activating the whole network. Hierarchical modular networks were previously found to show a ",
+    "preprint_id": "1003.3081v1",
+    "doi": "https://doi.org/10.3389/fninf.2010.00008",
+    "url": "http://arxiv.org/abs/1003.3081v1",
+    "source": "preprints",
+    "category": "q-bio.NC",
+    "thread": "dendrogram_neural",
+    "tier": "background"
+  },
+  {
+    "title": "Hierarchical modularity in human brain functional networks",
+    "authors": [
+      "D. Meunier",
+      "R. Lambiotte",
+      "A. Fornito",
+      "K. D. Ersche",
+      "E. T. Bullmore"
+    ],
+    "year": 2010,
+    "abstract": "The idea that complex systems have a hierarchical modular organization originates in the early 1960s and has recently attracted fresh support from quantitative studies of large scale, real-life networks. Here we investigate the hierarchical modular (or \"modules-within-modules\") decomposition of human brain functional networks, measured using functional magnetic resonance imaging (fMRI) in 18 healthy volunteers under no-task or resting conditions. We used a customized template to extract networks",
+    "preprint_id": "1004.3153v1",
+    "doi": "https://doi.org/10.3389/neuro.11.037.2009",
+    "url": "http://arxiv.org/abs/1004.3153v1",
+    "source": "preprints",
+    "category": "physics.data-an",
+    "thread": "dendrogram_neural",
+    "tier": "reject"
+  },
+  {
+    "title": "Organization and Complexity in a Nested Hierarchical Spin-Glass like Social Space",
+    "authors": [
+      "Fariel Shafee"
+    ],
+    "year": 2009,
+    "abstract": "In this paper, we mathematically formulate the interaction and dynamics of a hierarchical complex social system where each agent is seen as an array of many variables. The formation of identities and modifications can be studied by using interaction physics in an energy landscape. The spin glass Hamiltonian is modified to suit our needs in light of complexity. The expression of variables subject to weights and topology is considered. Interactions within the same hierarchy level as well as the ef",
+    "preprint_id": "0911.5570v2",
+    "doi": "",
+    "url": "http://arxiv.org/abs/0911.5570v2",
+    "source": "preprints",
+    "category": "physics.soc-ph",
+    "thread": "hopfield_spin_glass",
+    "tier": "background"
+  },
+  {
+    "title": "Untangling the Braid: Finding Outliers in a Set of Streams",
+    "authors": [
+      "Chiranjeeb Buragohain",
+      "Luca Foschini",
+      "Subhash Suri"
+    ],
+    "year": 2009,
+    "abstract": "Monitoring the performance of large shared computing systems such as the cloud computing infrastructure raises many challenging algorithmic problems. One common problem is to track users with the largest deviation from the norm (outliers), for some measure of performance. Taking a stream-computing perspective, we can think of each user's performance profile as a stream of numbers (such as response times), and the aggregate performance profile of the shared infrastructure as a \"braid\" of these in",
+    "preprint_id": "0907.2951v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/0907.2951v1",
+    "source": "preprints",
+    "category": "cs.DB",
+    "thread": "braided_memory",
+    "tier": "reject"
+  },
+  {
+    "title": "Ultrametricity and clustering of states in spin glasses: A one-dimensional view",
+    "authors": [
+      "Helmut G. Katzgraber",
+      "Alexander K. Hartmann"
+    ],
+    "year": 2008,
+    "abstract": "We present results from Monte Carlo simulations to test for ultrametricity and clustering properties in spin-glass models. By using a one-dimensional Ising spin glass with random power-law interactions where the universality class of the model can be tuned by changing the power-law exponent, we find signatures of ultrametric behavior both in the mean-field and non-mean-field universality classes for large linear system sizes. Furthermore, we confirm the existence of nontrivial connected componen",
+    "preprint_id": "0807.3513v2",
+    "doi": "https://doi.org/10.1103/PhysRevLett.102.037207",
+    "url": "http://arxiv.org/abs/0807.3513v2",
+    "source": "preprints",
+    "category": "cond-mat.dis-nn",
+    "thread": "hopfield_spin_glass",
+    "tier": "background"
+  },
+  {
+    "title": "The Non-Equilibrium Reliability of Quantum Memories",
+    "authors": [
+      "Alastair Kay"
+    ],
+    "year": 2008,
+    "abstract": "The ability to store quantum information without recourse to constant feedback processes would yield a significant advantage for future implementations of quantum information processing. In this paper, limitations of the prototypical model, the Toric code in two dimensions, are elucidated along with a sufficient condition for overcoming these limitations. Specifically, the interplay between Hamiltonian perturbations and dynamically occurring noise is considered as a system in its ground state is",
+    "preprint_id": "0807.0287v3",
+    "doi": "https://doi.org/10.1103/PhysRevLett.102.070503",
+    "url": "http://arxiv.org/abs/0807.0287v3",
+    "source": "preprints",
+    "category": "quant-ph",
+    "thread": "braided_memory",
+    "tier": "reject"
+  },
+  {
+    "title": "On mutation and Khovanov homology",
+    "authors": [
+      "Abhijit Champanerkar",
+      "Ilya Kofman"
+    ],
+    "year": 2008,
+    "abstract": "It is conjectured that the Khovanov homology of a knot is invariant under mutation. In this paper, we review the spanning tree complex for Khovanov homology, and reformulate this conjecture using a matroid obtained from the Tait graph (checkerboard graph) G of a knot diagram K. The spanning trees of G provide a filtration and a spectral sequence that converges to the reduced Khovanov homology of K. We show that the E_2-term of this spectral sequence is a matroid invariant and hence invariant und",
+    "preprint_id": "0801.4937v2",
+    "doi": "",
+    "url": "http://arxiv.org/abs/0801.4937v2",
+    "source": "preprints",
+    "category": "math.GT",
+    "thread": "braided_memory",
+    "tier": "background"
+  },
+  {
+    "title": "A calendar Quipu of the early 17th century and its relationship with the Inca astronomy",
+    "authors": [
+      "Laura Laurencich-Minelli",
+      "Giulio Magli"
+    ],
+    "year": 2008,
+    "abstract": "The so-called Miccinelli documents are a set of documents which were written by Jesuit scholars in Peru within the first half of the 17th century. Among such documents, one contains the depiction of a Quipu, that is, a device made out of cords of different nature and colors which, with the help of nodes, were used by the Incas for storing data. This Quipu is claimed by the author, Blas Valera, to be a reproduction of the Inca calendar of the year of the Spanish conquest. We give here a complete ",
+    "preprint_id": "0801.1577v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/0801.1577v1",
+    "source": "preprints",
+    "category": "physics.hist-ph",
+    "thread": "quipu_encoding",
+    "tier": "reject"
+  },
+  {
+    "title": "Landscape dynamics, interbasin kinetics and ultrametric diffusion",
+    "authors": [
+      "S. V. Kozyrev"
+    ],
+    "year": 2007,
+    "abstract": "We discuss the interbasin kinetics approximation for random walk on a complex landscape. We show that for a generic landscape the corresponding model of interbasin kinetics is equivalent to an ultrametric diffusion, generated by an ultrametric pseudodifferential operator on the ultrametric space related to the tree of basins. The simplest example of ultrametric diffusion of this kind is described by the p-adic heat equation.",
+    "preprint_id": "0711.1453v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/0711.1453v1",
+    "source": "preprints",
+    "category": "cond-mat.dis-nn",
+    "thread": "ultrametric_memory",
+    "tier": "background"
+  },
+  {
+    "title": "Comment on \"Ultrametricity in the Edwards-Anderson Model\"",
+    "authors": [
+      "Thomas Jorg",
+      "Florent Krzakala"
+    ],
+    "year": 2007,
+    "abstract": "In a recent interesting Letter Contucci {\\it et al.} have investigated several properties of the three-dimensional (3d) Edwards-Anderson (EA) Ising spin glass. They claim to have found strong numerical evidence for the presence of a complex ultrametric structure similar to the one described by the replica symmetry breaking solution of the mean field model. We illustrate by numerical simulations that the relations used by Contucci {\\it et al.} as evidence for an ultrametric structure in the 3d EA",
+    "preprint_id": "0709.0894v1",
+    "doi": "https://doi.org/10.1103/PhysRevLett.100.159701",
+    "url": "http://arxiv.org/abs/0709.0894v1",
+    "source": "preprints",
+    "category": "cond-mat.dis-nn",
+    "thread": "ultrametric_memory",
+    "tier": "supporting"
+  },
+  {
+    "title": "Spatial medians, depth functions and multivariate Jensen's inequality",
+    "authors": [
+      "Djordje Baljozovic",
+      "Milan Merkle"
+    ],
+    "year": 2007,
+    "abstract": "For any given partial order in a $d$-dimensional euclidean space, under mild regularity assumptions, we show that the intersection of closed (generalized) intervals containing more than 1/2 of the probability mass, is a non-empty compact interval. This property is shared with common intervals on real line, where the intersection is the median set of the underlying probability distribution. So obtained multivariate medians with respect to a partial order, can be observed as special cases of cente",
+    "preprint_id": "math/0701922v3",
+    "doi": "https://doi.org/10.1016/j.jmaa.2010.04",
+    "url": "http://arxiv.org/abs/math/0701922v3",
+    "source": "preprints",
+    "category": "math.ST",
+    "thread": "merkle_version",
+    "tier": "reject"
+  },
+  {
+    "title": "Aging, rejuvenation and memory : the example of spin glasses",
+    "authors": [
+      "Eric Vincent"
+    ],
+    "year": 2006,
+    "abstract": "In this paper, we review the general features of the out-of-equilibrium dynamics of spin glasses. We use this example as a guideline for a brief description of glassy dynamics in other disordered systems like structural and polymer glasses, colloids, gels etc. Starting with the simplest experiments, we discuss the scaling laws used to describe the isothermal aging observed in spin glasses after a quench down to the low temperature phase (these scaling laws are the same as established for polymer",
+    "preprint_id": "cond-mat/0603583v1",
+    "doi": "https://doi.org/10.1007/3-540-69684-9",
+    "url": "http://arxiv.org/abs/cond-mat/0603583v1",
+    "source": "preprints",
+    "category": "cond-mat.dis-nn",
+    "thread": "hopfield_spin_glass",
+    "tier": "background"
+  },
+  {
+    "title": "Topological Computation without Braiding",
+    "authors": [
+      "H. Bombin",
+      "M. A. Martin-Delgado"
+    ],
+    "year": 2006,
+    "abstract": "We show that universal quantum computation can be performed within the ground state of a topologically ordered quantum system, which is a naturally protected quantum memory. In particular, we show how this can be achieved using brane-net condensates in 3-colexes. The universal set of gates is implemented without selective addressing of physical qubits and, being fully topologically protected, it does not rely on quasiparticle excitations or their braiding.",
+    "preprint_id": "quant-ph/0610024v2",
+    "doi": "https://doi.org/10.1103/PhysRevLett.98.160502",
+    "url": "http://arxiv.org/abs/quant-ph/0610024v2",
+    "source": "preprints",
+    "category": "quant-ph",
+    "thread": "braided_memory",
+    "tier": "supporting"
+  },
+  {
+    "title": "The QDF file format: an electronic system to describe ancient andean khipus",
+    "authors": [
+      "Manuel Arturo Izquierdo"
+    ],
+    "year": 2005,
+    "abstract": "With the goal of bringing to reseachers of the ancient andean khipus with a tool to share and process electronically the current corpus of these ancient information devices, I present on this paper a proposal for a Quipu Description Format (QDF), a XML based file format designed to describe such documents in a systematic and computer standard way.",
+    "preprint_id": "cs/0505050v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/cs/0505050v1",
+    "source": "preprints",
+    "category": "cs.CY",
+    "thread": "quipu_encoding",
+    "tier": "background"
+  },
+  {
+    "title": "Ultrametric Broken Replica Symmetry RaMOSt",
+    "authors": [
+      "Luca De Sanctis"
+    ],
+    "year": 2004,
+    "abstract": "We propose an ultrametric broken replica symmetry trial function for the diluted mean field sping glass model in the framework of random multi-overlap structure.",
+    "preprint_id": "cond-mat/0411726v2",
+    "doi": "",
+    "url": "http://arxiv.org/abs/cond-mat/0411726v2",
+    "source": "preprints",
+    "category": "cond-mat.dis-nn",
+    "thread": "ultrametric_memory",
+    "tier": "background"
+  },
+  {
+    "title": "Probabilistic Solutions of Equations in the Braid Group",
+    "authors": [
+      "D. Garber",
+      "S. Kaplan",
+      "M. Teicher",
+      "B. Tsaban",
+      "U. Vishne"
+    ],
+    "year": 2004,
+    "abstract": "Given a system of equations in a \"random\" finitely generated subgroup of the braid group, we show how to find a small ordered list of elements in the subgroup, which contains a solution to the equations with a significant probability. Moreover, with a significant probability, the solution will be the first in the list. This gives a probabilistic solution to: The conjugacy problem, the group membership problem, the shortest representation of an element, and other combinatorial group-theoretic pro",
+    "preprint_id": "math/0404076v4",
+    "doi": "https://doi.org/10.1016/j.aam.2005.03.002",
+    "url": "http://arxiv.org/abs/math/0404076v4",
+    "source": "preprints",
+    "category": "math.GR",
+    "thread": "braided_memory",
+    "tier": "reject"
+  },
+  {
+    "title": "Enumerating the Prime Alternating Knots, Part II",
+    "authors": [
+      "Ortho Smith",
+      "John Schermann",
+      "Stuart Rankin"
+    ],
+    "year": 2002,
+    "abstract": "This is the second of a part series devoted to enumerating prime alternating knots and links. In Part I, we introduced four operators on knots and showed that if these operators are applied to the set of all prime alternating knots of n crossings, the set of all prime alternating knots of n+1 crossings is obtained. In this paper, we explain how to actually implement the operators in an efficient manner. This relies on a complete invariant that we have introduced, called the master array for a pr",
+    "preprint_id": "math/0211348v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/math/0211348v1",
+    "source": "preprints",
+    "category": "math.GT",
+    "thread": "braided_memory",
+    "tier": "reject"
+  },
+  {
+    "title": "p-Adic Models of Ultrametric Diffusion Constrained by Hierarchical Energy Landscapes",
+    "authors": [
+      "V A Avetisov",
+      "A H Bikulov",
+      "S V Kozyrev",
+      "V A Osipov"
+    ],
+    "year": 2001,
+    "abstract": "We demonstrate that p-adic analysis is a natural basis for the construction of a wide variety of the ultrametric diffusion models constrained by hierarchical energy landscapes. A general analytical description in terms of p-adic analysis is given for a class of models. Two exactly solvable examples, i.e. the ultrametric diffusion constraned by the linear energy landscape and the ultrametric diffusion with reaction sink, are considered. We show that such models can be applied to both the relaxati",
+    "preprint_id": "cond-mat/0106506v1",
+    "doi": "https://doi.org/10.1088/0305-4470/35/2/301",
+    "url": "http://arxiv.org/abs/cond-mat/0106506v1",
+    "source": "preprints",
+    "category": "cond-mat.dis-nn",
+    "thread": "ultrametric_memory",
+    "tier": "background"
+  },
+  {
+    "title": "The many faces of cyclic branched coverings of 2-bridge knots and links",
+    "authors": [
+      "Michele Mulazzani",
+      "Andrei Vesnin"
+    ],
+    "year": 2001,
+    "abstract": "We discuss 3-manifolds which are cyclic coverings of the 3-sphere, branched over 2-bridge knots and links. Different descriptions of these manifolds are presented: polyhedral, Heegaard diagram, Dehn surgery and coloured graph constructions. Using these descriptions, we give presentations for their fundamental groups, which are cyclic presentations in the case of 2-bridge knots. The homology groups are given for a wide class of cases. Moreover, we prove that each singly-cyclic branched covering o",
+    "preprint_id": "math/0106164v1",
+    "doi": "",
+    "url": "http://arxiv.org/abs/math/0106164v1",
+    "source": "preprints",
+    "category": "math.GT",
+    "thread": "braided_memory",
+    "tier": "reject"
+  },
+  {
+    "title": "Ultrametric space cut instead of 2d one in 2d quantum field models",
+    "authors": [
+      "D. B. Saakian"
+    ],
+    "year": 2000,
+    "abstract": "It is possible to formulate 2d field theory on the ultrametric space with the free correlators identical to 2d correlators and the same potential. Such model should carry some features of original model for scale invariant theories. For the case of strings and 2d conformal models it is possible to derive exact results. It is possible to investigate not only bulk structure (phase transition points) of theory, but sometimes also correlators. Such ultrametric models could be naturally expressed via",
+    "preprint_id": "cond-mat/0004086v2",
+    "doi": "",
+    "url": "http://arxiv.org/abs/cond-mat/0004086v2",
+    "source": "preprints",
+    "category": "cond-mat.dis-nn",
+    "thread": "ultrametric_memory",
+    "tier": "reject"
+  },
+  {
+    "title": "Some Exact Results on the Ultrametric Overlap Distribution in Mean Field Spin Glass Models (I)",
+    "authors": [
+      "Francesco Baffioni",
+      "Francesco Rosati"
+    ],
+    "year": 2000,
+    "abstract": "The mean field spin glass model is analyzed by a combination of mathematically rigororous methods and a powerful Ansatz. The method exploited is general, and can be applied to others disordered mean field models such as, e.g., neural networks.   It is well known that the probability measure of overlaps among replicas carries the whole physical content of these models. A functional order parameter of Parisi type is introduced by rigorous methods, according to previous works by F. Guerra. By the A",
+    "preprint_id": "cond-mat/0002342v1",
+    "doi": "https://doi.org/10.1007/s100510070123",
+    "url": "http://arxiv.org/abs/cond-mat/0002342v1",
+    "source": "preprints",
+    "category": "cond-mat.dis-nn",
+    "thread": "ultrametric_memory",
+    "tier": "core"
+  },
+  {
+    "title": "Dynamic ultrametricity in finite dimensional spin glasses",
+    "authors": [
+      "Daniel A. Stariolo"
+    ],
+    "year": 2000,
+    "abstract": "We show results of simulations of a weakly driven four dimensional Edwards- Anderson spin glass, which presents clear signatures of dynamical ultrametricity at low temperatures. The presence of a hierarchical organization of time scales is evident from the appearance of a triangular relation between correlations at three characteristic long times in the asymptotic limit of small drive, and also in the scaling form of stationary correlations in this regime. The differences between this scenario a",
+    "preprint_id": "cond-mat/0010495v2",
+    "doi": "https://doi.org/10.1209/epl/i2001-00474-0",
+    "url": "http://arxiv.org/abs/cond-mat/0010495v2",
+    "source": "preprints",
+    "category": "cond-mat.dis-nn",
+    "thread": "hopfield_spin_glass",
+    "tier": "supporting"
+  },
+  {
+    "title": "Is dynamic ultrametricity observable in spin glasses?",
+    "authors": [
+      "Ludovic Berthier",
+      "Jean-Louis Barrat",
+      "Jorge Kurchan"
+    ],
+    "year": 2000,
+    "abstract": "We investigate the dynamics of spin glasses from the `rheological' point of view, in which aging is suppressed by the action of small, non-conservative forces. The different features can be expressed in terms of the scaling of relaxation times with the magnitude of the driving force, which plays the role of the critical parameter. Stated in these terms, ultrametricity loses much of its mystery and can be checked rather easily. This approach also seems a natural starting point to investigate what",
+    "preprint_id": "cond-mat/0006161v1",
+    "doi": "https://doi.org/10.1103/PhysRevE.63.016105",
+    "url": "http://arxiv.org/abs/cond-mat/0006161v1",
+    "source": "preprints",
+    "category": "cond-mat.dis-nn",
+    "thread": "hopfield_spin_glass",
+    "tier": "background"
+  },
+  {
+    "title": "Ultrametricity in 3D Edwards-Anderson spin glasses",
+    "authors": [
+      "Silvio Franz",
+      "Federico Ricci-Tersenghi"
+    ],
+    "year": 1999,
+    "abstract": "We perform an accurate test of Ultrametricity in the aging dynamics of the three dimensional Edwards-Anderson spin glass. Our method consists in considering the evolution in parallel of two identical systems constrained to have fixed overlap. This turns out to be a particularly efficient way to study the geometrical relations between configurations at distant large times. Our findings strongly hint towards dynamical ultrametricity in spin glasses, while this is absent in simpler aging systems wi",
+    "preprint_id": "cond-mat/9903130v2",
+    "doi": "https://doi.org/10.1103/PhysRevE.61.1121",
+    "url": "http://arxiv.org/abs/cond-mat/9903130v2",
+    "source": "preprints",
+    "category": "cond-mat.dis-nn",
+    "thread": "hopfield_spin_glass",
+    "tier": "background"
+  },
+  {
+    "title": "Memory interference effects in spin glasses",
+    "authors": [
+      "K. Jonason",
+      "P. Nordblad",
+      "E. Vincent",
+      "J. Hammann",
+      "J. P. Bouchaud"
+    ],
+    "year": 1999,
+    "abstract": "When a spin glass is cooled down, a memory of the cooling process is imprinted in the spin structure. This memory can be disclosed in a continuous heating measurement of the ac-susceptibility. E.g., if a continuous cooling process is intermittently halted during a certain aging time at one or two intermediate temperatures, the trace of the previous stop(s) is recovered when the sample is continuously re-heated [1]. However, heating the sample above the aging temperature, but keeping it below Tg,",
+    "preprint_id": "cond-mat/9904410v2",
+    "doi": "https://doi.org/10.1007/s100510050014",
+    "url": "http://arxiv.org/abs/cond-mat/9904410v2",
+    "source": "preprints",
+    "category": "cond-mat.dis-nn",
+    "thread": "hopfield_spin_glass",
+    "tier": "background"
+  },
+  {
+    "title": "Ultrametric Distance in Syntax",
+    "authors": [
+      "Mark D. Roberts"
+    ],
+    "year": 1998,
+    "abstract": "Phrase structure trees have a hierarchical structure. In many subjects, most notably in Taxonomy such tree structures have been studied using ultrametrics. Here syntactical hierarchical phrase trees are subject to a similar analysis, which is much siompler as the branching structure is more readily discernible and switched. The occurence of hierarchical structure elsewhere in linguistics is mentioned. The phrase tree can be represented by a matrix and the elements of the matrix can be represente",
+    "preprint_id": "cs/9810012v4",
+    "doi": "",
+    "url": "http://arxiv.org/abs/cs/9810012v4",
+    "source": "preprints",
+    "category": "cs.CL",
+    "thread": "ultrametric_memory",
+    "tier": "supporting"
+  },
+  {
+    "title": "Are Ground States of 3d +/-J Spin Glasses ultrametric ?",
+    "authors": [
+      "Alexander K. Hartmann"
+    ],
+    "year": 1998,
+    "abstract": "Ground states of 3d EA Ising spin glasses are calculated for sizes up to 14^3 using a combination of a genetic algorithm and Cluster-Exact Approximation. Evidence for an ultrametric structure is found by studying triplets of independent ground states where one or two values of the three overlaps are fixed.",
+    "preprint_id": "cond-mat/9804325v1",
+    "doi": "https://doi.org/10.1209/epl/i1998-00464-8",
+    "url": "http://arxiv.org/abs/cond-mat/9804325v1",
+    "source": "preprints",
+    "category": "cond-mat.dis-nn",
+    "thread": "hopfield_spin_glass",
+    "tier": "background"
+  },
+  {
+    "title": "Ultrametric Matrices and Representation Theory",
+    "authors": [
+      "P. Bantay",
+      "G. Zala"
+    ],
+    "year": 1997,
+    "abstract": "The consequences of replica-symmetry breaking on the structure of ultrametric matrices appearing in the theory of disordered systems is investigated with the help of representation theory, and the results are compared with those obtained by Temesvari, De Dominicis and Kondor.",
+    "preprint_id": "cond-mat/9705041v1",
+    "doi": "https://doi.org/10.1088/0305-4470/30/19/019",
+    "url": "http://arxiv.org/abs/cond-mat/9705041v1",
+    "source": "preprints",
+    "category": "cond-mat.dis-nn",
+    "thread": "ultrametric_memory",
+    "tier": "background"
+  },
+  {
+    "title": "Replica Fourier Transforms on Ultrametric Trees, and Block-Diagonalizing Multi-Replica Matrices",
+    "authors": [
+      "C. De Dominicis",
+      "D. M. Carlucci",
+      "T. Temesvari"
+    ],
+    "year": 1997,
+    "abstract": "The analysis of objects living on ultrametric trees, in particular the block-diagonalization of 4-replica matrices $M^{αβ; γδ}$, is shown to be dramatically simplified through the introduction of properly chosen operations on those objects. These are the Replica Fourier Transforms on ultrametric trees. Those transformations are defined and used in the present work.",
+    "preprint_id": "cond-mat/9703132v1",
+    "doi": "https://doi.org/10.1051/jp1:1997128",
+    "url": "http://arxiv.org/abs/cond-mat/9703132v1",
+    "source": "preprints",
+    "category": "cond-mat.dis-nn",
+    "thread": "ultrametric_memory",
+    "tier": "supporting"
+  },
+  {
+    "title": "Ultrametricity and Memory in a Solvable Model of Self-Organized Criticality",
+    "authors": [
+      "Stefan Boettcher",
+      "Maya Paczuski"
+    ],
+    "year": 1996,
+    "abstract": "Slowly driven dissipative systems may evolve to a critical state where long periods of apparent equilibrium are punctuated by intermittent avalanches of activity. We present a self-organized critical model of punctuated equilibrium behavior in the context of biological evolution, and solve it in the limit that the number of independent traits for each species diverges. We derive an exact equation of motion for the avalanche dynamics from the microscopic rules. In the continuum limit, avalanches ",
+    "preprint_id": "cond-mat/9603018v1",
+    "doi": "https://doi.org/10.1103/PhysRevE.54.1082",
+    "url": "http://arxiv.org/abs/cond-mat/9603018v1",
+    "source": "preprints",
+    "category": "cond-mat",
+    "thread": "ultrametric_memory",
+    "tier": "background"
+  },
+  {
+    "title": "A Numerical Study of Ultrametricity in Finite Dimensional Spin Glasses",
+    "authors": [
+      "Angelo Cacciuto",
+      "Enzo Marinari",
+      "Giorgio Parisi"
+    ],
+    "year": 1996,
+    "abstract": "We use a constrained Monte Carlo technique to analyze ultrametric features of a 4 dimensional Edwards-Anderson spin glass with quenched couplings J=\\pm 1. We find that in the large volume limit an ultrametric structure emerges quite clearly in the overlap of typical equilibrium configurations.",
+    "preprint_id": "cond-mat/9608161v1",
+    "doi": "https://doi.org/10.1088/0305-4470/30/9/002",
+    "url": "http://arxiv.org/abs/cond-mat/9608161v1",
+    "source": "preprints",
+    "category": "cond-mat",
+    "thread": "hopfield_spin_glass",
+    "tier": "background"
+  }
+]
