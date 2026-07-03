@@ -1,0 +1,22 @@
+{
+  "title": "The Braided Memory Register: A Consilient Model of Memory Across Mathematics, Computation, and Social Propagation",
+  "upload_type": "publication",
+  "publication_type": "workingpaper",
+  "description": "Memory — whether biological, computational, or social — has been described using incompatible formalisms: ultrametric trees for hierarchical clustering, braid groups for associative binding, Merkle DAGs for content-addressable versioning, and graph theory for social propagation. This paper proposes that these are not competing models but facets of a single abstract structure: the Braided Ultrametric Register. We present evidence from five converging domains — spin-glass physics, Andean quipu record-keeping, blockchain/git version control, social media propagation, and modern hierarchical neural networks — that a unified mathematical object exists at their intersection. The central conjecture (ultrametric distance = braid word length, up to scaling) was falsified across all five metric variants (R^2 < 0.5) using 60 synthetic topologies, but the five-pillar structural consilience survives independently. The QNFO living-paper corpus was enriched with individual author metadata (100 papers) but confirmed as a single-author corpus, blocking co-authorship-based validation. The paper recommends a pivot from metric to structural/entropy measures (Jones polynomial, braid index, Vassiliev invariants) and documents the infrastructure (2 live Cloudflare Workers, Python library v0.1.0, R2 archive) built to support the research.",
+  "creators": [
+    {
+      "name": "Quni-Gudzinas, Rowan Brad",
+      "affiliation": "QWAV / QNFO",
+      "orcid": "0009-0002-4317-5604"
+    }
+  ],
+  "access_right": "open",
+  "license": "CC-BY-4.0",
+  "version": "1.0.0",
+  "keywords": [
+    "ultrametric", "braided monoidal category", "associative memory",
+    "content-addressable storage", "version DAG", "quipu",
+    "spin glass", "Hopfield network", "memory register",
+    "consilience", "p-adic", "dendrogram"
+  ]
+}

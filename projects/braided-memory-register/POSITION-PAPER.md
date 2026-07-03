@@ -1,9 +1,9 @@
 # The Braided Memory Register: A Consilient Model of Memory Across Mathematics, Computation, and Social Propagation
 
 **Author:** Rowan Brad Quni-Gudzinas | **Date:** 2026-07-03
-**Status:** Preprint Draft — v0.1 | **License:** QNFO-ULA
+**Status:** Published — v0.3 | **License:** QNFO-ULA
 **Project:** braided-memory-register
-**Target Venue:** Zenodo → deep.qwav.tech/papers/
+**DOI:** [10.5281/zenodo.21168175](https://doi.org/10.5281/zenodo.21168175)
 
 ---
 
@@ -136,7 +136,7 @@ C5 (edge-distance) was the most structurally natural metric, achieving $R^2 \app
 
 The QNFO living-paper database (119 papers, queried via `graph-api.q08.workers.dev`) was evaluated for empirical validation. All 100 accessible entries originally listed `"QNFO Research Collective"` as their sole author. On 2026-07-03, individual author metadata was extracted from paper frontmatter and synced to the Knowledge Graph. The enrichment confirmed that all 100 papers are authored by a single individual (Rowan Brad Quni-Gudzinas) — this is a single-author research corpus.
 
-Since all papers share the same author, every co-authorship pair has the same braid distance (1 or ∞), producing no variation. The co-authorship-based conjecture therefore cannot be tested on the QNFO corpus — not due to missing data, but due to the single-author structure. Alternative proximity measures (ultrametric taxonomy classification, content similarity, citation edges) remain viable pathways for future testing as the corpus diversifies.
+Since all papers share the same author, every co-authorship pair has the same braid distance (1 or $\infty$), producing no variation. The co-authorship-based conjecture therefore cannot be tested on the QNFO corpus — not due to missing data, but due to the single-author structure. Alternative proximity measures (ultrametric taxonomy classification, content similarity, citation edges) remain viable pathways for future testing as the corpus diversifies.
 
 ### 7.3 Interpretation
 
