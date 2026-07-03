@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FPGA–Ultrametric Cross-Pollination — QNFO Research</title>
+<style>
+  :root {
+    --blue: #1a56db;
+    --bg: #f8f9fa;
+    --text: #1a1a2e;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { 
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: var(--bg); color: var(--text); line-height: 1.7;
+    max-width: 960px; margin: 0 auto; padding: 2rem 1.5rem;
+  }
+  h1 { font: 700 2rem/1.3 'Source Serif 4', Georgia, serif; color: var(--blue); margin-bottom: 0.5rem; }
+  h2 { font: 700 1.4rem/1.4 'Source Serif 4', Georgia, serif; color: var(--blue); margin: 2rem 0 0.75rem; border-bottom: 2px solid var(--border); padding-bottom: 0.35rem; }
+  h3 { font: 700 1.1rem/1.4 'Source Serif 4', Georgia, serif; color: var(--text); margin: 1.25rem 0 0.5rem; }
+  p { margin: 0.6rem 0; }
+  .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 1.5rem; }
+  .badge { display: inline-block; padding: 0.15rem 0.55rem; border-radius: 4px; font-size: 0.8rem; font-weight: 600; }
+  .badge-disconfirm { background: #fee2e2; color: #991b1b; }
+  .badge-false { background: #fee2e2; color: #991b1b; }
+  .badge-pass { background: #dcfce7; color: #166534; }
+  .badge-success { background: #dcfce7; color: #166534; }
+  .badge-block { background: #fef3c7; color: #92400e; }
+  .badge-pending { background: #fef3c7; color: #92400e; }
+  table { width: 100%; border-collapse: collapse; margin: 0.75rem 0 1.25rem; font-size: 0.9rem; }
+  th, td { padding: 0.55rem 0.75rem; text-align: left; border-bottom: 1px solid var(--border); }
+  th { font-weight: 600; background: #f1f5f9; color: var(--text); }
+  tr:hover { background: #fafbfc; }
+  code { background: #f1f5f9; padding: 0.1rem 0.35rem; border-radius: 3px; font-size: 0.88em; }
+  pre { background: #1a1a2e; color: #e2e8f0; padding: 1rem; border-radius: 6px; overflow-x: auto; font-size: 0.85rem; margin: 0.75rem 0; }
+  pre code { background: none; padding: 0; }
+  ul, ol { margin: 0.5rem 0 0.5rem 1.5rem; }
+  li { margin: 0.25rem 0; }
+  blockquote { border-left: 4px solid var(--blue); padding: 0.25rem 1rem; margin: 0.75rem 0; background: #f1f5f9; color: var(--muted); font-style: italic; }
+  hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
+  .footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; text-align: center; }
+  .katex { font-size: 1.05em; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {delimiters: [{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]});"></script>
+</head>
+<body>
+
+<h1>FPGA–Ultrametric Cross-Pollination</h1>
+<p class="meta"><strong>Author:</strong> QNFO Research Agent | <strong>Date:</strong> 2026-07-03 | <strong>Status:</strong> Research Arc Complete</p>
+
+<blockquote>
+  A full-stack investigation spanning FPGA architectures for high-frequency trading, quantum computing control infrastructure, and ultrametric/p-adic mathematics — and their convergence within QNFO's existing research program.
+</blockquote>
+
+<hr>
+
+<h2>Abstract</h2>
+
+<p>
+  This document synthesizes a complete research arc spanning three domains — high-frequency trading (HFT) FPGA architectures, quantum computing control infrastructure, and ultrametric/p-adic mathematics — and their convergence within QNFO's existing research program.
+</p>
+
+<p>
+  The arc began with a user query about FPGA–HFT–ultrametric cross-pollination and proceeded through four phases: (1) fact-check and critique of three AI-generated answers on the topic, (2) formalization of an Ultrametric FPGA architecture including a 20-instruction ISA and Verilog reference designs, (3) computational validation of the Braided Memory Register central conjecture ($\delta = c \cdot w$), and (4) evidence-based falsification across all five natural interpretations of the conjecture.
+</p>
+
+<p>
+  <strong>Key finding:</strong> The Braided Memory Register conjecture $\delta = c \cdot w$ is falsified across all tested variants. However, the falsification does not invalidate the broader Braided Memory Register project — four of its five pillars are unaffected, and the FPGA architecture designs remain valid for other QNFO applications.
+</p>
+
+<hr>
+
+<h2>Research Phases</h2>
+
+<h3>Phase 1: Fact-Check &amp; Literature Assessment</h3>
+
+<p>Three AI-generated answers on FPGA-HFT-ultrametric-quantum were scrutinized. Key corrections:</p>
+
+<table>
+  <thead><tr><th>Answer</th><th>Error</th><th>Correction</th></tr></thead>
+  <tbody>
+    <tr><td>FPGA–HFT–Ultrametric</td><td>Claimed p-adic carries propagate toward lower-significance digits</td><td>Carries propagate same direction as decimal arithmetic; the valuation inverts "size" but not carry direction</td></tr>
+    <tr><td>FPGA–HFT–Ultrametric</td><td>Overstated decision trees as "ultrametric computing"</td><td>Decision trees use axis-aligned splits, not ultrametric ball partitions</td></tr>
+    <tr><td>FPGA–Quantum</td><td>"FPGAs are the only technology for QEC deadlines"</td><td>Custom ASICs (SEEQC, Google cryo-CMOS) are the scaling path</td></tr>
+    <tr><td>Ultrametric-FPGA–Quantum</td><td><strong>Omitted Bruhat-Tits buildings for QEC</strong></td><td>QNFO's Silent Radix synthesis connects BT buildings to QEC — strongest QNFO-specific connection missed entirely</td></tr>
+  </tbody>
+</table>
+
+<h3>Phase 2: Architecture Formalization</h3>
+
+<p>A complete 20-instruction Ultrametric FPGA ISA was formalized across three execution units:</p>
+
+<table>
+  <thead><tr><th>Category</th><th>Instructions</th><th>Purpose</th></tr></thead>
+  <tbody>
+    <tr><td>P-adic ALU</td><td><code>PADD</code>, <code>PMUL</code>, <code>PVAL</code>, <code>PDIST</code>, <code>PNORM</code>, <code>HENC</code>, <code>WTADD</code>, <code>WTMUL</code></td><td>p-adic arithmetic, Hensel lifting, Witt vectors</td></tr>
+    <tr><td>Tree Engine</td><td><code>UDIST</code>, <code>ANC</code>, <code>DEPTH</code>, <code>BALL</code>, <code>NN</code></td><td>Dendrogram traversal, ball queries, nearest neighbor</td></tr>
+    <tr><td>Braid Engine</td><td><code>BWGT</code>, <code>BCOMP</code>, <code>BARTIN</code></td><td>Braid word length, braid composition, Artin word length</td></tr>
+  </tbody>
+</table>
+
+<p>Resource estimate: ~3,000 LUTs, 6 BRAM blocks — fits in a small FPGA (Artix-7 XC7A35T).</p>
+
+<h3>Phase 3: Computational Validation</h3>
+
+<h4>p-adic Arithmetic — <span class="badge badge-pass">20/20 PASS</span></h4>
+
+<table>
+  <thead><tr><th>Test</th><th>Trials</th><th>Result</th></tr></thead>
+  <tbody>
+    <tr><td>PADD identity ($a + 0 = a$)</td><td>500 × 8 configs</td><td>PASS</td></tr>
+    <tr><td>PMUL identity ($a \times 1 = a$)</td><td>200 × 6 configs</td><td>PASS</td></tr>
+    <tr><td>PDIST symmetry</td><td>500 × 4 configs</td><td>PASS</td></tr>
+    <tr><td>Ultrametric triangle inequality</td><td>500 triples</td><td>PASS</td></tr>
+    <tr><td>Isosceles property</td><td>500 triples</td><td>PASS</td></tr>
+  </tbody>
+</table>
+
+<h4>Conjecture Validation — <span class="badge badge-disconfirm">ALL 5 DISCONFIRMED</span></h4>
+
+<table>
+  <thead><tr><th>Conjecture</th><th>$n=10$ ($R^2$)</th><th>$n=20$ ($R^2$)</th><th>$n=50$ ($R^2$)</th><th>$n=100$ ($R^2$)</th><th>Spearman $\rho$ ($n=20$)</th></tr></thead>
+  <tbody>
+    <tr><td>C1: Permitted crossings</td><td>0.0114</td><td>0.0046</td><td>0.0033</td><td>—</td><td>—</td></tr>
+    <tr><td>C2: Rank preservation</td><td>—</td><td>—</td><td>—</td><td>—</td><td>0.2834</td></tr>
+    <tr><td>C3: Monotonic</td><td>—</td><td>—</td><td>—</td><td>—</td><td>$\tau=0.2363$</td></tr>
+    <tr><td>C4: Unrestricted crossings</td><td>0.1188</td><td>0.0938</td><td>0.0648</td><td>0.0474</td><td>0.2834</td></tr>
+    <tr><td>C5: Edge-distance</td><td>0.4814</td><td>0.4295</td><td>0.3633</td><td>0.2983</td><td>—</td></tr>
+  </tbody>
+</table>
+
+<p><strong>All 5 variants are disconfirmed or weak.</strong> The best performer (C5) achieves only $R^2 \approx 0.43$ at $n=20$ and degrades monotonically with $n$.</p>
+
+<hr>
+
+<h2>Strategic Fit to QNFO</h2>
+
+<table>
+  <thead><tr><th>Project</th><th>Connection</th><th>Impact</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Braided Memory Register</strong></td><td>FPGA validates $\delta \approx c \cdot w$ for $n > 20$</td><td><span class="badge badge-disconfirm">FALSIFIED</span></td></tr>
+    <tr><td><strong>Number Theory Ultrametric Deep</strong></td><td>FPGA benchmarks p-adic arithmetic for Pillars 3–4</td><td>MEDIUM</td></tr>
+    <tr><td><strong>Silent Radix / UW-BT</strong></td><td>FPGA traverses Bruhat-Tits buildings for QEC validation</td><td>MEDIUM</td></tr>
+    <tr><td><strong>Ultrametric Engine (Workers)</strong></td><td>FPGA as architectural reference</td><td>MEDIUM</td></tr>
+  </tbody>
+</table>
+
+<hr>
+
+<h2>Strongest Cross-Pollination Insight</h2>
+
+<blockquote><strong>Architectural isomorphism between HFT decision-tree pipelines and concatenated-code QEC decoding.</strong></blockquote>
+
+<p>Both domains require flattening a hierarchical decision structure into a pipelined comparator network with deterministic nanosecond latency. An FPGA template that evaluates an XGBoost ensemble for trade signals could, with only a remapping of the stored tree, evaluate a Steane-code qubit decoder. This is genuine technology transfer.</p>
+
+<hr>
+
+<h2>Key Insights</h2>
+
+<ol>
+  <li><strong>Falsification is a feature, not a bug.</strong> The project defined falsification conditions before testing. Computational results provide clean, unambiguous evidence.</li>
+  <li><strong>p-adic arithmetic is trivially verifiable on FPGA.</strong> The digit-serial design achieves 20–60× projected speedup over Python.</li>
+  <li><strong>The HFT-to-QEC architectural isomorphism is real and underappreciated.</strong> Flattened decision-tree pipelines are a hardware pattern that transfers across domains.</li>
+  <li><strong>Negative results are scientifically valuable.</strong> The Braided Memory Register conjecture is falsified — but the 5-pillar structural analogy survives.</li>
+</ol>
+
+<hr>
+
+<h2>Project Deliverables</h2>
+
+<table>
+  <thead><tr><th>File</th><th>Size</th><th>Description</th></tr></thead>
+  <tbody>
+    <tr><td><code>ANALYSIS.md</code></td><td>19.7 KB</td><td>Fact-check, strategic fit, synthesis</td></tr>
+    <tr><td><code>ARCHITECTURE-SPEC.md</code></td><td>15.3 KB</td><td>20-instruction ISA, 5-stage pipeline</td></tr>
+    <tr><td><code>REFERENCE-DESIGN.md</code></td><td>17.6 KB</td><td>Verilog pseudocode for 3 execution units</td></tr>
+    <tr><td><code>BRAID-VALIDATION.md</code></td><td>10.9 KB</td><td>Conjecture validation spec</td></tr>
+    <tr><td><code>FALSIFICATION-REPORT.md</code></td><td>7.4 KB</td><td>All 5 variants tested, results analyzed</td></tr>
+    <tr><td><code>SYNTHESIS.md</code></td><td>14.7 KB</td><td>Full research arc capstone</td></tr>
+    <tr><td><code>HANDOFF.md</code></td><td>7.5 KB</td><td>Continuation prompt for next session</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Git:</strong> <code>feature/braided-memory-register</code> — 7 commits on <a href="https://github.com/rwnq8/silent-radix">github.com/rwnq8/silent-radix</a></p>
+
+<hr>
+
+<div class="footer">
+  <p>Published under the QNFO Unified License Agreement · <a href="https://legal.qnfo.org">legal.qnfo.org</a></p>
+  <p>Certainty calibration: [CODE-EXECUTED] for all quantitative results · [LLM-INFERRED] for projected FPGA performance · [speculative] for architectural claims</p>
+</div>
+
+</body>
+</html>
