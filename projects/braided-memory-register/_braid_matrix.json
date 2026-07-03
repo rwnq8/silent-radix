@@ -1,0 +1,513 @@
+{
+  "papers": [
+    "chapter-5-the-contours-of-ignorance",
+    "ii-4-astronomer-s-exile",
+    "1-converging-quests",
+    "1-introduction",
+    "1-introduction",
+    "1-introduction",
+    "1-introduction-toward-a-new-paradigm",
+    "1-particle-paradox",
+    "1-why-does-physics-need-philosophy",
+    "1-1-introduction",
+    "1-2-counting-fingers",
+    "1-3-number-constructs",
+    "1-4-linearity",
+    "1-5-natural-constants",
+    "1-6-ratios",
+    "10-architecture-of-order",
+    "10-it-from-bit",
+    "10-philosophical-foundations",
+    "10-quantum-phenomena",
+    "11-beyond-classical",
+    "11-discussion",
+    "11-ethical-considerations",
+    "11-particle-as-autaxic-process",
+    "12-conceptions-of-time",
+    "12-emergence-of-spacetime",
+    "12-historical-context-and-future-directions",
+    "13-mass-energy-equivalence",
+    "13-recursion-scale-and-interconnectedness",
+    "14-cosmic-tapestry",
+    "14-cosmological-frameworks",
+    "15-autology-and-the-evolution-of-science",
+    "15-singularities",
+    "16-alchemy-of-awareness",
+    "16-autaxys-and-the-nature-of-mind",
+    "17-epistemology-re-founded",
+    "17-ways-of-knowing",
+    "18-autaxic-synthesis",
+    "18-synthesis",
+    "19-future-directions",
+    "2-boundless-awareness",
+    "2-constructed-panorama",
+    "2-context",
+    "2-defining-information-universally",
+    "2-foundations",
+    "2-fundamental-entities",
+    "2-7-standard-units",
+    "2-8-consequences",
+    "3-core-concepts",
+    "3-exploring-formlessness",
+    "3-global-informational-framework",
+    "3-instrumental-veil",
+    "3-mechanics",
+    "3-resonance-structure",
+    "3-10-synthesis",
+    "3-9-dark-universe",
+    "4-emptiness-and-cessation",
+    "4-fundamental-constants",
+    "4-impacts",
+    "4-imprint-of-mind",
+    "4-mathematical-formalism",
+    "4-ontology",
+    "42-theses-on-the-nature-of-a-pattern-based-reality",
+    "5-empirical-validation",
+    "5-graph",
+    "5-interaction-with-physical-laws",
+    "5-mitigation",
+    "5-pathways-to-transformation",
+    "5i",
+    "6-analysis",
+    "6-cognitive-mechanisms",
+    "6-cognitive-mechanisms",
+    "6-information-in-non-biological-systems",
+    "6-interaction-strength",
+    "6-questions",
+    "7-autaxys-defined",
+    "7-biological-systems-as-informational-manifestations",
+    "7-conclusion",
+    "7-gravity",
+    "7-probing-inner-space",
+    "7-synthesis",
+    "8-beyond-baseline",
+    "8-bridging-physics-and-cosmology",
+    "8-cosmology",
+    "8-references",
+    "8-the-generative-engine",
+    "9-brain-as-processor",
+    "9-computational-insights",
+    "9-information-re-founded",
+    "9-origin-event",
+    "a-amplitude",
+    "a-graph-ontology",
+    "appendices",
+    "autaxic-trilemma",
+    "autaxys-defined",
+    "autaxys-and-its-generative-engin",
+    "b-crosswalk",
+    "b-nodes",
+    "before-the-big-bang",
+    "beyond-the-tyranny-of-math",
+    "bootstrapping-infomatics-v3"
+  ],
+  "paper_count": 100,
+  "adjacency": {
+    "chapter-5-the-contours-of-ignorance": [],
+    "ii-4-astronomer-s-exile": [],
+    "1-converging-quests": [],
+    "1-introduction": [],
+    "1-introduction-toward-a-new-paradigm": [],
+    "1-particle-paradox": [],
+    "1-why-does-physics-need-philosophy": [],
+    "1-1-introduction": [],
+    "1-2-counting-fingers": [],
+    "1-3-number-constructs": [],
+    "1-4-linearity": [],
+    "1-5-natural-constants": [],
+    "1-6-ratios": [],
+    "10-architecture-of-order": [],
+    "10-it-from-bit": [],
+    "10-philosophical-foundations": [],
+    "10-quantum-phenomena": [],
+    "11-beyond-classical": [],
+    "11-discussion": [],
+    "11-ethical-considerations": [],
+    "11-particle-as-autaxic-process": [],
+    "12-conceptions-of-time": [],
+    "12-emergence-of-spacetime": [],
+    "12-historical-context-and-future-directions": [],
+    "13-mass-energy-equivalence": [],
+    "13-recursion-scale-and-interconnectedness": [],
+    "14-cosmic-tapestry": [],
+    "14-cosmological-frameworks": [],
+    "15-autology-and-the-evolution-of-science": [],
+    "15-singularities": [],
+    "16-alchemy-of-awareness": [],
+    "16-autaxys-and-the-nature-of-mind": [],
+    "17-epistemology-re-founded": [],
+    "17-ways-of-knowing": [],
+    "18-autaxic-synthesis": [],
+    "18-synthesis": [],
+    "19-future-directions": [],
+    "2-boundless-awareness": [],
+    "2-constructed-panorama": [],
+    "2-context": [],
+    "2-defining-information-universally": [],
+    "2-foundations": [],
+    "2-fundamental-entities": [],
+    "2-7-standard-units": [],
+    "2-8-consequences": [],
+    "3-core-concepts": [],
+    "3-exploring-formlessness": [],
+    "3-global-informational-framework": [],
+    "3-instrumental-veil": [],
+    "3-mechanics": [],
+    "3-resonance-structure": [],
+    "3-10-synthesis": [],
+    "3-9-dark-universe": [],
+    "4-emptiness-and-cessation": [],
+    "4-fundamental-constants": [],
+    "4-impacts": [],
+    "4-imprint-of-mind": [],
+    "4-mathematical-formalism": [],
+    "4-ontology": [],
+    "42-theses-on-the-nature-of-a-pattern-based-reality": [],
+    "5-empirical-validation": [],
+    "5-graph": [],
+    "5-interaction-with-physical-laws": [],
+    "5-mitigation": [],
+    "5-pathways-to-transformation": [],
+    "5i": [],
+    "6-analysis": [],
+    "6-cognitive-mechanisms": [
+      "6-cognitive-mechanisms"
+    ],
+    "6-information-in-non-biological-systems": [],
+    "6-interaction-strength": [],
+    "6-questions": [],
+    "7-autaxys-defined": [],
+    "7-biological-systems-as-informational-manifestations": [],
+    "7-conclusion": [],
+    "7-gravity": [],
+    "7-probing-inner-space": [],
+    "7-synthesis": [],
+    "8-beyond-baseline": [],
+    "8-bridging-physics-and-cosmology": [],
+    "8-cosmology": [],
+    "8-references": [],
+    "8-the-generative-engine": [],
+    "9-brain-as-processor": [],
+    "9-computational-insights": [],
+    "9-information-re-founded": [],
+    "9-origin-event": [],
+    "a-amplitude": [],
+    "a-graph-ontology": [],
+    "appendices": [],
+    "autaxic-trilemma": [],
+    "autaxys-defined": [],
+    "autaxys-and-its-generative-engin": [],
+    "b-crosswalk": [],
+    "b-nodes": [],
+    "before-the-big-bang": [],
+    "beyond-the-tyranny-of-math": [],
+    "bootstrapping-infomatics-v3": []
+  },
+  "distances": {
+    "chapter-5-the-contours-of-ignorance": {
+      "chapter-5-the-contours-of-ignorance": 0
+    },
+    "ii-4-astronomer-s-exile": {
+      "ii-4-astronomer-s-exile": 0
+    },
+    "1-converging-quests": {
+      "1-converging-quests": 0
+    },
+    "1-introduction": {
+      "1-introduction": 0
+    },
+    "1-introduction-toward-a-new-paradigm": {
+      "1-introduction-toward-a-new-paradigm": 0
+    },
+    "1-particle-paradox": {
+      "1-particle-paradox": 0
+    },
+    "1-why-does-physics-need-philosophy": {
+      "1-why-does-physics-need-philosophy": 0
+    },
+    "1-1-introduction": {
+      "1-1-introduction": 0
+    },
+    "1-2-counting-fingers": {
+      "1-2-counting-fingers": 0
+    },
+    "1-3-number-constructs": {
+      "1-3-number-constructs": 0
+    },
+    "1-4-linearity": {
+      "1-4-linearity": 0
+    },
+    "1-5-natural-constants": {
+      "1-5-natural-constants": 0
+    },
+    "1-6-ratios": {
+      "1-6-ratios": 0
+    },
+    "10-architecture-of-order": {
+      "10-architecture-of-order": 0
+    },
+    "10-it-from-bit": {
+      "10-it-from-bit": 0
+    },
+    "10-philosophical-foundations": {
+      "10-philosophical-foundations": 0
+    },
+    "10-quantum-phenomena": {
+      "10-quantum-phenomena": 0
+    },
+    "11-beyond-classical": {
+      "11-beyond-classical": 0
+    },
+    "11-discussion": {
+      "11-discussion": 0
+    },
+    "11-ethical-considerations": {
+      "11-ethical-considerations": 0
+    },
+    "11-particle-as-autaxic-process": {
+      "11-particle-as-autaxic-process": 0
+    },
+    "12-conceptions-of-time": {
+      "12-conceptions-of-time": 0
+    },
+    "12-emergence-of-spacetime": {
+      "12-emergence-of-spacetime": 0
+    },
+    "12-historical-context-and-future-directions": {
+      "12-historical-context-and-future-directions": 0
+    },
+    "13-mass-energy-equivalence": {
+      "13-mass-energy-equivalence": 0
+    },
+    "13-recursion-scale-and-interconnectedness": {
+      "13-recursion-scale-and-interconnectedness": 0
+    },
+    "14-cosmic-tapestry": {
+      "14-cosmic-tapestry": 0
+    },
+    "14-cosmological-frameworks": {
+      "14-cosmological-frameworks": 0
+    },
+    "15-autology-and-the-evolution-of-science": {
+      "15-autology-and-the-evolution-of-science": 0
+    },
+    "15-singularities": {
+      "15-singularities": 0
+    },
+    "16-alchemy-of-awareness": {
+      "16-alchemy-of-awareness": 0
+    },
+    "16-autaxys-and-the-nature-of-mind": {
+      "16-autaxys-and-the-nature-of-mind": 0
+    },
+    "17-epistemology-re-founded": {
+      "17-epistemology-re-founded": 0
+    },
+    "17-ways-of-knowing": {
+      "17-ways-of-knowing": 0
+    },
+    "18-autaxic-synthesis": {
+      "18-autaxic-synthesis": 0
+    },
+    "18-synthesis": {
+      "18-synthesis": 0
+    },
+    "19-future-directions": {
+      "19-future-directions": 0
+    },
+    "2-boundless-awareness": {
+      "2-boundless-awareness": 0
+    },
+    "2-constructed-panorama": {
+      "2-constructed-panorama": 0
+    },
+    "2-context": {
+      "2-context": 0
+    },
+    "2-defining-information-universally": {
+      "2-defining-information-universally": 0
+    },
+    "2-foundations": {
+      "2-foundations": 0
+    },
+    "2-fundamental-entities": {
+      "2-fundamental-entities": 0
+    },
+    "2-7-standard-units": {
+      "2-7-standard-units": 0
+    },
+    "2-8-consequences": {
+      "2-8-consequences": 0
+    },
+    "3-core-concepts": {
+      "3-core-concepts": 0
+    },
+    "3-exploring-formlessness": {
+      "3-exploring-formlessness": 0
+    },
+    "3-global-informational-framework": {
+      "3-global-informational-framework": 0
+    },
+    "3-instrumental-veil": {
+      "3-instrumental-veil": 0
+    },
+    "3-mechanics": {
+      "3-mechanics": 0
+    },
+    "3-resonance-structure": {
+      "3-resonance-structure": 0
+    },
+    "3-10-synthesis": {
+      "3-10-synthesis": 0
+    },
+    "3-9-dark-universe": {
+      "3-9-dark-universe": 0
+    },
+    "4-emptiness-and-cessation": {
+      "4-emptiness-and-cessation": 0
+    },
+    "4-fundamental-constants": {
+      "4-fundamental-constants": 0
+    },
+    "4-impacts": {
+      "4-impacts": 0
+    },
+    "4-imprint-of-mind": {
+      "4-imprint-of-mind": 0
+    },
+    "4-mathematical-formalism": {
+      "4-mathematical-formalism": 0
+    },
+    "4-ontology": {
+      "4-ontology": 0
+    },
+    "42-theses-on-the-nature-of-a-pattern-based-reality": {
+      "42-theses-on-the-nature-of-a-pattern-based-reality": 0
+    },
+    "5-empirical-validation": {
+      "5-empirical-validation": 0
+    },
+    "5-graph": {
+      "5-graph": 0
+    },
+    "5-interaction-with-physical-laws": {
+      "5-interaction-with-physical-laws": 0
+    },
+    "5-mitigation": {
+      "5-mitigation": 0
+    },
+    "5-pathways-to-transformation": {
+      "5-pathways-to-transformation": 0
+    },
+    "5i": {
+      "5i": 0
+    },
+    "6-analysis": {
+      "6-analysis": 0
+    },
+    "6-cognitive-mechanisms": {
+      "6-cognitive-mechanisms": 0
+    },
+    "6-information-in-non-biological-systems": {
+      "6-information-in-non-biological-systems": 0
+    },
+    "6-interaction-strength": {
+      "6-interaction-strength": 0
+    },
+    "6-questions": {
+      "6-questions": 0
+    },
+    "7-autaxys-defined": {
+      "7-autaxys-defined": 0
+    },
+    "7-biological-systems-as-informational-manifestations": {
+      "7-biological-systems-as-informational-manifestations": 0
+    },
+    "7-conclusion": {
+      "7-conclusion": 0
+    },
+    "7-gravity": {
+      "7-gravity": 0
+    },
+    "7-probing-inner-space": {
+      "7-probing-inner-space": 0
+    },
+    "7-synthesis": {
+      "7-synthesis": 0
+    },
+    "8-beyond-baseline": {
+      "8-beyond-baseline": 0
+    },
+    "8-bridging-physics-and-cosmology": {
+      "8-bridging-physics-and-cosmology": 0
+    },
+    "8-cosmology": {
+      "8-cosmology": 0
+    },
+    "8-references": {
+      "8-references": 0
+    },
+    "8-the-generative-engine": {
+      "8-the-generative-engine": 0
+    },
+    "9-brain-as-processor": {
+      "9-brain-as-processor": 0
+    },
+    "9-computational-insights": {
+      "9-computational-insights": 0
+    },
+    "9-information-re-founded": {
+      "9-information-re-founded": 0
+    },
+    "9-origin-event": {
+      "9-origin-event": 0
+    },
+    "a-amplitude": {
+      "a-amplitude": 0
+    },
+    "a-graph-ontology": {
+      "a-graph-ontology": 0
+    },
+    "appendices": {
+      "appendices": 0
+    },
+    "autaxic-trilemma": {
+      "autaxic-trilemma": 0
+    },
+    "autaxys-defined": {
+      "autaxys-defined": 0
+    },
+    "autaxys-and-its-generative-engin": {
+      "autaxys-and-its-generative-engin": 0
+    },
+    "b-crosswalk": {
+      "b-crosswalk": 0
+    },
+    "b-nodes": {
+      "b-nodes": 0
+    },
+    "before-the-big-bang": {
+      "before-the-big-bang": 0
+    },
+    "beyond-the-tyranny-of-math": {
+      "beyond-the-tyranny-of-math": 0
+    },
+    "bootstrapping-infomatics-v3": {
+      "bootstrapping-infomatics-v3": 0
+    }
+  },
+  "metadata": {
+    "built_at": "2026-07-03T11:33:04.987562+00:00",
+    "source": "graph-api.q08.workers.dev",
+    "edge_types": [
+      "citation",
+      "co-authorship-filtered",
+      "shared-domain"
+    ],
+    "filtered_collective_authors": [
+      "quniverse research",
+      "",
+      "qnfo research collective"
+    ]
+  }
+}
