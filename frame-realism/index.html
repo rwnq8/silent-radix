@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frame Realism — Silent Radix</title>
+<meta name="description" content="Like the silent radix, space and time are dimensions within assumed frames. An exploration of frame realism — the idea that truth is frame-relative but no less real.">
+<meta property="og:title" content="Frame Realism">
+<meta property="og:description" content="Like the silent radix, space and time are dimensions within assumed frames. Mathematical, physical, and narrative frames — and what happens when we forget we chose them.">
+<meta name="twitter:card" content="summary">
+<style>
+  :root {
+    --bg: #faf9f7;
+    --text: #1a1a1a;
+    --accent: #4a6741;
+    --muted: #6b6b6b;
+    --border: #e0ddd8;
+    --code-bg: #f3f1ed;
+    --tag-bg: #e8f0e3;
+    --tag-text: #3a5a30;
+    --blockquote: #f5f3ef;
+    --blockquote-border: #c8c3b8;
+    --link: #2a5a3a;
+    --card-bg: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1a1a1a;
+      --text: #e0ddd8;
+      --accent: #7a9e6d;
+      --muted: #9a9a9a;
+      --border: #333;
+      --code-bg: #252525;
+      --tag-bg: #2a3a25;
+      --tag-text: #8ab87a;
+      --blockquote: #222;
+      --blockquote-border: #555;
+      --link: #7a9e6d;
+      --card-bg: #222;
+      --card-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.75;
+    font-size: 18px;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1 {
+    font-size: 2.2rem;
+    font-weight: normal;
+    line-height: 1.2;
+    margin: 1.5rem 0 0.5rem;
+    letter-spacing: -0.01em;
+  }
+  h2 {
+    font-size: 1.4rem;
+    font-weight: normal;
+    margin: 2.5rem 0 0.75rem;
+    color: var(--accent);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.35rem;
+  }
+  h3 {
+    font-size: 1.15rem;
+    font-weight: bold;
+    margin: 1.5rem 0 0.5rem;
+  }
+  p { margin: 0 0 1rem; }
+  a { color: var(--link); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s; }
+  a:hover { border-bottom-color: var(--link); }
+  code {
+    font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+    background: var(--code-bg);
+    padding: 0.1em 0.35em;
+    border-radius: 3px;
+    font-size: 0.9em;
+  }
+  blockquote {
+    background: var(--blockquote);
+    border-left: 3px solid var(--blockquote-border);
+    margin: 1.25rem 0;
+    padding: 0.75rem 1.25rem;
+    font-style: italic;
+    color: var(--muted);
+  }
+  strong { color: var(--text); }
+  .math-block { overflow-x: auto; padding: 0.5rem 0; text-align: center; }
+  .subtitle {
+    color: var(--muted);
+    font-size: 1.05rem;
+    font-style: italic;
+    margin-bottom: 2rem;
+  }
+  .meta {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin: 0.5rem 0 1.5rem;
+  }
+  .tag {
+    display: inline-block;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+    padding: 0.15em 0.6em;
+    border-radius: 12px;
+    font-size: 0.78rem;
+    font-family: system-ui, sans-serif;
+    margin-right: 0.35rem;
+    margin-bottom: 0.35rem;
+  }
+  .toc {
+    background: var(--card-bg);
+    box-shadow: var(--card-shadow);
+    padding: 1.25rem 1.5rem;
+    margin: 2rem 0;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+  .toc a { color: var(--accent); border: none; }
+  .toc ol { padding-left: 1.5rem; }
+  hr { border: none; border-top: 1px solid var(--border); margin: 2.5rem 0; }
+  .open-q {
+    background: var(--card-bg);
+    box-shadow: var(--card-shadow);
+    padding: 1rem 1.25rem;
+    margin: 1rem 0;
+    border-radius: 6px;
+    font-size: 0.95rem;
+  }
+  .open-q strong { color: var(--accent); }
+  .certainty { font-size: 0.82rem; color: var(--muted); font-style: italic; }
+  footer {
+    margin-top: 4rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+  @media (max-width: 600px) {
+    body { font-size: 16px; padding: 1.25rem 1rem; }
+    h1 { font-size: 1.7rem; }
+    h2 { font-size: 1.2rem; }
+  }
+</style>
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\\[','\\]']],
+    macros: {
+      R: '\\mathbb{R}',
+      Q: '\\mathbb{Q}',
+      Z: '\\mathbb{Z}',
+      C: '\\mathbb{C}',
+      N: '\\mathbb{N}',
+      L: '\\mathcal{L}',
+      A: '\\mathcal{A}',
+      T: '\\mathcal{T}',
+    }
+  },
+  options: { ignoreHtmlClass: 'no-mathjax' }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+<h1>Frame Realism</h1>
+<p class="subtitle">Like the silent radix, space and time are simply dimensions that exist within a defined frame with assumptions — whether assumed linearity of the number line, assumptions of sets, or assumptions of physical spatial dimensions versus the perception of time in different contexts.</p>
+<div class="meta">2026-07-03 &middot; <span class="tag">philosophy</span><span class="tag">mathematics</span><span class="tag">physics</span><span class="tag">ultrametric</span><span class="tag">silent-radix</span></div>
+
+<div class="toc">
+<strong>Contents</strong>
+<ol>
+  <li><a href="#what-is-a-frame">What Is a Frame?</a></li>
+  <li><a href="#mathematical-frames">Mathematical Frames</a></li>
+  <li><a href="#physical-frames">Physical Frames</a></li>
+  <li><a href="#narrative-frames">Narrative and Perceptual Frames</a></li>
+  <li><a href="#frame-interfaces">Frame Interfaces</a></li>
+  <li><a href="#meta-frame">The Meta-Frame Problem and the Self</a></li>
+  <li><a href="#synthesis">Synthesis</a></li>
+</ol>
+</div>
+
+<blockquote>Every frame has a silent radix — an assumption so deep that practitioners forget it is an assumption. The decimal number line feels continuous and absolute, but it is Archimedean, built on the silent radix 10. ZFC feels like "how sets are," but the Axiom of Choice is independent. The 3+1 spacetime of daily experience feels like "space and time," but simultaneity is frame-dependent. The movie has its own space and time — 24 frames per second, edited causality — and yet within that frame, the horror is real, the romance is felt.</blockquote>
+
+<h2 id="what-is-a-frame">1. What Is a Frame?</h2>
+
+<p>A <em>frame</em> [my conjecture — operational definition follows] is a closure under a set of axioms, together with an operational vocabulary that gains meaning only within that closure. More formally:</p>
+
+<div class="math-block">$$\text{Frame} = \langle \mathcal{A}, \mathcal{L}, \mathcal{T} \rangle$$</div>
+
+<p>where $\mathcal{A}$ is a set of axioms (the silent radices — assumptions we forget we chose), $\mathcal{L}$ is a language/operational vocabulary (the terms that gain meaning only within the frame), and $\mathcal{T}$ is the closure of $\mathcal{A}$ under the inference rules of $\mathcal{L}$ — the set of truths <em>within</em> the frame.</p>
+
+<p>What makes this different from a standard formal system is the <strong>silent radix property</strong>: the axioms $\mathcal{A}$ include assumptions so deep that practitioners forget they are assumptions. The decimal number line feels continuous and absolute — but it is Archimedean, built on the silent radix 10, and its "completeness" is a choice. ZFC feels like "how sets are" — but the Axiom of Choice is independent, and there are models of ZF where it fails [established]. The 3+1 spacetime of daily experience feels like "space and time" — but simultaneity is frame-dependent [established, special relativity 1905], and the "flow" of time has no privileged slice in the block universe [mainstream interpretation, eternalism].</p>
+
+<p>The silent radix is the <em>forgotten choice</em> — the axiom that became invisible.</p>
+
+<h2 id="mathematical-frames">2. Mathematical Frames: Ostrowski's Theorem and the Plurality of Number</h2>
+
+<h3>2.1 Completions of $\mathbb{Q}$</h3>
+
+<p>Ostrowski's theorem (1916) states that the only non-trivial absolute values on $\mathbb{Q}$, up to equivalence, are the real absolute value $|x|_{\infty}$ and the $p$-adic absolute values $|x|_p$ — one for each prime $p$. There is no third kind [established].</p>
+
+<p>The rational numbers $\mathbb{Q}$ are the "raw territory" — the map-less thing. But to <em>work</em> with numbers, you must complete them. And there are exactly these completions — $\mathbb{R}$, $\mathbb{Q}_{2}$, $\mathbb{Q}_{3}$, $\mathbb{Q}_{5}$, $\mathbb{Q}_{7}$, ... — each with its own silent radix, its own notion of "closeness," its own ultrametric or Archimedean triangle inequality.</p>
+
+<p>In $\mathbb{R}$, $1 + 2 + 4 + 8 + 16 + \cdots$ diverges to infinity. In $\mathbb{Q}_{2}$, the same series converges to $-1$ (because $|2|_{2} = 1/2$, and the terms get <em>smaller</em> in the 2-adic valuation). The <em>truth</em> of whether this series converges depends on which frame you're in. This is not "relativism" in the loose sense — it is frame-relative truth with mathematical precision.</p>
+
+<h3>2.2 Ultrametric Closure</h3>
+
+<p>The $p$-adic numbers obey the <strong>strong triangle inequality</strong> [established]:</p>
+
+<div class="math-block">$$d(x,z) \leq \max(d(x,y), d(y,z))$$</div>
+
+<p>This means every triangle is isosceles with the two equal sides at least as long as the third. In an ultrametric space, "close" is transitive: if $x$ is close to $y$ and $y$ is close to $z$, then $x$ is close to $z$. Balls don't partially overlap — they are either disjoint or nested [established].</p>
+
+<p>This is a radically different "space" than Euclidean space. In Euclidean geometry, you can have three points where each pair is at distance 1, forming an equilateral triangle. In an ultrametric space, at least two of the three pairwise distances must be equal and at least as large as the third. The <em>geometry of closeness itself</em> is different.</p>
+
+<p>Yet $\mathbb{Q}_{p}$ is no less valid than $\mathbb{R}$. Both are completions of $\mathbb{Q}$ under different absolute values. Both support analysis — differentiation, integration, power series, spectral theory. The Amice transform in $p$-adic analysis is the analog of the Fourier transform; the Tate curve in $p$-adic geometry plays the role of elliptic curves over $\mathbb{C}$ [established]. Berkovich spaces and Bruhat-Tits buildings provide spatial intuition that is internally coherent and yields genuine mathematical discoveries.</p>
+
+<h3>2.3 The Category-Theoretic View</h3>
+
+<p>[PHILOSOPHY] From a category-theoretic perspective, frames are like <em>topoi</em> — categories that behave like the category of sets but with different internal logics. A topos has its own "truth values," its own notion of what counts as a valid proof, its own internal language. The same statement can be true in one topos and false in another.</p>
+
+<p>ZFC is one topos. Smooth infinitesimal analysis (where every function is continuous and nilpotent infinitesimals exist) is another. Both are internally consistent. Both generate "mathematics." But statements true in one may be false in the other [speculative — the connection between frame realism and topos theory is developed but not a standard philosophical position].</p>
+
+<h2 id="physical-frames">3. Physical Frames</h2>
+
+<h3>3.1 Spacetime as Frame</h3>
+
+<p>General relativity formalizes the user's original observation precisely: spacetime is not a background stage but a dynamical entity — the metric $g_{\mu\nu}$ is a field that <em>defines</em> distances and durations [established, GR 1915]. The signature of spacetime — the (3,1) split — is a feature of our low-energy frame. In regimes where the distinction between space and time breaks down (near singularities, in certain quantum gravity proposals), the 3+1 decomposition may not be fundamental [speculative].</p>
+
+<p>Zitterbewegung — the rapid oscillatory motion of a Dirac electron at the Compton wavelength scale — suggests that "position" and "velocity" lose their classical meanings at sufficiently small scales. In the Dirac equation, the velocity operator has eigenvalues $\pm c$, and the position operator's time derivative oscillates at frequency $2mc^2/\hbar$ [established]. The "trajectory" of a particle — a central concept in the classical frame — is not a well-defined concept in the quantum frame.</p>
+
+<h3>3.2 The Measurement Frame</h3>
+
+<p>Quantum mechanics introduces a particularly sharp frame boundary: the <strong>Heisenberg cut</strong> — the division between the quantum system and the classical measuring apparatus [mainstream interpretation]. The "system" evolves unitarily; the "apparatus" collapses the wavefunction. But where exactly the cut goes is a choice — you can push it further toward the apparatus (Wigner's friend), or toward the system (decoherence programs) [debated].</p>
+
+<p>The key insight: <strong>the boundary of the frame is where meaning is produced</strong>. Inside the quantum frame, there are amplitudes; at the classical boundary, there are events. The frame itself — the cut — generates the ontology.</p>
+
+<h3>3.3 Thermodynamic Frames</h3>
+
+<p>The arrow of time — the fact that entropy increases — is a statistical phenomenon, not a microscopic law. The microscopic laws (Newton, Maxwell, Schrödinger) are time-reversible [established]. The thermodynamic frame introduces an "arrow" that is not present in the underlying dynamics. This is a frame effect — a consequence of coarse-graining and the choice of initial conditions. In the thermodynamic frame, "before" and "after" are meaningful. In the microscopic frame, they are symmetric. Neither is "more fundamental" — they are different levels of description, different closures, different frames.</p>
+
+<h2 id="narrative-frames">4. Narrative and Perceptual Frames</h2>
+
+<h3>4.1 The Film Frame</h3>
+
+<p>Within the film frame: the monster <em>is</em> terrifying — the fear is genuine, the cortisol is real, the amygdala activates [established — measurable physiological response to fictional stimuli]. The romance <em>is</em> moving — the tears are real, the oxytocin release is measurable. The character death <em>is</em> sad — the grief response is neurochemically indistinguishable from grief for real losses, though it typically resolves faster [established].</p>
+
+<p>The frame produces <em>real</em> effects on a <em>real</em> nervous system. The emotion is not "fake" or "merely constructed." The frame is the context that gives the stimuli their meaning, and within that context, the meaning is real. <strong>Frames generate genuine causal effects across their boundaries.</strong></p>
+
+<h3>4.2 Ritual and Play Frames</h3>
+
+<p>Gregory Bateson's concept of the "play frame" is relevant: when animals play-fight, they exchange meta-communicative signals that say "this bite does not denote what a bite would denote" [established — Bateson 1955, "A Theory of Play and Fantasy"]. Ritual, theater, fiction, games — all involve "this is not what it appears to be" signals that establish a new frame with its own internal semantics.</p>
+
+<p><strong>The frame is the semantic closure.</strong> It defines what things <em>mean</em>.</p>
+
+<h2 id="frame-interfaces">5. Frame Interfaces: Embedding, Nesting, and Boundaries</h2>
+
+<h3>5.1 Frame Embedding</h3>
+
+<p>Frames can be embedded in other frames. The film frame is embedded in the physical frame. The mathematical frame is embedded in the linguistic frame. The quantum frame is embedded in the classical frame (the laboratory, the experimental apparatus). When one frame is embedded in another, there is an <em>interface</em> — a place where the rules of the two frames must interact.</p>
+
+<p>The Heisenberg cut is the interface between quantum and classical frames. The "suspension of disbelief" is the interface between narrative and physical frames. The Gödel numbering is the interface between the syntactic frame and the arithmetic frame.</p>
+
+<h3>5.2 Gödel Incompleteness as Frame Boundary</h3>
+
+<p>Gödel's incompleteness theorems [established, 1931] can be read as a theorem about the limits of a frame's ability to describe its own interface. When a formal system is powerful enough to encode arithmetic, it can construct statements that refer to their own provability <em>within that frame</em>. The resulting Gödel sentence is true (in the meta-frame) but unprovable (in the object frame).</p>
+
+<p>[PHILOSOPHY] This suggests that <strong>no sufficiently powerful frame can be self-contained</strong>. The interface between a frame and the meta-frame that contains it produces statements that are meaningful but undecidable within the frame. The frame can point at its own boundary but cannot cross it. Any frame rich enough to talk about itself will generate boundary statements that it cannot resolve.</p>
+
+<h3>5.3 The Turtles Problem</h3>
+
+<p>[PHILOSOPHY] If frames are embedded in frames that are embedded in frames, does this chain terminate? Either there is an infinite regress, or there is a terminal frame that somehow defines its own interface (self-containing, which runs into Gödel-type problems), or the concept of "frame" itself is the terminal frame — which begs the question.</p>
+
+<p>I find this puzzling [my conjecture]. Possibly the resolution is that <strong>framing is an activity, not an object</strong> — you don't need a "frame of all frames" because framing is something you <em>do</em>, not something you <em>have</em>.</p>
+
+<h2 id="meta-frame">6. The Meta-Frame Problem and the Self</h2>
+
+<h3>6.1 The Navigational Self</h3>
+
+<p>[PHILOSOPHY] If truth is frame-relative, then understanding <em>which frame you're in</em> becomes a prerequisite for understanding <em>what is true</em> within it. This requires a navigational self — something that can move between frames, recognize frame boundaries, and switch frame-dependent meanings. What is this navigational self made of?</p>
+
+<p>One possibility: the self is the <em>interface</em> between frames. Just as the Heisenberg cut is not "in" the quantum system or "in" the classical apparatus but is the boundary between them, the self might not be "in" any particular frame but might be the activity of frame navigation itself. This is reminiscent of certain Buddhist epistemologies (the self as a process, not a substance) [PHILOSOPHY, not established], but also of certain interpretations of the hard problem: consciousness might be what frame-navigation <em>feels like</em> from the inside [my conjecture, not yet falsifiable].</p>
+
+<h3>6.2 Falsifiability</h3>
+
+<p>Frame realism would be disconfirmed if we found a domain where there is only one possible frame, that frame requires no silent assumptions, and statements within it are true independently of the frame's axioms. Mathematics provides a partial challenge: arithmetic truths (e.g., $2 + 2 = 4$) seem to hold across all standard frames. If there are <em>cross-frame invariants</em> — truths that survive the transition between any two frames — then frame relativity is bounded [speculative]. The search for cross-frame invariants might be the search for whatever is <em>not</em> frame-dependent.</p>
+
+<h2 id="synthesis">7. Synthesis: How Frame Realism Changes How We Hold Knowledge</h2>
+
+<h3>7.1 From Fundamentalism to Frame-Fluency</h3>
+
+<p>[PHILOSOPHY] The key shift frame realism demands is from <strong>fundamentalism</strong> (the belief that one frame is the correct one) to <strong>frame-fluency</strong> (the capacity to navigate between frames, recognize their assumptions, and evaluate their internal validity without confusing any of them for the territory).</p>
+
+<p>This does not mean "everything is relative." Within a frame, truths are as hard as mathematics — as hard as "this series converges to $-1$ in $\mathbb{Q}_{2}$" or "this character's death is tragic within the narrative logic of the film." The hardness is <em>conditional</em> — conditional on the frame's axioms — but once those axioms are accepted, the consequences are as rigorous as any proof.</p>
+
+<h3>7.2 The Virtue of the Silent Radix</h3>
+
+<p>The silent radix is not a mistake to be eliminated. It is <strong>necessary for thought to be possible at all</strong>. Without assuming something — a base, a valuation, a metric, a measurement protocol, a narrative logic — there is no closure, and without closure, there are no truths, and without truths, there is no knowledge.</p>
+
+<p>The virtue is not in eliminating silent assumptions (impossible — you'd need a frame to do it from) but in <strong>remembering that they are assumptions</strong>. The physicist who remembers that her measurement apparatus is part of the frame; the mathematician who remembers that her number system is one completion among many; the film critic who remembers that the horror is real within the film's logic without being real in her living room — these are frame-fluent.</p>
+
+<p>The silent radix is always there. We just forget we chose it. Frame realism is the discipline of not forgetting.</p>
+
+<hr>
+
+<h3>Open Questions</h3>
+
+<div class="open-q"><strong>1. The interface problem:</strong> How exactly do frames interact at their boundaries? What is the physics, mathematics, or logic of the interface?</div>
+<div class="open-q"><strong>2. The self problem:</strong> What is the ontological status of the navigational self? Is it a frame, an interface, or something else entirely? <span class="certainty">[not yet falsifiable]</span></div>
+<div class="open-q"><strong>3. The invariant problem:</strong> Are there cross-frame invariants? Can we prove that any such invariant must exist (or cannot exist)?</div>
+<div class="open-q"><strong>4. The terminal frame problem:</strong> Does the regress of meta-frames terminate? Is "being a frame" itself a frame?</div>
+<div class="open-q"><strong>5. The pragmatic question:</strong> If frame-fluency is the virtue, how do we teach it? How do we build institutions that reward frame-awareness rather than frame-fundamentalism?</div>
+
+<footer>
+  <p>This exploration draws on ultrametric mathematics (Ostrowski's theorem, $p$-adic analysis), general relativity, quantum foundations, Gödel incompleteness, Gregory Bateson's play frame theory, and the metaphor of the silent radix.</p>
+  <p style="margin-top:0.75rem;">Certainty calibration per QNFO-POL-COM-001. <a href="https://github.com/rwnq8/silent-radix">silent-radix</a></p>
+</footer>
+
+</body>
+</html>

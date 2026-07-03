@@ -1,0 +1,627 @@
+\documentclass[12pt]{article}
+
+% ── Packages ──────────────────────────────────────────────────────────────────
+\usepackage{amsmath, amscd, amsthm, amssymb, mathtools}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage[capitalise]{cleveref}
+\usepackage{mathrsfs}
+
+% ── Theorem environments ──────────────────────────────────────────────────────
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{construction}{Construction}[section]
+
+\theoremstyle{plain}
+\newtheorem{conjecture}{Conjecture}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}{Corollary}[section]
+
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+
+% ── Certainty labels ──────────────────────────────────────────────────────────
+\newcommand{\speculative}{{\color{gray!50!cyan}[\textsf{speculative}]}}
+\newcommand{\myconj}{{\color{orange}[\textsf{my conjecture}]}}
+\newcommand{\established}{{\color{green!50!black}[\textsf{established}]}}
+
+% ── Shortcuts ─────────────────────────────────────────────────────────────────
+\newcommand{\Fp}{\mathbb{F}_p}
+\newcommand{\Fq}{\mathbb{F}_q}
+\newcommand{\Fbar}{\overline{\mathbb{F}}_p}
+\newcommand{\Zp}{\mathbb{Z}_p}
+\newcommand{\Qp}{\mathbb{Q}_p}
+\newcommand{\Cp}{\mathbb{C}_p}
+\newcommand{\A}{\mathbb{A}_{\mathbb{Q}}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\cS}{\mathcal{S}}
+\newcommand{\cP}{\mathcal{P}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cM}{\mathcal{M}}
+\newcommand{\cD}{D\text{-}\mathbf{Mod}}
+\newcommand{\Witt}{W(\Fq)}
+\newcommand{\Wittbar}{W(\Fbar)}
+\newcommand{\Wittn}{W_n(\Fq)}
+\newcommand{\Dk}{D_k}
+\newcommand{\DieuRing}{W(k)[F,V]/(FV-p=VF-p)}
+\newcommand{\Bcrys}{B_{\mathrm{crys}}}
+\newcommand{\Bst}{B_{\mathrm{st}}}
+\newcommand{\BdR}{B_{\mathrm{dR}}}
+\newcommand{\BHT}{B_{\mathrm{HT}}}
+
+% ── Title ─────────────────────────────────────────────────────────────────────
+
+\title{\textbf{Conjectures on Witt Cohomology of Stabilizer Codes}\\[6pt]
+\large A Formal Framework for Dieudonn\'{e}-Module Theory in\\Quantum Error Correction}
+\author{QNFO Research Agent \quad|\quad Project: \texttt{number-theory-ultrametric-deep}}
+\date{2026-07-03 \quad|\quad Status: Phase~1 — Framework Formalization}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This document formalizes the Witt cohomology conjecture (Pillar~VI of the number--QEC bridge program) and its cross-pillar connections to Fontaine's $p$-adic Hodge theory (Pillar~III). We define a cohomology theory for stabilizer codes valued in modules over the Dieudonn\'{e} ring, identify the Frobenius and Verschiebung operators with Clifford conjugation and $T$-gate injection, and state the Dieudonn\'{e}--Manin slope-threshold correspondence as a precise inequality. Every conjecture is labeled with its certainty status and includes an explicit falsifiability condition.
+\end{abstract}
+
+\tableofcontents
+
+%═════════════════════════════════════════════════════════════════════════════════
+\section{Preliminaries on Witt Vectors and Dieudonn\'{e} Modules}
+%═════════════════════════════════════════════════════════════════════════════════
+
+We recall the classical theory needed to formulate the quantum-code analog. All material in this section is \established.
+
+\subsection{Witt Vectors}
+
+Let $p$ be a prime and let $k$ be a perfect field of characteristic $p$. Let $q=p^m$ for $m\geq 1$.
+
+\begin{definition}[$p$-typical Witt vectors]
+The \emph{ring of ($p$-typical) Witt vectors} $W(k)$ is the set of infinite sequences
+\[
+W(k)=\{(a_0,a_1,a_2,\dots):a_i\in k\}
+\]
+equipped with addition and multiplication defined by the universal Witt polynomials
+\[
+\Phi_n(x_0,\dots,x_{n-1})=\sum_{i=0}^{n-1}p^i\,x_i^{\,p^{\,n-i}},
+\qquad
+P_n(x_0,\dots,x_{n-1};y_0,\dots,y_{n-1})
+\]
+such that the \emph{ghost map}
+\[
+w:W(k)\longrightarrow k^{\mathbb{N}},\qquad
+w(a)=(\Phi_n(a_0,\dots,a_{n-1}))_{n\geq1}
+\]
+is a ring homomorphism. The ring $W(k)$ is a complete discrete valuation ring of characteristic~0 with maximal ideal $pW(k)$ and residue field $k$.
+\end{definition}
+
+\begin{definition}[Truncated Witt vectors]
+For $n\geq 1$, the \emph{ring of truncated Witt vectors of length $n$} is
+\[
+W_n(k)=W(k)/p^nW(k)\cong\{(a_0,\dots,a_{n-1}):a_i\in k\}
+\]
+with the operations induced from $W(k)$. The canonical projection is
+\[
+R_{n+1}:W_{n+1}(k)\twoheadrightarrow W_n(k),\qquad
+R_{n+1}(a_0,\dots,a_n)=(a_0,\dots,a_{n-1}).
+\]
+The full Witt ring is the inverse limit:
+\[
+W(k)=\varprojlim_{n}W_n(k).
+\]
+\end{definition}
+
+\begin{definition}[Teichm\"{u}ller lift]
+The \emph{Teichm\"{u}ller representative} of $a\in k$ is
+\[
+[a]=(a,0,0,\dots)\in W(k).
+\]
+The map $a\mapsto[a]$ is a multiplicative section of the reduction map $W(k)\to k$.
+\end{definition}
+
+\subsection{The Dieudonn\'{e} Ring}
+
+\begin{definition}[Dieudonn\'{e} ring]
+Let $k$ be a perfect field of characteristic $p$. The \emph{Dieudonn\'{e} ring} $\Dk$ is the non-commutative $W(k)$-algebra generated by two operators $F$ and $V$ subject to the relations
+\[
+FV=VF=p,\qquad
+Fa=\sigma(a)F,\qquad
+Va=\sigma^{-1}(a)V\qquad(\forall\,a\in W(k)),
+\]
+where $\sigma:W(k)\to W(k)$ is the Frobenius automorphism induced by $x\mapsto x^p$ on the residue field $k$. Explicitly,
+\[
+\Dk=W(k)\langle F,V\rangle/(FV-p,\,VF-p).
+\]
+\end{definition}
+
+\begin{definition}[Dieudonn\'{e} module]
+A \emph{Dieudonn\'{e} module} over $k$ is a left $\Dk$-module $M$ that is finitely generated and free as a $W(k)$-module. The category of Dieudonn\'{e} modules is denoted $\cD_k$.
+\end{definition}
+
+On a Dieudonn\'{e} module $M$, the operator $F$ is $\sigma$-semilinear and $V$ is $\sigma^{-1}$-semilinear. The relation $FV=VF=p$ implies $pM\subseteq F(M)\cap V(M)$.
+
+\subsection{The Dieudonn\'{e}--Manin Slope Decomposition}
+
+\begin{proposition}[Dieudonn\'{e}--Manin classification, \established]
+Let $M$ be a Dieudonn\'{e} module over $k$. Then the isocrystal $M\otimes_{W(k)}\operatorname{Frac}(W(k))$ admits a canonical direct-sum decomposition into \emph{slope components}:
+\[
+M\otimes_{\Zp}\Qp\;\cong\;\bigoplus_{\lambda\in\mathbb{Q}}M_{\lambda},
+\]
+where each $M_{\lambda}$ is an isoclinic module of slope $\lambda=r/s$ (with $\gcd(r,s)=1$, $s>0$), characterized by the existence of a $W(k)$-lattice $L\subseteq M_{\lambda}$ such that
+\[
+F^s(L)=p^{\,r}L.
+\]
+The multiplicity of slope $\lambda$ is the integer $s\cdot\dim_{\operatorname{Frac}(W(k))}M_{\lambda}$.
+\end{proposition}
+
+\begin{remark}
+The slope $\lambda=0$ corresponds to \emph{\'{e}tale} modules (pure Frobenius-action), $\lambda=1$ to \emph{multiplicative type} (pure Verschiebung-action), and $\lambda=1/2$ to \emph{self-dual} modules.
+\end{remark}
+
+\subsection{Fontaine's Period Rings}
+
+We recall the definitions needed for the cross-pillar Fontaine classification (\S\ref{sec:fontaine}).
+
+\begin{definition}[Fontaine's period rings, \established]
+For a finite extension $K/\Qp$, Fontaine constructs the following $\Qp$-algebras equipped with a continuous $G_K$-action:
+\[
+\Bcrys\;\subset\;\Bst\;\subset\;\BdR,
+\]
+where:
+\begin{itemize}[nosep]
+  \item $\BdR$ is the \emph{de Rham period ring} — a complete discrete valuation field with residue field $\Cp$, endowed with the de Rham filtration $\operatorname{Fil}^{\bullet}\BdR$.
+  \item $\Bst=\Bcrys[\log t]$ is the \emph{semistable period ring}, where $t$ is Fontaine's $2\pi i$ element, equipped with a monodromy operator $N$.
+  \item $\Bcrys$ is the \emph{crystalline period ring}, the maximal subring of $\Bst$ on which $N=0$, equipped with a $\sigma$-semilinear Frobenius $\varphi:\Bcrys\to\Bcrys$.
+  \item $\BHT=\operatorname{gr}^{\bullet}\BdR$ is the \emph{Hodge-Tate period ring}, the associated graded ring.
+\end{itemize}
+\end{definition}
+
+\begin{definition}[Crystalline, semistable, de Rham representations]
+A $p$-adic Galois representation $V$ of $G_K$ is:
+\begin{itemize}[nosep]
+  \item \emph{de Rham} if $\dim_K(V\otimes_{\Qp}\BdR)^{G_K}=\dim_{\Qp}V$,
+  \item \emph{semistable} if $\dim_K(V\otimes_{\Qp}\Bst)^{G_K}=\dim_{\Qp}V$,
+  \item \emph{crystalline} if $\dim_K(V\otimes_{\Qp}\Bcrys)^{G_K}=\dim_{\Qp}V$.
+\end{itemize}
+We have the strict inclusions:
+\[
+\{\text{crystalline}\}\;\subset\;\{\text{semistable}\}\;\subset\;\{\text{de Rham}\}.
+\]
+\end{definition}
+
+%═════════════════════════════════════════════════════════════════════════════════
+\section{Formal Definition: Witt Cohomology of Stabilizer Codes}
+%═════════════════════════════════════════════════════════════════════════════════
+
+\subsection{Stabilizer Codes over Finite Fields}
+
+We fix a ground field $k=\Fq$ where $q=p^m$.
+
+\begin{definition}[Stabilizer code over $k$]
+A \emph{stabilizer code $\cC$ over $k$} with parameters $[[n,\kappa,\delta]]_q$ is a $q^{\kappa}$-dimensional subspace of the Hilbert space $(\mathbb{C}^q)^{\otimes n}$ whose stabilizer group $S\subseteq\cP_q^{\,n}$ is an abelian subgroup of the generalized $q$-dimensional Pauli group that does not contain $-I$. The code corrects errors on up to $\lfloor(\delta-1)/2\rfloor$ qudits.
+\end{definition}
+
+We denote by $\mathfrak{C}_p$ the set of isomorphism classes of stabilizer codes defined over finite fields of characteristic $p$.
+
+\subsection{The Witt Cohomology Functor}
+
+\begin{conjecture}[Existence of Witt cohomology, \myconj]\label{conj:witt-cohomology}
+There exists a contravariant functor
+\[
+H^{\bullet}_{\textup{stab}}:\mathfrak{C}_p\longrightarrow\cD_{\Fp},
+\qquad
+\cC\longmapsto H^{\bullet}_{\textup{stab}}(\cC),
+\]
+assigning to every stabilizer code $\cC$ over $\Fq$ (with $q=p^m$) a $\mathbb{Z}$-graded Dieudonn\'{e} module $H^{\bullet}_{\textup{stab}}(\cC)=\bigoplus_{i\geq0}H^{i}_{\textup{stab}}(\cC)$ over $W(\Fp)$ with the following properties:
+\begin{enumerate}[label=(\arabic*),nosep]
+  \item \textbf{Functoriality:} A morphism of stabilizer codes (a $k$-linear map of the underlying stabilizer groups that preserves the code subspace) induces a morphism of Dieudonn\'{e} modules in the reverse direction.
+  \item \textbf{Finite generation:} Each $H^{i}_{\textup{stab}}(\cC)$ is a finitely generated $W(\Fp)$-module.
+  \item \textbf{Code dimension:} $\dim_{\Qp} H^{0}_{\textup{stab}}(\cC)\otimes_{\Zp}\Qp = \kappa$ (dimension of the encoded logical subspace).
+  \item \textbf{Distance grading:} $\operatorname{rk}_{W(\Fp)} H^{i}_{\textup{stab}}(\cC)=0$ for $i>\delta$ (cohomology vanishes beyond the code distance).
+  \item \textbf{Mayer--Vietoris:} For a covering of the stabilizer by two commuting subgroups $S=S_1S_2$ with $S_{12}=S_1\cap S_2$, there is a long exact sequence of Dieudonn\'{e} modules related to the induced codes $\cC(S_1),\cC(S_2),\cC(S_{12})$.
+\end{enumerate}
+\end{conjecture}
+
+\begin{remark}[Falsifiability of \Cref{conj:witt-cohomology}]
+The conjecture would be falsified if no non-trivial $\Dk$-module structure can be defined on any cohomological invariant of stabilizer codes, or if the functoriality condition (1) forces $H^{\bullet}_{\textup{stab}}(\cC)$ to be the zero module for all $\cC$.
+\end{remark}
+
+\subsection{The Frobenius Operator: Clifford Conjugation}
+
+\begin{definition}[Clifford conjugation of a stabilizer code]
+Let $\cC$ be a stabilizer code with stabilizer group $S$. The \emph{Clifford conjugate} of $\cC$ is the code
+\[
+\cC^F = U\,\cC\,U^{\dagger},
+\]
+where $U$ is the full Clifford-group element that conjugates the generalized Pauli group by a complete Fourier transform on each qudit. The stabilizer group of $\cC^F$ is the image of $S$ under this conjugation.
+\end{definition}
+
+\begin{conjecture}[Frobenius as Clifford conjugation, \myconj]\label{conj:F-clifford}
+Under the Witt cohomology functor of \Cref{conj:witt-cohomology}, the Frobenius operator
+\[
+F:H^{\bullet}_{\textup{stab}}(\cC)\longrightarrow H^{\bullet}_{\textup{stab}}(\cC^F)
+\]
+corresponds to the $\sigma$-semilinear map induced by Clifford conjugation. Moreover, $F$ is an isomorphism on the isocrystal level:
+\[
+F\otimes\Qp: H^{\bullet}_{\textup{stab}}(\cC)\otimes_{\Zp}\Qp\;\xrightarrow{\cong}\; H^{\bullet}_{\textup{stab}}(\cC^F)\otimes_{\Zp}\Qp.
+\]
+\end{conjecture}
+
+\begin{remark}[Falsifiability of \Cref{conj:F-clifford}]
+The conjecture is falsified if, for a known code family (e.g., the $[[5,1,3]]$ perfect code or toric codes), the iterated Clifford conjugate $\cC^{F^k}$ has cohomological invariants that do not follow the slope pattern predicted by the Frobenius action on a Dieudonn\'{e} module.
+\end{remark}
+
+\subsection{The Verschiebung Operator: $T$-Gate Injection}
+
+\begin{definition}[$T$-gate injection (level increase)]
+Let $\cC$ be a stabilizer code over $\Fp$. The \emph{$T$-gate injected code} $\cC^V$ is obtained by conjugating the stabilizer generators of $\cC$ by a $T$-gate ($\pi/8$ phase gate) on a designated subset of qudits:
+\[
+\cC^V = T\,\cC\,T^{\dagger},
+\]
+where $T$ acts as $T|j\rangle=e^{2\pi i j^2/8p}|j\rangle$ on qudits of dimension $q=p^m$. The operator $V$ encodes the effect of \emph{increasing the Clifford hierarchy level} by one — it ``unfolds'' the code into the next level of the hierarchy, corresponding to the shift action of Verschiebung on Witt vector components.
+\end{definition}
+
+\begin{conjecture}[Verschiebung as $T$-gate injection, \myconj]\label{conj:V-Tgate}
+Under the Witt cohomology functor, the Verschiebung operator
+\[
+V:H^{\bullet}_{\textup{stab}}(\cC^V)\longrightarrow H^{\bullet}_{\textup{stab}}(\cC)
+\]
+is a $\sigma^{-1}$-semilinear map corresponding to the inverse of $T$-gate injection at the cohomological level. Moreover, on the underlying Dieudonn\'{e} module:
+\[
+FV = p = VF\qquad\text{on }H^{\bullet}_{\textup{stab}}(\cC).
+\]
+\end{conjecture}
+
+\begin{remark}[Falsifiability of \Cref{conj:V-Tgate}]
+The conjecture is falsified if, for any stabilizer code $\cC$, the composition of Clifford conjugation followed by $T$-gate injection (or vice versa) fails to equal the scalar $p$ on the available cohomological invariants. A direct numerical test: compute the trace of $F\circ V$ and $V\circ F$ on $H^{0}_{\textup{stab}}$ for small codes and compare to $p\cdot\operatorname{rk}_{W(\Fp)}H^{0}_{\textup{stab}}(\cC)$.
+\end{remark}
+
+\subsection{The Witt-Cohomology Pairing}
+
+\begin{conjecture}[Poincar\'{e} duality for stabilizer codes, \speculative]\label{conj:poincare}
+For a stabilizer code $\cC$ with parameters $[[n,\kappa,\delta]]_q$, there exists a non-degenerate pairing
+\[
+\langle\cdot,\cdot\rangle: H^{i}_{\textup{stab}}(\cC)\times H^{\delta-i}_{\textup{stab}}(\cC^{\perp})\longrightarrow W(\Fp),
+\]
+where $\cC^{\perp}$ is the dual code. Under this pairing, $F$ and $V$ are adjoint:
+\[
+\langle Fx,y\rangle = \langle x,Vy\rangle^{\sigma}.
+\]
+\end{conjecture}
+
+%═════════════════════════════════════════════════════════════════════════════════
+\section{Dieudonn\'{e}--Manin Classification of Codes}
+%═════════════════════════════════════════════════════════════════════════════════
+
+\subsection{Slopes of a Stabilizer Code}
+
+\begin{definition}[Slope spectrum]
+For a stabilizer code $\cC$, its \emph{slope spectrum} is the multiset of rational numbers
+\[
+\operatorname{Slopes}(\cC)=\{\lambda_1,\dots,\lambda_r\}\subset\mathbb{Q}\cap[0,1]
+\]
+obtained from the Dieudonn\'{e}--Manin decomposition of the isocrystal $H^{\bullet}_{\textup{stab}}(\cC)\otimes_{\Zp}\Qp$:
+\[
+H^{\bullet}_{\textup{stab}}(\cC)\otimes_{\Zp}\Qp\;\cong\;\bigoplus_{\lambda\in\operatorname{Slopes}(\cC)}M_{\lambda},
+\]
+where $M_{\lambda}$ is isoclinic of slope $\lambda$. The \emph{slope spread} is $\Delta(\cC)=\lambda_{\max}-\lambda_{\min}$.
+\end{definition}
+
+\begin{conjecture}[Slope-threshold inequality, \myconj]\label{conj:slope-threshold}
+Let $\cC$ be a family of stabilizer codes $\{\cC_n\}_{n=1}^{\infty}$ with an associated fault-tolerance threshold $p_{\mathrm{th}}(\cC)$. There exists a universal monotone-decreasing function $f:[0,1]\to[0,1]$ such that
+\[
+p_{\mathrm{th}}(\cC)\;\leq\;f\bigl(\Delta(\cC)\bigr)
+\]
+for every code family $\cC$, with equality holding for \emph{crystalline} code families (those with integer slopes; see \Cref{def:crystalline-code}). Moreover:
+\begin{itemize}[nosep]
+  \item $\lambda=0$ (purely \'{e}tale) $\Longrightarrow$ $p_{\mathrm{th}}=1$ (perfect, no logical error in the thermodynamic limit),
+  \item $\lambda=1$ (multiplicative) $\Longrightarrow$ $p_{\mathrm{th}}=0$ (classical, no entanglement protection),
+  \item $\lambda=1/2$ (self-dual) $\Longrightarrow$ $p_{\mathrm{th}}=1/2$ (CSS codes with $H_X=H_Z$).
+\end{itemize}
+\end{conjecture}
+
+\begin{remark}[Falsifiability of \Cref{conj:slope-threshold}]
+This conjecture is directly testable: compute the slope spectrum of known code families (surface codes, color codes, toric codes, quantum LDPC codes) and correlate $\Delta(\cC)$ with their independently determined error thresholds. No correlation between $\Delta$ and $p_{\mathrm{th}}$ (after controlling for $n,k,d$) would falsify the conjecture. For code families with a single slope $\lambda$, the prediction $p_{\mathrm{th}}=1-\lambda$ is a sharp numerical test.
+\end{remark}
+
+\subsection{Crystalline and Non-Crystalline Codes}
+
+\begin{definition}[Crystalline code, \myconj]\label{def:crystalline-code}
+A stabilizer code $\cC$ is \emph{crystalline} if all slopes in its slope spectrum are integers (hence 0 or 1, since slopes are confined to $[0,1]$). Equivalently, the Frobenius operator $F$ is invertible on $H^{\bullet}_{\textup{stab}}(\cC)$ (no non-trivial $V$-torsion).
+\end{definition}
+
+\begin{conjecture}[Characterization of crystalline codes, \myconj]\label{conj:crystalline-char}
+A stabilizer code $\cC$ is crystalline if and only if its stabilizer group is invariant under the full Clifford group (Frobenius-invariant):
+\[
+U S U^{\dagger}=S\qquad\forall\,U\in\mathcal{C}\ell_n^{(q)}.
+\]
+Such codes are \emph{topological} in the sense that their error-correction properties are invariant under local unitary deformations.
+\end{conjecture}
+
+\begin{remark}[Falsifiability of \Cref{conj:crystalline-char}]
+Test on known topological codes: the toric code and color code are expected to be crystalline (all slopes 0); generic random stabilizer codes should have fractional slopes. If a known topological code is not crystalline, or if a known non-topological code is crystalline, the conjecture is falsified.
+\end{remark}
+
+\subsection{Slope Semantics and Error Correction}
+
+\begin{proposition}[Slope semantics, \myconj]\label{prop:slope-semantics}
+The slope $\lambda$ of a Dieudonn\'{e}-module component $M_{\lambda}\subseteq H^{\bullet}_{\textup{stab}}(\cC)\otimes\Qp$ has the following QEC interpretation:
+\[
+\begin{array}{c|c|l}
+\text{Slope }\lambda & \text{Number-theoretic type} & \text{QEC meaning}\\\hline
+0 & \text{\'{E}tale (pure $F$)} & \text{Perfect fault-tolerance; exponential suppression}\\
+(0,1/2) & \text{Fractional, $F$-dominant} & \text{Strong error correction; high threshold}\\
+1/2 & \text{Self-dual} & \text{CSS code with symmetric $X\!/\!Z$ structure}\\
+(1/2,1) & \text{Fractional, $V$-dominant} & \text{Weak error correction; low threshold}\\
+1 & \text{Multiplicative (pure $V$)} & \text{Classical code; no quantum advantage}\\
+\notin[0,1] & \text{Unphysical} & \text{No quantum code can realize these slopes}
+\end{array}
+\]
+\end{proposition}
+
+%═════════════════════════════════════════════════════════════════════════════════
+\section{Witt Vectors as Truncated Hierarchies}
+%═════════════════════════════════════════════════════════════════════════════════
+
+\subsection{Truncation and Code Levels}
+
+\begin{definition}[Truncated code at level $n$]
+For a stabilizer code $\cC$ over $\Fq$, its \emph{$n$th truncation} is
+\[
+\cC_n = \cC\otimes_{\Fq}W_n(\Fq),
+\]
+interpreted as the code with stabilizer entries lifted to the Witt vectors of length $n$. The family $\{\cC_n\}_{n\geq1}$ forms a projective system with reduction maps
+\[
+\cC_{n+1}\twoheadrightarrow\cC_n,
+\]
+induced by the Witt vector truncation $W_{n+1}(\Fq)\twoheadrightarrow W_n(\Fq)$.
+\end{definition}
+
+\begin{conjecture}[Witt hierarchy correspondence, \myconj]\label{conj:witt-hierarchy}
+The $n$th truncation $\cC_n$ corresponds to a quantum code with $(n-1)$-st order error correction:
+
+\begin{center}
+\begin{tabular}{c|l}
+$W_n$ level & QEC interpretation\\\hline
+$W_1=\Fq$ & Qubit/qutrit-level code (mod-$p$ information)\\
+$W_2$ & Code with single-order syndrome correction\\
+$W_3$ & Code with second-order syndrome correction\\
+$W_n$ & Code with $(n-1)$-st order syndrome correction\\
+$W(\Fq)=\varprojlim W_n(\Fq)$ & \textbf{Thermodynamic limit}: infinite code family
+\end{tabular}
+\end{center}
+
+Moreover, properties that hold for all finite $n$ but fail in the limit $W(\Fq)$ indicate \emph{phase transitions in code space}.
+\end{conjecture}
+
+\begin{remark}[Falsifiability of \Cref{conj:witt-hierarchy}]
+Construct the truncated codes $\cC_n$ for a known family (e.g., concatenated codes or repetition codes) and verify that the $n$th level indeed provides $(n-1)$-st order correction. If the truncation level does not correlate with error-correction order, the hierarchy interpretation is falsified.
+\end{remark}
+
+\subsection{Thermodynamic Limit}
+
+\begin{definition}[Thermodynamic limit of a code family]
+The \emph{thermodynamic limit} of a code family $\{\cC^{(n)}\}$ is the inverse limit
+\[
+\cC^{(\infty)}=\varprojlim_{n}\cC^{(n)},
+\]
+taken in the category of stabilizer codes with reduction maps given by partial trace or concatenation decoding.
+\end{definition}
+
+\begin{conjecture}[Witt limit = thermodynamic limit, \myconj]\label{conj:thermo-limit}
+For a code family $\cC^{(n)}$ that arises from the Witt truncation $\cC_n=\cC\otimes_{\Fq}W_n(\Fq)$, the thermodynamic limit is isomorphic to the code over the full Witt vector ring:
+\[
+\cC^{(\infty)}\;\cong\; \cC\otimes_{\Fq}W(\Fq).
+\]
+The Dieudonn\'{e} module of the limit code satisfies
+\[
+H^{\bullet}_{\textup{stab}}(\cC^{(\infty)})\;\cong\; H^{\bullet}_{\textup{stab}}(\cC)\otimes_{W(\Fp)}W(\Fq),
+\]
+where the right-hand side is the extension of scalars to the larger Witt ring.
+\end{conjecture}
+
+\subsection{Connection to Moy--Prasad Depth}
+
+\begin{conjecture}[Moy--Prasad depth as error rate, \myconj]\label{conj:moy-prasad}
+Let $\cC$ be a quantum code with associated representation $\pi_{\cC}$ of a $p$-adic group (via the Langlands bridge of Pillar~VII). Then the Moy--Prasad depth $r(\pi_{\cC})$ and the logical error rate $p_L$ satisfy
+\[
+p_L = \exp\!\bigl(-r(\pi_{\cC})/ \tau \bigr)
+\]
+for a universal temperature-like parameter $\tau>0$ (possibly $\tau=k_B T/E_0$). Representations of depth 0 (tamely ramified) correspond to fault-tolerant codes with exponential error suppression; positive depth codes require concatenation.
+\end{conjecture}
+
+\begin{remark}[Falsifiability of \Cref{conj:moy-prasad}]
+Compute Moy--Prasad depths for known code families where the $p$-adic representation is constructible (e.g., codes arising from algebraic constructions: Goppa codes, AG codes) and correlate with measured logical error rates at fixed physical error rates. No exponential relationship falsifies the depth--rate link.
+\end{remark}
+
+%═════════════════════════════════════════════════════════════════════════════════
+\section{The Fontaine Classification (Cross-Pillar)}
+\label{sec:fontaine}
+%═════════════════════════════════════════════════════════════════════════════════
+
+\subsection{The Code Filtration}
+
+\begin{conjecture}[Fontaine filtration of stabilizer codes, \myconj]\label{conj:fontaine-filtration}
+There exists a nested classification of stabilizer codes over $\Qp$:
+\[
+\cC_{\mathrm{crys}}\;\subset\;\cC_{\mathrm{st}}\;\subset\;\cC_{\mathrm{dR}}\;\subset\;\cC_{\mathrm{HT}}\;\subset\;\cC_{\mathrm{all}},
+\]
+where each class corresponds to the analogous Fontaine period-ring condition on the Witt cohomology $H^{\bullet}_{\textup{stab}}(\cC)\otimes_{\Zp}\Qp$, viewed as a $G_{\Qp}$-representation:
+\[
+\cC\in\cC_{\bullet}\;\Longleftrightarrow\;
+\dim_{\Qp}\bigl(H^{\bullet}_{\textup{stab}}(\cC)\otimes_{\Qp}B_{\bullet}\bigr)^{G_{\Qp}}
+\;=\;\dim_{\Qp}H^{\bullet}_{\textup{stab}}(\cC)\otimes\Qp,
+\]
+for $B_{\bullet}\in\{\Bcrys,\Bst,\BdR,\BHT\}$.
+\end{conjecture}
+
+\begin{remark}[Falsifiability of \Cref{conj:fontaine-filtration}]
+The conjecture requires constructing a $G_{\Qp}$-action on $H^{\bullet}_{\textup{stab}}(\cC)$. If no natural $G_{\Qp}$-action can be defined, or if the filtration collapses ($\cC_{\mathrm{crys}}=\cC_{\mathrm{dR}}$ for all known codes), the Fontaine analogy is falsified.
+\end{remark}
+
+\subsection{Interpretation of Fontaine Classes}
+
+\begin{proposition}[Fontaine class semantics, \myconj]\label{prop:fontaine-semantics}
+\begin{center}
+\begin{tabular}{c|p{3.5cm}|p{6.5cm}}
+Code class & Number-theoretic analog & QEC meaning\\\hline
+$\cC_{\mathrm{crys}}$ & Good reduction, unramified & \textbf{Rigid codes}: lift from $\Fp$ without deformation;\\
+ &  & sharp fault-tolerance thresholds\\
+$\cC_{\mathrm{st}}$ & Semistable reduction & \textbf{Flexible codes}: controlled Clifford deformation;\\
+ &  & monodromy encodes logical gates\\
+$\cC_{\mathrm{dR}}$ & All admissible reps & \textbf{All analytic codes}: expressible in $p$-adic Hodge framework\\
+$\cC_{\mathrm{HT}}$ & Hodge--Tate representations & Weighted-stabilizer codes: stratified by Hodge--Tate weights
+\end{tabular}
+\end{center}
+\end{proposition}
+
+\subsection{The Frobenius--Cyclic Measurement Correspondence}
+
+\begin{conjecture}[Frobenius as cyclic measurement, \myconj]\label{conj:F-cyclic}
+The Frobenius endomorphism on the crystalline Dieudonn\'{e} module
+\[
+\varphi: D_{\mathrm{crys}}\bigl(H^{\bullet}_{\textup{stab}}(\cC)\otimes\Qp\bigr)
+\;\longrightarrow\;
+D_{\mathrm{crys}}\bigl(H^{\bullet}_{\textup{stab}}(\cC)\otimes\Qp\bigr)
+\]
+corresponds to the \emph{cyclic measurement operator} $M_{\mathrm{cyclic}}$ of the silent-radix synthesis. That is, the following square commutes:
+\[
+\begin{CD}
+\cC          @>{M_{\mathrm{cyclic}}}>> \cC'\\
+@VVV                             @VVV\\
+D_{\mathrm{crys}}(\cC) @>{\varphi}>> D_{\mathrm{crys}}(\cC')
+\end{CD}
+\]
+where $M_{\mathrm{cyclic}}(\cC)$ is the code obtained by applying a full cycle of Fourier measurements to $\cC$, and both $\varphi$ and $M_{\mathrm{cyclic}}$ are semilinear automorphisms whose eigenvalues are the Dieudonn\'{e}-Manin slopes.
+\end{conjecture}
+
+\begin{remark}[Falsifiability of \Cref{conj:F-cyclic}]
+Compute the slope spectrum of a known code $\cC$ from the Dieudonn\'{e} decomposition (via the Witt cohomology functor) and independently compute the eigenvalue spectrum of the cyclic measurement operator on $\cC$. The two spectra must coincide. A mismatch for any testable code falsifies the correspondence.
+\end{remark}
+
+\subsection{The Crystalline--Topological Link}
+
+\begin{conjecture}[Crystalline $\Longleftrightarrow$ topological, \myconj]\label{conj:crystalline-topological}
+A quantum code is \emph{topological} (its error-correction properties are invariant under local perturbations of the Hamiltonian) if and only if it is crystalline — that is, its Witt cohomology factors through $\Bcrys$:
+\[
+\cC\text{ is topological}\;\Longleftrightarrow\;
+\dim_{\Qp}\bigl(H^{\bullet}_{\textup{stab}}(\cC)\otimes\Bcrys\bigr)^{G_{\Qp}}
+\;=\;\dim_{\Qp}H^{\bullet}_{\textup{stab}}(\cC)\otimes\Qp.
+\]
+\end{conjecture}
+
+\begin{remark}[Falsifiability of \Cref{conj:crystalline-topological}]
+Verify on independently classified topological codes (toric code, color code, Kitaev surface code) and non-topological codes (stabilizer codes with no topological order). A topological code that is not crystalline, or a non-topological crystalline code, falsifies the equivalence.
+\end{remark}
+
+%═════════════════════════════════════════════════════════════════════════════════
+\section{Computational Consequences}
+%═════════════════════════════════════════════════════════════════════════════════
+
+\subsection{Immediately Testable Predictions}
+
+We enumerate predictions that can be verified with existing code data and computational resources (Phase~2 of the research plan).
+
+\begin{enumerate}[label=\textbf{T\arabic*.},leftmargin=*]
+
+  \item \textbf{Slope-threshold correlation.} \myconj
+  \[
+  \text{Hypothesis:}\quad
+  \operatorname{corr}\bigl(\Delta(\cC),\,p_{\mathrm{th}}(\cC)\bigr)_{\cC\in\text{Families}}
+  \;<\; -0.7.
+  \]
+  \emph{Method:} Compute slopes for known code families (surface, color, toric, LDPC) via the conjectural Dieudonn\'{e} decomposition; correlate with published threshold data.\\
+  \emph{Falsification:} $|\text{corr}|<0.3$ after controlling for $n,k,d$.
+
+  \item \textbf{Crystalline detection.} \myconj
+  \[
+  \text{Hypothesis:}\quad
+  \{\text{Surface codes, color codes, toric codes}\}\subseteq\cC_{\mathrm{crys}}.
+  \]
+  \emph{Method:} Test Frobenius-invariance of the stabilizer: verify $USU^{\dagger}=S$ for full Clifford group elements $U$.\\
+  \emph{Falsification:} Any topological code failing full Clifford invariance.
+
+  \item \textbf{Witt truncation order.} \myconj
+  \[
+  \text{Hypothesis:}\quad
+  \cC_n\text{ corrects errors up to weight }(n-1)/2\text{ on the lifted stabilizer}.
+  \]
+  \emph{Method:} Construct explicit $\cC_n$ for concatenated codes and test error-correction capacity.\\
+  \emph{Falsification:} $\cC_1$ outperforming $\cC_2$, or $\cC_n$ for large $n$ failing to improve.
+
+  \item \textbf{Adelic product constraint.} \myconj
+  \[
+  \text{Hypothesis:}\quad
+  \prod_{p\leq\infty} d_p(\cC)=1,
+  \]
+  where $d_p(\cC)$ is the $p$-adic distance of the local code at prime $p$.\\
+  \emph{Method:} Construct local codes for several primes; compute $p$-adic distances; verify the product.\\
+  \emph{Falsification:} $\prod_p d_p\neq 1$ for any consistently constructed local code family.
+
+\end{enumerate}
+
+\subsection{Predictions Requiring Deeper Theory}
+
+These predictions require advancing the mathematical framework of \S\S2--5 before testing.
+
+\begin{enumerate}[label=\textbf{T\arabic*.},leftmargin=*,resume]
+
+  \item \textbf{Brauer--Manin obstruction.} \speculative
+  Some code parameters $[[n,k,d]]_q$ have local realizations at every prime $p$
+  and at $p=\infty$ but no global code over $\mathbb{C}$. The obstruction lies in the
+  Brauer group $\operatorname{Br}(X)/\operatorname{Br}(\mathbb{Q})$ for a suitable
+  moduli space $X$ of codes.
+
+  \item \textbf{Bernstein universality bound.} \speculative
+  The number of asymptotic universality classes of quantum code families (distinguished by their scaling behavior $k\sim n^\alpha$, $d\sim n^\beta$) is finite for each fixed qudit dimension, bounded by the number of Bernstein blocks for $\operatorname{GL}_n(\Qp)$.
+
+  \item \textbf{Langlands $\varepsilon$-factor = MacWilliams transform.} \speculative
+  For a quantum code $\cC$ with weight enumerator $A_{\cC}(z)$, let $L(s,\pi_{\cC})$ be the $L$-function of the associated Langlands parameter. Then the functional equation $\varepsilon$-factor satisfies
+  \[
+  |\varepsilon(1/2,\pi_{\cC})| = \frac{1}{q^{\kappa/2}}\cdot
+  A_{\cC}\!\left(\frac{-1}{q+1}\right).
+  \]
+
+  \item \textbf{Exceptional code symmetries.} \speculative
+  Codes corresponding to exceptional Kodaira types $\mathrm{II}^*,\mathrm{III}^*,\mathrm{IV}^*$ have exceptional Lie group symmetries $E_8,E_7,E_6$ in their stabilizer groups. Such codes have not been constructed and may represent a fundamentally new class of quantum codes.
+
+\end{enumerate}
+
+\subsection{Falsifiability of the Entire Pillar VI Framework}
+
+The whole Witt cohomology program (Pillars~VI and III) is falsified as a scientific framework if \emph{any} of the following conditions hold:
+
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+  \item \textbf{No cohomological structure:} No natural map from the set of stabilizer codes to modules over the Dieudonn\'{e} ring can be constructed — the functor $H^{\bullet}_{\textup{stab}}$ is everywhere zero or fails functoriality.
+  \item \textbf{No slope--threshold correlation:} After computing slopes for at least 10 code families, the Pearson correlation between $\Delta(\cC)$ and $p_{\mathrm{th}}(\cC)$ is indistinguishable from zero ($|r|<0.2$).
+  \item \textbf{No natural $F,V$ operators:} The operations of Clifford conjugation and $T$-gate injection on stabilizer codes do not induce endomorphisms with the relation $FV=p=VF$ on \emph{any} code-theoretic invariant.
+  \item \textbf{Fontaine filtration collapse:} The filtration $\cC_{\mathrm{crys}}\subset\cC_{\mathrm{st}}\subset\cC_{\mathrm{dR}}$ collapses to a single class — i.e., all stabilizer codes are crystalline (or all are de~Rham), providing no discrimination.
+  \item \textbf{Truncation fails to encode correction order:} $\cC_1$ and $\cC_n$ for $n>1$ have identical error-correction properties.
+\end{enumerate}
+
+Conversely, confirmation of the slope--threshold correlation at $|r|>0.7$ would constitute strong evidence for the geometric picture underlying Pillar~VI, even before the full functor is constructed.
+
+\subsection{Computational Implementation Roadmap}
+
+\begin{enumerate}[label=(\alph*),leftmargin=*]
+  \item \texttt{dieudonne\_slope\_classifier.py}: Given a stabilizer code $\cC$, compute its conjectural slope spectrum by analyzing the action of the Clifford group on the stabilizer. Output $\operatorname{Slopes}(\cC)$ and $\Delta(\cC)$.
+  \item \texttt{witt\_truncation\_builder.py}: Construct $\cC_n=\cC\otimes W_n(\Fq)$ for small $n$ and small codes. Test error correction order.
+  \item \texttt{fontaine\_classifier.py}: Given $\cC$, determine whether the Witt cohomology (as a $G_{\Qp}$-representation) is crystalline, semistable, or de~Rham by checking Frobenius-invariance and monodromy.
+  \item \texttt{falsifiability\_dashboard.py}: Given a corpus of code families, compute correlation $r(\Delta,p_{\mathrm{th}})$ and report whether each falsifiability condition (i)--(v) of \S6.3 is triggered.
+\end{enumerate}
+
+%═════════════════════════════════════════════════════════════════════════════════
+\section*{Acknowledgments}
+%═════════════════════════════════════════════════════════════════════════════════
+
+This document synthesizes conjectures from the
+\textsc{number-theory-qec-bridge.md} (all seven pillars) and the
+\textsc{research-plan.md} (Pillars~III and~VI) of the
+\texttt{number-theory-ultrametric-deep} project. All non-textbook
+claims are labeled with certainty per QNFO-POL-COM-001. Each conjecture
+includes an explicit falsifiability condition.
+
+\end{document}

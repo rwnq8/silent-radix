@@ -1,0 +1,565 @@
+% DEFINITIONS: Formal Conjectures for Deep Number-Theoretic Foundations
+% of Ultrametric Quantum Information
+% Project: number-theory-ultrametric-deep
+% Date: 2026-07-03
+% Status: Phase 1 — Conjecture Formalization
+\documentclass[12pt]{article}
+\usepackage{amsmath, amssymb, amsthm, mathtools}
+\usepackage{mathrsfs}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\newtheorem{definition}{Definition}[section]
+\newtheorem{conjecture}[definition]{Conjecture}
+\newtheorem{question}[definition]{Open Question}
+\theoremstyle{remark}
+\newtheorem{remark}[definition]{Remark}
+\newtheorem{notation}[definition]{Notation}
+
+\title{Formal Definitions and Conjectures for Deep Number-Theoretic \\
+Quantum Error Correction}
+\author{QNFO Research Collective}
+\date{2026-07-03}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This document formalizes the central definitions and conjectures connecting
+seven pillars of modern number theory to quantum error correction, hierarchical
+discovery, and ultrametric memory architectures. Each definition specifies a
+proposed mathematical object or structure. Each conjecture states a relationship
+to be proved or falsified. Certainty labels follow QNFO-POL-COM-001:
+$[\text{established}]$, $[\text{conjecture}]$, $[\text{speculative}]$,
+$[\text{not yet falsifiable}]$. The document serves as the formal reference
+for Phase 2 computational exploration and Phase 3 theorem development.
+\end{abstract}
+
+% ======================================================================
+\section{Preliminaries and Notation}
+% ======================================================================
+
+\begin{notation}[Stabilizer Codes]
+A \emph{stabilizer code} $C = [[n,k,d]]_q$ is a $q^k$-dimensional subspace of
+$(\mathbb{C}^q)^{\otimes n}$ defined as the simultaneous $+1$ eigenspace of an
+abelian subgroup $\mathcal{S} \subset \mathcal{P}_n(q)$, the $n$-qudit Pauli
+group, where $-\mathbb{I} \notin \mathcal{S}$ and $|\mathcal{S}| = q^{n-k}$.
+The code distance $d = \min_{P \in N(\mathcal{S}) \setminus \mathcal{S}}
+\operatorname{wt}(P)$ where $N(\mathcal{S})$ is the normalizer of $\mathcal{S}$
+in $\mathcal{P}_n(q)$.
+\end{notation}
+
+\begin{notation}[p-adic Numbers]
+For a prime $p$, let $\mathbb{Q}_p$ denote the field of $p$-adic numbers with
+valuation $v_p$ and absolute value $|x|_p = p^{-v_p(x)}$. Let $\mathbb{Z}_p$
+denote the ring of $p$-adic integers. Let $\mathbb{C}_p$ denote the completion
+of an algebraic closure of $\mathbb{Q}_p$. The valuation extends uniquely to
+$\mathbb{C}_p$.
+\end{notation}
+
+\begin{notation}[Witt Vectors]
+Let $W(\mathbb{F}_q)$ denote the ring of Witt vectors of the finite field
+$\mathbb{F}_q$ ($q = p^m$). Elements are infinite sequences
+$(a_0, a_1, a_2, \ldots)$ with $a_i \in \mathbb{F}_q$, with addition and
+multiplication defined by the universal Witt polynomials.
+$W_n(\mathbb{F}_q)$ denotes the truncated Witt vectors of length $n$.
+\end{notation}
+
+\begin{notation}[Galois Groups]
+$G_{\mathbb{Q}_p} = \operatorname{Gal}(\overline{\mathbb{Q}}_p / \mathbb{Q}_p)$
+is the absolute Galois group of $\mathbb{Q}_p$. $I_p \subset G_{\mathbb{Q}_p}$
+is the inertia subgroup. $W_{\mathbb{Q}_p}$ is the Weil group.
+\end{notation}
+
+% ======================================================================
+\section{Pillar I: p-adic Analysis of Quantum Codes}
+% ======================================================================
+
+\begin{definition}[p-adic Encoding of a Stabilizer Code]
+$[\text{definition}]$
+Let $C = [[n,k,d]]_q$ be a stabilizer code over $\mathbb{C}$. A
+\emph{p-adic encoding} of $C$ at prime $p$ is a continuous map
+$\iota_C: \mathbb{Z}_p \to \mathbb{Q}_p$ constructed from the code
+parameters $(n,k,d)$ and a choice of basis such that:
+\begin{enumerate}
+\item $\iota_C$ is continuous (i.e., uniformly continuous w.r.t.\ the
+  $p$-adic metric)
+\item The Mahler expansion $\iota_C(x) = \sum_{m=0}^{\infty} a_m \binom{x}{m}$
+  converges uniformly, with $a_m \in \mathbb{Q}_p$ and $|a_m|_p \to 0$
+\item The coefficient sequence $(a_m)_{m \geq 0}$ is computable from $C$
+  in polynomial time in $n$
+\end{enumerate}
+The encoding is \emph{natural} if it is invariant under local Clifford
+transformations of $C$ up to a $p$-adic isometry.
+\end{definition}
+
+\begin{conjecture}[Mahler Decay Classifies Code Structure]
+$[\text{conjecture}]$
+The Mahler coefficient decay rate $\rho(C) = -\limsup_{m \to \infty}
+\frac{\log |a_m|_p}{\log m}$ is an invariant of the stabilizer code $C$
+(independent of the choice of natural encoding) and satisfies:
+\[
+\rho(C) \begin{cases}
+= 0 & \text{if } C \text{ is a random CSS code} \\
+\in (0, 1] & \text{if } C \text{ is an algebraic code (Goppa, AG)} \\
+\text{correlated with } d/n & \text{for surface codes}
+\end{cases}
+\]
+This would be disconfirmed if two natural encodings of the same code produce
+statistically distinguishable Mahler spectra.
+\end{conjecture}
+
+\begin{question}[Amice Spectral Classification]
+$[\text{speculative}]$
+Does the intrinsic Amice transform of $\iota_C$ detect Galois-invariant
+subspaces in the space of quantum codes? Specifically, for Goppa codes
+(which arise from curves over finite fields), is there a characteristic
+spectral signature in the Amice domain that distinguishes them from
+random CSS codes of the same $[[n,k,d]]$ parameters?
+\end{question}
+
+% ======================================================================
+\section{Pillar II: Hasse Local-Global Principle}
+% ======================================================================
+
+\begin{definition}[Local Quantum Code at Prime $p$]
+$[\text{definition — central to entire framework}]$
+Let $C = [[n,k,d]]_q$ be a stabilizer code. For a prime $p$, a
+\emph{local quantum code at $p$} with the same parameters $[[n,k,d]]_q$
+is a stabilizer code $C_p$ defined over the $p$-adic numbers satisfying:
+\begin{enumerate}
+\item $C_p$ is defined by a stabilizer group $\mathcal{S}_p$ whose matrix
+  entries (in some $p$-adic basis) lie in $\mathbb{Q}_p$ (or its
+  unramified extension)
+\item The code subspace is a $q^k$-dimensional subspace of a $p$-adic
+  Hilbert module $(\mathbb{Q}_p(\zeta_q))^{\otimes n}$ where
+  $\zeta_q = e^{2\pi i/q}$
+\item The distance $d_p$ (minimum $p$-adic weight of non-trivial logical
+  operators) satisfies $|d_p - d|_p < 1$ (i.e., $d$ is the reduction of
+  $d_p$ modulo $p$)
+\item There exists a \emph{Witt lift} from characteristic $p$: a stabilizer
+  code $\overline{C}_p$ over $\mathbb{F}_p$ (or $\mathbb{F}_{p^m}$) whose
+  Witt vector lift $W(\overline{C}_p) \otimes_{\mathbb{Z}_p} \mathbb{Q}_p$
+  is locally equivalent to $C_p$
+\end{enumerate}
+\end{definition}
+
+\begin{remark}
+This definition is the SINGLE most important formalization in the
+entire research plan. Without a rigorous notion of ``local quantum code''
+at a prime, Pillars II, III, VI, and VII have no objects to work with.
+The Witt lift condition (item 4) connects this to Pillar VI (Dieudonn\'e
+modules) and Pillar III (crystalline codes).
+\end{remark}
+
+\begin{conjecture}[Hasse Principle for Stabilizer Codes]
+$[\text{conjecture}]$
+A stabilizer code with parameters $[[n,k,d]]_q$ exists over $\mathbb{C}$
+if and only if it exists locally at EVERY prime $p$ AND at the archimedean
+place (i.e., over $\mathbb{R}$ or $\mathbb{C}$). Formally:
+\[
+\exists C/\mathbb{C} \iff
+\left(\forall p \text{ prime}: \exists C_p/\mathbb{Q}_p\right) \land
+\left(\exists C_\infty/\mathbb{R}\right)
+\]
+This would be disconfirmed if code parameters are found that are everywhere
+locally realizable but not globally realizable (analogous to Selmer's
+counterexample $3x^3 + 4y^3 + 5z^3 = 0$ for the classical Hasse principle).
+\end{conjecture}
+
+\begin{conjecture}[Brauer-Manin Obstruction for Quantum Codes]
+$[\text{conjecture}]$
+When the Hasse principle fails, the obstruction is captured by a
+cohomological invariant taking values in a Brauer-like group
+$\operatorname{Br}(\mathcal{C})$ associated to the ``moduli space''
+of stabilizer codes, analogous to $\operatorname{Br}(X)/\operatorname{Br}(k)$
+for algebraic varieties.
+\end{conjecture}
+
+\begin{question}[Minkowski-Hasse for Codes]
+$[\text{speculative}]$
+Does there exist a classification theorem for stabilizer code parameters
+analogous to the Minkowski-Hasse theorem for quadratic forms — i.e., a
+complete set of local invariants (dimension, $p$-adic signature, Witt index)
+that determine when parameters $[[n,k,d]]_q$ are realizable?
+\end{question}
+
+% ======================================================================
+\section{Pillar III: Galois Representations and p-adic Hodge Theory}
+% ======================================================================
+
+\begin{definition}[Galois Representation of a Local Quantum Code]
+$[\text{definition — speculative}]$
+Let $C_p$ be a local quantum code at prime $p$ (as defined in \S 2).
+A \emph{Galois representation} associated to $C_p$ is a continuous
+homomorphism
+\[
+\rho_{C_p}: G_{\mathbb{Q}_p} \to \operatorname{GL}_n(\mathbb{Q}_p)
+\]
+constructed from the stabilizer group $\mathcal{S}_p$ and the Witt lift
+$\overline{C}_p$, satisfying:
+\begin{enumerate}
+\item $\rho_{C_p}$ is unramified if and only if $C_p$ lifts from an
+  unramified extension of $\mathbb{Q}_p$ (crystalline case)
+\item $\det \circ \rho_{C_p}$ is the $p$-adic cyclotomic character times
+  the code rate $k/n$
+\item The representation is Hodge-Tate with weights corresponding to the
+  code distance spectrum
+\end{enumerate}
+\end{definition}
+
+\begin{conjecture}[Fontaine Filtration of Stabilizer Codes]
+$[\text{conjecture}]$
+There exists a filtration of the category of local quantum codes at $p$:
+\[
+\mathcal{C}_{\text{crys}} \subset
+\mathcal{C}_{\text{st}} \subset
+\mathcal{C}_{\text{dR}}
+\]
+corresponding to Fontaine's period ring filtration
+$B_{\text{crys}} \subset B_{\text{st}} \subset B_{\text{dR}}$, where:
+\begin{itemize}
+\item $\mathcal{C}_{\text{crys}}$ (crystalline codes): lift from $\mathbb{F}_p$
+  without ramification; codes with ``good reduction'' — distance preserved
+  under $p$-adic deformation
+\item $\mathcal{C}_{\text{st}}$ (semistable codes): allow controlled
+  ramification; Clifford-deformed stabilizers
+\item $\mathcal{C}_{\text{dR}}$ (de Rham codes): all codes expressible
+  in the $p$-adic analytic category
+\end{itemize}
+\end{conjecture}
+
+\begin{conjecture}[Fontaine-Mazur Analog for Quantum Codes]
+$[\text{speculative}]$
+A quantum code $C$ is ``geometric'' (physically realizable by physical qubits
+in a laboratory) if and only if its associated Galois representation
+$\rho_{C_p}$ is de Rham (in the sense of Fontaine) and unramified at almost
+all primes. This would provide a mathematical criterion for physical
+realizability independent of hardware constraints.
+\end{conjecture}
+
+\begin{question}[Frobenius = Cyclic Measurement]
+$[\text{speculative}]$
+The Frobenius endomorphism $\varphi$ on the $p$-adic Galois representation
+$\rho_{C_p}$ satisfies $\varphi(x) \equiv x^p \pmod{p}$. In the silent-radix
+framework, cyclic measurement operators generate finite cyclic groups on
+quantum state spaces. Does the Frobenius action on $\rho_{C_p}$ correspond
+to a cyclic measurement operator? If so, what is the operational meaning
+of the characteristic polynomial of Frobenius?
+\end{question}
+
+% ======================================================================
+\section{Pillar IV: Class Field Theory and Cyclic Measurement}
+% ======================================================================
+
+\begin{definition}[Artin Symbol of a Cyclic Measurement]
+$[\text{definition}]$
+Let $\mathcal{M}_D$ be a cyclic measurement protocol with period $D$
+(silent-radix framework, $D=4$ Fourier clocks). The group generated by
+$\mathcal{M}_D$ is isomorphic to $\mathbb{Z}/D\mathbb{Z}$. The
+\emph{Artin symbol} $\operatorname{Art}(\mathcal{M}_D)$ is the element
+of $\operatorname{Gal}(\mathbb{Q}_p(\zeta_D)/\mathbb{Q}_p)$
+corresponding to the measurement operator under the local Artin map:
+\[
+\theta_p: \mathbb{Q}_p^\times \to
+\operatorname{Gal}(\mathbb{Q}_p^{\text{ab}}/\mathbb{Q}_p)
+\]
+via the identification $\mathbb{Z}/D\mathbb{Z} \cong
+(\mathbb{Z}/D\mathbb{Z})^\times$ (for $D$ coprime to $p$).
+\end{definition}
+
+\begin{conjecture}[Kronecker-Weber Theorem for Quantum Measurement]
+$[\text{conjecture}]$
+Every abelian measurement scheme (every finite abelian group of unitary
+operators acting on quantum state space that forms a complete set of
+measurements) is contained in a generalized Clifford group $\mathcal{C}_n(q)$,
+just as every finite abelian extension of $\mathbb{Q}$ is contained in a
+cyclotomic extension $\mathbb{Q}(\zeta_m)$ (Kronecker-Weber theorem).
+This would be disconfirmed by exhibiting an abelian measurement scheme
+not contained in any generalized Clifford group.
+\end{conjecture}
+
+\begin{question}[Idele Class Group = Universal Measurement Group]
+$[\text{speculative}]$
+Does the idele class group $\mathbb{A}_\mathbb{Q}^\times/\mathbb{Q}^\times$
+serve as a universal measurement group for the adelic QEC framework,
+where each local component $\mathbb{Q}_p^\times$ corresponds to measurements
+at the $p$-adic completion?
+\end{question}
+
+% ======================================================================
+\section{Pillar V: Arithmetic Geometry of Quantum Codes}
+% ======================================================================
+
+\begin{definition}[p-adic Deformation Family of Quantum Codes]
+$[\text{definition}]$
+A \emph{$p$-adic deformation family} of stabilizer codes is a 1-parameter
+family $\{C_t\}_{t \in \mathbb{Z}_p}$ such that:
+\begin{enumerate}
+\item For each $t \in \mathbb{Z}_p$, $C_t$ is a stabilizer code with
+  parameters $[[n_t, k_t, d_t]]_q$
+\item The stabilizer generators vary continuously (in the $p$-adic topology)
+  as functions of $t$
+\item The special fiber $C_0$ (at $t=0$) is the ``reference code''
+\item The distance function $t \mapsto d_t$ is locally constant on $p$-adic
+  discs (ultrametric property)
+\end{enumerate}
+\end{definition}
+
+\begin{conjecture}[Kodaira-N\'eron Classification of Code Degenerations]
+$[\text{conjecture}]$
+Let $\{C_t\}_{t \in \mathbb{Z}_p}$ be a $p$-adic deformation family of
+quantum codes. The behavior of the distance $d_t$ as $t \to 0$ (i.e., under
+$p$-adic reduction) follows the Kodaira-N\'eron classification:
+\begin{itemize}
+\item \textbf{Good reduction} (Type I$_0$): $d_t = d_0$ for all $t$ with
+  $|t|_p$ sufficiently small — distance is preserved
+\item \textbf{Multiplicative reduction} (Type I$_n$): $d_t \to d_0/n$ as
+  $t \to 0$ — partial distance collapse
+\item \textbf{Additive reduction} (Types II-IV$^*$): $d_t \to 0$ —
+  catastrophic distance collapse
+\end{itemize}
+\end{conjecture}
+
+\begin{question}[Isogeny Graph = Code-Switching Protocol]
+$[\text{speculative}]$
+Does a path in a supersingular isogeny graph between two elliptic curves
+$E_1$ and $E_2$ correspond to a sequence of code deformations (a
+``code-switching protocol'') that preserves ultrametric invariants while
+transforming code parameters? If so, the Ramanujan expander property of
+isogeny graphs would guarantee efficient code-switching.
+\end{question}
+
+% ======================================================================
+\section{Pillar VI: Witt Vectors and Stabilizer Code Cohomology}
+% ======================================================================
+
+\begin{definition}[Dieudonn\'e Module of a Stabilizer Code]
+$[\text{definition — speculative}]$
+Let $\overline{C}$ be a stabilizer code over $\mathbb{F}_p$ (the reduction
+mod $p$ of a local quantum code $C_p$). A \emph{Dieudonn\'e module}
+associated to $\overline{C}$ is a module $D(\overline{C})$ over the
+Dieudonn\'e ring $D_{\mathbb{F}_p} = W(\mathbb{F}_p)[F, V]/(FV - p)$
+where:
+\begin{itemize}
+\item $F: D(\overline{C}) \to D(\overline{C})$ is a semilinear operator
+  (Frobenius) satisfying $F(ax) = \sigma(a) F(x)$ where $\sigma$ is the
+  Frobenius automorphism of $W(\mathbb{F}_p)$
+\item $V: D(\overline{C}) \to D(\overline{C})$ is a semilinear operator
+  (Verschiebung) satisfying $FV = VF = p$
+\end{itemize}
+The module $D(\overline{C})$ encodes the cohomological structure of the
+stabilizer code, with the first cohomology group $H^1_{\text{stab}}(C)$
+being isomorphic to $D(\overline{C})$ as a $D_{\mathbb{F}_p}$-module.
+\end{definition}
+
+\begin{conjecture}[Frobenius = Clifford Conjugation, Verschiebung = T-gate]
+$[\text{conjecture}]$
+For a stabilizer code $\overline{C}$ over $\mathbb{F}_p$:
+\begin{enumerate}
+\item The Frobenius operator $F$ on $D(\overline{C})$ corresponds to
+  conjugation by an element of the Clifford group $\mathcal{C}_n(p)$
+\item The Verschiebung operator $V$ corresponds to T-gate injection
+  (a non-Clifford operation that increases the level of the Clifford
+  hierarchy)
+\item The relation $FV = p = VF$ corresponds to the fact that $p$
+  iterations of the T-gate compose to a Clifford operation (for qudits
+  of dimension $p$)
+\end{enumerate}
+This would be disconfirmed if no natural $F$-$V$ pair can be constructed
+on the stabilizer code space satisfying the Dieudonn\'e relation and
+respecting the quantum computational interpretation.
+\end{conjecture}
+
+\begin{conjecture}[Dieudonn\'e-Manin Slope = Error-Correction Capacity]
+$[\text{conjecture}]$
+The Dieudonn\'e-Manin classification decomposes the isocrystal
+$D(\overline{C}) \otimes_{\mathbb{Z}_p} \mathbb{Q}_p$ into isoclinic
+components by their slopes $\lambda \in \mathbb{Q}$. Then:
+\begin{itemize}
+\item \textbf{Crystalline codes} (integer slopes): sharp error-correction
+  thresholds — the code distance is a rigid invariant
+\item \textbf{Non-crystalline codes} (fractional slopes): soft thresholds,
+  distance degrades continuously with noise
+\item The slope $\lambda$ is monotonically related to the threshold error
+  rate: higher slopes $\implies$ lower thresholds
+\end{itemize}
+\end{conjecture}
+
+\begin{conjecture}[Witt Truncation = Thermodynamic Limit]
+$[\text{conjecture}]$
+Truncated Witt vectors $W_n(\mathbb{F}_q)$ correspond to
+$\mathbb{Z}/p^n\mathbb{Z}$-truncated quantum codes (codes with $n$ levels
+of concatenation). The inverse limit $W(\mathbb{F}_q) =
+\varprojlim W_n(\mathbb{F}_q)$ corresponds to the thermodynamic limit
+$n \to \infty$ of infinite code families, with the Witt vector
+$p$-adic topology encoding the convergence of code families.
+\end{conjecture}
+
+% ======================================================================
+\section{Pillar VII: Bruhat-Tits Buildings, Berkovich Spaces, Langlands}
+% ======================================================================
+
+\begin{definition}[Moy-Prasad Filtration of Quantum Codes]
+$[\text{definition — speculative}]$
+Let $C$ be a quantum code embedded (via p-adic encoding) into a smooth
+representation $\pi_C$ of $\operatorname{GL}_n(\mathbb{Q}_p)$ or an
+associated $p$-adic group. The \emph{Moy-Prasad depth} $r(C)$ is the
+minimal $r \geq 0$ such that $\pi_C$ has nonzero $G(\mathbb{Q}_p)_{x,r}$-
+fixed vectors for some point $x$ in the Bruhat-Tits building
+$\mathcal{B}(\operatorname{GL}_n, \mathbb{Q}_p)$.
+\end{definition}
+
+\begin{conjecture}[Moy-Prasad Depth = Logical Error Rate]
+$[\text{conjecture}]$
+The Moy-Prasad depth $r(C)$ is related to the logical error rate
+$p_L(C, \eta)$ of the code $C$ under a noise model with physical error
+rate $\eta$:
+\[
+p_L(C, \eta) \sim \exp(-\alpha \cdot r(C) \cdot d)
+\]
+for some constant $\alpha > 0$. Codes with larger depth have lower error
+rates; the depth corresponds to the fault-tolerance threshold in the sense
+that codes with $r(C) > r_{\text{crit}}$ are below threshold.
+\end{conjecture}
+
+\begin{conjecture}[Bernstein Decomposition = Universality Classes]
+$[\text{conjecture}]$
+The Bernstein decomposition of the category of smooth representations of
+$G(\mathbb{Q}_p)$ into Bernstein blocks classifies universality classes
+of quantum codes: codes in the same Bernstein block share the same
+asymptotic scaling behavior (threshold, overhead, decoding complexity).
+Different blocks correspond to different code families (surface codes,
+hyperbolic codes, LDPC codes, etc.).
+\end{conjecture}
+
+\begin{conjecture}[Local Langlands for Quantum Codes]
+$[\text{speculative — deferred}]$
+The local Langlands correspondence for $\operatorname{GL}_n(\mathbb{Q}_p)$:
+\[
+\begin{Bmatrix}
+\text{irreducible smooth representations} \\
+\text{of } \operatorname{GL}_n(\mathbb{Q}_p)
+\end{Bmatrix}
+\longleftrightarrow
+\begin{Bmatrix}
+n\text{-dimensional Weil-Deligne} \\
+\text{representations of } W_{\mathbb{Q}_p}
+\end{Bmatrix}
+\]
+classifies $n$-qudit quantum codes: the Langlands parameter
+$(\rho, N)$ encodes the code's weight enumerator
+($L$-function analog) and error statistics
+($\varepsilon$-factor analog). The qudit count $n$ corresponds to
+$\operatorname{GL}_n$, and supercuspidal representations correspond
+to primitive (indecomposable) quantum codes.
+\end{conjecture}
+
+\begin{remark}
+This is the most ambitious conjecture in the framework. Even the
+classical local Langlands correspondence for $\operatorname{GL}_n$
+is a deep theorem (Harris-Taylor 2001, Henniart 2000). Extending it
+to quantum codes is a multi-decade research program. The conjecture
+is labeled $[\text{speculative — deferred}]$ and should not be a
+Phase 2-3 deliverable.
+\end{remark}
+
+% ======================================================================
+\section{Cross-Cutting Conjectures}
+% ======================================================================
+
+\begin{conjecture}[Adelic Code Product Formula]
+$[\text{conjecture}]$
+Let $C$ be a global quantum code (over $\mathbb{C}$) with local realizations
+$C_p$ at each prime $p$ and $C_\infty$ at the archimedean place. Then the
+product of local code distances satisfies:
+\[
+\prod_{p \leq \infty} d_p(C) = 1
+\]
+(under an appropriate normalization of distance). This would be the quantum
+code analog of the Artin product formula $\prod_v |x|_v = 1$ for
+$x \in \mathbb{Q}^\times$, imposing a fundamental constraint on how code
+distance can vary across completions.
+\end{conjecture}
+
+\begin{conjecture}[p-adic to Archimedean Bridge via Fontaine-Fargues]
+$[\text{not yet falsifiable}]$
+The Fontaine-Fargues curve — a ``$p$-adic Riemann surface'' interpolating
+between characteristic 0 and characteristic $p$ — provides a geometric
+framework for connecting $p$-adic quantum codes (characteristic $p$ side)
+to physical quantum codes (characteristic 0 / archimedean side). The
+archimedean limit of ultrametric quantum codes corresponds to the
+semiclassical limit $p \to \infty$.
+\end{conjecture}
+
+\begin{question}[Arithmetic Topology and Topological Codes]
+$[\text{speculative}]$
+Arithmetic topology (Mazur, Kapranov, Reznikov) draws analogies:
+\[
+\{\text{knots in } S^3\} \longleftrightarrow
+\{\text{primes in } \operatorname{Spec}(\mathbb{Z})\}
+\]
+If topological quantum codes (surface codes) are defined on 3-manifolds
+via knot theory, does arithmetic topology suggest a notion of
+\emph{arithmetic quantum codes} defined on $\operatorname{Spec}(\mathcal{O}_K)$
+for a number field $K$, where the genus of $K$ controls the code rate
+and prime ideals correspond to excitations?
+\end{question}
+
+% ======================================================================
+\section{Falsifiability Conditions}
+% ======================================================================
+
+\begin{center}
+\begin{tabular}{|l|p{8cm}|}
+\hline
+\textbf{Pillar} & \textbf{Falsification Condition} \\
+\hline
+I (p-adic analysis) & No correlation between Mahler coefficient decay
+  and code structure exists in real benchmark data \\
+\hline
+II (Hasse principle) & All known code parameters that exist locally also
+  exist globally (principle is tautological) \\
+\hline
+III (Galois reps) & Crystalline/semistable/de Rham provides no
+  discrimination between known code types \\
+\hline
+IV (Class field theory) & Cyclic measurement operators do not form a
+  group isomorphic to a Galois group \\
+\hline
+V (Arithmetic geometry) & Kodaira-N\'eron types show no correlation with
+  code property variation under deformation \\
+\hline
+VI (Witt cohomology) & No natural $F$-$V$ pair exists on the space of
+  stabilizer codes \\
+\hline
+VII (BT/Langlands) & No meaningful map between Moy-Prasad depth and
+  code parameters exists \\
+\hline
+\end{tabular}
+\end{center}
+
+% ======================================================================
+\section{Minimal Pilot Experiments (Phase 2 Entry Points)}
+% ======================================================================
+
+\begin{enumerate}
+\item \textbf{Mahler spectrum of 5-qubit code} (Pillar I):
+  Compute Mahler coefficients for a specific p-adic encoding of the
+  5-qubit perfect code. Compare against random p-adic functions.
+  \textit{Cost: 1 day. Success: statistically distinguishable spectra.}
+
+\item \textbf{Local invariants for CSS codes} (Pillar II):
+  Define and compute local invariants for small CSS code families
+  (toric codes, Shor codes) across small primes $p = 2, 3, 5$.
+  \textit{Cost: 2 days. Success: at least one code family shows
+  nontrivial variation across primes.}
+
+\item \textbf{Artin symbol for $D=4$ Fourier clocks} (Pillar IV):
+  Map the cyclic measurement group $\mathbb{Z}/4\mathbb{Z}$ from
+  silent-radix to a specific element of
+  $\operatorname{Gal}(\mathbb{Q}_p(\zeta_4)/\mathbb{Q}_p)$.
+  \textit{Cost: 1 day. Success: identifiable group isomorphism.}
+\end{enumerate}
+
+\end{document}

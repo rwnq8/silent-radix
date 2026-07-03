@@ -1,0 +1,28 @@
+{
+  "timestamp": "2026-07-03",
+  "prototypes_tested": [
+    "Mahler",
+    "Hasse",
+    "Kodaira-Neron"
+  ],
+  "code_families": 4,
+  "conjectures_tested": 4,
+  "results": [
+    {
+      "family": "Surface Codes",
+      "proof_score": "2/3"
+    },
+    {
+      "family": "CSS Codes",
+      "proof_score": "1/3"
+    },
+    {
+      "family": "Optimal Codes",
+      "proof_score": "3/3"
+    },
+    {
+      "family": "Random Codes",
+      "proof_score": "3/3"
+    }
+  ]
+}
