@@ -6,23 +6,23 @@
     "Kodaira-Neron"
   ],
   "code_families": 4,
-  "conjectures_tested": 4,
+  "conjectures_tested": 5,
   "results": [
     {
       "family": "Surface Codes",
-      "proof_score": "2/3"
+      "proof_score": "4/5"
     },
     {
       "family": "CSS Codes",
-      "proof_score": "1/3"
+      "proof_score": "2/5"
     },
     {
       "family": "Optimal Codes",
-      "proof_score": "3/3"
+      "proof_score": "3/5"
     },
     {
       "family": "Random Codes",
-      "proof_score": "3/3"
+      "proof_score": "4/5"
     }
   ]
 }
