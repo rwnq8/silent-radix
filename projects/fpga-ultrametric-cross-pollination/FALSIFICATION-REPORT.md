@@ -49,21 +49,45 @@ The falsification does NOT invalidate the Braided Memory Register project. It on
 
 ### 3.1 Alternative Formulations (from CONJECTURE-PROOF.md §4)
 
-These weaker conjectures should be tested next:
+These weaker conjectures were tested on 2026-07-03:
 
-| Conjecture | Statement | Status |
-|:-----------|:----------|:-------|
-| **C1** (strong, original) | δ = c·w for permitted crossings | ❌ DISCONFIRMED |
-| **C2** (rank preservation) | δ(a,b) < δ(c,d) ⇔ w(a,b) < w(c,d) | Untested |
-| **C3** (monotonic) | w non-decreasing with δ (but not necessarily linear) | Untested |
-| **C4** (unrestricted crossings) | δ = c·w where w counts ALL adjacent transpositions (not just permitted) | Untested |
-| **C5** (minimum dendrogram distance) | w(a,b) equals number of dendrogram edges on shortest path | Untested |
+| Conjecture | Statement | R² (n=20) | Spearman ρ | Verdict |
+|:-----------|:----------|:----------|:-----------|:--------|
+| **C1** (strong, original) | δ = c·w for permitted crossings | 0.0046 ± 0.0054 | — | ❌ DISCONFIRMED |
+| **C2** (rank preservation) | δ(a,b) < δ(c,d) ⇔ w(a,b) < w(c,d) | — | 0.2834 ± 0.1354 | ❌ DISCONFIRMED |
+| **C3** (monotonic) | w non-decreasing with δ | — | τ=0.2363 ± 0.1136 | ❌ DISCONFIRMED |
+| **C4** (unrestricted crossings) | δ = c·w where w counts ALL adjacent transpositions | 0.0938 ± 0.0495 | 0.2834 ± 0.1354 | ❌ DISCONFIRMED |
+| **C5** (edge-distance) | δ = c·e where e = dendrogram shortest-path edges | 0.4295 ± 0.1537 | — | ⚠️ WEAK (degrades from R²=0.48 at n=10 to 0.30 at n=100) |
 
-### 3.2 What to Try Next
+**Key finding:** Even C5 (edge-distance, the most structurally natural metric — it directly measures dendrogram path length between leaves) only achieves R² ≈ 0.4, well below the 0.7 threshold for "MODERATE" support. All metrics get worse as n increases, indicating no asymptotic relationship.
 
-1. **Test C4:** Remove the permitted-crossings restriction. Count ALL adjacent transpositions to swap positions a and b. This should correlate with leaf ordering distance, which may correlate with dendrogram depth.
-2. **Test C5:** Use dendrogram edge-count distance (shortest path in the dendrogram graph) instead of depth.
-3. **Test C2:** Use Spearman rank correlation (already computed; check if ρ > 0 even if R² ≈ 0).
+### 3.2 What This Means
+
+All 5 conjecture variants — spanning the natural space of possible braid/ultrametric relationships — have been computationally tested and none show the hypothesized proportionality. This strongly suggests:
+
+1. **Ultrametric depth and braid structure are NOT related through simple linear metrics** for random dendrograms
+2. **The "permitted crossings" model is not just poorly parameterized — the entire approach of mapping dendrogram position to braid word length may be invalid**
+3. **The Braided Memory Register conjecture (δ = c·w) is fundamentally falsified** across all reasonable interpretations of w
+
+### 3.3 What Survives (Revised)
+
+The falsification clarifies the scope of what the Braided Memory Register project actually establishes:
+
+| Claim | Status |
+|:------|:-------|
+| Ultrametric topology describes memory storage | ✅ Unaffected — p-adic arithmetic fully verified (20/20 tests) |
+| Braided categories describe associative binding | ✅ Unaffected — this is a structural claim, not a quantitative one |
+| Content-addressable memory via ultrametric hashing | ✅ Unaffected |
+| DAG-based versioning | ✅ Unaffected |
+| Social propagation as memory contagion | ✅ Unaffected |
+| **δ = c·w proportionality** | ❌ **FALSIFIED across all 5 variants** |
+
+### 3.4 Next Steps — Revised
+
+1. **Accept the falsification.** The δ = c·w conjecture in all tested forms is not supported by evidence.
+2. **Refocus on qualitative connections.** The Braided Memory Register's value is in the structural analogy between its five pillars, not in a single quantitative metric.
+3. **Pivot from "braid word length" to "braided structure."** The braid group B_n provides a language for associative binding, but the specific metric of word length between two strands is probably not the right bridge to ultrametric depth.
+4. **Alternative research direction:** Instead of δ = c·w, explore whether the ultrametric dendrogram and braid group share an entropy or complexity measure (e.g., ultrametric entropy vs. braid entropy).
 
 ---
 
