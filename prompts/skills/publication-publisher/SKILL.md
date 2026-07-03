@@ -858,7 +858,7 @@ All QNFO/QWAV publications use the **Silent Radix Light Theme** design system:
 
 ---
 
-*publication-publisher v2.3 — Phase 4–5 of LRAP. v2.3 adds self-contained embedded scripts (no R2 pull needed) + v2.2 mandatory Cloudflare-first cross-channel dissemination protocol (R2 canonical, GitHub backup, Obsidian ephemeral). v2.1 adds dual PDF pipeline, heading HTML tag cleanup fix, TeX Live detection.*
+*publication-publisher v2.4 — Phase 4–5 of LRAP. v2.4 fixes PDF math rendering: simplified preamble (microtype+amsmath, no setmathfont), pandoc+XeLaTeX as default, mandatory PyMuPDF verification of U+FFFD=0. v2.3 adds self-contained embedded scripts. v2.2 adds Cloudflare-first dissemination. v2.1 adds dual PDF pipeline + TeX Live detection.*
 
 ## RT: RED-TEAM SELF-AUDIT
 
