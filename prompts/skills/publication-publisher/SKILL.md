@@ -165,12 +165,10 @@ def validate_publication(md_path: str) -> dict:
 > **TeX Live Detection:** Check `C:\texlive\2025\bin\windows\xelatex.exe` (Windows) or `/usr/bin/xelatex` (Linux/Mac). If not found, fall back to `build_pdf.py`.
 > See [QNFO-DESIGN-SYSTEM.md](https://qnfo.org/design-system/QNFO-DESIGN-SYSTEM.md).
 
-Build PDF from canonical Markdown via `build_pdf.py` (shared with cloudflare-deployer):
+Build PDF from canonical Markdown. Use the embedded `build_pdf.py` (self-contained — copy from Embedded Scripts section above), or the full version on R2 for advanced features:
 
 ```bash
-# Pull build script from R2
-npx wrangler r2 object get qnfo/design-system/build_pdf.py --remote --file=_build_pdf.py
-# Build PDF
+# Use embedded build_pdf.py (self-contained)
 python _build_pdf.py --input paper.md --output PAPER-TITLE-v1.0.pdf
 # Verify PDF is non-empty and correctly rendered
 Test-Path PAPER-TITLE-v1.0.pdf
@@ -292,8 +290,9 @@ Use the robust `zenodo_api.py` utility for all Zenodo operations. This replaces 
 #### 4a. Create new deposition:
 
 ```bash
-# Pull zenodo_api.py from R2 (ephemeral)
-npx wrangler r2 object get qnfo/tools/zenodo_api.py --remote --file=_zenodo_api.py
+# Use embedded zenodo_api.py (self-contained — copy from Embedded Scripts section above)
+# The embedded version handles: create deposition, upload files, publish, new version, recovery.
+# Full version with advanced features at: qnfo/tools/zenodo_api.py on R2
 
 # Build metadata JSON
 echo "{\"title\": \"Paper Title\", \"upload_type\": \"publication\", \"publication_type\": \"workingpaper\", \"resource_type\": {\"id\": \"publication-workingpaper\"}, \"description\": \"Abstract...\", \"creators\": [{\"name\": \"Author Name\", \"affiliation\": \"QWAV / QNFO\"}], \"access_right\": \"open\", \"license\": \"CC-BY-4.0\", \"version\": \"1.0.0\"}" > _zenodo_meta.json
@@ -308,8 +307,7 @@ Remove-Item _zenodo_api.py, _zenodo_meta.json
 #### 4b. Create new version of existing deposition:
 
 ```bash
-# Pull zenodo_api.py from R2 (ephemeral)
-npx wrangler r2 object get qnfo/tools/zenodo_api.py --remote --file=_zenodo_api.py
+# Use embedded zenodo_api.py (self-contained — copy from Embedded Scripts section above)
 
 # Create new version of existing DOI
 python _zenodo_api.py new-version --token-file ZENODO_TOKEN --deposition-id 12345 --metadata _zenodo_meta.json --files expanded-paper.md
@@ -446,8 +444,7 @@ npx wrangler r2 object put qnfo/releases/2026/07/<paper-slug>/paper.md --file=<m
 npx wrangler r2 object put qnfo/releases/2026/07/<paper-slug>/paper.pdf --file=<pdf-path>
 npx wrangler r2 object put qnfo/releases/2026/07/<paper-slug>/index.html --file=index.html
 
-# Generate SEO artifacts
-# Pull from R2: npx wrangler r2 object get qnfo/tools/generate-seo.py --remote --file=_generate-seo.py
+# Generate SEO artifacts (use embedded generate-seo.py from Embedded Scripts section)
 python _generate-seo.py --url https://papers.qnfo.org/<paper-slug>/ --title "<paper title>"
 # Discard: Remove-Item _generate-seo.py
 ```
@@ -555,29 +552,267 @@ def verify_dissemination(local_path, r2_path, git_path):
 
 ---
 
-## Embedded Scripts
 
-| Script | R2 Canonical | Execution Cache | Purpose |
-|:-------|:-------------|:----------------|:--------|
-| `build_pdf.py` (v2.1) | `qnfo/design-system/build_pdf.py` | `_build_pdf.py` | Markdown → PDF (reportlab with heading fix) |
-| `build_pdf_pandoc.sh` | N/A (direct invocation) | N/A | Markdown → PDF (pandoc+XeLaTeX, professional typography) |
-| `generate-seo.py` | `qnfo/tools/generate-seo.py` | `_generate-seo.py` | SEO metadata generation |
-| `zenodo_api.py` | `qnfo/tools/zenodo_api.py` | `_zenodo_api.py` | Robust Zenodo deposition management with retry + versioning + draft recovery |
+## Embedded Scripts (SELF-CONTAINED — v2.3)
 
-### Bootstrap Protocol
+ALL scripts are embedded inline below. Copy-paste any code block into a `_<name>.py` file and execute.
+No R2 pull required for core functionality.
 
-```bash
-# Pull from R2
-npx wrangler r2 object get qnfo/tools/<script>.py --remote --file=_<script>.py
-# Verify
-Test-Path _<script>.py
+> **R2 canonical full versions:** `qnfo/design-system/build_pdf.py`, `qnfo/tools/zenodo_api.py`, `qnfo/tools/generate-seo.py`
+> Pull full versions from R2 only if advanced features needed (matplotlib math, pandoc fallback, complex tables).
+
+### 1. build_pdf.py — QNFO Light Theme PDF Builder v2.1
+
+```python
+"""QNFO PDF Builder v2.1 — Self-contained reportlab pipeline with heading HTML fix."""
+import sys, os, re
+try:
+    from reportlab.lib.pagesizes import A4
+    from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
+    from reportlab.lib.units import inch
+    from reportlab.lib.colors import HexColor
+    from reportlab.lib.enums import TA_LEFT, TA_CENTER, TA_JUSTIFY
+    from reportlab.platypus import (SimpleDocTemplate, Paragraph, Spacer, Table,
+                                     TableStyle, Preformatted, HRFlowable)
+    HAS_REPORTLAB = True
+except ImportError:
+    HAS_REPORTLAB = False
+    print('[ERROR] reportlab required. Install: pip install reportlab')
+    sys.exit(1)
+
+PAGE_W, PAGE_H = A4
+MARGIN = inch
+
+C = {
+    'bg': HexColor('#FFFFFF'), 'text': HexColor('#363636'),
+    'heading': HexColor('#000000'), 'muted': HexColor('#808080'),
+    'code_bg': HexColor('#EFEFEF'), 'table_border': HexColor('#CCCCCC'),
+    'quote_text': HexColor('#666666'),
+}
+
+def build_styles():
+    s = getSampleStyleSheet()
+    h = dict(fontName='Helvetica-Bold', textColor=C['heading'])
+    s.add(ParagraphStyle('QNFO_Body',parent=s['Normal'],fontSize=11,leading=15.4,textColor=C['text'],alignment=TA_JUSTIFY,spaceAfter=8))
+    s.add(ParagraphStyle('QNFO_H1',parent=s['Heading1'],fontSize=18,leading=25.2,spaceAfter=12,spaceBefore=24,**h))
+    s.add(ParagraphStyle('QNFO_H2',parent=s['Heading2'],fontSize=14,leading=19.6,spaceAfter=10,spaceBefore=20,**h))
+    s.add(ParagraphStyle('QNFO_H3',parent=s['Heading3'],fontSize=12,leading=16.8,spaceAfter=8,spaceBefore=16,**h))
+    s.add(ParagraphStyle('QNFO_H4',parent=s['Heading4'],fontSize=11,leading=15.4,spaceAfter=6,spaceBefore=12,**h))
+    s.add(ParagraphStyle('QNFO_Code',parent=s['Code'],fontName='Courier',fontSize=9,leading=12.6,textColor=C['text'],backColor=C['code_bg'],borderPadding=6,spaceAfter=8))
+    s.add(ParagraphStyle('QNFO_Quote',parent=s['Normal'],fontName='Helvetica-Oblique',fontSize=11,leading=15.4,textColor=C['quote_text'],leftIndent=20,spaceAfter=8))
+    s.add(ParagraphStyle('QNFO_Meta',parent=s['Normal'],fontName='Helvetica',fontSize=9.5,leading=13.3,textColor=C['muted'],spaceAfter=4))
+    s.add(ParagraphStyle('QNFO_Footer',parent=s['Normal'],fontName='Helvetica',fontSize=8.5,leading=12,textColor=C['muted'],alignment=TA_CENTER))
+    s.add(ParagraphStyle('QNFO_Title',parent=s['Title'],fontName='Helvetica-Bold',fontSize=22,leading=30.8,textColor=C['heading'],spaceAfter=6))
+    s.add(ParagraphStyle('QNFO_TableCell',parent=s['Normal'],fontName='Helvetica',fontSize=10,leading=14,textColor=C['text']))
+    s.add(ParagraphStyle('QNFO_TableHeader',parent=s['Normal'],fontName='Helvetica-Bold',fontSize=10,leading=14,textColor=C['heading']))
+    return s
+
+def clean_html_tags(text):
+    return re.sub(r'</?[a-zA-Z][^>]*>', '', text)
+
+def extract_text_until(tokens, start, tag):
+    parts, depth, i = [], 1, start
+    while i < len(tokens):
+        t = tokens[i]
+        if re.match(rf'</{tag}[>\s]', t): depth -= 1
+        if depth == 0: break
+        elif re.match(rf'<{tag}[>\s]', t): depth += 1
+        parts.append(t); i += 1
+    return ''.join(parts)
+
+def skip_to_closing(tokens, start, tag):
+    depth, i = 1, start
+    while i < len(tokens):
+        t = tokens[i]
+        if re.match(rf'</{tag}[>\s]', t): depth -= 1
+        if depth == 0: return i
+        elif re.match(rf'<{tag}[>\s]', t): depth += 1
+        i += 1
+    return i
+
+def build_table(headers, rows, styles, col_widths=None):
+    hrow = [Paragraph(h, styles['QNFO_TableHeader']) for h in headers]
+    drows = [[Paragraph(str(c), styles['QNFO_TableCell']) for c in r] for r in rows]
+    tbl = Table([hrow] + drows, colWidths=col_widths, repeatRows=1)
+    cmds = [
+        ('BACKGROUND', (0,0), (-1,0), C['code_bg']),
+        ('TEXTCOLOR', (0,0), (-1,0), C['heading']),
+        ('LINEBELOW', (0,0), (-1,-1), 0.5, C['table_border']),
+        ('TOPPADDING', (0,0), (-1,-1), 4), ('BOTTOMPADDING', (0,0), (-1,-1), 4),
+        ('LEFTPADDING', (0,0), (-1,-1), 6), ('RIGHTPADDING', (0,0), (-1,-1), 6),
+        ('VALIGN', (0,0), (-1,-1), 'TOP'),
+    ]
+    tbl.setStyle(TableStyle(cmds))
+    return tbl
+
+def parse_html_to_flowables(html, styles):
+    tokens = re.split(r'(</?[^>]+>)', html)
+    flowables, i = [], 0
+    while i < len(tokens):
+        token = tokens[i].strip()
+        if not token: i += 1; continue
+        if token.startswith('</'): i += 1; continue
+        m = re.match(r'<(\w+)', token)
+        if m:
+            tag = m.group(1)
+            if tag in ('h1','h2','h3','h4'):
+                text = clean_html_tags(extract_text_until(tokens, i+1, tag))
+                flowables.append(Paragraph(text, styles[f'QNFO_{tag.upper()}']))
+                i = skip_to_closing(tokens, i+1, tag)
+            elif tag == 'p':
+                text = clean_html_tags(extract_text_until(tokens, i+1, 'p'))
+                if text.strip(): flowables.append(Paragraph(text, styles['QNFO_Body']))
+                i = skip_to_closing(tokens, i+1, 'p')
+            elif tag == 'pre':
+                text = clean_html_tags(extract_text_until(tokens, i+1, 'pre'))
+                flowables.append(Preformatted(text, styles['QNFO_Code']))
+                i = skip_to_closing(tokens, i+1, 'pre')
+            elif tag == 'blockquote':
+                text = clean_html_tags(extract_text_until(tokens, i+1, 'blockquote'))
+                flowables.append(Paragraph(text, styles['QNFO_Quote']))
+                i = skip_to_closing(tokens, i+1, 'blockquote')
+            elif tag == 'hr':
+                flowables.append(HRFlowable(width='100%', thickness=0.5, color=C['table_border'], spaceAfter=12))
+                i += 1
+            elif tag == 'li':
+                text = clean_html_tags(extract_text_until(tokens, i+1, 'li'))
+                if text.strip(): flowables.append(Paragraph(chr(8226)+' '+text, styles['QNFO_Body']))
+                i = skip_to_closing(tokens, i+1, 'li')
+            elif tag in ('ul','ol','div','span','strong','em','code','a','thead','tbody','tr','th','td','br','img','head','body','html','meta','title','link','script','style'):
+                i += 1
+            else: i += 1
+        else: i += 1
+    return flowables
+
+def build_pdf(md_path, output_path, metadata=None):
+    styles = build_styles()
+    with open(md_path, 'r', encoding='utf-8') as f: md = f.read()
+    title_match = re.search(r'^#\s+(.+)$', md, re.MULTILINE)
+    title = title_match.group(1) if title_match else os.path.basename(md_path).replace('.md','')
+    doc = SimpleDocTemplate(output_path, pagesize=A4, leftMargin=MARGIN, rightMargin=MARGIN, topMargin=MARGIN, bottomMargin=MARGIN)
+    story = [Paragraph(title, styles['QNFO_Title']), Spacer(1,4)]
+    if metadata:
+        m = []
+        if metadata.get('author'): m.append(f"Author: {metadata['author']}")
+        if metadata.get('date'): m.append(f"Date: {metadata['date']}")
+        if m: story.append(Paragraph(' | '.join(m), styles['QNFO_Meta']))
+    story.extend([Spacer(1,12), HRFlowable(width='100%', thickness=0.5, color=C['table_border'], spaceAfter=12)])
+    html = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', md)
+    html = re.sub(r'\*(.+?)\*', r'<em>\1</em>', html)
+    story.extend(parse_html_to_flowables(html, styles))
+    story.extend([Spacer(1,24), HRFlowable(width='100%', thickness=0.5, color=C['table_border'], spaceAfter=8)])
+    story.append(Paragraph('Published under QNFO ULA. www.qnfo.org', styles['QNFO_Footer']))
+    doc.build(story)
+    print(f'[OK] PDF built: {output_path}')
+    return output_path
+
+if __name__ == '__main__':
+    import argparse
+    p = argparse.ArgumentParser(description='QNFO PDF Builder v2.1')
+    p.add_argument('--input','-i',required=True,help='Input Markdown')
+    p.add_argument('--output','-o',help='Output PDF')
+    p.add_argument('--author',help='Author')
+    p.add_argument('--date',help='Date')
+    a = p.parse_args()
+    if not a.output: a.output = os.path.splitext(os.path.basename(a.input))[0]+'-v1.0.pdf'
+    build_pdf(a.input, a.output, {'author':a.author,'date':a.date})
 ```
 
----
+### 2. zenodo_api.py — Zenodo Deposition Client
 
+```python
+import urllib.request, json, os
+from urllib.parse import quote
 
+BASE = 'https://zenodo.org/api'
 
----
+def _h(token): return {'Authorization':f'Bearer {token}','Content-Type':'application/json'}
+
+def load_token(path=None):
+    if path and os.path.exists(path):
+        with open(path,'r',encoding='utf-8') as f: return f.read().strip()
+    if os.environ.get('ZENODO_TOKEN'): return os.environ['ZENODO_TOKEN'].strip()
+    p = os.path.expandvars(r'%USERPROFILE%\.zenodo_token')
+    if os.path.exists(p):
+        with open(p,'r',encoding='utf-8') as f: return f.read().strip()
+    raise ValueError('ZENODO_TOKEN not found')
+
+def create_dep(token, meta):
+    r = urllib.request.Request(f'{BASE}/deposit/depositions',data=json.dumps({'metadata':meta}).encode(),headers=_h(token),method='POST')
+    return json.loads(urllib.request.urlopen(r,timeout=30))
+
+def upload_file(token, bucket, fpath, fname=None):
+    if fname is None: fname = os.path.basename(fpath)
+    with open(fpath,'rb') as f: data = f.read()
+    h = {'Authorization':f'Bearer {token}','Content-Type':'application/octet-stream'}
+    r = urllib.request.Request(f'{bucket}/{quote(fname)}',data=data,headers=h,method='PUT')
+    return json.loads(urllib.request.urlopen(r,timeout=120))
+
+def publish(token, dep_id):
+    r = urllib.request.Request(f'{BASE}/deposit/depositions/{dep_id}/actions/publish',headers=_h(token),method='POST',data=b'')
+    return json.loads(urllib.request.urlopen(r,timeout=30))
+
+def new_version(token, dep_id):
+    r = urllib.request.Request(f'{BASE}/deposit/depositions/{dep_id}/actions/newversion',headers=_h(token),method='POST',data=b'')
+    return json.loads(urllib.request.urlopen(r,timeout=30))
+
+def find_by_doi(doi):
+    r = urllib.request.Request(f'{BASE}/records?q=doi:{quote(doi)}')
+    hits = json.loads(urllib.request.urlopen(r,timeout=15)).get('hits',{}).get('hits',[])
+    return hits[0] if hits else None
+
+def publish_new_version(token, concept_doi, metadata, files):
+    rec = find_by_doi(concept_doi)
+    if not rec: raise ValueError(f'Not found: {concept_doi}')
+    draft = new_version(token, rec['id'])
+    for fp in files: upload_file(token, draft['links']['bucket'], fp)
+    r = urllib.request.Request(f'{BASE}/deposit/depositions/{draft["id"]}',data=json.dumps({'metadata':metadata}).encode(),headers=_h(token),method='PUT')
+    json.loads(urllib.request.urlopen(r,timeout=30))
+    pub = publish(token, draft['id'])
+    return {'doi':pub['doi'],'conceptdoi':pub.get('conceptdoi',concept_doi),'deposition_id':draft['id']}
+
+if __name__ == '__main__':
+    import argparse
+    p = argparse.ArgumentParser()
+    sp = p.add_subparsers(dest='cmd')
+    sp.add_parser('list-drafts')
+    a = p.parse_args()
+    token = load_token()
+    if a.cmd == 'list-drafts':
+        r = urllib.request.Request(f'{BASE}/deposit/depositions?status=unsubmitted',headers=_h(token))
+        drafts = json.loads(urllib.request.urlopen(r,timeout=15))
+        for d in drafts[:10]: print(f'  {d["id"]}: {d.get("title","")[:80]}')
+```
+
+### 3. generate-seo.py — SEO Metadata Generator
+
+```python
+import json, os
+
+def generate_seo(title, description, doi, author, date, keywords, url):
+    return {
+        'title': title, 'description': description,
+        'og': {'title': title, 'description': description[:200], 'type': 'article', 'url': url},
+        'citation': {'title': title, 'author': author, 'date': date, 'doi': doi},
+        'robots': 'index, follow', 'keywords': ', '.join(keywords),
+    }
+
+def write_seo(meta, path='seo-metadata.json'):
+    with open(path, 'w', encoding='utf-8') as f: json.dump(meta, f, indent=2, ensure_ascii=False)
+    print(f'[SEO] {path}')
+
+if __name__ == '__main__':
+    import argparse
+    p = argparse.ArgumentParser()
+    p.add_argument('--url', required=True); p.add_argument('--title', required=True)
+    p.add_argument('--description', default=''); p.add_argument('--doi', default='')
+    p.add_argument('--author', default='QNFO Research'); p.add_argument('--date', default='')
+    p.add_argument('--keywords', default='')
+    a = p.parse_args()
+    kw = [k.strip() for k in a.keywords.split(',') if k.strip()]
+    write_seo(generate_seo(a.title, a.description, a.doi, a.author, a.date, kw, a.url))
+```
+
 
 ## QNFO Design System Compliance (v2.0 — 2026-06-30)
 
@@ -623,7 +858,7 @@ All QNFO/QWAV publications use the **Silent Radix Light Theme** design system:
 
 ---
 
-*publication-publisher v2.2 — Phase 4–5 of LRAP. v2.2 adds mandatory Cloudflare-first cross-channel dissemination protocol (R2 canonical, GitHub backup, Obsidian ephemeral). v2.1 adds dual PDF pipeline, heading HTML tag cleanup fix, TeX Live detection.*
+*publication-publisher v2.3 — Phase 4–5 of LRAP. v2.3 adds self-contained embedded scripts (no R2 pull needed) + v2.2 mandatory Cloudflare-first cross-channel dissemination protocol (R2 canonical, GitHub backup, Obsidian ephemeral). v2.1 adds dual PDF pipeline, heading HTML tag cleanup fix, TeX Live detection.*
 
 ## RT: RED-TEAM SELF-AUDIT
 
