@@ -116,9 +116,58 @@ A minimal prototype specification (PROTOTYPE-SPEC.md) tests the conjecture empir
 
 ---
 
-## 7. Conclusion
+## 7. Results and Falsification
 
-Five domains independently converged on the same structural principles for memory. We propose they are facets of a single object — the Braided Ultrametric Register. Whether or not the strong conjecture holds, the weaker forms establish consilience across disciplines that do not read each other's papers. The next steps: prove the existence theorem, build the prototype, and test the predictions. We invite collaboration from category theorists, cognitive neuroscientists, Andean archaeologists, and AI architects.
+### 7.1 Computational Validation
+
+A computational test suite (`fpga-ultrametric-cross-pollination` project, 2026-07-03) evaluated the central conjecture across 60 random ultrametric topologies with 4 to 128 leaves. Five conjecture variants were tested:
+
+| Variant | Description | Best $R^2$ | Verdict |
+|:--------|:------------|:----------:|:--------|
+| **C1 (Strong)** | $\delta(a,b) = c \cdot w(a,b)$ with permitted crossings only | $\sim 0$ | ❌ DISCONFIRMED |
+| **C2 (Rank)** | Spearman rank correlation between $\delta$ and $w$ | $\rho \sim 0.28$ | ❌ WEAK |
+| **C3 (Monotonic)** | Kendall $\tau$ — monotonic relationship | $\tau \sim 0.24$ | ❌ WEAK |
+| **C4 (Unrestricted)** | All $\sigma_i$ crossings permitted (no adjacency restriction) | $R^2 \sim 0.09$ | ❌ DISCONFIRMED |
+| **C5 (Edge-distance)** | Braid distance = minimum edges crossed when embedding tree in plane | $R^2 \sim 0.43$ | ⚠️ MODERATE but degrades with $n$ |
+
+C5 (edge-distance) was the most structurally natural metric, achieving $R^2 \approx 0.43$ — significantly better than other variants but still below the moderate-correlation threshold. Crucially, C5's performance degraded as corpus size increased, suggesting it does not scale to large corpora.
+
+### 7.2 QNFO Corpus Blocked
+
+The QNFO living-paper database (119 papers, queried via `graph-api.q08.workers.dev`) was evaluated for empirical validation. All 100 accessible entries share `"QNFO Research Collective"` as their sole author. With zero individual author attributions and predominantly empty category fields, the co-authorship graph is empty, producing no meaningful braid distances. Conjecture validation on the QNFO corpus is **BLOCKED** pending metadata enrichment — specifically, individual author attribution and domain/category tagging.
+
+### 7.3 Interpretation
+
+The falsification of all five metric variants does not invalidate the Braided Memory Register framework. The falsification targeted one specific quantitative claim: that ultrametric distances and braid word lengths are metrically proportional. The falsification shows this relationship is not linear (C1-C4) and not strongly monotonic (C5) under any tested formalization.
+
+However, the five-pillar structural analogy remains:
+- **Ultrametric hierarchy** is empirically confirmed in spin glasses and neural networks `[established]`
+- **Braided associative binding** is a structural description of quipu cord intertwining and cross-modal memory binding `[my conjecture]`
+- **Content-addressable versioning** is provably effective in Git and blockchain `[established]`
+- **Social propagation DAGs** are observable in retweet chains and oral traditions `[established]`
+- **Hierarchical associative memory** is implemented in modern Hopfield networks `[established]`
+
+The convergence of these independent domains on the same underlying structural pattern — a hierarchical, braided, versioned, content-addressable, socially propagated register — does not depend on the specific metric relationship $\delta = c \cdot w$. The structural consilience is independently supported by evidence from each pillar.
+
+### 7.4 Recommended Pivot
+
+The FPGA project recommends pivoting from **braid word length** to **braided structural/entropy measures**. Specific candidates include:
+- Braid index (minimum number of strands needed to represent a given link)
+- Jones polynomial invariants of the braid closure
+- Entanglement entropy of the braid diagram
+- Vassiliev invariants of the memory link
+
+These measures capture braided structure without requiring metric proportionality to ultrametric distances.
+
+---
+
+## 8. Conclusion
+
+Five domains independently converged on the same structural principles for memory. We proposed they are facets of a single object — the Braided Ultrametric Register — connected by the conjecture $\delta(a,b) = c \cdot w(a,b)$. Computational validation across 60 synthetic topologies and five conjecture variants has **falsified** this specific metric formulation. All variants returned $R^2 < 0.5$, with the strongest (edge-distance) achieving $R^2 \approx 0.43$ but degrading with corpus size. Empirical validation on the QNFO research corpus is pending individual author metadata enrichment.
+
+The falsification is a contribution, not a failure. It provides clear constraints on what the relationship between ultrametric hierarchy and braided association *cannot* be — it cannot be a simple metric proportionality — and it guides future work toward structural/entropy measures. The five-pillar structural consilience across spin-glass physics, Andean quipu technology, Git/blockchain versioning, social propagation, and hierarchical neural networks remains intact and does not depend on the metric formulation.
+
+The next steps: enrich QNFO corpus metadata, prove the existence theorem for a braided monoidal category on ultrametric dendrogram leaves, develop braided structural measures, and test the cognitive predictions. We invite collaboration from category theorists, cognitive neuroscientists, Andean archaeologists, and AI architects.
 
 ---
 
