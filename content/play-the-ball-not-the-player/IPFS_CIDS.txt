@@ -1,0 +1,12 @@
+# IPFS CIDs — Play the Ball, Not the Player
+# Generated: 2026-07-03T11:35:03.021Z
+bafybeibslwmyux23oocfu7urj7aa7t6jv3qlaj4teacj6ek3o2o3ddpyqa
+bafkreifqm2mc5bku2sca4cwabtsraikyeqg65l5ftr3sqo5do6khkndtdy  README.md
+bafkreig7d5y6dulmx5ont7vcibygpb7eotybdj6hhsm56q2f2mvg5xpnrm  blog-post.md
+bafkreiaga7uxnrbteyeg5ubaeynnvsghrgitd55w3ceswov75xtlwfyn2e  content-series.md
+bafkreig2ukv6km27xxzrtzxrhnkxtbdcdja5s3rp6z7sixp2dqilov26hi  slide-deck.md
+bafkreiaib4nvdyq6vzbc3ncfxy2b2lp2pjr5wdyvvccrndbzefv2fsplny  philosophical-essay.md
+
+https://ipfs.io/ipfs/bafybeibslwmyux23oocfu7urj7aa7t6jv3qlaj4teacj6ek3o2o3ddpyqa
+https://cloudflare-ipfs.com/ipfs/bafybeibslwmyux23oocfu7urj7aa7t6jv3qlaj4teacj6ek3o2o3ddpyqa
+https://dweb.link/ipfs/bafybeibslwmyux23oocfu7urj7aa7t6jv3qlaj4teacj6ek3o2o3ddpyqa

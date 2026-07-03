@@ -87,8 +87,8 @@ CONTINUE number-theory-ultrametric-deep FROM HANDOFF.
 |:-----|:-----|:------|
 | 1 | ~~Run literature search for Pillars IV and V~~ | ✅ DONE — 100 papers, LITERATURE-BRIEF updated |
 | 2 | Deep-read Core papers from LITERATURE-BRIEF.md | Identify 5-8 core papers for detailed analysis — focus on isogeny graph math (Pillar V) and p-adic cyclotomic (Pillar IV) |
-| 3 | Generate `definitions.tex` — formalize conjectures | "Local quantum code at prime p", "crystalline stabilizer code", "code cohomology" |
-| 4 | Fix KG edge to `ultrametric-foundation-thesis` | Verify correct node ID via `/nodes?search=ultrametric-foundation` |
+| 3 | ~~Generate `definitions.tex`~~ | ✅ DONE — 17 definitions/conjectures, 3 pilot experiments, falsifiability matrix |
+| 4 | ~~Fix KG edge to `ultrametric-foundation-thesis`~~ | ✅ DONE — DEPENDS_ON edge created (1 upserted), verified via /neighbors |
 | 5 | Semantic Scholar retry (was rate-limited 429) | Try again after rate-limit window |
 | 6 | Re-query Kodaira-Neron specifically | Use `all:"Neron model"` or `all:"elliptic curve reduction"` to avoid astronomer K. Kodaira papers |
 | 7 | HIDDEN-ASSUMPTIONS-AND-CONSEQUENCES.md review | New deliverable — audit of 7-pillar framework hidden assumptions |
