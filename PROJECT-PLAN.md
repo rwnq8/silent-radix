@@ -50,8 +50,8 @@ Demonstrate that positional notation is an ultrametric tree whose radix encodes 
 | M3: Consequence Atlas threshold | ≥200 documented silent-frame failures | ✅ (205) |
 | M4: Zenodo v3.0 published | 14 files uploaded, 7 prior DOIs linked | ✅ |
 | M5: R2 sync verified | All core artifacts accessible via R2 | ✅ (26 files) |
-| M6: arXiv submission | Paper submitted to math.HO or cs.LO | ⚠️ |
-| M7: 4-D distribution complete | ≥5 of 7 archive targets achieved | ⚠️ (3/7) |
+| M6: IPFS pinnned | 4 artifacts pinned via Pinata with verified CIDs | ✅ |
+| M7: 4-D distribution complete | ≥5 of 7 archive targets achieved | ⚠️ (4/7) |
 
 ---
 

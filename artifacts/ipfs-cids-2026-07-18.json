@@ -1,0 +1,42 @@
+{
+  "generated": "2026-07-18T11:45:00Z",
+  "session": "NXs1O64RllntReg5wKdcE",
+  "service": "Pinata (IPFS)",
+  "pins": [
+    {
+      "name": "Silent Radix — Synthesis Paper v1.1 (PDF)",
+      "file": "silent-radix-synthesis-paper-v1.1.pdf",
+      "cid": "QmbJ4e5KQ3NaQ15YEc5aU8tx4HwBtPuzbMMbZBoAsyvmYz",
+      "size_bytes": 227890,
+      "sha256": "5bda58eeaf2a184d75a285e9e89cc8adcae2da8474104274715cd530bacd4b01",
+      "gateway": "https://gateway.pinata.cloud/ipfs/QmbJ4e5KQ3NaQ15YEc5aU8tx4HwBtPuzbMMbZBoAsyvmYz"
+    },
+    {
+      "name": "Silent Radix — Lean 4 Formalization (14 theorems, 0 sorry)",
+      "file": "formal/silent-radix-theorems.lean",
+      "cid": "QmdsSuZTrDc6JDkaykFHt5EWxthAMqAWtxjkThNSBMAjaN",
+      "size_bytes": 27928,
+      "sha256": "da5cc898940182685b861c8480a79d366f1d39d7ba2f4059ac0a08e7f3e114e2",
+      "gateway": "https://gateway.pinata.cloud/ipfs/QmdsSuZTrDc6JDkaykFHt5EWxthAMqAWtxjkThNSBMAjaN"
+    },
+    {
+      "name": "Silent Radix — Synthesis Paper v1.1 (Markdown)",
+      "file": "silent-radix-synthesis-paper-v1.1.md",
+      "cid": "QmNwbmfPXRCwGAdeyCqSDNvYzAEiA6x1haUcwuCkrqaEqn",
+      "size_bytes": 30774,
+      "sha256": "2142c9d1fa84eae390e0096561bf84b9128afccb36ecd1442df88ad0c621261a",
+      "gateway": "https://gateway.pinata.cloud/ipfs/QmNwbmfPXRCwGAdeyCqSDNvYzAEiA6x1haUcwuCkrqaEqn"
+    },
+    {
+      "name": "Silent Radix — Formal Appendix (8 theorems)",
+      "file": "formal-appendix-silent-radix-theorem.md",
+      "cid": "QmPJBNN6geFYXNqbJKyesCiF5BeL4b8tN3oQT3xPwCQk5V",
+      "size_bytes": 14480,
+      "sha256": "b0ee3b5cd26ef61bb80aedcd8db523074a147dc15c206432e868943b28add311",
+      "gateway": "https://gateway.pinata.cloud/ipfs/QmPJBNN6geFYXNqbJKyesCiF5BeL4b8tN3oQT3xPwCQk5V"
+    }
+  ],
+  "distribution_status": "distributed (4/7 targets)",
+  "targets_achieved": ["GitHub", "R2", "Zenodo", "IPFS"],
+  "targets_remaining": ["Arweave", "DNSLink", "Internet Archive"]
+}
