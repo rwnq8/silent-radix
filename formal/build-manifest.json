@@ -1,0 +1,16 @@
+{
+  "file": "formal/silent-radix-theorems.lean",
+  "size_chars": 25549,
+  "size_lines": 597,
+  "non_empty_lines": 551,
+  "theorems": 14,
+  "lemmas": 0,
+  "definitions": 12,
+  "imports": 1,
+  "sorry_count": 0,
+  "complete_proofs": 14,
+  "appendix_coverage": 6,
+  "additional_theorems": 7,
+  "imports_mathlib": true,
+  "status": "READY"
+}
