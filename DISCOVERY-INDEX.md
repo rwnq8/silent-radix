@@ -64,7 +64,7 @@
 | System | Status |
 |--------|:------:|
 | Cloudflare Pages | ✅ silent-radix-demo.pages.dev |
-| Cloudflare R2 | ✅ qnfo/releases/2026/07/silent-radix/ |
+| Cloudflare R2 | ✅ r2://releases/2026/07/silent-radix/ (26 files) |
 | GitHub | ✅ feature/cyclic-measurement (synced 2026-07-18) |
 | arXiv | ⚠️ LaTeX+PDF ready, needs manual submit |
 | Buffer | ❌ Token expired, needs regeneration |
